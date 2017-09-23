@@ -1,0 +1,11 @@
+v查看映射在哪个文件定义.txt
+
+:Author: crane
+:Email: crane@ubuntu
+:Date: 2017-09-12 21:29
+
+
+在noremap前加verbose.
+:verbose  nnoremap <C-p>
+
+会在结果中显示文件名

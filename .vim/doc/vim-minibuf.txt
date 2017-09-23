@@ -1,0 +1,10 @@
+"在minibuf-vim下mkdir syntax
+"然后touch  minibufexpl.vim (文件名和 minibuf窗口的 filetype一样,进入后使用 :set ft?查看即可)
+"在这个文件中放入以下内容:
+
+syntax match MBENormal                   '\[[^\]]*\]'
+syntax match MBEChanged                  '\[[^\]]*\]+'
+syntax match MBEVisibleNormal            '\[[^\]]*\]\*'
+syntax match MBEVisibleChanged           '\[[^\]]*\]\*+'
+syntax match MBEVisibleActiveNormal      '\[[^\]]*\]\*!'
+syntax match MBEVisibleActiveChanged     '\[[^\]]*\]\*+!'

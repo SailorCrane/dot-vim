@@ -1,0 +1,17 @@
+1:  .gitmodules
+Delete the relevant lines from the .gitmodules file. e.g. delete these:
+
+2:  .git/config
+Delete the relevant section from .git/config. e.g. delete these:
+[submodule "path_to_submodule"]
+    path = path_to_submodule
+    url = https://github.com/path_to_submodule
+
+3:  .git/modules
+# 注意这里 path_to_submodule,　是自己设置的想对于git项目的路径
+
+rm -rf .git/modules/path_to_submodule
+[submodule "path_to_submodule"]
+    url = https://github.com/path_to_submodule
+
+4: 最后 git rm  modules_path (确认一定要在git版本库中删除了submodules path 目录)

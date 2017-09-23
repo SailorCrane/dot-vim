@@ -1,0 +1,35 @@
+#
+# Makefile
+# crane, 2017-05-09 10:13
+#
+CC       = gcc
+CXX      = g++
+CPP      = # 预编译器, 默认为 $(CC) -E
+
+CPPFLAGS = -g  -Wall         # C/C++ 预编译选项. -D
+CFLAGS   = # C编译选项
+CXXFLAGS = -std=c++11        # C++ 选项
+SUBDIR   = $(shell ls -d */) # 所有子目录
+
+.PHONY : all default clean run
+
+BIN = main
+
+all : $(BIN)
+
+default : all
+
+main :
+
+run:
+	./main
+
+clean:
+
+
+Srcs := $(wildcard *.c *.cpp)
+
+#Objs := $(patsubst %.cpp, %.o, $(Srcs))
+Objs := $(Srcs: %.cpp=%.o)
+
+# vim:ft=make

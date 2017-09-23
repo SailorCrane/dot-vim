@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# 将这个脚本放在/usr/bin/vimc
+# 在git中就可以设置 core.editor=vimc , 这样git就可以使用符合自己习惯的 vimc了
+# 注意后面的 $*, 这是传给bash脚本, 或者bash函数的参数
+# 所以执行 vimc  myfile...  ==  vim  -u  '/home/galaxyeye/CraneVim/.vimrc' myfile...
+vim  -u  '/home/galaxyeye/CraneVim/.vimrc'  $*

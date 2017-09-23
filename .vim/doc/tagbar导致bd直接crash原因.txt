@@ -1,0 +1,26 @@
+Bug重现:
+
+Bug reproduce:
+Start vim,
+      open a file for which tagbar can generate tags,
+      ToggleTagbar.
+      Switch the main window to a different buffer.
+
+      The tagbar remains active. If the different buffer is taggable, the TagBar will be updated, otherwise the TagBar will retain the tags of the previous buffer.
+
+      Now, delete the buffer you switched to, which is now the current buffer:
+      :bd[elete]
+
+      Vim will crash.
+
+      //如果在关闭(禁止)tagbar之前,做:bd的操作,vim不会退出
+      If you deactivate the TagBar before you delete the buffer, no crash.
+
+details:
+Vim isn't crashing here.
+What's happening is this: when you delete a buffer Vim will close the window associated with it (unless it's the last one), and if Tagbar notices that it is the last window open it will quit Vim (since a Tagbar window without any other windows is pretty useless).
+I'm not sure what the best solution would be for this problem: there's no way to keep Vim from closing the window without creating a function like this one, and keeping the Tagbar window open as the only window is also not very useful.
+So I guess the best workaround would be to either not use :bdelete or use a function like the one I linked.
+
+解决方案:
+映射<leader>d 为关闭buffer,关闭前,先调用:TagbarClose<cr>关闭tagbar窗口

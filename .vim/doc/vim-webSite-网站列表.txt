@@ -1,0 +1,19 @@
+vim WebSite lists:
+1: awesome-vim
+2: casts vim
+3: spf13
+4: wklken 的blog,是中国人写的
+5: vimer --->http://www.vimer.cn/
+6: 插件列表  --->http://www.cnblogs.com/hengzi/archive/2011/08/14/vim-plugin-list.html
+
+vim Book  lists:
+1: 笨方法学习vim-script
+2: practical vim
+3: learn vi and vim
+4: hacking vim
+
+vim Docs in local machine:
+1: [helps].txt in  'doc' directory
+2: vimrc_example
+3: vimtutor
+

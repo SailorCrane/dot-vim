@@ -1,0 +1,4 @@
+设置这两个变量则可以支持c和cpp头文件支持.
+注意:如果c.h 的 filetype=cpp,那么设置c_check是无法检测语法错误的,要设置cpp_check才可以
+let g:syntastic_c_check_header=1
+let g:syntastic_cpp_check_header = 1
