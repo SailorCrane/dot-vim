@@ -1,0 +1,258 @@
+[submodule ".vim/bundle/Align"]
+	path = .vim/bundle/Align
+	url = https://github.com/vim-scripts/Align
+[submodule ".vim/bundle/AutoFold.vim"]
+	path = .vim/bundle/AutoFold.vim
+	url = https://github.com/vim-scripts/AutoFold.vim
+[submodule ".vim/bundle/CmdlineComplete"]
+	path = .vim/bundle/CmdlineComplete
+	url = https://github.com/vim-scripts/CmdlineComplete
+[submodule ".vim/bundle/Colour-Sampler-Pack"]
+	path = .vim/bundle/Colour-Sampler-Pack
+	url = https://github.com/vim-scripts/Colour-Sampler-Pack
+[submodule ".vim/bundle/EasyGrep"]
+	path = .vim/bundle/EasyGrep
+	url = https://github.com/vim-scripts/EasyGrep
+[submodule ".vim/bundle/Emmet.vim"]
+	path = .vim/bundle/Emmet.vim
+	url = https://github.com/vim-scripts/Emmet.vim
+[submodule ".vim/bundle/FuzzyFinder"]
+	path = .vim/bundle/FuzzyFinder
+	url = https://github.com/vim-scripts/FuzzyFinder
+[submodule ".vim/bundle/L9"]
+	path = .vim/bundle/L9
+	url = https://github.com/vim-scripts/L9
+[submodule ".vim/bundle/vim-powerline"]
+	path = .vim/bundle/vim-powerline
+	url = https://github.com/Lokaltog/vim-powerline
+[submodule ".vim/bundle/vim-addon-mw-utils"]
+	path = .vim/bundle/vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils
+[submodule ".vim/bundle/Mark"]
+	path = .vim/bundle/Mark
+	url = https://github.com/vim-scripts/Mark
+[submodule ".vim/bundle/ReplaceWithRegister"]
+	path = .vim/bundle/ReplaceWithRegister
+	url = https://github.com/vim-scripts/ReplaceWithRegister
+[submodule ".vim/bundle/ShowMarks"]
+	path = .vim/bundle/ShowMarks
+	url = https://github.com/vim-scripts/ShowMarks
+[submodule ".vim/bundle/ShowTrailingWhitespace"]
+	path = .vim/bundle/ShowTrailingWhitespace
+	url = https://github.com/vim-scripts/ShowTrailingWhitespace
+[submodule ".vim/bundle/vim-autoformat"]
+	path = .vim/bundle/vim-autoformat
+	url = https://github.com/Chiel92/vim-autoformat
+[submodule ".vim/bundle/Tagbar"]
+	path = .vim/bundle/Tagbar
+	url = https://github.com/vim-scripts/Tagbar
+[submodule ".vim/bundle/mark.vim"]
+	path = .vim/bundle/mark.vim
+	url = https://github.com/Tuxdude/mark.vim
+[submodule ".vim/bundle/VOoM"]
+	path = .vim/bundle/VOoM
+	url = https://github.com/vim-scripts/VOoM
+[submodule ".vim/bundle/VisIncr"]
+	path = .vim/bundle/VisIncr
+	url = https://github.com/vim-scripts/VisIncr
+[submodule ".vim/bundle/c-support"]
+	path = .vim/bundle/c-support
+	url = https://github.com/WolfgangMehner/c-support
+[submodule ".vim/bundle/YankRing.vim"]
+	path = .vim/bundle/YankRing.vim
+	url = https://github.com/vim-scripts/YankRing.vim
+[submodule ".vim/bundle/ZenCoding.vim"]
+	path = .vim/bundle/ZenCoding.vim
+	url = https://github.com/vim-scripts/ZenCoding.vim
+[submodule ".vim/bundle/a.vim"]
+	path = .vim/bundle/a.vim
+	url = https://github.com/vim-scripts/a.vim
+[submodule ".vim/bundle/ack.vim"]
+	path = .vim/bundle/ack.vim
+	url = https://github.com/vim-scripts/ack.vim
+[submodule ".vim/bundle/vim-colors-solarized"]
+	path = .vim/bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized
+[submodule ".vim/bundle/vim-template"]
+	path = .vim/bundle/vim-template
+	url = https://github.com/aperezdc/vim-template
+[submodule ".vim/bundle/c.vim"]
+	path = .vim/bundle/c.vim
+	url = https://github.com/vim-scripts/c.vim
+[submodule ".vim/bundle/jedi-vim"]
+	path = .vim/bundle/jedi-vim
+	url = https://github.com/davidhalter/jedi-vim
+[submodule ".vim/bundle/minibufexpl.vim"]
+	path = .vim/bundle/minibufexpl.vim
+	url = https://github.com/fholgado/minibufexpl.vim
+[submodule ".vim/bundle/vim-snipmate"]
+	path = .vim/bundle/vim-snipmate
+	url = https://github.com/garbas/vim-snipmate
+[submodule ".vim/bundle/vundle"]
+	path = .vim/bundle/vundle
+	url = https://github.com/gmarik/vundle
+[submodule ".vim/bundle/tabular"]
+	path = .vim/bundle/tabular
+	url = https://github.com/godlygeek/tabular
+[submodule ".vim/bundle/gundo"]
+	path = .vim/bundle/gundo
+	url = https://github.com/vim-scripts/gundo
+[submodule ".vim/bundle/python-syntax"]
+	path = .vim/bundle/python-syntax
+	url = https://github.com/hdima/python-syntax
+[submodule ".vim/bundle/vim-snippets"]
+	path = .vim/bundle/vim-snippets
+	url = https://github.com/honza/vim-snippets
+[submodule ".vim/bundle/vim-DrawIt"]
+	path = .vim/bundle/vim-DrawIt
+	url = https://github.com/hrj/vim-DrawIt
+[submodule ".vim/bundle/xterm-color-table.vim"]
+	path = .vim/bundle/xterm-color-table.vim
+	url = http://git.oschina.net/CraneAgain/xterm-color-table.vim
+[submodule ".vim/bundle/SearchComplete"]
+	path = .vim/bundle/SearchComplete
+	url = https://github.com/SailorCrane/SearchComplete
+[submodule ".vim/bundle/vim-easymotion"]
+	path = .vim/bundle/vim-easymotion
+	url = https://github.com/easymotion/vim-easymotion
+[submodule ".vim/bundle/calendar.vim"]
+	path = .vim/bundle/calendar.vim
+	url = https://github.com/itchyny/calendar.vim
+[submodule ".vim/bundle/vim-textobj-entire"]
+	path = .vim/bundle/vim-textobj-entire
+	url = https://github.com/kana/vim-textobj-entire
+[submodule ".vim/bundle/vim-textobj-user"]
+	path = .vim/bundle/vim-textobj-user
+	url = https://github.com/kana/vim-textobj-user
+[submodule ".vim/bundle/ctrlp.vim"]
+	path = .vim/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim
+[submodule ".vim/bundle/vim-qargs"]
+	path = .vim/bundle/vim-qargs
+	url = https://github.com/nelstrom/vim-qargs
+[submodule ".vim/bundle/vim-visual-star-search"]
+	path = .vim/bundle/vim-visual-star-search
+	url = https://github.com/nelstrom/vim-visual-star-search
+[submodule ".vim/bundle/vim-expand-region"]
+	path = .vim/bundle/vim-expand-region
+	url = https://github.com/terryma/vim-expand-region
+[submodule ".vim/bundle/vim-multiple-cursors"]
+	path = .vim/bundle/vim-multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors
+[submodule ".vim/bundle/vim-workspace"]
+	path = .vim/bundle/vim-workspace
+	url = https://github.com/thaerkh/vim-workspace
+[submodule ".vim/bundle/indentpython.vim"]
+	path = .vim/bundle/indentpython.vim
+	url = https://github.com/vim-scripts/indentpython.vim
+[submodule ".vim/bundle/auto-pairs"]
+	path = .vim/bundle/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs
+[submodule ".vim/bundle/bufexplorer"]
+	path = .vim/bundle/bufexplorer
+	url = https://github.com/jlanzarotta/bufexplorer
+[submodule ".vim/bundle/vim-easy-align"]
+	path = .vim/bundle/vim-easy-align
+	url = https://github.com/junegunn/vim-easy-align
+[submodule ".vim/bundle/vim-textobj-lastpat"]
+	path = .vim/bundle/vim-textobj-lastpat
+	url = https://github.com/kana/vim-textobj-lastpat
+[submodule ".vim/bundle/rainbow_parentheses.vim"]
+	path = .vim/bundle/rainbow_parentheses.vim
+	url = https://github.com/kien/rainbow_parentheses.vim
+[submodule ".vim/bundle/matchit.zip"]
+	path = .vim/bundle/matchit.zip
+	url = https://github.com/vim-scripts/matchit.zip
+[submodule ".vim/bundle/echofunc"]
+	path = .vim/bundle/echofunc
+	url = https://github.com/mbbill/echofunc
+[submodule ".vim/bundle/fencview"]
+	path = .vim/bundle/fencview
+	url = https://github.com/mbbill/fencview
+[submodule ".vim/bundle/undotree"]
+	path = .vim/bundle/undotree
+	url = https://github.com/mbbill/undotree
+[submodule ".vim/bundle/vim-indent-guides"]
+	path = .vim/bundle/vim-indent-guides
+	url = https://github.com/nathanaelkane/vim-indent-guides
+[submodule ".vim/bundle/Conque-Shell"]
+	path = .vim/bundle/Conque-Shell
+	url = https://github.com/oplatek/Conque-Shell
+[submodule ".vim/bundle/vim-mkdir"]
+	path = .vim/bundle/vim-mkdir
+	url = https://github.com/pbrisbin/vim-mkdir
+[submodule ".vim/bundle/pydoc.vim"]
+	path = .vim/bundle/pydoc.vim
+	url = https://github.com/vim-scripts/pydoc.vim
+[submodule ".vim/bundle/pyflakes"]
+	path = .vim/bundle/pyflakes
+	url = https://github.com/vim-scripts/pyflakes
+[submodule ".vim/bundle/python.vim"]
+	path = .vim/bundle/python.vim
+	url = https://github.com/vim-scripts/python.vim
+[submodule ".vim/bundle/vim-repeat"]
+	path = .vim/bundle/vim-repeat
+	url = https://github.com/tpope/vim-repeat
+[submodule ".vim/bundle/vim-qf"]
+	path = .vim/bundle/vim-qf
+	url = https://github.com/romainl/vim-qf
+[submodule ".vim/bundle/nerdcommenter"]
+	path = .vim/bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter
+[submodule ".vim/bundle/nerdtree"]
+	path = .vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree
+[submodule ".vim/bundle/vim-instant-markdown"]
+	path = .vim/bundle/vim-instant-markdown
+	url = https://github.com/suan/vim-instant-markdown
+[submodule ".vim/bundle/taglist.vim"]
+	path = .vim/bundle/taglist.vim
+	url = https://github.com/vim-scripts/taglist.vim
+[submodule ".vim/bundle/vim-quickrun"]
+	path = .vim/bundle/vim-quickrun
+	url = https://github.com/thinca/vim-quickrun
+[submodule ".vim/bundle/vim-tmux"]
+	path = .vim/bundle/vim-tmux
+	url = https://github.com/tmux-plugins/vim-tmux
+[submodule ".vim/bundle/molokai"]
+	path = .vim/bundle/molokai
+	url = https://github.com/tomasr/molokai
+[submodule ".vim/bundle/vim-exchange"]
+	path = .vim/bundle/vim-exchange
+	url = https://github.com/tommcdo/vim-exchange
+[submodule ".vim/bundle/tlib_vim"]
+	path = .vim/bundle/tlib_vim
+	url = https://github.com/tomtom/tlib_vim
+[submodule ".vim/bundle/vim-abolish"]
+	path = .vim/bundle/vim-abolish
+	url = https://github.com/tpope/vim-abolish
+[submodule ".vim/bundle/vim-commentary"]
+	path = .vim/bundle/vim-commentary
+	url = https://github.com/tpope/vim-commentary
+[submodule ".vim/bundle/vim-surround"]
+	path = .vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule ".vim/bundle/vim-unimpaired"]
+	path = .vim/bundle/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired
+[submodule ".vim/bundle/vim-airline"]
+	path = .vim/bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule ".vim/bundle/vim-airline-themes"]
+	path = .vim/bundle/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
+[submodule ".vim/bundle/vim-fugitive"]
+	path = .vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule ".vim/bundle/vimim"]
+	path = .vim/bundle/vimim
+	url = https://github.com/vimim/vimim
+[submodule ".vim/bundle/vim-wakatime"]
+	path = .vim/bundle/vim-wakatime
+	url = https://github.com/wakatime/vim-wakatime
+[submodule ".vim/bundle/winmanager"]
+	path = .vim/bundle/winmanager
+	url = https://github.com/vim-scripts/winmanager
+[submodule ".vim/bundle/syntastic"]
+	path = .vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic
