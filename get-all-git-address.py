@@ -35,6 +35,7 @@ def print_submodule(short, real):
     # print(real)
 
     os.system("git submodule add %s %s" % (real, lay_path))
+    print("")        # new line to seperate
 
 
 """

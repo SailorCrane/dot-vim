@@ -216,7 +216,7 @@ nnoremap <Leader>0      :b 10<CR>
 " {{{
 nnoremap <tab>   gt
 nnoremap <s-tab> gT
-nnoremap tn      :tabnew<CR>:NERDTree<CR>
+nnoremap tn      :tabnew<CR>:NERDTree<CR><C-w>l
 nnoremap tc      :tabclose<CR>
 "nnoremap c<tab>  :tabnew<CR>
 "nnoremap d<tab>  :tabclose<CR>
