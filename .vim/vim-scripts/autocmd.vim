@@ -93,8 +93,8 @@ autocmd   FileType  nerdtree  setlocal  nu  rnu
 autocmd   FileType  c,cpp,python,vim match  ErrorMsg  /"　"/
 
 "12 c/cpp
-autocmd   FileType  c,cpp  source  $CRANE_DOT_VIM/vim-scripts/c.vim
-autocmd   FileType  cpp    source  $CRANE_DOT_VIM/vim-scripts/cpp.vim
+autocmd   FileType  c,cpp   source  $Vim_Scripts/c.vim
+autocmd   FileType  cpp     source  $Vim_Scripts/cpp.vim
 
 "13 python
-autocmd   FileType  python  source  $CRANE_DOT_VIM/vim-scripts/python.vim
+autocmd   FileType  python  source  $Vim_Scripts/python.vim

@@ -87,38 +87,38 @@ nnoremap  <Leader>elv :e $MYVIMRC<CR>
 nnoremap  <Leader>elg :e $MYGVIMRC<CR>
 
 " mobile rc  ./.vimrc and ./.gvimrc  edit
-nnoremap  <Leader>ev  :e  $CRANE_VIM_HOME/.vimrc<CR>
-nnoremap  <Leader>eg  :e  $CRANE_VIM_HOME/.gvimrc<CR>
+nnoremap  <Leader>ev  :e  $Crane_Vim_Home/.vimrc<CR>
+nnoremap  <Leader>eg  :e  $Crane_Vim_Home/.gvimrc<CR>
 
 " vim script edit
-nnoremap  <Leader>eV  :e  $CRANE_DOT_VIM/vim-scripts/visual-map.vim<CR>
-nnoremap  <Leader>ef  :e  $CRANE_DOT_VIM/vim-scripts/function.vim<CR>
-nnoremap  <Leader>en  :e  $CRANE_DOT_VIM/vim-scripts/normal-map.vim<CR>
-nnoremap  <Leader>ei  :e  $CRANE_DOT_VIM/vim-scripts/insert-map.vim<CR>
-nnoremap  <Leader>ec  :e  $CRANE_DOT_VIM/vim-scripts/command-map.vim<CR>
+nnoremap  <Leader>eV  :e  $Vim_Scripts/visual-map.vim<CR>
+nnoremap  <Leader>ef  :e  $Vim_Scripts/function.vim<CR>
+nnoremap  <Leader>en  :e  $Vim_Scripts/normal-map.vim<CR>
+nnoremap  <Leader>ei  :e  $Vim_Scripts/insert-map.vim<CR>
+nnoremap  <Leader>ec  :e  $Vim_Scripts/command-map.vim<CR>
 
-nnoremap  <Leader>ea  :e  $CRANE_DOT_VIM/vim-scripts/abbrev-map.vim<CR>
+nnoremap  <Leader>ea  :e  $Vim_Scripts/abbrev-map.vim<CR>
 
-nnoremap  <Leader>et  :e  $CRANE_DOT_VIM/test/HarryPotter-Stone.txt<CR>
+nnoremap  <Leader>et  :e  $Crane_Dot_Vim/test/HarryPotter-Stone.txt<CR>
 
 " <Leader>eb b stand for bundle
-nnoremap  <Leader>eb  :e  $CRANE_DOT_VIM/vim-scripts/myBundle.vim<CR>
-nnoremap  <Leader>ep  :e  $CRANE_DOT_VIM/vim-scripts/python.vim<CR>
-"nnoremap  <Leader>ef  :e  $CRANE_DOT_VIM/vim-scripts/autocmd.vim<CR>
+nnoremap  <Leader>eb  :e  $Vim_Scripts/myBundle.vim<CR>
+nnoremap  <Leader>ep  :e  $Vim_Scripts/python.vim<CR>
+"nnoremap  <Leader>ef  :e  $Vim_Scripts/autocmd.vim<CR>
 " eC C stand for command: command mode/autocmd
-nnoremap  <Leader>eC  :e  $CRANE_DOT_VIM/vim-scripts/autocmd.vim<CR>
+nnoremap  <Leader>eC  :e  $Vim_Scripts/autocmd.vim<CR>
 
-nnoremap  <Leader>ee  :e  $CRANE_DOT_VIM/vim-scripts/example/vimrc_example.vim<CR>
-nnoremap  <Leader>eE  :e  $CRANE_DOT_VIM/vim-scripts/example/<CR>
+nnoremap  <Leader>ee  :e  $Vim_Scripts/example/vimrc_example.vim<CR>
+nnoremap  <Leader>eE  :e  $Vim_Scripts/example/<CR>
 
 nnoremap  <Leader>eO  :e  $PLUGIN_SCRIPT/plugin-common.vim<CR>
 nnoremap  <Leader>eP  :e  $PLUGIN_SCRIPT/plugin-python.vim<CR>
 
-nnoremap  <Leader>ed  :e  $CRANE_DOT_VIM/doc/<CR>
+nnoremap  <Leader>ed  :e  $Crane_Dot_Vim/doc/<CR>
 
 " 编辑good-idea-script.vim, 记录最新学习情况
 " I表示Idea
-nnoremap  <Leader>eI  :e  $CRANE_DOT_VIM/vim-scripts/good-idea-script.vim<CR>
+nnoremap  <Leader>eI  :e  $Vim_Scripts/good-idea-script.vim<CR>
 
 " Prompt to open file with same name, different extension
 " from  https://github.com/nelstrom/dotfiles/blob/master/vimrc

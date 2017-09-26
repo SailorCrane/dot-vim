@@ -5,21 +5,26 @@
 " edit 和 source 文件路径, 由变量作为路径前缀, 而不使用具体路径
 " 路径最后不要跟"/"
 " ====================================================================
-let  $CRANE_VIM_HOME = '~'
+let  $Crane_Vim_Home = '~'
 
 " 下面的 "." 是vim的字符串连接运算符, 相当于其它编程语言中的string() + string()
 " 下面的赋值语句, 相当于一个字符串 加法
 " 一般情况下是 ~/.vim, 注意最后没有/结尾
 " 路径最后不要跟"/"
-let  $CRANE_DOT_VIM   = $CRANE_VIM_HOME . "/.vim"
+let  $Crane_Dot_Vim    = $Crane_Vim_Home . "/.vim"
 
-let  $VIEW            = $CRANE_DOT_VIM  . "/view"
-let  $SESSION         = $CRANE_DOT_VIM  . "/session"
+let  $Vim_Scripts      = $Crane_Dot_Vim  . "/vim-scripts"
+let  $Plugin_Script    = $Vim_Scripts    . "/plugin-vim"
 
-let  $TEMPLATE_CPP    = $CRANE_DOT_VIM  . "/templates/cpp"
-let  $TEMPLATE_PYTHON = $CRANE_DOT_VIM  . "/templates/python"
+let  $Crane_Vim_Bundle = $Crane_Dot_Vim  . '/bundle'
 
-let  $PLUGIN_SCRIPT   = $CRANE_DOT_VIM  . "/vim-scripts/plugin-vim"
+let  $TEMPLATE_CPP     = $Crane_Dot_Vim  . "/templates/cpp"
+let  $TEMPLATE_PYTHON  = $Crane_Dot_Vim  . "/templates/python"
+
+let  $VIEW             = $Crane_Dot_Vim  . "/view"
+let  $SESSION          = $Crane_Dot_Vim  . "/session"
+
+
 
 " ====================================================================
 
@@ -93,17 +98,17 @@ let g:mapleader = ","       " global <Leader>
 " My map of 'normal', 'insert', 'visual', 'command', 'iabbrev'
 " source ~/.vim/vim-scripts/myBundle.vim
 " 注意这里如果要编辑, 只能使用<Leader>e 前缀编辑, 无法通过gf跳转.
-source  $CRANE_DOT_VIM/vim-scripts/myBundle.vim
-source  $CRANE_DOT_VIM/vim-scripts/function.vim
-source  $CRANE_DOT_VIM/vim-scripts/normal-map.vim
-source  $CRANE_DOT_VIM/vim-scripts/insert-map.vim
+source  $Crane_Dot_Vim/vim-scripts/myBundle.vim
+source  $Crane_Dot_Vim/vim-scripts/function.vim
+source  $Crane_Dot_Vim/vim-scripts/normal-map.vim
+source  $Crane_Dot_Vim/vim-scripts/insert-map.vim
 
-source  $CRANE_DOT_VIM/vim-scripts/command-map.vim
-source  $CRANE_DOT_VIM/vim-scripts/visual-map.vim
+source  $Crane_Dot_Vim/vim-scripts/command-map.vim
+source  $Crane_Dot_Vim/vim-scripts/visual-map.vim
 
-source  $CRANE_DOT_VIM/vim-scripts/abbrev-map.vim
-source  $CRANE_DOT_VIM/vim-scripts/autocmd.vim
-source  $CRANE_DOT_VIM/vim-scripts/tmp-test.vim
+source  $Crane_Dot_Vim/vim-scripts/abbrev-map.vim
+source  $Crane_Dot_Vim/vim-scripts/autocmd.vim
+source  $Crane_Dot_Vim/vim-scripts/tmp-test.vim
 
 
 "13 autoread,文件被外部程序改变,gvim 和 vim自动重新加载,不发出提示
