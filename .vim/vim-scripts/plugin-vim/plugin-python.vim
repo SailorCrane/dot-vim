@@ -11,3 +11,5 @@ Bundle  "hdima/python-syntax"
 
 " python 的一款补全插件
 Bundle  "davidhalter/jedi-vim"
+
+Bundle "python-rope/ropevim"

@@ -56,7 +56,7 @@ nnoremap  <Leader>i   :set ignorecase!  ignorecase?<CR>
 " {{{
 nnoremap  <Leader>eb  :e ~/.bashrc<CR>
 nnoremap  <Leader>ez  :e ~/.zshrc<CR>
-nnoremap  <Leader>eP  :e ~/.profile<CR>
+"nnoremap  <Leader>eP  :e ~/.profile<CR>    # 太容易编辑了, "让出快捷键给plugin-python.vim
 
 " jquery edit
 nnoremap  <Leader>ej  :e https://code.jquery.com/jquery-3.2.1.js<CR>
@@ -112,6 +112,7 @@ nnoremap  <Leader>ee  :e  $CRANE_DOT_VIM/vim-scripts/example/vimrc_example.vim<C
 nnoremap  <Leader>eE  :e  $CRANE_DOT_VIM/vim-scripts/example/<CR>
 
 nnoremap  <Leader>eO  :e  $PLUGIN_SCRIPT/plugin-common.vim<CR>
+nnoremap  <Leader>eP  :e  $PLUGIN_SCRIPT/plugin-python.vim<CR>
 
 nnoremap  <Leader>ed  :e  $CRANE_DOT_VIM/doc/<CR>
 

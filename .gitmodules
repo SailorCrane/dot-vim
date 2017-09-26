@@ -265,3 +265,7 @@
 [submodule ".vim/bundle/vim-session"]
 	path = .vim/bundle/vim-session
 	url = https://github.com/xolox/vim-session
+
+[submodule ".vim/bundle/ropevim"]
+    path = .vim/bundle/ropevim
+    url = https://github.com/python-rope/ropevim
