@@ -166,7 +166,8 @@ cnoreabbrev  manual  set  foldmethod=manual
 cnoreabbrev  fd         set  fdm?
 "cnoreabbrev  foldmethod  set  fdm?
 
-"18
+
+"18 grep search
 "   search recursive
 "   search world
 "   search now  : "%" stand for current file
@@ -176,3 +177,7 @@ cnoreabbrev   sw  grep  <C-r><C-w> . -R --exclude=tags --exclude-dir=".svn" <C-b
 cnoreabbrev   sn  grep  ""    % <C-b><Right><Right><Right><Right><Right><Right><Right>
 cnoreabbrev   sp  grep  ""    --include="*.py" -R . <C-b><Right><Right><Right><Right><Right><Right><Right>
 cnoreabbrev   sc  grep  ""    --include="*.c"  --include="*.cpp" -R . <C-b><Right><Right><Right><Right><Right><Right><Right>
+
+
+" 19 <C-a> to line begin
+cnoremap <C-a>  <C-b>
