@@ -259,10 +259,6 @@ Bundle "tommcdo/vim-exchange"
 Bundle  "tpope/vim-unimpaired"
 
 
-"58  vim-workspace
-Bundle "https://github.com/thaerkh/vim-workspace"
-
-
 "59  lastpat
 " vi/ 选择模式选中下一次匹配
 " 鸡肋, 因为vim的gn, gN 已经可以在选择模式中, 选中下一次匹配了
@@ -320,7 +316,9 @@ let g:instant_markdown_autostart = 0        " 只有在markdown文档中, 并且
                                             " 才会有InstantMarkdownPreview
                                             " 命令可以使用
 
-" 71
+" 71 vim-session插件比vim-workspace好用很多
+Bundle "https://github.com/thaerkh/vim-workspace"
+
 Bundle "xolox/vim-misc"
 Bundle "xolox/vim-session"
-
+:let g:session_autosave = 'no'
