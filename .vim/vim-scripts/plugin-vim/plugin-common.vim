@@ -282,7 +282,7 @@ Bundle 'hrj/vim-DrawIt'
 
 " 66 file-template
 Bundle 'aperezdc/vim-template'
-let g:templates_directory = $CRANE_DOT_VIM . "/templates"
+let g:templates_directory = $Crane_Dot_Vim . "/templates"
 
 " 67 Mark.vim 可以同时高亮多个词: 比如同时高亮好几个变量.
 "Bundle  'Tuxdude/mark.vim'

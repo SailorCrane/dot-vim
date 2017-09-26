@@ -111,8 +111,8 @@ nnoremap  <Leader>eC  :e  $Vim_Scripts/autocmd.vim<CR>
 nnoremap  <Leader>ee  :e  $Vim_Scripts/example/vimrc_example.vim<CR>
 nnoremap  <Leader>eE  :e  $Vim_Scripts/example/<CR>
 
-nnoremap  <Leader>eO  :e  $PLUGIN_SCRIPT/plugin-common.vim<CR>
-nnoremap  <Leader>eP  :e  $PLUGIN_SCRIPT/plugin-python.vim<CR>
+nnoremap  <Leader>eO  :e  $Plugin_Script/plugin-common.vim<CR>
+nnoremap  <Leader>eP  :e  $Plugin_Script/plugin-python.vim<CR>
 
 nnoremap  <Leader>ed  :e  $Crane_Dot_Vim/doc/<CR>
 

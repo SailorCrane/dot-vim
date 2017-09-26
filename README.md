@@ -17,20 +17,20 @@ vimrc通过souce这些脚本产生作用.
     2-2: 在~/.bashrc 中定义 alias
          alias  vimc="vim  -u  ~/CraneVim/vimrc"
     2-3: 修改 ~/CraneVim/vimrc 中第一个路径变量的值:为vimrc的地址, 后面不要跟"/"
-         let  $CRANE_VIM_HOME = '~/CraneVim/'
+         let  $Crane_Vim_Home = '~/CraneVim/'
          source ~/.bashrc
 
          这时候自己定义的一些指令, 基本已经可以用了.
          可以使用vimc启动了.
     2-4: 这时候myBundle.vim 不能使用.: <Leader>ep 修改 ~/myBundle.vim
 
-         " 先定义 CRANE_VIM_BUNDLE 变量, 相对于CRANE_DOT_VIM 路径变量定义.
-         let  $CRANE_VIM_BUNDLE= $CRANE_DOT_VIM . '/bundle'
+         " 先定义 Crane_Vim_Bundle 变量, 相对于CRANE_DOT_VIM 路径变量定义.
+         let  $Crane_Vim_Bundle= $CRANE_DOT_VIM . '/bundle'
 
-         set  rtp+=$CRANE_VIM_BUNDLE/vundle/
-         set  rtp+=$CRANE_VIM_BUNDLE/ack.vim/
-         set  rtp+=$CRANE_VIM_BUNDLE/easymotion/
-         set  rtp+=$CRANE_VIM_BUNDLE/easymotion/
+         set  rtp+=$Crane_Vim_Bundle/vundle/
+         set  rtp+=$Crane_Vim_Bundle/ack.vim/
+         set  rtp+=$Crane_Vim_Bundle/easymotion/
+         set  rtp+=$Crane_Vim_Bundle/easymotion/
          ...
 
     2-5: 使用vimc测试, 然后将~/myBundle.vim中rtp中不能使用的插件注释即可.
@@ -59,7 +59,7 @@ vimrc通过souce这些脚本产生作用.
         而系统的~/.vimrc, ~/.gvimrc, ~/.vim/ 则都在"~"下
 
     项目和Linux本机目录结构达到了统一:
-        这样无论 vimrc中的 $CRANE_VIM_HOME 指向项目目录, 还是~/本地目录.
+        这样无论 vimrc中的 $Crane_Vim_Home 指向项目目录, 还是~/本地目录.
         所有的<Leader>ev, <Leader>eg 都可以打开 .vimrc 和 .gvimrc
 
 
