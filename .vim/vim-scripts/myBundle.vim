@@ -18,6 +18,7 @@ Bundle 'gmarik/vundle'
 " 将插件按功能分在不同目录
 source   $CRANE_DOT_VIM/vim-scripts/plugin-vim/plugin-common.vim
 source   $CRANE_DOT_VIM/vim-scripts/plugin-vim/plugin-view.vim      " 和外观显示相关的: 包括窗口, 主题等
+source   $CRANE_DOT_VIM/vim-scripts/plugin-vim/plugin-scheme.vim
 source   $CRANE_DOT_VIM/vim-scripts/plugin-vim/plugin-code.vim      " 和coding 相关的
 source   $CRANE_DOT_VIM/vim-scripts/plugin-vim/plugin-python.vim
 

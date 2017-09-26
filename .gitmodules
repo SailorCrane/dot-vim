@@ -269,3 +269,7 @@
 [submodule ".vim/bundle/ropevim"]
     path = .vim/bundle/ropevim
     url = https://github.com/python-rope/ropevim
+
+[submodule ".vim/bundle/vim-monokai"]
+    path = .vim/bundle/vim-monokai
+    url = https://github.com/sickill/vim-monokai
