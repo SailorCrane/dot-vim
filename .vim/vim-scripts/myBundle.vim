@@ -20,6 +20,7 @@ source   $Plugin_Script/plugin-view.vim      " 和外观显示相关的: 包括�
 source   $Plugin_Script/plugin-scheme.vim
 source   $Plugin_Script/plugin-code.vim      " 和coding 相关的
 source   $Plugin_Script/plugin-python.vim
+source   $Plugin_Script/plugin-ft.vim        " 和文件类型相关关:markdown, vim-tmux
 
 
 filetype plugin indent on

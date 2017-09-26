@@ -273,3 +273,10 @@
 [submodule ".vim/bundle/vim-monokai"]
     path = .vim/bundle/vim-monokai
     url = https://github.com/sickill/vim-monokai
+
+
+[submodule ".vim/bundle/vim-markdown"]
+    path = .vim/bundle/vim-markdown
+    url = https://github.com/tpope/vim-markdown
+
+
