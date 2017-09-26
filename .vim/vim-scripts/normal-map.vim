@@ -743,8 +743,8 @@ nnoremap  <Leader>cv  :set  cursorcolumn!  cursorcolumn?<CR>
 " 34 统计模式/出现次数: word count/number
 " 因为wc不是很好按, 所以用<Leader>wn
 " {{{
-nnoremap  <Leader>wn  :%s///gn<CR>
-nnoremap  <Leader>wc  :%s///gn<CR>
+nnoremap  <Leader>wn  :%s/<C-r><C-w>//gn<CR>
+nnoremap  <Leader>wc  :%s/<C-r><C-w>//gn<CR>
 " }}}
 
 

@@ -322,3 +322,7 @@ Bundle "https://github.com/thaerkh/vim-workspace"
 Bundle "xolox/vim-misc"
 Bundle "xolox/vim-session"
 :let g:session_autosave = 'no'
+
+
+" 72 vimwiki
+"Bundle "vimwiki/vimwiki"
