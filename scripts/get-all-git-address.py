@@ -47,8 +47,12 @@ def print_submodule(short, real):
 def get_last_name(short):
     return short.split('/')[-1]
 
+# 必须在脚本所在的目录执行
 def main():
     f = open("./plugins.txt")
+
+    # 返回上级目录工作
+    os.chdir("..")
 
     for l in f:
         if l.startswith("#") or len(l) <= 1:       # 跳过注释
