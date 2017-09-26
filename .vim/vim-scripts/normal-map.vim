@@ -111,6 +111,8 @@ nnoremap  <Leader>eC  :e  $CRANE_DOT_VIM/vim-scripts/autocmd.vim<CR>
 nnoremap  <Leader>ee  :e  $CRANE_DOT_VIM/vim-scripts/example/vimrc_example.vim<CR>
 nnoremap  <Leader>eE  :e  $CRANE_DOT_VIM/vim-scripts/example/<CR>
 
+nnoremap  <Leader>eO  :e  $PLUGIN_SCRIPT/plugin-common.vim<CR>
+
 nnoremap  <Leader>ed  :e  $CRANE_DOT_VIM/doc/<CR>
 
 " 编辑good-idea-script.vim, 记录最新学习情况
@@ -886,7 +888,8 @@ nnoremap  <Leader>cf  :let @*=expand("%:p")<CR>
 
 "44 使当前编辑文件/脚本具有可执行权限
 "nnoremap  <Leader>ex  :call ChmodExec()<CR>
-nnoremap  <Leader>ex  :!chmod +x %<CR>
+" 第二个<CR>用于从shell返回, 最后:w 保存文件状态
+nnoremap  <Leader>ex  :!chmod +x %<CR><CR>:w<CR>
 
 " eo stand for "execute open"
 " 使用gnome-open 选择合适的程序, 打开当前文件.
@@ -913,6 +916,7 @@ nnoremap  gm  /\v(int)?\s+main\s*\(.*<CR>
 "nnoremap  <Leader>ar  a------><ESC>
 " 插入后, 直接进入插入模式, 不再返回normal mode
 nnoremap  <Leader>ar  a------>
+nnoremap  <Leader>ra  a<------
 
 
 " 47 set fileencoding=utf-8

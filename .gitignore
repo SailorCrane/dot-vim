@@ -1,3 +1,7 @@
+# vim: set ft=config  foldlevel=2: vim modeline( set )
+
 *.swp
-tags
-tags-*
+./vim/bundle/
+
+# vim-session插件保存session的目录
+.vim/sessions/

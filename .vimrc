@@ -11,12 +11,15 @@ let  $CRANE_VIM_HOME = '~'
 " 下面的赋值语句, 相当于一个字符串 加法
 " 一般情况下是 ~/.vim, 注意最后没有/结尾
 " 路径最后不要跟"/"
-let  $CRANE_DOT_VIM = $CRANE_VIM_HOME . "/.vim"
+let  $CRANE_DOT_VIM   = $CRANE_VIM_HOME . "/.vim"
 
-let  $VIEW          = $CRANE_DOT_VIM  . "/view"
-let  $SESSION       = $CRANE_DOT_VIM  . "/session"
-let  $TEMPLATE_CPP  = $CRANE_DOT_VIM  . "/templates/cpp"
+let  $VIEW            = $CRANE_DOT_VIM  . "/view"
+let  $SESSION         = $CRANE_DOT_VIM  . "/session"
+
+let  $TEMPLATE_CPP    = $CRANE_DOT_VIM  . "/templates/cpp"
 let  $TEMPLATE_PYTHON = $CRANE_DOT_VIM  . "/templates/python"
+
+let  $PLUGIN_SCRIPT   = $CRANE_DOT_VIM  . "/vim-scripts/plugin-vim"
 
 " ====================================================================
 

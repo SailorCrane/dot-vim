@@ -320,3 +320,7 @@ let g:instant_markdown_autostart = 0        " 只有在markdown文档中, 并且
                                             " 才会有InstantMarkdownPreview
                                             " 命令可以使用
 
+" 71
+Bundle "xolox/vim-misc"
+Bundle "xolox/vim-session"
+
