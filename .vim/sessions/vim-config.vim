@@ -1,6 +1,6 @@
-" /mySaved/dot-vim/.vim/sessions/vim.vim:
+" /mySaved/dot-vim/.vim/sessions/vim-config.vim:
 " Vim session script.
-" Created by session.vim 2.13.1 on 27 September 2017 at 09:40:00.
+" Created by session.vim 2.13.1 on 27 September 2017 at 09:57:46.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=aegimrLtT
@@ -26,9 +26,10 @@ endif
 set shortmess=aoO
 badd +1 .vim/vim-scripts/normal-map.vim
 badd +1 ~/.vimrc
-badd +0 .vim/vim-scripts/myBundle.vim
-badd +4 .vim/vim-scripts/plugin-vim/plugin-python.vim
+badd +1 .vim/vim-scripts/myBundle.vim
+badd +1 .vim/vim-scripts/plugin-vim/plugin-python.vim
 badd +1 .vim/vim-scripts/python.vim
+badd +0 .gitmodules
 argglobal
 silent! argdel *
 set stal=2
@@ -42,8 +43,8 @@ set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
-exe 'vert 1resize ' . ((&columns * 102 + 102) / 205)
-exe 'vert 2resize ' . ((&columns * 102 + 102) / 205)
+exe 'vert 1resize ' . ((&columns * 83 + 84) / 168)
+exe 'vert 2resize ' . ((&columns * 84 + 84) / 168)
 argglobal
 setlocal fdm=marker
 setlocal fde=0
@@ -53,7 +54,7 @@ setlocal fdl=2
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 27) / 54)
+let s:l = 1 - ((0 * winheight(0) + 20) / 41)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -70,15 +71,37 @@ setlocal fdl=2
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 27) / 54)
+let s:l = 1 - ((0 * winheight(0) + 20) / 41)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 1
 normal! 0
 wincmd w
-exe 'vert 1resize ' . ((&columns * 102 + 102) / 205)
-exe 'vert 2resize ' . ((&columns * 102 + 102) / 205)
+exe 'vert 1resize ' . ((&columns * 83 + 84) / 168)
+exe 'vert 2resize ' . ((&columns * 84 + 84) / 168)
+tabedit .gitmodules
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let s:l = 290 - ((18 * winheight(0) + 20) / 41)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+290
+normal! 05|
 tabedit .vim/vim-scripts/myBundle.vim
 set splitbelow splitright
 set nosplitbelow
@@ -94,34 +117,13 @@ setlocal fdl=2
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 27) / 54)
+let s:l = 1 - ((0 * winheight(0) + 20) / 41)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 1
 normal! 0
-tabedit .vim/vim-scripts/plugin-vim/plugin-python.vim
-set splitbelow splitright
-set nosplitbelow
-set nosplitright
-wincmd t
-set winheight=1 winwidth=1
-argglobal
-setlocal fdm=marker
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=2
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 27) / 54)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-1
-normal! 0
-tabnext 3
+tabnext 2
 set stal=1
 if exists('s:wipebuf')
 "   silent exe 'bwipe ' . s:wipebuf
@@ -139,7 +141,7 @@ let &so = s:so_save | let &siso = s:siso_save
 " by :mksession out of the box).
 
 1wincmd w
-tabnext 3
+tabnext 2
 if exists('s:wipebuf')
   if empty(bufname(s:wipebuf))
 if !getbufvar(s:wipebuf, '&modified')

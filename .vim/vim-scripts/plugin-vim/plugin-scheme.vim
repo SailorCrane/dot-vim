@@ -20,3 +20,7 @@ Bundle "sickill/vim-monokai"
 
 "5: railscast
 Bundle "jpo/vim-railscasts-theme"
+
+
+"6: more colorscheme
+Bundle "rafi/awesome-vim-colorschemes"
