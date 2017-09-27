@@ -1,7 +1,7 @@
 " vim: set foldmethod=marker  foldlevel=2: vim modeline( set )
 
 "1: colors/molokai.vim
-Bundle  'tomasr/molokai'
+Bundle  'SailorCrane/molokai'
 let g:molokai_original = 1
 
 "2: altercation/vim-colors-solarized
