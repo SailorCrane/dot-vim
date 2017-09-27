@@ -297,5 +297,9 @@ Bundle "xolox/vim-session"
 :let g:session_autosave = 'no'
 
 
+" 72 vim-tmux-navigator
+Bundle "christoomey/vim-tmux-navigator"
+
+
 " 72 vimwiki
 "Bundle "vimwiki/vimwiki"
