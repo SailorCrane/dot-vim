@@ -2,7 +2,7 @@
 " GUI setting
 
 " 1
-colorscheme molokai
+colorscheme monokai
 
 
 " 2
