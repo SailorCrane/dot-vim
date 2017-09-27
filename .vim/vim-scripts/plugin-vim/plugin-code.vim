@@ -1,7 +1,7 @@
 " vim: set foldmethod=marker  foldlevel=2: vim modeline( set )
 
 "3: nerdcommenter in scrooloose
-Bundle 'scrooloose/nerdcommenter'
+Bundle "scrooloose/nerdcommenter.git"
 " {{{
 
 " <C-_> stand for <C-/>, 可以插入模式下使用: <C-v><C-/> 查看
@@ -12,7 +12,7 @@ Bundle 'scrooloose/nerdcommenter'
 
 
 "4: syntastic in scrooloose
-Bundle 'scrooloose/syntastic'
+Bundle "scrooloose/syntastic.git"
 " {{{
 " 为了使syntastic 和 YCM一起工作, 将他们的 error 和 warning
 " symbol设置为不同标志
@@ -40,11 +40,11 @@ let g:syntastic_cpp_check_header = 1
 
 
 "5: taglist in vim-scripts in github
-Bundle 'taglist.vim'
+Bundle "taglist.vim.git"
 
 
 "5-2 Tagbar in vim-scripts's repo
-Bundle "Tagbar"
+Bundle "Tagbar.git"
 " {{{
 " <leader>tt 被vim-scripts/Align使用了
 " 所以这里使用ti: tag invert, tt :tag toggle
@@ -57,7 +57,7 @@ let g:tagbar_left = 1
 
 
 "6: YouCompleteMe
-"Bundle 'Valloric/YouCompleteMe'
+"Bundle "Valloric/YouCompleteMe.git"
 " {{{
 " 自动补全配置
 set completeopt=longest,menu	"让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
@@ -110,17 +110,17 @@ nnoremap <leader>yd :YcmCompleter GoToDefinitionElseDeclaration<CR> " 跳转到�
 
 
 "8: echofunc
-Bundle 'mbbill/echofunc'
+Bundle "mbbill/echofunc.git"
 
 
 "12:  c-support用来支持c或者cpp的快捷键
-Bundle "WolfgangMehner/c-support"
+Bundle "WolfgangMehner/c-support.git"
 
 "12-1: 不知道怎么用, 先下载下来, 慢慢挖掘
-Bundle "c.vim"
+Bundle "c.vim.git"
 
 "12-2: a.vim :switch between header and source file
-Bundle "a.vim"
+Bundle "a.vim.git"
 " {{{
 "cnoreabbrev  a  A
 " i stand for  include
@@ -129,24 +129,24 @@ nnoremap <C-t>  :A<CR>:call ShowBufName()<CR>
 
 
 "14:  quick fix
-"Bundle "romainl/vim-qf"
+"Bundle "romainl/vim-qf.git"
 
 
 "48 commentary from toppe: operator
-Bundle  "https://github.com/tpope/vim-commentary"
+Bundle  "https://github.com/tpope/vim-commentary.git"
 
 
 " 63
-Bundle "thinca/vim-quickrun"
+Bundle "thinca/vim-quickrun.git"
 
 
 " 69 ultisnips +  vim-snippets
 "    ultisnips 是一个snippet引擎(类似于snipMate), vim-snippets是代码片段定义.
-Bundle "SirVer/ultisnips"
-Bundle "honza/vim-snippets"
+Bundle "SirVer/ultisnips.git"
+Bundle "honza/vim-snippets.git"
 
 
 " argwrap
-Bundle "FooSoft/vim-argwrap"
+Bundle "FooSoft/vim-argwrap.git"
 nnoremap  <Leader>aw  :ArgWrap<CR>
 inoremap  <Leader>aw  <ESC>:ArgWrap<CR>

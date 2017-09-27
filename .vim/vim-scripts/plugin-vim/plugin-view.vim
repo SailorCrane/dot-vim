@@ -3,7 +3,7 @@
 
 "2: NERDTree in scrooloose
 " {{{
-Bundle 'scrooloose/nerdtree'
+Bundle "scrooloose/nerdtree.git"
 let NERDChristmasTree=0
 let NERDTreeWinSize=35
 let NERDTreeChDirMode=2
@@ -22,7 +22,7 @@ nnoremap <leader>xn :NERDTreeToggle<cr>
 
 "7: WinManager
 "{{{
-Bundle  'winmanager'
+Bundle  "winmanager.git"
 "let g:winManagerWindowLayout = "TagList|FileExplorer"
 let g:winManagerWindowLayout = "TagList"
 
@@ -39,7 +39,7 @@ let g:AutoOpenWinManager = 1 "在进入vim时自动打开winmanager
 "11:  powerline
 " {{{
 "Powerline 字体github可下载: https://github.com/runsisi/consolas-font-for-powerline
-"Bundle "Lokaltog/vim-powerline"
+"Bundle "Lokaltog/vim-powerline.git"
 "set guifont=PowerlineSymbols\ for\ Powerline
 "set guifont=Powerline\ Consolas\ Bold
 "set laststatus=2
@@ -62,8 +62,8 @@ let g:AutoOpenWinManager = 1 "在进入vim时自动打开winmanager
 ""let g:airline_symbols.whitespace = 'Ξ'
 
 "11-2 air-line : 使用tabline, 必须设置laststatus=2
-Bundle "vim-airline/vim-airline"
-Bundle "vim-airline/vim-airline-themes"
+Bundle "vim-airline/vim-airline.git"
+Bundle "vim-airline/vim-airline-themes.git"
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
@@ -115,7 +115,7 @@ let g:airline_symbols.whitespace = 'Ξ'
 "13:  minibufexplorer
 "{{{
 " 因为在 打开quickfix窗口时, 老是崩溃, 所以禁止掉,以后使用bufexplorer
-"Bundle "fholgado/minibufexpl.vim"
+"Bundle "fholgado/minibufexpl.vim.git"
 "let g:miniBufExplMapCTabSwitchBufs = 1
 "let g:miniBufExplForceSyntaxEnable = 1
 "let g:miniBufExplModSelTarget      = 1      "不在不可编辑窗口中打开选中的文件buffer
@@ -125,7 +125,7 @@ let g:airline_symbols.whitespace = 'Ξ'
 
 
 "13-2 bufexplorer
-Bundle  "https://github.com/jlanzarotta/bufexplorer"
+Bundle  "https://github.com/jlanzarotta/bufexplorer.git"
 "{{{
 let g:bufExplorerSplitVertSize=30
 nnoremap <f3>       :ToggleBufExplorer<CR>:ToggleBufExplorer<CR>
@@ -135,7 +135,7 @@ nnoremap <leader>bb :BufExplorerVerticalSplit<CR>
 
 
 "15:  rainbow  parentheses
-Bundle 'kien/rainbow_parentheses.vim'
+Bundle "kien/rainbow_parentheses.vim.git"
 " {{{
 let g:rbpt_colorpairs = [
     \ ['brown',       'RoyalBlue3'],

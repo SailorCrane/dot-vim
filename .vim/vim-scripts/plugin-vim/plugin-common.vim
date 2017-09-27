@@ -3,7 +3,7 @@
 
 "9: Conque-Shell
 " {{{
-Bundle  'oplatek/Conque-Shell'
+Bundle  "oplatek/Conque-Shell.git"
 "nnoremap   <C-n>  :ConqueTermVSplit bash<CR>
 "nnoremap   <C-b>  :ConqueTermVSplit bash<CR>
 noremap  <leader>ba  :ConqueTermVSplit bash<CR>
@@ -11,26 +11,26 @@ noremap  <leader>ba  :ConqueTermVSplit bash<CR>
 
 
 "10: wakatime/vim-wakatime
-"Bundle 'wakatime/vim-wakatime'
+"Bundle "wakatime/vim-wakatime.git"
 
 
 "16: jiangmiao/auto-pairs.git
-Bundle  'jiangmiao/auto-pairs'
+Bundle  "jiangmiao/auto-pairs.git"
 let g:AutoPairShortcutToggle = '<C-p>'
 
 
 "17: mbbill/undotree
-Bundle 'mbbill/undotree'
+Bundle "mbbill/undotree.git"
 nnoremap <F2>  :UndotreeToggle<cr>
 
 
 "18: https://github.com/kien/ctrlp.vim
-Bundle 'https://github.com/kien/ctrlp.vim'
+Bundle "https://github.com/kien/ctrlp.vim.git"
 
 
 "19: easy-motion
 " {{{
-Bundle 'https://github.com/easymotion/vim-easymotion'
+Bundle "https://github.com/easymotion/vim-easymotion.git"
 let g:EasyMotion_smartcase = 1
 "let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
 map <Leader><leader>h <Plug>(easymotion-linebackward)
@@ -67,17 +67,17 @@ map <Leader><leader>. <Plug>(easymotion-repeat)
 " 一个很烂的插件,将我command
 " 模式下的<tab>映射为对buffer的补全,当我想补全命令时,总是刷新我的输入. Shit
 " 难道是因为我没有好好读读文档,所以不会使用?
-"Bundle 'https://github.com/SailorCrane/SearchComplete'
+"Bundle "https://github.com/SailorCrane/SearchComplete.git"
 "20-1 CmdlineComplete
-Bundle "CmdlineComplete"
+Bundle "CmdlineComplete.git"
 
 
 "21 ShowMarks 显示使用m所下的标记
-"Bundle "ShowMarks"
+"Bundle "ShowMarks.git"
 
 
 "22 vim-surround
-Bundle "tpope/vim-surround"
+Bundle "tpope/vim-surround.git"
 " cs"'
 " ds"
 " ysiw"
@@ -86,11 +86,11 @@ Bundle "tpope/vim-surround"
 "23 repeat ,和surround同一个作者,主要用于 重复执行surround的操作
 "  ysiW": 给W添加"
 "  yss" : 给一行添加"
-Bundle "tpope/vim-repeat"
+Bundle "tpope/vim-repeat.git"
 
 
 "25 vim-fugitive
-Bundle "tpope/vim-fugitive"
+Bundle "tpope/vim-fugitive.git"
 nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>gd :Gdiff<cr>
 nnoremap <leader>gc :Gcommit<cr>
@@ -101,42 +101,42 @@ nnoremap <leader>gw :Gwrite<cr>
 
 "26 matchit 注释这个插件, 因为vim已经自带了
 "只用在vimrc中添加 runtime macros/matchit.vim即可
-"Bundle "matchit.zip"
+"Bundle "matchit.zip.git"
 
 
 "27 EasyGrep
-Bundle "EasyGrep"
+Bundle "EasyGrep.git"
 
 
 "28 SnipMate
-"Bundle "garbas/vim-snipmate"
+"Bundle "garbas/vim-snipmate.git"
 " the tow plugins below is necessary for snipmate
-"Bundle "tomtom/tlib_vim"
-"Bundle "MarcWeber/vim-addon-mw-utils"
+"Bundle "tomtom/tlib_vim.git"
+"Bundle "MarcWeber/vim-addon-mw-utils.git"
 " snippets is  optional for snipmate
-"Bundle  "honza/vim-snippets"
+"Bundle  "honza/vim-snippets.git"
 
 
 "29 vimim
-"Bundle 'vimim/vimim'
+"Bundle "vimim/vimim.git"
 
 "30 Chiel92/vim-autoformat
-Bundle "Chiel92/vim-autoformat"
+Bundle "Chiel92/vim-autoformat.git"
 
 
 "31 Yankring,因为很多快捷键冲突,所以先将这个插件注释
-Bundle "YankRing.vim"
+Bundle "YankRing.vim.git"
 nnoremap  <leader>ys  :YRShow<cr>
 nnoremap  <leader>yc  :YRClear<cr>
 
 
 "32 color view
-Bundle "http://git.oschina.net/CraneAgain/xterm-color-table.vim"
+Bundle "http://git.oschina.net/CraneAgain/xterm-color-table.vim.git"
 
 
 "34 L9: vim library, vim script util.
 "暂时先不启用这个库,需要时再打开注释:<leader>ci toggle注释
-Bundle "L9"
+Bundle "L9.git"
 
 
 " no vundle#end
@@ -144,13 +144,13 @@ Bundle "L9"
 
 
 "35 multiple-cursor
-Bundle "https://github.com/terryma/vim-multiple-cursors"
+Bundle "https://github.com/terryma/vim-multiple-cursors.git"
 let g:multi_cursor_start_word_key='g<C-n>'     "选择单词"
 let g:multi_cursor_start_key='gi<C-n>'           "在单词中的,也被选择"
 
 
 "36 junegunn/vim-easy-align
-Bundle "junegunn/vim-easy-align"
+Bundle "junegunn/vim-easy-align.git"
 " 注意这里使用nore非递归映射是不起作用的,可能因为这里使用了<Plug>的原因,<Plug>不是vim底层的操作,所以映射之后也没有意义
 vmap <Leader>a <Plug>(EasyAlign)
 nmap <Leader>a <Plug>(EasyAlign)
@@ -162,100 +162,100 @@ let g:easy_align_delimiters['#'] = { 'pattern': '#', 'ignore_groups': ['String']
 
 
 "37 expand-region
-Bundle "https://github.com/terryma/vim-expand-region"
+Bundle "https://github.com/terryma/vim-expand-region.git"
 vmap v <Plug>(expand_region_expand)
 vmap V <Plug>(expand_region_shrink)
 
 
 "38 gundo stand for gnu undo
-Bundle "gundo"
+Bundle "gundo.git"
 
 
 "39 FuzzyFinder : need L9 library
-Bundle "FuzzyFinder"
+Bundle "FuzzyFinder.git"
 
 
 "40 ShowTrailingWhiteSpace
-Bundle 'ShowTrailingWhitespace'
+Bundle "ShowTrailingWhitespace.git"
 
 
 "41 godlygeek/tabular
-Bundle "godlygeek/tabular"
+Bundle "godlygeek/tabular.git"
 
 
 "42 FencView: fencview
-Bundle  'mbbill/fencview'
-"Bundle  'fencview'
+Bundle  "mbbill/fencview.git"
+"Bundle  "fencview.git"
 
 
 "43 ack.vim
-Bundle "ack.vim"
+Bundle "ack.vim.git"
 
 
 "44 mkdir, very simple
-Bundle  "https://github.com/pbrisbin/vim-mkdir"
+Bundle  "https://github.com/pbrisbin/vim-mkdir.git"
 
 
 "45 visual-star search
 " 这是vim-practical 作者的一款插件, 实现很简单
 " 在«vim-practical»技巧86中, 有这个技巧的实现, 并且书中还有一个关于/ 和?的bug
-Bundle "https://github.com/nelstrom/vim-visual-star-search"
+Bundle "https://github.com/nelstrom/vim-visual-star-search.git"
 
 
 "46 qargs
-Bundle "https://github.com/nelstrom/vim-qargs"
+Bundle "https://github.com/nelstrom/vim-qargs.git"
 
 
 "47 text-object-entire: file object
-Bundle "https://github.com/kana/vim-textobj-user"
-Bundle "https://github.com/kana/vim-textobj-entire"
+Bundle "https://github.com/kana/vim-textobj-user.git"
+Bundle "https://github.com/kana/vim-textobj-entire.git"
 
 
 "49 Mark
 " 因为'r 和 'n寄存器重复, 所以先注释掉这个插件
-"Bundle "Mark"
+"Bundle "Mark.git"
 
 
 "50 VOoM
-Bundle "VOoM"
+Bundle "VOoM.git"
 
 
 "51 calendar
-Bundle "https://github.com/itchyny/calendar.vim"
+Bundle "https://github.com/itchyny/calendar.vim.git"
 
 
 "52 visincr 提供增长数列功能
-Bundle "VisIncr"
+Bundle "VisIncr.git"
 
 
 "53 Align  vim-script 294
-Bundle "Align"
+Bundle "Align.git"
 
 
 "55 ReplaceWithRegister
-Bundle "ReplaceWithRegister"
+Bundle "ReplaceWithRegister.git"
 
 
 "56  vim-exchange :learned from vimcasts
-Bundle "tommcdo/vim-exchange"
+Bundle "tommcdo/vim-exchange.git"
 
 
 "57  vim-unimpaired : toggle twince, paste once
 " h paste
 " h pasteoggle
-Bundle  "tpope/vim-unimpaired"
+Bundle  "tpope/vim-unimpaired.git"
 
 
 "59  lastpat
 " vi/ 选择模式选中下一次匹配
 " 鸡肋, 因为vim的gn, gN 已经可以在选择模式中, 选中下一次匹配了
-"Bundle  "kana/vim-textobj-lastpat"
+"Bundle  "kana/vim-textobj-lastpat.git"
 
 
 "60 vim-abolish
 "使用:S 命令, 交换词
 ":S/{good, bad}/
-Bundle "tpope/vim-abolish"
+Bundle "tpope/vim-abolish.git"
 
 
 "61 emmet-vim
@@ -263,43 +263,43 @@ Bundle "tpope/vim-abolish"
 
 
 "62 indent-guide
-Bundle "nathanaelkane/vim-indent-guides"
+Bundle "nathanaelkane/vim-indent-guides.git"
 
 
 " 64 auto-fold: zf add marker, zd delete marker
 "" 比较烂, 自动添加marker 不太好. 而且有了这个插件, 每次写入文件, 就跳行...
-"Bundle "AutoFold.vim"
+"Bundle "AutoFold.vim.git"
 
 
 " 65 drawit: 使用vim draw文本图.
-Bundle 'hrj/vim-DrawIt'
+Bundle "hrj/vim-DrawIt.git"
 
 
 " 66 file-template
-Bundle 'aperezdc/vim-template'
+Bundle "aperezdc/vim-template.git"
 let g:templates_directory = $Crane_Dot_Vim . "/templates"
 
 " 67 Mark.vim 可以同时高亮多个词: 比如同时高亮好几个变量.
-"Bundle  'Tuxdude/mark.vim'
+"Bundle  "Tuxdude/mark.vim.git"
 
 
 " 68 速写 html/css/js(javascript) : 官方插件. ZenCoding renamed to Emmet.vim
-"Bundle  'ZenCoding.vim'
-Bundle  'Emmet.vim'
+"Bundle  "ZenCoding.vim.git"
+Bundle  "Emmet.vim.git"
 
 
 
 " 71 vim-session插件比vim-workspace好用很多
-Bundle "https://github.com/thaerkh/vim-workspace"
+Bundle "https://github.com/thaerkh/vim-workspace.git"
 
-Bundle "xolox/vim-misc"
-Bundle "xolox/vim-session"
+Bundle "xolox/vim-misc.git"
+Bundle "xolox/vim-session.git"
 :let g:session_autosave = 'no'
 
 
 " 72 vim-tmux-navigator
-Bundle "christoomey/vim-tmux-navigator"
+Bundle "christoomey/vim-tmux-navigator.git"
 
 
 " 72 vimwiki
-"Bundle "vimwiki/vimwiki"
+"Bundle "vimwiki/vimwiki.git"
