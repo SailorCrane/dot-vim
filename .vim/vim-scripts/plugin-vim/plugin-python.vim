@@ -13,3 +13,5 @@ Bundle  "hdima/python-syntax"
 Bundle  "davidhalter/jedi-vim"
 
 Bundle "python-rope/ropevim"
+
+Bundle "python-mode/python-mode.git"
