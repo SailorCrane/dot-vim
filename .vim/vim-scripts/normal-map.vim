@@ -113,6 +113,7 @@ nnoremap  <Leader>eE  :e  $Vim_Scripts/example/<CR>
 
 nnoremap  <Leader>eO  :e  $Plugin_Script/plugin-common.vim<CR>
 nnoremap  <Leader>eP  :e  $Plugin_Script/plugin-python.vim<CR>
+nnoremap  <Leader>eS  :e  $Plugin_Script/plugin-scheme.vim<CR>
 
 nnoremap  <Leader>ed  :e  $Crane_Dot_Vim/doc/<CR>
 

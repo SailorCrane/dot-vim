@@ -280,3 +280,8 @@
     url = https://github.com/tpope/vim-markdown
 
 
+[submodule ".vim/bundle/vim-railscasts-theme"]
+    path = .vim/bundle/vim-railscasts-theme
+    url = https://github.com/jpo/vim-railscasts-theme
+
+
