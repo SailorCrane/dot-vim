@@ -295,6 +295,7 @@ Bundle "https://github.com/thaerkh/vim-workspace.git"
 Bundle "xolox/vim-misc.git"
 Bundle "xolox/vim-session.git"
 :let g:session_autosave = 'no'
+:let g:session_autoload = 'no'
 
 
 " 72 vim-tmux-navigator
