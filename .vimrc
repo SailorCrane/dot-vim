@@ -234,7 +234,8 @@ set grepprg=grep\ -E\ -n\ $*\ /dev/null  " add -E to default setting
 "100  vim colorscheme, gvim colorscheme in ~/.gvimrc
 "colorscheme  slate
 "colorscheme  marklar   "from Colour-Sampler-Pack
-colorscheme  molokai
+"colorscheme  molokai
+colorscheme  monokai
 
 hi SpecialKey gui=bold term=NONE  guibg=bg guifg=green
 

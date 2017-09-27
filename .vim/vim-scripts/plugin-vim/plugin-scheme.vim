@@ -15,7 +15,8 @@ set background=dark
 
 
 "4: monokai
-Bundle "sickill/vim-monokai"
+"Bundle "sickill/vim-monokai"
+Bundle "SailorCrane/vim-monokai"
 
 
 "5: railscast
