@@ -187,9 +187,11 @@ set list
 "set listchars=tab:▸-,eol:¬,trail:-
 "set listchars=tab:>-,eol:ሴ
 set listchars=tab:\|\        " show tab in python/Makefile file
+"set listchars=tab:\█\        " full height vertical bar
+"set listchars=tab:\¦\        " break vertical var
 " Invisible character colors
-highlight NonText    guifg=#4a4a59
-highlight SpecialKey guifg=#4a4a59
+"highlight NonText    guifg=#4a4a59
+"highlight SpecialKey guifg=#4a4a59
 
 " 23-2 :special  symbol
 " Symbol	Unicode	Name
