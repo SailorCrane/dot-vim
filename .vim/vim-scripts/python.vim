@@ -5,18 +5,13 @@
 " 是触发 Filetype时被 autocmd.vim 中source的
 " 只会触发一次: 所以此脚本中不可再 使用autocmd命令:否则不生效
 
+" 0: tab setting ========================================
+source  $Vim_Scripts/python-tab.vim
+
 
 " 1: setting ========================================
-"setlocal foldmethod=indent   " python use indent to fold
-"setlocal foldlevel=99
-
-" coporation setting1
-"setlocal noexpandtab
-"setlocal tabstop=8 shiftwidth=8  softtabstop=8
-
-" coporation setting1
-"setlocal expandtab
-"setlocal tabstop=4 shiftwidth=4  softtabstop=4
+setlocal foldmethod=indent   " python use indent to fold
+setlocal foldlevel=99
 
 
 " 2: map jump ========================================
