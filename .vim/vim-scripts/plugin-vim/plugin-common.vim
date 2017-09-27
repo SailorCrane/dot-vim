@@ -99,6 +99,9 @@ nnoremap <leader>gl :Glog<cr>
 nnoremap <leader>gp :Git push<cr>
 nnoremap <leader>gw :Gwrite<cr>
 
+Bundle "jisaacks/GitGutter.git"
+
+
 "26 matchit 注释这个插件, 因为vim已经自带了
 "只用在vimrc中添加 runtime macros/matchit.vim即可
 "Bundle "matchit.zip.git"
