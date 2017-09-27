@@ -186,7 +186,7 @@ endif
 set list
 "set listchars=tab:▸-,eol:¬,trail:-
 "set listchars=tab:>-,eol:ሴ
-set listchars=tab:>-        " show tab in python/Makefile file
+set listchars=tab:\|\        " show tab in python/Makefile file
 " Invisible character colors
 highlight NonText    guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
@@ -234,10 +234,9 @@ set grepprg=grep\ -E\ -n\ $*\ /dev/null  " add -E to default setting
 "colorscheme  marklar   "from Colour-Sampler-Pack
 colorscheme  molokai
 
+hi SpecialKey gui=bold term=NONE  guibg=bg guifg=green
 
 syntax on
-
-
 
 
 "101 这是一个对于系统export环境变量的测试, 在$tmpPath中放入了var.vim
