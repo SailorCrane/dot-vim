@@ -304,3 +304,7 @@
 [submodule ".vim/bundle/python-mode"]
     path = .vim/bundle/python-mode
     url = https://github.com/python-mode/python-mode.git
+
+[submodule ".vim/bundle/vim-sort-motion"]
+    path = .vim/bundle/vim-sort-motion
+    url = https://github.com/christoomey/vim-sort-motion

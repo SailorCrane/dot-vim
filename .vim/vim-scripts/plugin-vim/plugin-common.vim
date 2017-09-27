@@ -304,3 +304,7 @@ Bundle "christoomey/vim-tmux-navigator.git"
 
 " 72 vimwiki
 "Bundle "vimwiki/vimwiki.git"
+
+
+" sort motion
+Bundle "christoomey/vim-sort-motion.git"
