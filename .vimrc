@@ -92,6 +92,13 @@ let mapleader   = ","       "
 let g:mapleader = ","       " global <Leader>
 
 
+"20 enable :Man, 这样就可以使用命令:Man 在vim中查看Man文档
+" 也可以使用<Leader>K 去查看光标下的关键字: 通过Man
+" 但是我已经在normal-map.vim做了映射,如果exists(":Man"), K 就映射到<Leader>K
+runtime   ftplugin/man.vim      " 放在 source command-map.vim之前, 因为其中用了'Man'命令
+runtime   macros/matchit.vim    "激活vim自带的matchit.vim, 这样就不用这个matchit.vim插件了
+
+
 "12 module scripts: 将source移动到最后,这样当所有先前条件准备好之后,再去source
 " 比如上面的 runtime  ftplugin/man.vim
 " 而normal-map 中有一个根据这个,对于<s-k>,即K的映射
@@ -156,13 +163,6 @@ set wildmode=full       "最终发现, 还是习惯zsh这种full 风格 + wildme
 
 "set wildmode=longest,list
 "bash style complete, 这种情况下,就不再需要wildmenu了: 先试一段时间bash风格补全,不习惯再换回full (zsh) 风格
-
-
-"20 enable :Man, 这样就可以使用命令:Man 在vim中查看Man文档
-" 也可以使用<Leader>K 去查看光标下的关键字: 通过Man
-" 但是我已经在normal-map.vim做了映射,如果exists(":Man"), K 就映射到<Leader>K
-runtime   ftplugin/man.vim
-runtime   macros/matchit.vim    "激活vim自带的matchit.vim, 这样就不用这个matchit.vim插件了
 
 
 "21

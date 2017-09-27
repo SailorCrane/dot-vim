@@ -172,11 +172,19 @@ cnoreabbrev  fd         set  fdm?
 "   search world
 "   search now  : "%" stand for current file
 "   search Python
-cnoreabbrev   sr  grep  "" . -R --exclude=tags --exclude="*.pyc"  --exclude="*.swp" --exclude-dir=".svn" --exclude-dir=".git"<C-b><Right><Right><Right><Right><Right><Right><Right>
-cnoreabbrev   sw  grep  <C-r><C-w> . -R --exclude=tags --exclude-dir=".svn" <C-b><Right><Right><Right><Right><Right>
-cnoreabbrev   sn  grep  ""    % <C-b><Right><Right><Right><Right><Right><Right><Right>
-cnoreabbrev   sp  grep  ""    --include="*.py" -R . <C-b><Right><Right><Right><Right><Right><Right><Right>
-cnoreabbrev   sc  grep  ""    --include="*.c"  --include="*.cpp" -R . <C-b><Right><Right><Right><Right><Right><Right><Right>
+"cnoreabbrev   sr  grep  "" . -R --exclude=tags --exclude="*.pyc"  --exclude="*.swp" --exclude-dir=".svn" --exclude-dir=".git"<C-b><Right><Right><Right><Right><Right><Right><Right>
+"cnoreabbrev   sw  grep  <C-r><C-w> . -R --exclude=tags --exclude-dir=".svn" <C-b><Right><Right><Right><Right><Right>
+"cnoreabbrev   sn  grep  ""    % <C-b><Right><Right><Right><Right><Right><Right><Right>
+"cnoreabbrev   sp  grep  ""    --include="*.py" -R . <C-b><Right><Right><Right><Right><Right><Right><Right>
+"cnoreabbrev   sc  grep  ""    --include="*.c"  --include="*.cpp" -R . <C-b><Right><Right><Right><Right><Right><Right><Right>
+
+
+" ack auto recursive and auto exclude ".git", ".svn", about tabs?
+cnoreabbrev sr  Ack  ""                      <C-b><Right><Right><Right><Right><Right><Right><Right>
+cnoreabbrev sw  Ack  "<C-r><C-w>"            <CR>
+cnoreabbrev sn  Ack  ""    %                 <C-b><Right><Right><Right><Right><Right><Right><Right>
+cnoreabbrev sp  Ack  ""   -f --type=python   <C-b><Right><Right><Right><Right><Right><Right><Right>
+cnoreabbrev sc  Ack  ""    --include="*.c"  --include="*.cpp"  <C-b><Right><Right><Right><Right><Right><Right><Right>
 
 
 " 19 <C-a> to line begin
