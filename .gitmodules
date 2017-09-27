@@ -296,4 +296,8 @@
     path = .vim/bundle/awesome-vim-colorschemes
     url = https://github.com/rafi/awesome-vim-colorschemes
 
+[submodule ".vim/bundle/vim-argwrap"]
+    path = .vim/bundle/vim-argwrap
+    url = https://github.com/FooSoft/vim-argwrap
+
 

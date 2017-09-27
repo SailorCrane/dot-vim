@@ -144,3 +144,9 @@ Bundle "thinca/vim-quickrun"
 "    ultisnips 是一个snippet引擎(类似于snipMate), vim-snippets是代码片段定义.
 Bundle "SirVer/ultisnips"
 Bundle "honza/vim-snippets"
+
+
+" argwrap
+Bundle "FooSoft/vim-argwrap"
+nnoremap  <Leader>aw  :ArgWrap<CR>
+inoremap  <Leader>aw  <ESC>:ArgWrap<CR>
