@@ -168,7 +168,7 @@ nnoremap  <Leader>ww :update<CR>
 " <C-r><C-w> to get  cursor word
 " <C-s> stand for "search"
 " exclude tags(ctags) and .svn/*
-nnoremap  <C-s>       :grep <C-r><C-w> . -R --exclude=tags --exclude-dir=".svn" <CR>
+nnoremap  <C-s>       :Ack  <C-r><C-w> <CR>
 " }}}
 
 
