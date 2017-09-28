@@ -14,7 +14,7 @@ do
     then
         cd  $dir
 
-        if [ -f .git ]  # 这里有可能.git是一个文件, 不是一个目录(submodule)
+        if [ -e .git ]  # 这里有可能.git是一个文件, 不是一个目录(submodule)
         then
             if git log | grep -E -e  "(21537991|crane)"  -i  >>/dev/null
 
