@@ -308,3 +308,7 @@
 [submodule ".vim/bundle/vim-sort-motion"]
     path = .vim/bundle/vim-sort-motion
     url = https://github.com/christoomey/vim-sort-motion
+
+[submodule ".vim/bundle/GitGutter"]
+    path = .vim/bundle/GitGutter
+    url = https://github.com/jisaacks/GitGutter.git
