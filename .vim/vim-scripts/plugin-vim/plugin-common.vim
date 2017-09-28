@@ -117,6 +117,11 @@ Bundle "EasyGrep.git"
 Bundle "tomtom/tlib_vim.git"
 
 
+"34 L9: vim library, vim script util.(和tlib一样)
+"暂时先不启用这个库,需要时再打开注释:<leader>ci toggle注释
+Bundle "L9.git"
+
+
 "28 SnipMate
 "Bundle "garbas/vim-snipmate.git"
 " the tow plugins below is necessary for snipmate
@@ -140,11 +145,6 @@ nnoremap  <leader>yc  :YRClear<cr>
 
 "32 color view
 Bundle "http://git.oschina.net/CraneAgain/xterm-color-table.vim.git"
-
-
-"34 L9: vim library, vim script util.
-"暂时先不启用这个库,需要时再打开注释:<leader>ci toggle注释
-Bundle "L9.git"
 
 
 " no vundle#end
@@ -182,6 +182,10 @@ Bundle "godlygeek/tabular.git"
 Bundle "https://github.com/terryma/vim-expand-region.git"
 vmap v <Plug>(expand_region_expand)
 vmap V <Plug>(expand_region_shrink)
+
+
+" extend target
+Bundle "wellle/targets.vim"
 
 
 "38 gundo stand for gnu undo
@@ -317,3 +321,7 @@ Bundle "christoomey/vim-tmux-navigator.git"
 
 " sort motion
 Bundle "christoomey/vim-sort-motion.git"
+
+
+" project
+Bundle "tpope/vim-projectionist"

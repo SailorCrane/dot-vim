@@ -322,3 +322,11 @@
 [submodule ".vim/bundle/vim-thematic"]
     path = .vim/bundle/vim-thematic
     url = https://github.com/reedes/vim-thematic
+
+[submodule ".vim/bundle/targets.vim"]
+    path = .vim/bundle/targets.vim
+    url = https://github.com/wellle/targets.vim
+
+[submodule ".vim/bundle/vim-projectionist"]
+    path = .vim/bundle/vim-projectionist
+    url = https://github.com/tpope/vim-projectionist
