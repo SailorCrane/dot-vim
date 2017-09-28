@@ -1,0 +1,11 @@
+m-b-mru-buffer.txt
+
+:Author: crane
+:Email: crane@crane-pc
+:Date: 2017-09-28 18:09
+
+
+mru.vim 插件打开MRU
+buffer explorer 打开buffers
+
+ctrlp 搜索mru 和 buffers
