@@ -248,9 +248,15 @@
 [submodule ".vim/bundle/vim-airline-themes"]
 	path = .vim/bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
+
 [submodule ".vim/bundle/vim-fugitive"]
 	path = .vim/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+
+[submodule ".vim/bundle/vim-gitgutter"]
+	path = .vim/bundle/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
+
 [submodule ".vim/bundle/vimim"]
 	path = .vim/bundle/vimim
 	url = https://github.com/vimim/vimim.git
@@ -309,6 +315,3 @@
     path = .vim/bundle/vim-sort-motion
     url = https://github.com/christoomey/vim-sort-motion
 
-[submodule ".vim/bundle/GitGutter"]
-    path = .vim/bundle/GitGutter
-    url = https://github.com/jisaacks/GitGutter.git

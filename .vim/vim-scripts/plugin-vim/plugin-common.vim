@@ -99,7 +99,7 @@ nnoremap <leader>gl :Glog<cr>
 nnoremap <leader>gp :Git push<cr>
 nnoremap <leader>gw :Gwrite<cr>
 
-Bundle "jisaacks/GitGutter.git"
+Bundle "airblade/vim-gitgutter"
 
 
 "26 matchit 注释这个插件, 因为vim已经自带了
