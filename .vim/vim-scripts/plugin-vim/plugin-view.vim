@@ -79,7 +79,10 @@ nnoremap <leader>oB :togglebufexplorer<cr>
 Bundle "vim-scripts/mru.vim"
 nnoremap  <Leader>om   :MRU<CR>
 nnoremap  <Leader>ov   :MRU vim<CR>
-nnoremap  <Leader>op   :MRU python<CR>
+nnoremap  <Leader>op   :MRU py<CR>
+nnoremap  <Leader>os   :MRU sh<CR>
+" 因为是根据文件匹配, 所以用py, 不用python
+"nnoremap  <Leader>op   :MRU python<CR>
 
 
 "17: undotree
