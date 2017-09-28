@@ -32,7 +32,8 @@ let NERDTreeWinPos="left"
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&
 " b:NERDTreeType == "primary") | q | endif
 " " Open a NERDTree
-nnoremap <leader>on :NERDTreeToggle<cr>
+"nnoremap <leader>on :NERDTreeToggle<cr>
+nnoremap <leader>on :NERDTreeFind<cr>
 " }}}
 
 

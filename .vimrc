@@ -239,6 +239,11 @@ colorscheme  monokai
 
 hi SpecialKey gui=bold term=NONE  guibg=bg guifg=green
 
+
+" tabpage name
+set guitablabel=%N/\ %t\ %M
+
+
 syntax on
 
 
