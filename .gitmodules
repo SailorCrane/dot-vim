@@ -318,3 +318,7 @@
 [submodule ".vim/bundle/mru.vim"]
     path = .vim/bundle/mru.vim
     url = https://github.com/vim-scripts/mru.vim
+
+[submodule ".vim/bundle/vim-thematic"]
+    path = .vim/bundle/vim-thematic
+    url = https://github.com/reedes/vim-thematic
