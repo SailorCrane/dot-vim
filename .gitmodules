@@ -315,3 +315,6 @@
     path = .vim/bundle/vim-sort-motion
     url = https://github.com/christoomey/vim-sort-motion
 
+[submodule ".vim/bundle/mru.vim"]
+    path = .vim/bundle/mru.vim
+    url = https://github.com/vim-scripts/mru.vim

@@ -54,7 +54,16 @@ let g:tagbar_left = 1
 " }}}
 
 
-"4:  minibufexplorer
+"4-1 bufexplorer
+Bundle  "https://github.com/jlanzarotta/bufexplorer.git"
+"{{{
+let g:bufExplorerSplitVertSize=30
+nnoremap <leader>ob :BufExplorerVerticalSplit<CR>
+nnoremap <leader>oB :togglebufexplorer<cr>
+"}}}
+
+
+"4-2:  minibufexplorer
 "{{{
 " 因为在 打开quickfix窗口时, 老是崩溃, 所以禁止掉,以后使用bufexplorer
 "Bundle "fholgado/minibufexpl.vim.git"
@@ -66,13 +75,9 @@ let g:tagbar_left = 1
 "}}}
 
 
-"4-2 bufexplorer
-Bundle  "https://github.com/jlanzarotta/bufexplorer.git"
-"{{{
-let g:bufExplorerSplitVertSize=30
-nnoremap <leader>ob :BufExplorerVerticalSplit<CR>
-nnoremap <leader>oB :togglebufexplorer<cr>
-"}}}
+"5 mru files
+Bundle "vim-scripts/mru.vim"
+nnoremap  <Leader>om   :MRU<CR>
 
 
 "17: undotree
