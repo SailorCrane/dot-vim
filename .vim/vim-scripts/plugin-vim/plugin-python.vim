@@ -14,4 +14,5 @@ Bundle  "davidhalter/jedi-vim.git"
 
 Bundle "python-rope/ropevim.git"
 
-Bundle "python-mode/python-mode.git"
+" 暂不启用
+"Bundle "python-mode/python-mode.git"

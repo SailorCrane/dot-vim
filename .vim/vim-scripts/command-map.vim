@@ -180,11 +180,13 @@ cnoreabbrev  fd         set  fdm?
 
 
 " ack auto recursive and auto exclude ".git", ".svn", about tabs?
-cnoreabbrev sr  Ack  ""                      <C-b><Right><Right><Right><Right><Right><Right><Right>
-cnoreabbrev sw  Ack  "<C-r><C-w>"            <CR>
-cnoreabbrev sn  Ack  ""    %                 <C-b><Right><Right><Right><Right><Right><Right><Right>
-cnoreabbrev sp  Ack  ""   -f --type=python   <C-b><Right><Right><Right><Right><Right><Right><Right>
-cnoreabbrev sc  Ack  ""    --include="*.c"  --include="*.cpp"  <C-b><Right><Right><Right><Right><Right><Right><Right>
+" --python same as --type=python
+cnoreabbrev sr  Ack  ""                <C-b><Right><Right><Right><Right><Right><Right>
+cnoreabbrev sw  Ack  "<C-r><C-w>"      <CR>
+cnoreabbrev sn  Ack  ""    %           <C-b><Right><Right><Right><Right><Right><Right>
+
+cnoreabbrev sp  Ack  ""    --python    <C-b><Right><Right><Right><Right><Right><Right>
+cnoreabbrev sc  Ack  ""    --cpp       <C-b><Right><Right><Right><Right><Right><Right>
 
 
 " 19 <C-a> to line begin
