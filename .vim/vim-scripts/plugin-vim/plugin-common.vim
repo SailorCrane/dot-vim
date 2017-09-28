@@ -112,10 +112,13 @@ Bundle "airblade/vim-gitgutter"
 Bundle "EasyGrep.git"
 
 
+" tlib: vim util fun
+"Bundle "tomtom/tlib_vim.git"
+
+
 "28 SnipMate
 "Bundle "garbas/vim-snipmate.git"
 " the tow plugins below is necessary for snipmate
-"Bundle "tomtom/tlib_vim.git"
 "Bundle "MarcWeber/vim-addon-mw-utils.git"
 " snippets is  optional for snipmate
 "Bundle  "honza/vim-snippets.git"
