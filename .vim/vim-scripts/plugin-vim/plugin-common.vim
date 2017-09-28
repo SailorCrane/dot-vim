@@ -17,6 +17,7 @@ noremap  <leader>ba  :ConqueTermVSplit bash<CR>
 "16: jiangmiao/auto-pairs.git
 Bundle  "jiangmiao/auto-pairs.git"
 let g:AutoPairShortcutToggle = '<C-p>'
+let g:AutoPairsMapCh = 0    " 不要将<c-h> 映射为<Backspace>删除键
 
 
 "17: mbbill/undotree
