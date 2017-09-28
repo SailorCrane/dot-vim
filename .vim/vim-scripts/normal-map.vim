@@ -833,51 +833,12 @@ nnoremap  <silent>  <C-F5>  :if  &guioptions =~#  'T' <Bar>
 " }}}
 
 
-" 40 加载最常用的"四格"布局
-" session 的加载需要启动时 vim -S, 或者启动后source session.vim
-" sl 是sesson load的意思, 当然s也可以理解为source
-" 这样<Leader>sl 和 <Leader>sv 都对应起来了
-" 注意1: 因为load session之后, pwd就变为了session中保存的目录, 所以要用cd -
-"        切换为原来的目录
-"        但是这样就修改了所有的pwd, 原来lcd自己维护的目录也被覆盖了
-" 注意2: four-square.vim是用mksession保存的, 所以之前的映射都保存在里面
-"        如果更新了映射, 加载four-square.vim还是会用老版本的映射
-" 注意3: 原先4个窗格, mksession保存后, 在空文件中加载session, 只剩下3个窗格.
-"        但是如果vim中有文件, 加载session后, 依旧是4个窗格
-" 注意4: 在注意3基础上, 如果保存5个窗格, 左3, 右4
-"        那么空白buff加载后, 依旧是4个窗格
-" 注意5: 根据注意2, 添加了mksession!, 重新mksession! 保存
-"        但是注意加!, 覆盖保存
-
-" {{{
-
-" 因为有可能给启动后, 就先加载布局, 这时候还没有 - OLD dir,这时候可能会出错
-" 所以先<C-w>=将所有窗口同等大小, 再cd -
-" 否则如果cd - 出错, <C-w>=就执行不了了
-nnoremap  <Leader>sl  :source     $SESSION/four-square.vim<CR><C-w>=:cd -<CR>
-"nnoremap  <Leader>ms  :mksession! $SESSION/four-square.vim<CR>
-nnoremap  <Leader>ms  :call Mk_four_square()<CR>
-
-" 注意6: 既然用session保存这么麻烦, 还不如直接调用命令手动创建4个窗格呢
-"nnoremap  <Leader>sl  :vsplit<CR>
-" }}}
-
-
 "41 这样'可以定位到具体column
 " {{{
 nnoremap  '  `
 nnoremap  `  '
 nnoremap <C-6> <C-6>`"
 nnoremap <C-g> 2<C-g>
-" }}}
-
-
-"42  insert "{{{" and  "}}}" for fold marker
-" 但是这样就占用了两个mark 的标记
-" 回头要好好想想这里
-" {{{
-"nnoremap  ms  a{{{<ESC>
-"nnoremap  me  a}}}<ESC>
 " }}}
 
 
