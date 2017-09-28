@@ -90,7 +90,8 @@ Bundle "tpope/vim-surround.git"
 Bundle "tpope/vim-repeat.git"
 
 
-"25 vim-fugitive
+"25 git and vertion control about
+" {{{
 Bundle "tpope/vim-fugitive.git"
 nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>gd :Gdiff<cr>
@@ -101,6 +102,10 @@ nnoremap <leader>gp :Git push<cr>
 nnoremap <leader>gw :Gwrite<cr>
 
 Bundle "airblade/vim-gitgutter"
+
+"Bundle "mhinz/vim-signify"
+" this support git/vcs..., no use now
+" }}}
 
 
 "26 matchit 注释这个插件, 因为vim已经自带了
