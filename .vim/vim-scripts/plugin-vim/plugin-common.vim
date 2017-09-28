@@ -113,6 +113,7 @@ Bundle "EasyGrep.git"
 
 
 " tlib: vim util fun
+" snipmate also need
 "Bundle "tomtom/tlib_vim.git"
 
 

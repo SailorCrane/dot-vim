@@ -78,6 +78,8 @@ nnoremap <leader>oB :togglebufexplorer<cr>
 "5 mru files
 Bundle "vim-scripts/mru.vim"
 nnoremap  <Leader>om   :MRU<CR>
+nnoremap  <Leader>ov   :MRU vim<CR>
+nnoremap  <Leader>op   :MRU python<CR>
 
 
 "17: undotree
