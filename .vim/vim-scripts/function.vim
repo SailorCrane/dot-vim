@@ -1,3 +1,4 @@
+" vim: set fdm=marker fdl=2: vim modeline( set )
 
 " 1: ================= edit Makefile / CMakeList.txt=======================
 " 因为已经使用了模板文件, 所以这个MakeInput函数已经没用了.
@@ -9,7 +10,7 @@
 
 " 1-1
 fun! EditMakefile()
-
+"{{{
     " 为什么使用$类型变量的解释:
     " 只有$变量, 才可以和vim 命令一起使用,并作为vim命令的对象
     " 普通变量, 不可以和vim命令一起使用
@@ -36,10 +37,10 @@ fun! EditMakefile()
 
     " 生成Makefile之后, 会自动添加一行新内容
     "call MakeInput()
+"}}}
 endfun
 
 
-" 1-2
 " 编辑CMakeLists.txt
 fun! EditCMakeLists()
     let $CMake = './CMakeLists.txt'
@@ -47,17 +48,10 @@ fun! EditCMakeLists()
 endfun
 
 
-" 2: =================chmod +x for currentfile =======================
-" nnoremap  :<Leader>ex   :!chmod  +x  %<CR>
-"fun! ChmodExec()
-    ""let $currentFile = expand("%:p")
-    "!chmod +x %
-"endfun
-
-
 " 3: =================open file=======================
 " used in <Leader>eo, to open current file
 fun! OpenFile()
+"{{{
     let $fileType = &filetype    " set filetype?, &filtype是set 变量类型
     "echo  $fileType
     if  $fileType == 'markdown'
@@ -65,6 +59,7 @@ fun! OpenFile()
     else
         !gnome-open %       " 函数可以执行:命令, 所以也可以加!执行外部命令
     endif
+"}}}
 endfun
 
 
@@ -79,6 +74,7 @@ command!  ShowBufName  call ShowBufName()
 
 " 5: =================最大化当前窗口, 并显示文件名====================
 fun! MaxCurrentWindow()
+"{{{
     "resize 和 vertical resize命令如果不加尺寸参数, 参数就是widest 和
     "h :Ctrl-w__
     "h :Ctrl-w_|
@@ -93,30 +89,65 @@ fun! MaxCurrentWindow()
     resize          " equal <C-w>_, set windows to hightest
     vertical resize " equal to <C-w>|
     call ShowBufName()
+"}}}
 endfun
 
 
-" 6: =================保存sessionoption的值====================
-fun!  Ssop_backup()
-    let g:ssop_back = &sessionoptions
+" 6 toggle isk hypen
+" 'isk' stand for 'iskeyword'
+" &用于获取vim 'option' 变量
+fun! Toggole_isk_hypen()
+"{{{
+py3 <<EOF
+import  vim
+
+def toggle_isk(delimit, add_target):
+    isk = vim.eval("&isk")
+
+    keys = isk.split(delimit)
+
+    # toggle
+    if add_target not in keys:
+        keys.append(add_target)
+    else:
+        keys.remove(add_target)
+
+    new_isk = delimit.join(keys)
+    vim.command("set  isk=%s" % new_isk)
+    print("old isk: %s" % isk)
+    print("new isk: %s" % new_isk)
+
+delimit = ","
+hypen   = "-"
+toggle_isk(",", "-")
+
+EOF
+"}}}
 endfun
 
-" 恢复sessionoption的值
-fun!  SSop_restore()
-    let &sessionoptions = g:ssop_back
-endfun
+fun! Toggole_isk_dot()
+"{{{
+py3 <<EOF
+import  vim
 
-" 创建仅包含空窗口布局的session
-fun!  Mk_four_square()
-    " 保存ssop选项
-    call Ssop_backup()
+def toggle_isk(delimit, add_target):
+    isk = vim.eval("&isk")
 
-    " ssop 只保存blank窗口
-    " 这样可以不保存其它映射, 文件内容等信息
-    " 这里文件名是four-square.vim, 后期可能会搞成函数参数
-    set        sessionoptions=blank
-    mksession! $SESSION/four-square.vim
+    keys = isk.split(delimit)
 
-    " 恢复原先ssop选项的值
-    call SSop_restore()
+    # toggle
+    if add_target not in keys:
+        keys.append(add_target)
+    else:
+        keys.remove(add_target)
+
+    new_isk = delimit.join(keys)
+    vim.command("set  isk=%s" % new_isk)
+    print("old isk: %s" % isk)
+    print("new isk: %s" % new_isk)
+
+toggle_isk(",", ".")
+
+EOF
+"}}}
 endfun

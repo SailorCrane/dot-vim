@@ -896,14 +896,18 @@ nnoremap <Leader>eu  :set fileencoding=utf-8  fileformat=unix<CR>:w<CR>
 " sub with "\r" (unix line)
 "nnoremap ,mm    :%s/<C-v><C-M>/\r/ge<CR>
 " /ge e: no match, but disable error msg
-nnoremap ,mm    :%s/<C-v><C-M>/\r/g<CR>
+nnoremap <Leader>mm    :%s/<C-v><C-M>/\r/g<CR>
 " show no space: upper case "S"
-nnoremap ,S     /\S\+<CR>
+nnoremap <Leader>S     /\S\+<CR>
 
 
 " 49 "在当前行的下一行/前一行插入数字列: o<ESC>0到新行的首列
 nnoremap  ,,n   o<ESC>0i 1<CR>2<CR>3<CR>4<CR>5<CR>6<CR>7<CR>8<CR>9<CR><Backspace>10<ESC>9k
 nnoremap  ,,N   <ESC>0i 1<CR>2<CR>3<CR>4<CR>5<CR>6<CR>7<CR>8<CR>9<CR><Backspace>10<CR><ESC>10k
+
+" 50
+nnoremap  <Leader>t-  :call Toggole_isk_hypen()<CR>
+nnoremap  <Leader>t.  :call Toggole_isk_dot()<CR>
 
 
 "99 关于normal 模式中惯用的n 和 p的总结:

@@ -3,8 +3,8 @@
 " map jk to esc
 " if you really want to input "jk", please input <C-v>jk
 " map <ESC> to <nop> is to force me use "jk"
-inoremap  jk <ESC>
-inoremap  kj <ESC>
+inoremap  jk <ESC>:w<CR>
+inoremap  kj <ESC>:w<CR>
 "inoremap <ESC> <nop>
 
 
