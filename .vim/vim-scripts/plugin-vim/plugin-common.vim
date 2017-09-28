@@ -153,16 +153,25 @@ let g:multi_cursor_start_word_key='g<C-n>'     "选择单词"
 let g:multi_cursor_start_key='gi<C-n>'           "在单词中的,也被选择"
 
 
-"36 junegunn/vim-easy-align
-Bundle "junegunn/vim-easy-align.git"
-" 注意这里使用nore非递归映射是不起作用的,可能因为这里使用了<Plug>的原因,<Plug>不是vim底层的操作,所以映射之后也没有意义
-vmap <Leader>a <Plug>(EasyAlign)
-nmap <Leader>a <Plug>(EasyAlign)
+" Align plugin
+" {{{
+"36-1 godlygeek/tabular
+Bundle "godlygeek/tabular.git"
 
-if !exists('g:easy_align_delimiters')
-      let g:easy_align_delimiters = {}
-endif
-let g:easy_align_delimiters['#'] = { 'pattern': '#', 'ignore_groups': ['String']  }
+"36-2 Align  vim-script 294
+"Bundle "Align.git"
+
+"36-3 junegunn/vim-easy-align
+" 注意这里使用nore非递归映射是不起作用的,可能因为这里使用了<Plug>的原因,<Plug>不是vim底层的操作,所以映射之后也没有意义
+"Bundle "junegunn/vim-easy-align.git"
+"vmap <Leader>a <Plug>(EasyAlign)
+"nmap <Leader>a <Plug>(EasyAlign)
+
+"if !exists('g:easy_align_delimiters')
+      "let g:easy_align_delimiters = {}
+"endif
+"let g:easy_align_delimiters['#'] = { 'pattern': '#', 'ignore_groups': ['String']  }
+" }}}
 
 
 "37 expand-region
@@ -181,10 +190,6 @@ Bundle "FuzzyFinder.git"
 
 "40 ShowTrailingWhiteSpace
 Bundle "ShowTrailingWhitespace.git"
-
-
-"41 godlygeek/tabular
-Bundle "godlygeek/tabular.git"
 
 
 "42 FencView: fencview
@@ -230,10 +235,6 @@ Bundle "https://github.com/itchyny/calendar.vim.git"
 
 "52 visincr 提供增长数列功能
 Bundle "VisIncr.git"
-
-
-"53 Align  vim-script 294
-Bundle "Align.git"
 
 
 "55 ReplaceWithRegister

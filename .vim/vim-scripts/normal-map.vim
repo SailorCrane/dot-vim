@@ -222,6 +222,9 @@ nnoremap <tab>   gt
 nnoremap <s-tab> gT
 nnoremap tn      :tabnew<CR>:NERDTree<CR><C-w>l
 nnoremap tc      :tabclose<CR>
+nnoremap to      :tabonly<CR>
+nnoremap tm      :tabmove<CR>
+
 "nnoremap c<tab>  :tabnew<CR>
 "nnoremap d<tab>  :tabclose<CR>
 
