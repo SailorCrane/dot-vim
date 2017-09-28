@@ -114,18 +114,21 @@ Bundle "mbbill/echofunc.git"
 
 
 "12:  c-support用来支持c或者cpp的快捷键
+" {{{
+" c-support 就是 vim-scripts官网的c.vim, 二者是一个东西
+" 修改了<c-j>
 Bundle "WolfgangMehner/c-support.git"
 
-"12-1: 不知道怎么用, 先下载下来, 慢慢挖掘
-Bundle "c.vim.git"
+"12-1: 放在SailorCrane自己用户下
+" c-support 就是 vim-scripts官网的c.vim, 二者是一个东西
+"Bundle "SailorCrane/c.vim.git"
+" }}}
 
 "12-2: a.vim :switch between header and source file
 Bundle "a.vim.git"
-" {{{
 "cnoreabbrev  a  A
 " i stand for  include
 nnoremap <C-t>  :A<CR>:call ShowBufName()<CR>
-" }}}
 
 
 "14:  quick fix
