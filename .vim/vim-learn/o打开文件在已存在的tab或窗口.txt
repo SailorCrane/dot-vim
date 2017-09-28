@@ -1,0 +1,9 @@
+o打开文件在已存在的tab或窗口.txt
+
+:Author: crane
+:Email: crane@crane-pc
+:Date: 2017-09-28 22:20
+
+
+:drop 如果文件已存在, 在一个已有窗口打开
+:edit 永远在当前窗口打开文件
