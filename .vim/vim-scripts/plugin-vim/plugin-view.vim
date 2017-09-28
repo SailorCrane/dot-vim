@@ -1,6 +1,22 @@
 " vim: set foldmethod=marker  foldlevel=2: vim modeline( set )
 
 
+"1: WinManager
+"{{{
+Bundle  "winmanager.git"
+"let g:winManagerWindowLayout = "TagList|FileExplorer"
+let g:winManagerWindowLayout = "TagList"
+
+let g:winManagerWidth = 30 "设置winmanager的宽度，默认为25
+"定义打开关闭winmanager快捷键为F8
+nnoremap  <leader>ow  :WMToggle<cr>
+"imap  <leader>z <esc>:WMToggle<cr> "定义打开关闭winmanager快捷键为F8
+
+let g:AutoOpenWinManager = 1 "在进入vim时自动打开winmanager
+
+"}}}
+
+
 "2: NERDTree in scrooloose
 " {{{
 Bundle "scrooloose/nerdtree.git"
@@ -16,27 +32,94 @@ let NERDTreeWinPos="left"
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&
 " b:NERDTreeType == "primary") | q | endif
 " " Open a NERDTree
-nnoremap <leader>xn :NERDTreeToggle<cr>
+nnoremap <leader>on :NERDTreeToggle<cr>
 " }}}
 
 
-"7: WinManager
+"3: file tag about
+" {{{
+Bundle "Tagbar.git"
+"5-2 Tagbar in vim-scripts's repo
+" <leader>tt 被vim-scripts/Align使用了
+" 所以这里使用ti: tag invert, tt :tag toggle
+nnoremap  <leader>ot  :TagbarToggle<cr>
+
+" 打开tagbar时,自动显示行号
+let g:tagbar_show_linenumbers=1
+let g:tagbar_left = 1
+
+
+"5: taglist in vim-scripts in github
+"Bundle "taglist.vim.git"
+" }}}
+
+
+"4:  minibufexplorer
 "{{{
-Bundle  "winmanager.git"
-"let g:winManagerWindowLayout = "TagList|FileExplorer"
-let g:winManagerWindowLayout = "TagList"
-
-let g:winManagerWidth = 30 "设置winmanager的宽度，默认为25
-"定义打开关闭winmanager快捷键为F8
-nnoremap  <leader>mw  :WMToggle<cr>
-"imap  <leader>z <esc>:WMToggle<cr> "定义打开关闭winmanager快捷键为F8
-
-let g:AutoOpenWinManager = 1 "在进入vim时自动打开winmanager
-
+" 因为在 打开quickfix窗口时, 老是崩溃, 所以禁止掉,以后使用bufexplorer
+"Bundle "fholgado/minibufexpl.vim.git"
+"let g:miniBufExplMapCTabSwitchBufs = 1
+"let g:miniBufExplForceSyntaxEnable = 1
+"let g:miniBufExplModSelTarget      = 1      "不在不可编辑窗口中打开选中的文件buffer
+"let g:miniBufExplorerMoreThanOne   = 0      "最多只有一个miniBuf窗口
+"nnoremap  <leader>mb   :MBEToggle!<cr>
 "}}}
 
 
-"11:  powerline
+"4-2 bufexplorer
+Bundle  "https://github.com/jlanzarotta/bufexplorer.git"
+"{{{
+let g:bufExplorerSplitVertSize=30
+nnoremap <leader>ob :BufExplorerVerticalSplit<CR>
+nnoremap <leader>oB :togglebufexplorer<cr>
+"}}}
+
+
+"17: undotree
+" {{{
+Bundle "mbbill/undotree.git"
+nnoremap  <Leader>ou :UndotreeToggle<cr>
+" }}}
+
+
+"15:  rainbow  parentheses
+Bundle "kien/rainbow_parentheses.vim.git"
+" {{{
+let g:rbpt_colorpairs = [
+    \ ['brown',       'RoyalBlue3'],
+    \ ['Darkblue',    'SeaGreen3'],
+    \ ['darkgray',    'DarkOrchid3'],
+    \ ['darkgreen',   'firebrick3'],
+    \ ['darkcyan',    'RoyalBlue3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['brown',       'firebrick3'],
+    \ ['gray',        'RoyalBlue3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['Darkblue',    'firebrick3'],
+    \ ['darkgreen',   'RoyalBlue3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkred',     'DarkOrchid3'],
+    \ ['red',         'firebrick3'],
+    \ ]
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+" 不加入这行, 防止黑色括号出现, 很难识别
+" " \ ['black',       'SeaGreen3'],
+"
+ let g:rbpt_max = 16
+ let g:rbpt_loadcmd_toggle = 0
+ autocmd VimEnter * RainbowParenthesesToggle
+ autocmd Syntax * RainbowParenthesesLoadRound
+ autocmd Syntax * RainbowParenthesesLoadSquare
+ autocmd Syntax * RainbowParenthesesLoadBraces
+" }}}
+
+
+"11:  powerline and airline
 " {{{
 "Powerline 字体github可下载: https://github.com/runsisi/consolas-font-for-powerline
 "Bundle "Lokaltog/vim-powerline.git"
@@ -60,6 +143,7 @@ let g:AutoOpenWinManager = 1 "在进入vim时自动打开winmanager
 ""let g:airline_symbols.paste = 'Þ'
 ""let g:airline_symbols.paste = '∥'
 ""let g:airline_symbols.whitespace = 'Ξ'
+
 
 "11-2 air-line : 使用tabline, 必须设置laststatus=2
 Bundle "vim-airline/vim-airline.git"
@@ -109,63 +193,4 @@ let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
-" }}}
-
-
-"13:  minibufexplorer
-"{{{
-" 因为在 打开quickfix窗口时, 老是崩溃, 所以禁止掉,以后使用bufexplorer
-"Bundle "fholgado/minibufexpl.vim.git"
-"let g:miniBufExplMapCTabSwitchBufs = 1
-"let g:miniBufExplForceSyntaxEnable = 1
-"let g:miniBufExplModSelTarget      = 1      "不在不可编辑窗口中打开选中的文件buffer
-"let g:miniBufExplorerMoreThanOne   = 0      "最多只有一个miniBuf窗口
-"nnoremap  <leader>mb   :MBEToggle!<cr>
-"}}}
-
-
-"13-2 bufexplorer
-Bundle  "https://github.com/jlanzarotta/bufexplorer.git"
-"{{{
-let g:bufExplorerSplitVertSize=30
-nnoremap <f3>       :ToggleBufExplorer<CR>:ToggleBufExplorer<CR>
-nnoremap <f4>       :ToggleBufExplorer<CR>
-nnoremap <leader>bb :BufExplorerVerticalSplit<CR>
-"}}}
-
-
-"15:  rainbow  parentheses
-Bundle "kien/rainbow_parentheses.vim.git"
-" {{{
-let g:rbpt_colorpairs = [
-    \ ['brown',       'RoyalBlue3'],
-    \ ['Darkblue',    'SeaGreen3'],
-    \ ['darkgray',    'DarkOrchid3'],
-    \ ['darkgreen',   'firebrick3'],
-    \ ['darkcyan',    'RoyalBlue3'],
-    \ ['darkred',     'SeaGreen3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
-    \ ['brown',       'firebrick3'],
-    \ ['gray',        'RoyalBlue3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
-    \ ['Darkblue',    'firebrick3'],
-    \ ['darkgreen',   'RoyalBlue3'],
-    \ ['darkcyan',    'SeaGreen3'],
-    \ ['darkred',     'DarkOrchid3'],
-    \ ['red',         'firebrick3'],
-    \ ]
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-
-" 不加入这行, 防止黑色括号出现, 很难识别
-" " \ ['black',       'SeaGreen3'],
-"
- let g:rbpt_max = 16
- let g:rbpt_loadcmd_toggle = 0
- autocmd VimEnter * RainbowParenthesesToggle
- autocmd Syntax * RainbowParenthesesLoadRound
- autocmd Syntax * RainbowParenthesesLoadSquare
- autocmd Syntax * RainbowParenthesesLoadBraces
 " }}}

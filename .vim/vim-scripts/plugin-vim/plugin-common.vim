@@ -20,11 +20,6 @@ let g:AutoPairShortcutToggle = '<C-p>'
 let g:AutoPairsMapCh = 0    " 不要将<c-h> 映射为<Backspace>删除键
 
 
-"17: mbbill/undotree
-Bundle "mbbill/undotree.git"
-nnoremap <F2>  :UndotreeToggle<cr>
-
-
 "18: https://github.com/kien/ctrlp.vim
 Bundle "https://github.com/kien/ctrlp.vim.git"
 

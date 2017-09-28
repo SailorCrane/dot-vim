@@ -39,23 +39,6 @@ let g:syntastic_cpp_check_header = 1
 " }}}
 
 
-"5: taglist in vim-scripts in github
-Bundle "taglist.vim.git"
-
-
-"5-2 Tagbar in vim-scripts's repo
-Bundle "Tagbar.git"
-" {{{
-" <leader>tt 被vim-scripts/Align使用了
-" 所以这里使用ti: tag invert, tt :tag toggle
-nnoremap  <leader>ti  :TagbarToggle<cr>
-
-" 打开tagbar时,自动显示行号
-let g:tagbar_show_linenumbers=1
-let g:tagbar_left = 1
-" }}}
-
-
 "6: YouCompleteMe
 "Bundle "Valloric/YouCompleteMe.git"
 " {{{
