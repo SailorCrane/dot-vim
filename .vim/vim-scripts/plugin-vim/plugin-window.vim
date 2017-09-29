@@ -94,3 +94,11 @@ nnoremap  <Leader>ou :UndotreeToggle<cr>
 
 "8: wintab
 "Bundle "zefei/vim-wintabs"
+
+
+"9: minimap like sublime, provide a preview of all file
+Bundle "severin-lemaignan/vim-minimap"
+let g:minimap_show='<Leader>oP'
+let g:minimap_toggle='<Leader>tp'
+"let g:minimap_update='<Leader>ou'
+"let g:minimap_close='<Leader>gc'

@@ -50,9 +50,6 @@ nnoremap  <Leader>i   :set ignorecase!  ignorecase?<CR>
 
 "3  quick edit
 " quick edit script v:vimrc, n:normal, i:insert, p:plugin-bundle, a:abbrev
-" edit  ~/.bashrc
-
-" ~/file  edit
 " {{{
 nnoremap  <Leader>eb  :e ~/.bashrc<CR>
 nnoremap  <Leader>ez  :e ~/.zshrc<CR>
@@ -916,6 +913,10 @@ nnoremap  <Leader>t.  :call Toggole_isk_dot()<CR>
 " 51 toggle fold(closed <------> opend)
 nnoremap <Space> za
 
+
+" 52
+noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
+noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
 "99 关于normal 模式中惯用的n 和 p的总结:
 " 其中CtrlP插件的<C-p> 被 <Leader>sp代替

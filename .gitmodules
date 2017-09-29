@@ -82,9 +82,11 @@
 [submodule ".vim/bundle/jedi-vim"]
 	path = .vim/bundle/jedi-vim
 	url = https://github.com/davidhalter/jedi-vim.git
-[submodule ".vim/bundle/minibufexpl.vim"]
-	path = .vim/bundle/minibufexpl.vim
-	url = https://github.com/fholgado/minibufexpl.vim.git
+
+;[submodule ".vim/bundle/minibufexpl.vim"]
+	;path = .vim/bundle/minibufexpl.vim
+	;url = https://github.com/fholgado/minibufexpl.vim.git
+
 [submodule ".vim/bundle/vim-snipmate"]
 	path = .vim/bundle/vim-snipmate
 	url = https://github.com/garbas/vim-snipmate.git
@@ -257,9 +259,10 @@
 	path = .vim/bundle/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter
 
-[submodule ".vim/bundle/vimim"]
-	path = .vim/bundle/vimim
-	url = https://github.com/vimim/vimim.git
+;[submodule ".vim/bundle/vimim"]
+	;path = .vim/bundle/vimim
+	;url = https://github.com/vimim/vimim.git
+
 [submodule ".vim/bundle/vim-wakatime"]
 	path = .vim/bundle/vim-wakatime
 	url = https://github.com/wakatime/vim-wakatime.git
