@@ -196,7 +196,7 @@ nnoremap <C-^>     <C-^>:call ShowBufName()<CR>
 " 因为现在有了<Leader>dl, 用来清空当前行, 所以删除<Leader>d, 添加<Leader>dd
 " 这样也更安全一些: 不会因为误按<Leader>d导致清除当前缓存
 "nnoremap <Leader>d  :TagbarClose<CR>:bd<CR>:syntax on<CR>
-nnoremap <Leader>dd :TagbarClose<CR>:bd<CR>:syntax on<CR>
+"nnoremap <Leader>dd :TagbarClose<CR>:bd<CR>:syntax on<CR>
 
 " 文件很多时, 不太有用. 并且只有在知道buff num情况下, 才有用
 " 所以结合air-line使用会更好
@@ -534,13 +534,12 @@ nnoremap  <Leader>d;    vf:;d
 " {{{
 "nnoremap  <Space><CR>   o<ESC>k
 
-nnoremap  <Leader>lo    <NOP>
-nnoremap  <Leader>lO    <NOP>
-
-nnoremap  <Leader>o     o<ESC>k
-nnoremap  <Leader>O     O<ESC>j
-nnoremap  <Leader>go    o<ESC>
-nnoremap  <Leader>gO    O<ESC>
+"nnoremap  <Leader>o     o<ESC>k
+"nnoremap  <Leader>O     O<ESC>j
+nnoremap         go     o<ESC>k
+nnoremap         gO     O<ESC>j
+"nnoremap  <Leader>go    o<ESC>
+"nnoremap  <Leader>gO    O<ESC>
 
 " d 和 u 代表up 和 down, 分别对应o 和O: 但是几乎没有用过
 " 有些鸡肋
