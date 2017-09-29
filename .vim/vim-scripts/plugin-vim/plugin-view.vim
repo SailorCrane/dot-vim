@@ -86,7 +86,7 @@ nnoremap  <Leader>os   :MRU sh<CR>
 "nnoremap  <Leader>op   :MRU python<CR>
 
 
-"17: undotree
+"6: undotree
 " {{{
 Bundle "mbbill/undotree.git"
 nnoremap  <Leader>ou :UndotreeToggle<cr>
@@ -130,7 +130,7 @@ au Syntax * RainbowParenthesesLoadBraces
 " }}}
 
 
-"11:  powerline and airline
+"7:  powerline and airline
 " {{{
 "Powerline 字体github可下载: https://github.com/runsisi/consolas-font-for-powerline
 "Bundle "Lokaltog/vim-powerline.git"
@@ -205,3 +205,7 @@ let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
 " }}}
+
+
+"8: wintab
+"Bundle "zefei/vim-wintabs"
