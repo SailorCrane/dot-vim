@@ -71,6 +71,8 @@ Bundle "CmdlineComplete.git"
 "21 ShowMarks 显示使用m所下的标记
 "Bundle "ShowMarks.git"
 
+Bundle "kshenoy/vim-signature"
+
 
 "22 vim-surround
 Bundle "tpope/vim-surround.git"
