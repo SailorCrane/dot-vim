@@ -120,3 +120,7 @@ imap  <Leader><Leader>  <ESC><Plug>(easymotion-prefix)
 " 8 画箭头
 inoremap  <Leader>ar  ------>
 inoremap  <Leader>ra  <------
+
+" 9 toggle, isk_hypen, isk_dot
+inoremap  <Leader>t-  <ESC>:call Toggole_isk_hypen()<CR>a
+inoremap  <Leader>t.  <ESC>:call Toggole_isk_dot()<CR>a
