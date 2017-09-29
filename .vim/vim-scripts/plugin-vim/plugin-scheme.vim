@@ -5,33 +5,40 @@ set background=dark
 
 "============colorschemes===========================
 
-"1: colors/molokai.vim
+
+"1: more colorscheme(大多数colorschemes在这里都有了)
+Bundle "rafi/awesome-vim-colorschemes.git"
+
+
+"2: colors/molokai.vim
 Bundle  "SailorCrane/molokai.git"
 let g:molokai_original = 1
 
-"2: altercation/vim-colors-solarized
-Bundle  "altercation/vim-colors-solarized.git"
 
-"3: color sampler
-Bundle  "Colour-Sampler-Pack.git"
-
-
-"4: monokai
+"3: monokai
 "Bundle "sickill/vim-monokai.git"
 Bundle "SailorCrane/vim-monokai.git"
 
 
-"5: railscast
+"4: altercation/vim-colors-solarized
+Bundle  "altercation/vim-colors-solarized.git"
+
+"5: color sampler
+Bundle  "Colour-Sampler-Pack.git"
+
+
+"6: railscast
 Bundle "jpo/vim-railscasts-theme.git"
 
 
-"6: more colorscheme
-Bundle "rafi/awesome-vim-colorschemes.git"
+"7: seoul256 colorschemes (awesome-vim-colorschemes中已有)
+"Bundle "junegunn/seoul256.vim"
 
 
-"==================================================
-
+"===================thematic=======================
+"1: thematic
 Bundle "reedes/vim-thematic"
+"{{{
 let g:thematic#themes = {
 \ 'molokai'  : {   'typeface': 'Menlo',
 \                  'font-size': 18,
@@ -50,3 +57,4 @@ let g:thematic#themes = {
 
 let g:thematic#monokai = 'monokai'
 "Thematic  monokai
+"}}}
