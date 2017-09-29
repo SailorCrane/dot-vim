@@ -22,7 +22,7 @@ nnoremap <CR> ;
 nnoremap <Leader><CR>    <CR>
 
 " <Space><Space>  替换当前元素为空格.
-nnoremap <Space><Space>  r<Space>l
+"nnoremap <Space><Space>  r<Space>l
 " }}}
 
 
@@ -532,7 +532,7 @@ nnoremap  <Leader>d;    vf:;d
 " 当前行不是空行时, 再使用这个映射:<Leader>lo, 或者<Leader>lO
 " 按<空格><回车> 就可以生成一行空白行
 " {{{
-nnoremap  <Space><CR>   o<ESC>k
+"nnoremap  <Space><CR>   o<ESC>k
 
 nnoremap  <Leader>lo    <NOP>
 nnoremap  <Leader>lO    <NOP>
@@ -908,6 +908,10 @@ nnoremap  ,,N   <ESC>0i 1<CR>2<CR>3<CR>4<CR>5<CR>6<CR>7<CR>8<CR>9<CR><Backspace>
 " 50
 nnoremap  <Leader>t-  :call Toggole_isk_hypen()<CR>
 nnoremap  <Leader>t.  :call Toggole_isk_dot()<CR>
+
+
+" 51 toggle fold(closed <------> opend)
+nnoremap <Space> za
 
 
 "99 关于normal 模式中惯用的n 和 p的总结:

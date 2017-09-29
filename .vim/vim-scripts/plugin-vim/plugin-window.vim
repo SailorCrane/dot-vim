@@ -47,7 +47,7 @@ nnoremap  <leader>ot  :TagbarToggle<cr>
 
 " 打开tagbar时,自动显示行号
 let g:tagbar_show_linenumbers=1
-let g:tagbar_left = 1
+let g:tagbar_left = 0
 
 
 "5: taglist in vim-scripts in github
