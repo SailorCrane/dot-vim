@@ -351,6 +351,9 @@ nnoremap <C-w>b   <C-w>=<C-w>b:call MaxCurrentWindow()<CR>:let g:tagbar_left = 0
 " {{{
 nnoremap  -  ddp
 nnoremap  _  kddpk
+
+nnoremap  <Leader>j  ddp
+nnoremap  <Leader>k  kddpk
 " }}}
 
 
