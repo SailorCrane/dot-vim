@@ -20,10 +20,6 @@ let g:AutoPairShortcutToggle = '<C-p>'
 let g:AutoPairsMapCh = 0    " 不要将<c-h> 映射为<Backspace>删除键
 
 
-"18: https://github.com/kien/ctrlp.vim
-Bundle "https://github.com/kien/ctrlp.vim.git"
-
-
 "19: easy-motion
 " {{{
 Bundle "https://github.com/easymotion/vim-easymotion.git"
@@ -31,8 +27,8 @@ let g:EasyMotion_smartcase = 1
 "let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
 
 " move to anything(global)
-map  <Leader><Leader>G <Plug>(easymotion-bd-f)
-nmap <Leader><Leader>G <Plug>(easymotion-overwin-f)
+map  <Leader><Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader><Leader>f <Plug>(easymotion-overwin-f)
 
 " Move to line
 map <Leader><Leader>L <Plug>(easymotion-bd-jk)
@@ -207,10 +203,6 @@ Bundle "wellle/targets.vim"
 Bundle "gundo.git"
 
 
-"39 FuzzyFinder : need L9 library
-Bundle "FuzzyFinder.git"
-
-
 "40 ShowTrailingWhiteSpace
 Bundle "ShowTrailingWhitespace.git"
 
@@ -334,5 +326,5 @@ Bundle "christoomey/vim-tmux-navigator.git"
 Bundle "christoomey/vim-sort-motion.git"
 
 
-" project
+" projectionist
 Bundle "tpope/vim-projectionist"

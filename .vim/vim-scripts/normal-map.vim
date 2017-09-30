@@ -220,7 +220,8 @@ nnoremap <s-tab> gT
 nnoremap tn      :tabnew<CR>:NERDTree<CR><C-w>l
 nnoremap tc      :tabclose<CR>
 nnoremap to      :tabonly<CR>
-nnoremap tm      :tabmove<CR>
+" 可以用"\ " 代表<space>, 但不好
+nnoremap tm      :tabmove<Space>
 
 "nnoremap c<tab>  :tabnew<CR>
 "nnoremap d<tab>  :tabclose<CR>
@@ -469,23 +470,6 @@ nnoremap  <Leader>xw  :%s/\s\+$//g<CR>:let @/=''<CR>
 "!cscope  -Rbq
 "nnoremap  <Leader>ct  :!ctags -R --fields=+lS .<CR>:!cscope  -Rbq<CR><CR>
 nnoremap  <Leader>ct  :!ctags -R --fields=+lS .<CR>:!cscope  -Rbq<CR>
-
-
-"19  ctrlp and  fuzzyfinder  mapping,
-" sp stand for "search ctrlP"
-" sf stand for "search FuzzyFinder"
-" CtrlP 插件 似乎是只要设置别的映射,映射到了CtrlP命令,那么<C-p>的映射就会自动取消.CtrlP的这个功能还是很棒的
-" 这样<C-p> 就可以用在Yankring中了
-" s stand for "search"
-" {{{
-nnoremap  <Leader>sp  :<C-u>CtrlP<CR>
-
-" CtrlP 中没有什么插件可以比得上Fuzzy Find 的 FunFile, 可以搜索所有路径.
-nnoremap  <Leader>sf  :<C-u>FufFile<CR>
-
-"nnoremap  <Leader>sb  :<C-u>FufBuffer<CR>
-nnoremap  <Leader>sb  :<C-u>CtrlPBuffer<CR>
-" }}}
 
 
 "20 释放<C-n>在multiple cursor中功能,由<C-m>去完成

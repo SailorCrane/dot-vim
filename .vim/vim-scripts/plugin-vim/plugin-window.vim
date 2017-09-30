@@ -97,8 +97,32 @@ nnoremap  <Leader>ou :UndotreeToggle<cr>
 
 
 "9: minimap like sublime, provide a preview of all file
-Bundle "severin-lemaignan/vim-minimap"
-let g:minimap_show='<Leader>oP'
-let g:minimap_toggle='<Leader>tp'
+"Bundle "severin-lemaignan/vim-minimap"
+"let g:minimap_show='<Leader>oP'
+"let g:minimap_toggle='<Leader>tp'
 "let g:minimap_update='<Leader>ou'
 "let g:minimap_close='<Leader>gc'
+
+
+"10 ctrlp
+let g:ctrlp_working_path_mode = 0
+Bundle "https://github.com/kien/ctrlp.vim.git"
+Bundle "FuzzyFinder.git"
+" {{{
+" in dir, search more file
+let g:ctrlp_max_files=350
+"let g:ctrlp_max_depth=40
+" sp stand for "search ctrlP"
+" sf stand for "search FuzzyFinder"
+" CtrlP 插件 似乎是只要设置别的映射,映射到了CtrlP命令,那么<C-p>的映射就会自动取消.CtrlP的这个功能还是很棒的
+" 这样<C-p> 就可以用在Yankring中了
+" s stand for "search"
+nnoremap  <Leader>sp  :<C-u>CtrlP<CR>
+
+" CtrlP 中没有什么插件可以比得上Fuzzy Find 的 FunFile, 可以搜索所有路径.
+nnoremap  <Leader>sf  :<C-u>FufFile<CR>
+
+"nnoremap  <Leader>sb  :<C-u>FufBuffer<CR>
+nnoremap  <Leader>sb  :<C-u>CtrlPBuffer<CR>
+nnoremap  <Leader>sm  :<C-u>CtrlPMixed<CR>
+" }}}
