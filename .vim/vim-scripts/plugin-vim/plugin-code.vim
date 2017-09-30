@@ -127,12 +127,32 @@ Bundle "thinca/vim-quickrun.git"
 
 
 " 69 ultisnips +  vim-snippets
+"{{{
 "    ultisnips 是一个snippet引擎(类似于snipMate), vim-snippets是代码片段定义.
 Bundle "SirVer/ultisnips.git"
-Bundle "honza/vim-snippets.git"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 
+" trigger doen't support space
+"let g:UltiSnipsExpandTrigger="<space>"
+"let g:UltiSnipsJumpForwardTrigger="<space>"
+"let g:UltiSnipsJumpBackwardTrigger="<S-space>"
+Bundle "honza/vim-snippets.git"
+"}}}
 
 " argwrap
 Bundle "FooSoft/vim-argwrap.git"
 nnoremap  <Leader>aw  :ArgWrap<CR>
 inoremap  <Leader>aw  <ESC>:ArgWrap<CR>
+
+
+"62 indent-guide
+Bundle "nathanaelkane/vim-indent-guides.git"
+"{{{
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_guide_size=1
+let g:indent_guides_start_level=2
+nnoremap  <Leader>ti  :IndentGuidesToggle<CR>
+nnoremap  <Leader>oi  :IndentGuidesEnable<CR>
+"}}}

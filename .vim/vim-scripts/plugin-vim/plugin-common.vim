@@ -277,10 +277,6 @@ Bundle "tpope/vim-abolish.git"
 "快速写html/css
 
 
-"62 indent-guide
-Bundle "nathanaelkane/vim-indent-guides.git"
-
-
 " 64 auto-fold: zf add marker, zd delete marker
 "" 比较烂, 自动添加marker 不太好. 而且有了这个插件, 每次写入文件, 就跳行...
 "Bundle "AutoFold.vim.git"
