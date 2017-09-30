@@ -29,12 +29,25 @@ Bundle "https://github.com/kien/ctrlp.vim.git"
 Bundle "https://github.com/easymotion/vim-easymotion.git"
 let g:EasyMotion_smartcase = 1
 "let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
+
+" move to anything(global)
+map  <Leader><Leader>G <Plug>(easymotion-bd-f)
+nmap <Leader><Leader>G <Plug>(easymotion-overwin-f)
+
+" Move to line
+map <Leader><Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader><Leader>L <Plug>(easymotion-overwin-line)
+
+" Move to word
+map  <Leader><Leader>W <Plug>(easymotion-bd-w)
+nmap <Leader><Leader>W <Plug>(easymotion-overwin-w)
+
 map <Leader><leader>h <Plug>(easymotion-linebackward)
+map <Leader><leader>l <Plug>(easymotion-lineforward)
 "map <Leader><Leader>j <Plug>(easymotion-j)
 "map <Leader><Leader>k <Plug>(easymotion-k)
-map <Leader><leader>l <Plug>(easymotion-lineforward)
 " 重复上一次操作, 类似repeat插件, 很强大
-map <Leader><leader>. <Plug>(easymotion-repeat)
+"map <Leader><leader>. <Plug>(easymotion-repeat)
 
 " 这里必须使用map/nmap, 而不可以使用nnoremap, 因为使用了连续映射如下所示
 " <Leader><Leader>             <Plug>(easymotion-prefix)
