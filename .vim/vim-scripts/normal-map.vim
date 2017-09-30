@@ -40,7 +40,7 @@ nnoremap  <Leader>ln   :set nu!  rnu!    nu? rnu? <CR>
 " {{{
 nnoremap  n           :set hlsearch<CR>n
 nnoremap  N           :set hlsearch<CR>N
-nnoremap  <Leader>/   :set hlsearch!    hlsearch?<CR>
+nnoremap  <Leader>/   :set hlsearch!  hlsearch?<CR>
 "nnoremap  <Leader>/   :nohlsearch<CR>
 " :nohlsearch 暂时性取消高亮,点击n就会再次高亮
 
