@@ -150,9 +150,15 @@ inoremap  <Leader>aw  <ESC>:ArgWrap<CR>
 "62 indent-guide
 Bundle "nathanaelkane/vim-indent-guides.git"
 "{{{
-let g:indent_guides_enable_on_vim_startup = 1
+if &expandtab   " 如果是tab, 就不要enable了, 因为会显示很宽
+    let g:indent_guides_enable_on_vim_startup = 1
+else    " use tab(noexpandtab)
+    let g:indent_guides_enable_on_vim_startup = 0
+endif
+
 let g:indent_guides_guide_size=1
 let g:indent_guides_start_level=2
+
 nnoremap  <Leader>ti  :IndentGuidesToggle<CR>
 nnoremap  <Leader>oi  :IndentGuidesEnable<CR>
 "}}}
