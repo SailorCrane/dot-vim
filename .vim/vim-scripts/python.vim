@@ -6,7 +6,7 @@
 " 只会触发一次: 所以此脚本中不可再 使用autocmd命令:否则不生效
 
 " 0: tab setting ========================================
-source  $Vim_Scripts/python-tab.vim
+source  $Vim_Scripts/python-tab-local.vim
 
 
 " 1: setting ========================================
