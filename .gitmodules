@@ -164,9 +164,14 @@
 [submodule ".vim/bundle/vim-textobj-lastpat"]
 	path = .vim/bundle/vim-textobj-lastpat
 	url = https://github.com/kana/vim-textobj-lastpat.git
+
 [submodule ".vim/bundle/rainbow_parentheses.vim"]
 	path = .vim/bundle/rainbow_parentheses.vim
 	url = https://github.com/kien/rainbow_parentheses.vim.git
+[submodule ".vim/bundle/rainbow"]
+	path = .vim/bundle/rainbow
+	url = https://github.com/luochen1990/rainbow
+
 [submodule ".vim/bundle/matchit.zip"]
 	path = .vim/bundle/matchit.zip
 	url = https://github.com/vim-scripts/matchit.zip.git

@@ -1,7 +1,7 @@
-" vim: set fdm=marker  foldlevel=2: vim modeline( set )
+" vim: set fdm=marker  foldlevel=0: vim modeline( set )
 
-"15:  rainbow  parentheses
-Bundle "kien/rainbow_parentheses.vim.git"
+"1:  rainbow  parentheses
+"Bundle "kien/rainbow_parentheses.vim.git"
 " {{{
 let g:rbpt_colorpairs = [
     \ ['brown',       'RoyalBlue3'],
@@ -20,24 +20,57 @@ let g:rbpt_colorpairs = [
     \ ['darkred',     'DarkOrchid3'],
     \ ['red',         'firebrick3'],
     \ ]
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-
 " 不加入这行, 防止黑色括号出现, 很难识别
 " " \ ['black',       'SeaGreen3'],
 "
- let g:rbpt_max = 16
- let g:rbpt_loadcmd_toggle = 0
- autocmd VimEnter * RainbowParenthesesToggle
- autocmd Syntax * RainbowParenthesesLoadRound
- autocmd Syntax * RainbowParenthesesLoadSquare
- autocmd Syntax * RainbowParenthesesLoadBraces
+
+let g:rbpt_max = 16
+let g:rbpt_loadcmd_toggle = 1
+
+"augroup  RainBow
+    "au!
+    "au VimEnter * RainbowParenthesesActivate
+    "au VimEnter   * RainbowParenthesesLoadRound
+    "au Syntax   * RainbowParenthesesLoadSquare
+    "au Syntax   * RainbowParenthesesLoadBraces
+"augroup END
 " }}}
 
 
-"7:  powerline and airline
+"1-2
+Bundle "luochen1990/rainbow"
+"{{{
+let g:rainbow_conf = {
+\   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+\   'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+\   'operators': '_,_',
+\   'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+\   'separately': {
+\       '*': {},
+\       'tex': {
+\           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+\       },
+\       'lisp': {
+\           'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+\       },
+\       'vim': {
+\           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+\       },
+\       'html': {
+\           'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+\       },
+\       'css': 0,
+\   }
+\}
+let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
+
+augroup RainBow
+    au!
+    au VimEnter * RainbowToggle
+augroup END
+"}}}
+
+"2:  powerline and airline
 " {{{
 "Powerline 字体github可下载: https://github.com/runsisi/consolas-font-for-powerline
 "Bundle "Lokaltog/vim-powerline.git"
