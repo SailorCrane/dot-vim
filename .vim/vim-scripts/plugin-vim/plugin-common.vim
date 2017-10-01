@@ -27,16 +27,18 @@ let g:EasyMotion_smartcase = 1
 "let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
 
 " move to anything(global)
-map  <Leader><Leader>f <Plug>(easymotion-bd-f)
-nmap <Leader><Leader>f <Plug>(easymotion-overwin-f)
+"map  <Leader><Leader>f <Plug>(easymotion-bd-f)
+"nmap <Leader><Leader>f <Plug>(easymotion-overwin-f)
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <leader>f <plug>(easymotion-overwin-f)
 
 " Move to line
-map <Leader><Leader>L <Plug>(easymotion-bd-jk)
-nmap <Leader><Leader>L <Plug>(easymotion-overwin-line)
+map  <Leader><Leader>l <Plug>(easymotion-bd-jk)
+nmap <Leader><Leader>l <Plug>(easymotion-overwin-line)
 
 " Move to word
-map  <Leader><Leader>W <Plug>(easymotion-bd-w)
-nmap <Leader><Leader>W <Plug>(easymotion-overwin-w)
+map  <Leader><Leader>w <Plug>(easymotion-bd-w)
+nmap  <Leader><Leader>w <Plug>(easymotion-overwin-w)
 
 map <Leader><leader>h <Plug>(easymotion-linebackward)
 map <Leader><leader>l <Plug>(easymotion-lineforward)

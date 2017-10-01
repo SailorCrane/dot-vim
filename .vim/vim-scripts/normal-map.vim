@@ -426,8 +426,10 @@ nnoremap gl  $
 "nnoremap  <Leader>b   5<C-y>
 " 因为还是<Leader>f比较好键入
 " {{{
-nnoremap  <Leader>u   5<C-y>
-nnoremap  <Leader>f   5<C-e>
+"nnoremap  <Leader>u   5<C-y>
+"nnoremap  <Leader>f   5<C-e>
+nnoremap  <C-y>   5<C-y>
+nnoremap  <C-e>   5<C-e>
 " }}}
 "nnoremap  <Leader>d   5<C-e>
 
