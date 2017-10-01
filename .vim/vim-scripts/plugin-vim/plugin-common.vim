@@ -69,6 +69,16 @@ map <Leader><leader>l <Plug>(easymotion-lineforward)
 " <Plug>(easymotion-f)         :<C-U>call EasyMotion#S(1,0,0)<CR>
 " }}}
 
+" 19-2 easy incsearch
+Bundle "haya14busa/incsearch.vim"
+Bundle "haya14busa/incsearch-easymotion.vim"
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+map z/ <Plug>(incsearch-easymotion-/)
+map z? <Plug>(incsearch-easymotion-?)
+map zg/ <Plug>(incsearch-easymotion-stay)
+
 
 "20 SearchComplete
 " 一个很烂的插件,将我command
@@ -199,6 +209,7 @@ vmap V <Plug>(expand_region_shrink)
 
 " extend target
 Bundle "wellle/targets.vim"
+let g:targets_pairs = '()b {}B [] <>'
 
 
 "38 gundo stand for gnu undo
@@ -304,7 +315,6 @@ let g:templates_directory = $Crane_Dot_Vim . "/templates"
 " 68 速写 html/css/js(javascript) : 官方插件. ZenCoding renamed to Emmet.vim
 "Bundle  "ZenCoding.vim.git"
 Bundle  "Emmet.vim.git"
-
 
 
 " 71 vim-session插件比vim-workspace好用很多
