@@ -57,7 +57,9 @@ fun! OpenFile()
     if  $fileType == 'markdown'
         InstantMarkdownPreview
     else
-        !gnome-open %       " 函数可以执行:命令, 所以也可以加!执行外部命令
+        " 函数可以执行:命令, 所以也可以加!执行外部命令
+        " 注意, 不要在command后面加 "注释
+        !gnome-open %
     endif
 "}}}
 endfun
