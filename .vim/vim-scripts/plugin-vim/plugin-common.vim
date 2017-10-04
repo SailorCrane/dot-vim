@@ -80,6 +80,10 @@ map z? <Plug>(incsearch-easymotion-?)
 map zg/ <Plug>(incsearch-easymotion-stay)
 
 
+" quick move
+Bundle "matze/vim-move"
+
+
 "20 SearchComplete
 " 一个很烂的插件,将我command
 " 模式下的<tab>映射为对buffer的补全,当我想补全命令时,总是刷新我的输入. Shit
