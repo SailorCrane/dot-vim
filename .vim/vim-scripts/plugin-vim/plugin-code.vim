@@ -156,6 +156,7 @@ else    " use tab(noexpandtab)
     let g:indent_guides_enable_on_vim_startup = 0
 endif
 
+" 注意如果是tab缩进, size=1不管用, 会对整个tab显示indent(对于这里不要存在疑惑)
 let g:indent_guides_guide_size=1
 let g:indent_guides_start_level=2
 
