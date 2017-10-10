@@ -39,6 +39,7 @@ let g:rbpt_loadcmd_toggle = 1
 
 "1-2
 Bundle "luochen1990/rainbow"
+" 和syntax on有冲突
 "{{{
 let g:rainbow_conf = {
 \   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],

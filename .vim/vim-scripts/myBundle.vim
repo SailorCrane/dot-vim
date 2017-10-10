@@ -26,6 +26,3 @@ source   $Plugin_Script/plugin-ft.vim          " 和文件类型相关关:markdo
 
 filetype plugin indent on
 filetype on
-
-
-
