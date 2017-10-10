@@ -63,11 +63,13 @@ let g:rainbow_conf = {
 \   }
 \}
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
+nnoremap  <Leader>tr  :RainbowToggle<CR>
+nnoremap  <Leader>or  :RainbowToggleOn<CR>
 
-augroup RainBow
-    au!
-    au VimEnter * RainbowToggle
-augroup END
+"augroup RainBow
+    "au!
+    "au VimEnter * RainbowToggleOn
+"augroup END
 "}}}
 
 "2:  powerline and airline

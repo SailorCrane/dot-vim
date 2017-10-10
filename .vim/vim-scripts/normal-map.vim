@@ -471,7 +471,7 @@ nnoremap  <Leader>xw  :%s/\s\+$//g<CR>:let @/=''<CR>
 "!ctags -R .
 "!cscope  -Rbq
 "nnoremap  <Leader>ct  :!ctags -R --fields=+lS .<CR>:!cscope  -Rbq<CR><CR>
-nnoremap  <Leader>ct  :!ctags -R --fields=+lS .<CR>:!cscope  -Rbq<CR>
+nnoremap  <Leader>ct  :!ctags -R --fields=+lS .<CR>:!cscope  -Rbq<CR><CR>
 
 
 "20 释放<C-n>在multiple cursor中功能,由<C-m>去完成
