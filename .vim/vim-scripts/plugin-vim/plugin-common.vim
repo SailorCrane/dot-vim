@@ -83,6 +83,9 @@ map zg/ <Plug>(incsearch-easymotion-stay)
 " quick move
 Bundle "matze/vim-move"
 
+" does not work for <Leader>
+"let g:move_key_modifier = '<Leader>'
+
 
 "20 SearchComplete
 " 一个很烂的插件,将我command
