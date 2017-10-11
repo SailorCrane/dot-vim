@@ -3,16 +3,16 @@
 
 "1: WinManager
 "{{{
-Bundle  "winmanager.git"
+Bundle  "vim-scripts/winmanager.git"
 "let g:winManagerWindowLayout = "TagList|FileExplorer"
-let g:winManagerWindowLayout = "TagList"
+"let g:winManagerWindowLayout = "TagList"
 
 let g:winManagerWidth = 30 "设置winmanager的宽度，默认为25
 "定义打开关闭winmanager快捷键为F8
 nnoremap  <leader>ow  :WMToggle<cr>
 "imap  <leader>z <esc>:WMToggle<cr> "定义打开关闭winmanager快捷键为F8
 
-let g:AutoOpenWinManager = 1 "在进入vim时自动打开winmanager
+"let g:AutoOpenWinManager = 1 "在进入vim时自动打开winmanager
 
 "}}}
 
@@ -43,7 +43,10 @@ Bundle "Tagbar.git"
 "5-2 Tagbar in vim-scripts's repo
 " <leader>tt 被vim-scripts/Align使用了
 " 所以这里使用ti: tag invert, tt :tag toggle
-nnoremap  <leader>ot  :TagbarToggle<cr>
+nnoremap  <leader>ot  :TagbarOpen<cr>
+nnoremap  <leader>tt  :TagbarToggle<cr>
+" <Leader>ct comflict with create tags
+"nnoremap  <leader>ct  :TagbarOpen<cr>
 
 " 打开tagbar时,自动显示行号
 let g:tagbar_show_linenumbers=1
