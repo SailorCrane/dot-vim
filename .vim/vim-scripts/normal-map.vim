@@ -636,6 +636,11 @@ nnoremap  <Leader><Leader>P  "+P
 "27 yp 复制并粘贴
 " 光标位于粘贴新行
 " {{{
+
+" 有必要吗?
+nnoremap  yj  y1j
+nnoremap  yk  y1k
+
 nnoremap  yp  yyp
 " 光标位于旧行
 nnoremap  yP  yyP
