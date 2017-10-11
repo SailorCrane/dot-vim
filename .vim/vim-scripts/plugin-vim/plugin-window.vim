@@ -106,7 +106,7 @@ nnoremap  <Leader>ou :UndotreeToggle<cr>
 
 "10 ctrlp
 let g:ctrlp_working_path_mode = 0
-Bundle "https://github.com/kien/ctrlp.vim.git"
+Bundle "kien/ctrlp.vim.git"
 Bundle "FuzzyFinder.git"
 " {{{
 " in dir, search more file
@@ -126,3 +126,7 @@ nnoremap  <Leader>sf  :<C-u>FufFile<CR>
 nnoremap  <Leader>sb  :<C-u>CtrlPBuffer<CR>
 nnoremap  <Leader>sm  :<C-u>CtrlPMixed<CR>
 " }}}
+
+
+"11 tabman
+Bundle "kien/tabman.vim"
