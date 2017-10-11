@@ -105,7 +105,7 @@ nnoremap  <Leader>ep  :e  $Vim_Scripts/python.vim<CR>
 " eC C stand for command: command mode/autocmd
 nnoremap  <Leader>eC  :e  $Vim_Scripts/autocmd.vim<CR>
 
-nnoremap  <Leader>ee  :e  $Vim_Scripts/example/vimrc_example.vim<CR>
+"nnoremap  <Leader>ee  :e  $Vim_Scripts/example/vimrc_example.vim<CR>
 nnoremap  <Leader>eE  :e  $Vim_Scripts/example/<CR>
 
 nnoremap  <Leader>eO  :e  $Plugin_Script/plugin-common.vim<CR>
