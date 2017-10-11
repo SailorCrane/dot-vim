@@ -67,7 +67,13 @@ let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 nnoremap  <Leader>tr  :RainbowToggle<CR>
 nnoremap  <Leader>or  :RainbowToggleOn<CR>
 
-"augroup RainBow
+" 防止:syntax on disable Rainbow color
+if exists(':RainbowToggleOn')
+    RainbowToggleOn
+    echom "exists"
+endif
+
+"augroup Rainbow
     "au!
     "au VimEnter * RainbowToggleOn
 "augroup END
