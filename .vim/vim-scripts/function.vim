@@ -1,4 +1,4 @@
-" vim: set fdm=marker fdl=2: vim modeline( set )
+" vim: set fdm=marker fdl=0: vim modeline( set )
 
 " 1: ================= edit Makefile / CMakeList.txt=======================
 " 因为已经使用了模板文件, 所以这个MakeInput函数已经没用了.
@@ -98,12 +98,13 @@ endfun
 " 6 toggle isk hypen
 " 'isk' stand for 'iskeyword'
 " &用于获取vim 'option' 变量
-fun! Toggole_isk_hypen()
+" 提供一个通用的vim函数, 内部用Python实现, 这样只用实现一次Python代码
+fun! Toggle_isk(delimit, target)
 "{{{
 py3 <<EOF
 import  vim
-
 def toggle_isk(delimit, add_target):
+#{{{     这里要用Python注释
     isk = vim.eval("&isk")
 
     keys = isk.split(delimit)
@@ -118,38 +119,31 @@ def toggle_isk(delimit, add_target):
     vim.command("set  isk=%s" % new_isk)
     print("old isk: %s" % isk)
     print("new isk: %s" % new_isk)
-
-delimit = ","
-hypen   = "-"
-toggle_isk(",", "-")
+#}}}     这里要用Python注释
+delimit = vim.eval("a:delimit")     # python get vim argument
+target  = vim.eval("a:target")      # python get vim argument
+toggle_isk(delimit, target)
 
 EOF
 "}}}
 endfun
 
-fun! Toggole_isk_dot()
-"{{{
-py3 <<EOF
-import  vim
+fun! Toggle_isk_hypen()
+    call Toggle_isk(",", "-")
+endfun
 
-def toggle_isk(delimit, add_target):
-    isk = vim.eval("&isk")
+fun! Toggle_isk_underline()
+    call Toggle_isk(",", "_")
+endfun
 
-    keys = isk.split(delimit)
+fun! Toggle_isk_dot()
+    call Toggle_isk(",", ".")
+endfun
 
-    # toggle
-    if add_target not in keys:
-        keys.append(add_target)
-    else:
-        keys.remove(add_target)
+fun! Toggle_isk_slash()
+    call Toggle_isk(",", "/")
+endfun
 
-    new_isk = delimit.join(keys)
-    vim.command("set  isk=%s" % new_isk)
-    print("old isk: %s" % isk)
-    print("new isk: %s" % new_isk)
-
-toggle_isk(",", ".")
-
-EOF
-"}}}
+fun! Toggle_isk_colon()
+    call Toggle_isk(",", ":")
 endfun

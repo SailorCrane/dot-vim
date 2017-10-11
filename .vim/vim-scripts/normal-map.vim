@@ -1,4 +1,4 @@
-" vim: set fdm=marker  fdl=2: vim modeline( set )
+" vim: set fdm=marker  fdl=0: vim modeline( set )
 "  foldlevel=2, 这样vim打开文件时, 不会自动折叠, 不至于使不会折叠的人止步不前
 "  zM 折叠所有， zR 展开所有 (通过 foldlevel设置)
 
@@ -895,9 +895,12 @@ nnoremap <Leader>S     /\S\+<CR>
 nnoremap  ,,n   o<ESC>0i 1<CR>2<CR>3<CR>4<CR>5<CR>6<CR>7<CR>8<CR>9<CR><Backspace>10<ESC>9k
 nnoremap  ,,N   <ESC>0i 1<CR>2<CR>3<CR>4<CR>5<CR>6<CR>7<CR>8<CR>9<CR><Backspace>10<CR><ESC>10k
 
-" 50
-nnoremap  <Leader>t-  :call Toggole_isk_hypen()<CR>
-nnoremap  <Leader>t.  :call Toggole_isk_dot()<CR>
+" 50 toggle isk: some special symbol
+nnoremap  <Leader>t-  :call Toggle_isk_hypen()<CR>
+nnoremap  <Leader>t_  :call Toggle_isk_underline()<CR>
+nnoremap  <Leader>t.  :call Toggle_isk_dot()<CR>
+nnoremap  <Leader>t/  :call Toggle_isk_slash()<CR>
+nnoremap  <Leader>t:  :call Toggle_isk_colon()<CR>
 
 
 " 51 toggle fold(closed <------> opend)
