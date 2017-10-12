@@ -34,6 +34,7 @@ let NERDTreeWinPos="left"
 " " Open a NERDTree
 "nnoremap <leader>on :NERDTreeToggle<cr>
 nnoremap <leader>on :NERDTreeFind<cr>
+nnoremap <leader>tn :NERDTreeToggle<cr>
 " }}}
 
 
