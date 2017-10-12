@@ -1,6 +1,6 @@
 " /mySaved/dot-vim/.vim/sessions/server.vim:
 " Vim session script.
-" Created by session.vim 2.13.1 on 29 September 2017 at 14:50:09.
+" Created by session.vim 2.13.1 on 10 October 2017 at 21:03:35.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=aegirLtb
@@ -13,7 +13,7 @@ if &background != 'dark'
 	set background=dark
 endif
 if !exists('g:colors_name') || g:colors_name != 'monokai' | colorscheme monokai | endif
-call setqflist([{'lnum': 22, 'col': 0, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'dm/server/stub_components/imp_world_boss.py', 'text': '			self.restart_world_boss(spaceNo)'}, {'lnum': 42, 'col': 0, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'dm/server/stub_components/imp_world_boss.py', 'text': '	def restart_world_boss(self, spaceno):'}, {'lnum': 57, 'col': 0, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'dm/server/stub_components/imp_world_boss.py', 'text': '		scn.call_branch_method(''restart_world_boss'', seed)'}, {'lnum': 30, 'col': 0, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'dm/server/space_components/imp_world_boss.py', 'text': '	def restart_world_boss(self, seed):'}, {'lnum': 198, 'col': 0, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'dm/server/handlers/space_stub/scene.py', 'text': '	def restart_world_boss(self, seed):'}, {'lnum': 199, 'col': 0, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'dm/server/handlers/space_stub/scene.py', 'text': '		scn.call_branch_method(''restart_world_boss'', seed)'}, {'lnum': 106, 'col': 0, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'dm/server/gmcmd/generalcmd.py', 'text': '	def restart_world_boss(self, entity):'}, {'lnum': 108, 'col': 0, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'dm/server/gmcmd/generalcmd.py', 'text': '			entity.callstub(''SpaceStub'', ''restart_world_boss'', entity.space.spaceno)'}, {'lnum': 51553, 'col': 0, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': '/home/crane/tags', 'text': 'restart_world_boss	dm/server/gmcmd/generalcmd.py	/^	def restart_world_boss(self, entity):$/;"	m	language:Python	class:GeneralCmd'}, {'lnum': 51554, 'col': 0, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': '/home/crane/tags', 'text': 'restart_world_boss	dm/server/space_components/imp_world_boss.py	/^	def restart_world_boss(self, seed):$/;"	m	language:Python	class:WorldBossMember'}, {'lnum': 51555, 'col': 0, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': '/home/crane/tags', 'text': 'restart_world_boss	dm/server/stub_components/imp_world_boss.py	/^	def restart_world_boss(self, spaceno):$/;"	m	language:Python	class:WorldBossMember'}])
+call setqflist([{'lnum': 0, 'col': 0, 'valid': 0, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'dm/commons/datas/world_boss_data.py', 'text': 'Options ''-H'' and ''-f'' are mutually exclusive'}])
 let SessionLoad = 1
 if &cp | set nocp | endif
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
@@ -27,9 +27,9 @@ set shortmess=aoO
 badd +57 dm/server/stub_components/imp_world_boss.py
 badd +27 dm/server/entities/space_stub.py
 badd +86 dm/server/entities/space.py
-badd +117 dm/server/space_components/imp_world_boss.py
+badd +223 dm/server/space_components/imp_world_boss.py
 badd +1 dm/server/components/imp_space.py
-badd +244 dm/server/handlers/space_stub/scene.py
+badd +250 dm/server/handlers/space_stub/scene.py
 badd +51 dm/server/handlers/space_stub/space_handler.py
 badd +1 ~/.vimrc
 badd +87 dm/server/space_components/entities.py
@@ -48,8 +48,10 @@ badd +10 dm/server/space_components/imp_timer.py
 badd +52 dm/commons/calculate/generator.py
 badd +1 undotree_2
 badd +1 diffpanel_3
-badd +24 dm/server/stub_components/imp_branches.py
+badd +37 dm/server/stub_components/imp_branches.py
 badd +27 dm/server/space_components/branch_mgr.py
+badd +5 dm/server/entities/account.py
+badd +0 dm/commons/datas/world_boss_data.py
 argglobal
 silent! argdel *
 set stal=2
@@ -90,8 +92,6 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 25
-silent! normal! zo
-137
 silent! normal! zo
 let s:l = 28 - ((18 * winheight(0) + 18) / 37)
 if s:l < 1 | let s:l = 1 | endif
@@ -139,16 +139,12 @@ setlocal fdn=20
 setlocal fen
 14
 silent! normal! zo
-26
-silent! normal! zo
-43
-silent! normal! zo
 let s:l = 33 - ((18 * winheight(0) + 18) / 37)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 33
-normal! 025|
+normal! 0
 tabedit dm/server/handlers/space_stub/scene.py
 set splitbelow splitright
 set nosplitbelow
@@ -164,12 +160,14 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 244 - ((32 * winheight(0) + 18) / 37)
+22
+silent! normal! zo
+let s:l = 240 - ((17 * winheight(0) + 18) / 37)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-244
-normal! 017|
+240
+normal! 09|
 tabedit dm/server/handlers/space_stub/space_handler.py
 set splitbelow splitright
 set nosplitbelow
@@ -218,16 +216,10 @@ normal! zt
 normal! 017|
 tabedit dm/server/space_components/imp_world_boss.py
 set splitbelow splitright
-wincmd _ | wincmd |
-vsplit
-1wincmd h
-wincmd w
 set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
-exe 'vert 1resize ' . ((&columns * 69 + 69) / 139)
-exe 'vert 2resize ' . ((&columns * 69 + 69) / 139)
 argglobal
 setlocal fdm=indent
 setlocal fde=pymode#folding#expr(v:lnum)
@@ -237,15 +229,23 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 117 - ((18 * winheight(0) + 18) / 37)
+18
+silent! normal! zo
+67
+silent! normal! zo
+let s:l = 34 - ((17 * winheight(0) + 18) / 37)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-117
-normal! 017|
-wincmd w
+34
+normal! 05|
+tabedit dm/commons/datas/world_boss_data.py
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
 argglobal
-edit dm/server/space_components/branch_mgr.py
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -254,17 +254,14 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 27 - ((15 * winheight(0) + 18) / 37)
+let s:l = 7 - ((6 * winheight(0) + 18) / 37)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-27
-normal! 017|
-wincmd w
-2wincmd w
-exe 'vert 1resize ' . ((&columns * 69 + 69) / 139)
-exe 'vert 2resize ' . ((&columns * 69 + 69) / 139)
-tabnext 8
+7
+normal! 0
+lcd /myWork/myCode/h54-server/Package/Script/Python
+tabnext 9
 set stal=1
 if exists('s:wipebuf')
 "   silent exe 'bwipe ' . s:wipebuf
@@ -281,8 +278,8 @@ let &so = s:so_save | let &siso = s:siso_save
 " Everything down here is generated by vim-session (not supported
 " by :mksession out of the box).
 
-2wincmd w
-tabnext 8
+1wincmd w
+tabnext 9
 if exists('s:wipebuf')
   if empty(bufname(s:wipebuf))
 if !getbufvar(s:wipebuf, '&modified')
