@@ -167,3 +167,6 @@ nnoremap  <Leader>oi  :IndentGuidesEnable<CR>
 
 " cctree: 生成函数调用Tree
 Bundle "hari-rangarajan/CCTree"
+
+let g:CCTreeKeyTraceForwardTree = '<C-\>>'
+let g:CCTreeKeyToggleWindow = '<C-\>w'
