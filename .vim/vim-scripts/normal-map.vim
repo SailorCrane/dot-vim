@@ -430,6 +430,10 @@ nnoremap gl  $
 "nnoremap  <Leader>f   5<C-e>
 nnoremap  <C-y>   5<C-y>
 nnoremap  <C-e>   5<C-e>
+
+" 之前的<C-d> down半页, 太多了
+nnoremap  <C-d>   5j
+nnoremap  <C-u>   5k
 " }}}
 "nnoremap  <Leader>d   5<C-e>
 
