@@ -434,6 +434,10 @@ nnoremap  <C-e>   5<C-e>
 " 之前的<C-d> down半页, 太多了
 nnoremap  <C-d>   5j
 nnoremap  <C-u>   5k
+
+" 如何使用原始的<C-d> <C-u>, 答:使用前导<Leader>
+nnoremap  <Leader><C-d>   <C-d>
+nnoremap  <Leader><C-u>   <C-u>
 " }}}
 "nnoremap  <Leader>d   5<C-e>
 
