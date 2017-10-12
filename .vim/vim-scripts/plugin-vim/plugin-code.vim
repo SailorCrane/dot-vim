@@ -1,4 +1,4 @@
-" vim: set foldmethod=marker  foldlevel=2: vim modeline( set )
+" vim: set foldmethod=marker  foldlevel=0: vim modeline( set )
 
 "3: nerdcommenter in scrooloose
 Bundle "scrooloose/nerdcommenter.git"
@@ -163,3 +163,7 @@ let g:indent_guides_start_level=2
 nnoremap  <Leader>ti  :IndentGuidesToggle<CR>
 nnoremap  <Leader>oi  :IndentGuidesEnable<CR>
 "}}}
+
+
+" cctree: 生成函数调用Tree
+Bundle "hari-rangarajan/CCTree"

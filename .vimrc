@@ -1,4 +1,4 @@
-" vim: set foldmethod=marker  foldlevel=2: vim modeline( set )
+" vim: set foldmethod=marker  foldlevel=0: vim modeline( set )
 
 "0 一些变量的设置: 主要是.vimrc 和 .vim脚本位置
 " 这样以后如果想配置在其它服务器上, 那么改变这里的变量即可
