@@ -347,3 +347,9 @@ Bundle "christoomey/vim-sort-motion.git"
 
 " projectionist
 Bundle "tpope/vim-projectionist"
+
+
+" goyo.vim
+Bundle "junegunn/goyo.vim"
+nnoremap <Leader>tg  :Goyo<CR>
+nnoremap <Leader>cg  :Goyo!<CR>
