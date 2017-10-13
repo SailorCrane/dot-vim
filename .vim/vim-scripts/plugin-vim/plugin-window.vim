@@ -133,5 +133,8 @@ nnoremap  <Leader>sm  :<C-u>CtrlPMixed<CR>
 " }}}
 
 
-"11 tabman
+"11 tabman: tab + window管理, 类似于BufExplorer
 Bundle "kien/tabman.vim"
+" 因为m 已经被MRU占用了
+let g:tabman_toggle = '<leader>tM'
+let g:tabman_focus  = '<leader>oM'

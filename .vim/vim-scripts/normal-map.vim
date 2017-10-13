@@ -217,9 +217,12 @@ nnoremap <Leader>0      :b 10<CR>
 " {{{
 nnoremap <tab>   gt
 nnoremap <s-tab> gT
-nnoremap tn      :tabnew<CR>:NERDTree<CR><C-w>l
-nnoremap tc      :tabclose<CR>
-nnoremap to      :tabonly<CR>
+"nnoremap tn      :tabnew<CR>:NERDTreeFocus<CR>
+" 一般使用tn, 都是为了打开新文件, 所以不使用Focus
+"nnoremap tn      :tabnew<CR>:NERDTree<CR>
+nnoremap tn      :tabnew   <CR>
+nnoremap tc      :tabclose <CR>
+nnoremap to      :tabonly  <CR>
 " 可以用"\ " 代表<space>, 但不好
 nnoremap tm      :tabmove<Space>
 
