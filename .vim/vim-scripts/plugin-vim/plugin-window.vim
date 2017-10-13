@@ -1,4 +1,4 @@
-" vim: set fdm=marker foldlevel=2: vim modeline( set )
+" vim: set fdm=marker foldlevel=0: vim modeline( set )
 
 
 "1: WinManager
@@ -64,7 +64,7 @@ Bundle  "https://github.com/jlanzarotta/bufexplorer.git"
 "{{{
 let g:bufExplorerSplitVertSize=30
 nnoremap <leader>ob :BufExplorerVerticalSplit<CR>
-nnoremap <leader>oB :togglebufexplorer<cr>
+nnoremap <leader>tb :ToggleBufExplorer<cr>
 "}}}
 
 
@@ -92,7 +92,8 @@ nnoremap  <Leader>os   :MRU sh<CR>
 "6: undotree
 " {{{
 Bundle "mbbill/undotree.git"
-nnoremap  <Leader>ou :UndotreeToggle<cr>
+nnoremap  <Leader>ou :UndotreeShow<cr>
+nnoremap  <Leader>tu :UndotreeToggle<cr>
 " }}}
 
 
