@@ -431,12 +431,12 @@ nnoremap gl  $
 " {{{
 "nnoremap  <Leader>u   5<C-y>
 "nnoremap  <Leader>f   5<C-e>
-nnoremap  <C-y>   5<C-y>
-nnoremap  <C-e>   5<C-e>
+nnoremap  <C-y>   8<C-y>
+nnoremap  <C-e>   8<C-e>
 
 " 之前的<C-d> down半页, 太多了
-nnoremap  <C-d>   5j
-nnoremap  <C-u>   5k
+nnoremap  <C-d>   8j
+nnoremap  <C-u>   8k
 
 " 如何使用原始的<C-d> <C-u>, 答:使用前导<Leader>
 nnoremap  <Leader><C-d>   <C-d>

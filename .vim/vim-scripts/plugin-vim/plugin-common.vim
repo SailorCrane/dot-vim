@@ -328,13 +328,15 @@ let g:templates_directory = $Crane_Dot_Vim . "/templates"
 Bundle  "Emmet.vim.git"
 
 
-" 71 vim-session插件比vim-workspace好用很多
+" 71-1
 Bundle "https://github.com/thaerkh/vim-workspace.git"
 
+" 72-2 vim-session插件比vim-workspace好用很多
 Bundle "xolox/vim-misc.git"
 Bundle "xolox/vim-session.git"
 :let g:session_autosave = 'no'
 :let g:session_autoload = 'no'
+nnoremap <Leader>rv  :RestartVim<CR>
 
 
 " 72 vim-tmux-navigator
