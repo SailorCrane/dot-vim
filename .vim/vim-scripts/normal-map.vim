@@ -922,6 +922,13 @@ nnoremap <Space> za
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
+
+" 53 :retab
+" tab to space(4 space), need set expandtab
+nnoremap  <Leader>rt  :set expandtab   tabstop=4<CR>:%retab <CR>
+" tab to space(4 space), need set noexpandtab
+nnoremap  <Leader>rT  :set noexpandtab tabstop=4<CR>:%retab!<CR>
+
 "99 关于normal 模式中惯用的n 和 p的总结:
 " 其中CtrlP插件的<C-p> 被 <Leader>sp代替
 " QuickFix 使用:cn, cp 直接下一个,或者前一个
