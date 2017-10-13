@@ -183,7 +183,7 @@ nnoremap  <C-s>       :Ack  <C-r><C-w> <CR>
 
 
 "7 buffer:next/previous/delete
-" buf and tab
+" buf and tabpage
 " {{{
 nnoremap <Leader>n :bn<CR>
 nnoremap <Leader>p :bp<CR>
@@ -213,7 +213,7 @@ nnoremap <Leader>0      :b 10<CR>
 " }}}
 
 
-"7-2: tab 下面是vim 相关tab映射
+"7-2: tabpage 下面是vim 相关tabpage映射
 " {{{
 nnoremap <tab>   gt
 nnoremap <s-tab> gT
@@ -225,9 +225,6 @@ nnoremap tc      :tabclose <CR>
 nnoremap to      :tabonly  <CR>
 " 可以用"\ " 代表<space>, 但不好
 nnoremap tm      :tabmove<Space>
-
-"nnoremap c<tab>  :tabnew<CR>
-"nnoremap d<tab>  :tabclose<CR>
 
 nnoremap <A-1>      1gt<CR>
 nnoremap <A-2>      2gt<CR>
@@ -443,10 +440,6 @@ nnoremap  <Leader><C-d>   <C-d>
 nnoremap  <Leader><C-u>   <C-u>
 " }}}
 "nnoremap  <Leader>d   5<C-e>
-
-
-"13 show list, just funny, and test, 已经被<Leader>ls代替
-"nnoremap  <f3>  :set list!<CR>
 
 
 "14 To segment a line ----> two line
@@ -689,15 +682,9 @@ nmap <Leader>sc :cs find c <C-R>=expand("<cword>")<CR><CR>
 "nmap <Leader>si :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 
 
-
-"29 切换是否显示空白标志:
-" 结合 set listchars=tab:▸\ ,eol:¬ 使用
-" 在makefile中, 查看是否前置空白是不是tab, 很有用
-nnoremap  <Leader>ls   :set  list!  list?<CR>
-
-
-" 30 因为<C-i> 就是tab,被用来在vim顶上的tab间跳转,
-" 所以这里使用g_ctrl-o代替原来ctrl-i功能
+" 30 因为<C-i> 就是<tab>,被用来在vim顶上的tabpage间跳转,
+" 所以这里使用g_ctrl-o代替原来ctrl-i功能(向前跳跃)
+" 对应于<C-o>
 nnoremap  g<C-o>  <C-i>
 
 
@@ -923,11 +910,19 @@ noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
 
-" 53 :retab
+" 53 :tabkey和retab
+"{{{
+" 切换是否显示空白标志:
+" 结合 set listchars=tab:▸\ ,eol:¬ 使用
+" 在makefile中, 查看是否前置空白是不是tab, 很有用
+nnoremap  <Leader>ls   :set  list!  list?<CR>
+
 " tab to space(4 space), need set expandtab
 nnoremap  <Leader>rt  :set expandtab   tabstop=4<CR>:%retab <CR>
 " tab to space(4 space), need set noexpandtab
 nnoremap  <Leader>rT  :set noexpandtab tabstop=4<CR>:%retab!<CR>
+"}}}
+
 
 "99 关于normal 模式中惯用的n 和 p的总结:
 " 其中CtrlP插件的<C-p> 被 <Leader>sp代替
@@ -935,7 +930,7 @@ nnoremap  <Leader>rT  :set noexpandtab tabstop=4<CR>:%retab!<CR>
 " Multiple Cursor 的 C-n 被 g<C-n>所取代
 " <C-p> 和 <C-n>被映射到了 YankRing中:让n永远和p快乐的在一起窝
 " <Leader>n <Leader>p 还是buffer next 和 buffer previous, 自己已经用习惯了
-" 至于tab的前一个,和下一个,使用<tab> 和 <s-tab>完成.
+" 至于tabpage的前一个,和下一个,使用<tab> 和 <s-tab>完成.
 " 但是如此以来<C-i>,也就是<C-o>的反向功能,就不能再使用<tab>了,因为<tab> 和 <C-i>是同一个按键(同一个编码)
 
 
