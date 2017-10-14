@@ -910,7 +910,7 @@ noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
 
-" 53 :tabkey和retab
+" 53 :tabkey和:retab 命令(在tab和space之间切换)
 "{{{
 " 切换是否显示空白标志:
 " 结合 set listchars=tab:▸\ ,eol:¬ 使用
@@ -918,10 +918,22 @@ noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 nnoremap  <Leader>ls   :set  list!  list?<CR>
 
 " tab to space(4 space), need set expandtab
-nnoremap  <Leader>rt  :set expandtab   tabstop=4<CR>:%retab <CR>
 " tab to space(4 space), need set noexpandtab
+nnoremap  <Leader>rt  :set expandtab   tabstop=4<CR>:%retab <CR>
 nnoremap  <Leader>rT  :set noexpandtab tabstop=4<CR>:%retab!<CR>
+
+" visual模式下的retab, 注意1. 执行两次命令之间需要gv再次选中选取选区
+"                      注意2. 执行第一次命令时, 要使用<C-u> 去掉":'<,'>"
+vnoremap  <Leader>rt  :<C-u>set expandtab   tabstop=4<CR>gv: retab <CR>
+vnoremap  <Leader>rT  :<C-u>set noexpandtab tabstop=4<CR>gv: retab!<CR>
 "}}}
+
+
+" 54 xxd(在文本和hex之间切换)
+nnoremap  <Leader>xd  :%!xxd    <CR>
+nnoremap  <Leader>xD  :%!xxd -r <CR>
+vnoremap  <Leader>xd  : !xxd    <CR>
+vnoremap  <Leader>xD  : !xxd -r <CR>
 
 
 "99 关于normal 模式中惯用的n 和 p的总结:
