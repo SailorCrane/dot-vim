@@ -18,9 +18,12 @@ let g:instant_markdown_autostart = 0        " 只有在markdown文档中, 并且
                                             " 命令可以使用
 
 
-
-" markdown colork
+" markdown syntax color
 Bundle "tpope/vim-markdown.git"
 autocmd  BufNewFile,BufReadPost  *.md set filetype=markdown
 let  g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
 let  g:markdown_minlines = 100
+
+
+" xml folding
+Bundle "vim-scripts/XML-Folding"

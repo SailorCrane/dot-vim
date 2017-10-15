@@ -22,7 +22,7 @@ let g:AutoPairsMapCh = 0    " 不要将<c-h> 映射为<Backspace>删除键
 
 "19: easy-motion
 " {{{
-Bundle "https://github.com/easymotion/vim-easymotion.git"
+Bundle "easymotion/vim-easymotion.git"
 let g:EasyMotion_smartcase = 1
 "let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
 
@@ -97,7 +97,7 @@ map <CR>  <Plug>Sneak_;
 " 一个很烂的插件,将我command
 " 模式下的<tab>映射为对buffer的补全,当我想补全命令时,总是刷新我的输入. Shit
 " 难道是因为我没有好好读读文档,所以不会使用?
-"Bundle "https://github.com/SailorCrane/SearchComplete.git"
+"Bundle "SailorCrane/SearchComplete.git"
 "20-1 CmdlineComplete
 Bundle "CmdlineComplete.git"
 
@@ -188,7 +188,7 @@ Bundle "http://git.oschina.net/CraneAgain/xterm-color-table.vim.git"
 
 
 "35 multiple-cursor
-Bundle "https://github.com/terryma/vim-multiple-cursors.git"
+Bundle "terryma/vim-multiple-cursors.git"
 let g:multi_cursor_start_word_key='g<C-n>'     "选择单词"
 let g:multi_cursor_start_key='gi<C-n>'           "在单词中的,也被选择"
 
@@ -215,7 +215,7 @@ Bundle "godlygeek/tabular.git"
 
 
 "37 expand-region
-Bundle "https://github.com/terryma/vim-expand-region.git"
+Bundle "terryma/vim-expand-region.git"
 vmap v <Plug>(expand_region_expand)
 vmap V <Plug>(expand_region_shrink)
 
@@ -243,22 +243,22 @@ Bundle "ack.vim.git"
 
 
 "44 mkdir, very simple
-Bundle  "https://github.com/pbrisbin/vim-mkdir.git"
+Bundle  "pbrisbin/vim-mkdir.git"
 
 
 "45 visual-star search
 " 这是vim-practical 作者的一款插件, 实现很简单
 " 在«vim-practical»技巧86中, 有这个技巧的实现, 并且书中还有一个关于/ 和?的bug
-Bundle "https://github.com/nelstrom/vim-visual-star-search.git"
+Bundle "nelstrom/vim-visual-star-search.git"
 
 
 "46 qargs
-Bundle "https://github.com/nelstrom/vim-qargs.git"
+Bundle "nelstrom/vim-qargs.git"
 
 
 "47 text-object-entire: file object
-Bundle "https://github.com/kana/vim-textobj-user.git"
-Bundle "https://github.com/kana/vim-textobj-entire.git"
+Bundle "kana/vim-textobj-user.git"
+Bundle "kana/vim-textobj-entire.git"
 
 
 "49 Mark
@@ -271,7 +271,7 @@ Bundle "VOoM.git"
 
 
 "51 calendar
-Bundle "https://github.com/itchyny/calendar.vim.git"
+Bundle "itchyny/calendar.vim.git"
 
 
 "52 visincr 提供增长数列功能
@@ -331,7 +331,7 @@ Bundle  "Emmet.vim.git"
 
 
 " 71-1
-Bundle "https://github.com/thaerkh/vim-workspace.git"
+Bundle "thaerkh/vim-workspace.git"
 
 " 72-2 vim-session插件比vim-workspace好用很多
 Bundle "xolox/vim-misc.git"

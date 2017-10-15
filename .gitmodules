@@ -367,3 +367,7 @@
 [submodule ".vim/bundle/CCTree"]
     path = .vim/bundle/CCTree
     url = https://github.com/hari-rangarajan/CCTree
+
+[submodule ".vim/bundle/XML-Folding"]
+    path = .vim/bundle/XML-Folding
+    url = https://github.com/vim-scripts/XML-Folding
