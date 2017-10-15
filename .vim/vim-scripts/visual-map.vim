@@ -1,7 +1,8 @@
 
 "1 to command line
 vnoremap  ;    :
-vnoremap  <CR> ;
+"vnoremap  <CR> ;
+"map  <CR>  <Plug>Sneak_;
 
 
 "2 <Leader>f, <Leader>b to  page down up

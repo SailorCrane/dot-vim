@@ -17,7 +17,8 @@
 " {{{
 nnoremap  ;  :
 "nnoremap  :  <nop>
-nnoremap <CR> ;
+"nnoremap <CR>  <Plug>Sneak_;
+"nnoremap <CR>  ;
 " 在一些特殊情况下:比如 vim的命令窗口中, q:中, 需要回车执行命令时使用
 nnoremap <Leader><CR>    <CR>
 
@@ -26,7 +27,7 @@ nnoremap <Leader><CR>    <CR>
 " }}}
 
 
-"1-2
+"1-2 查看命令历史
 nnoremap  q;  q:
 
 

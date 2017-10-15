@@ -80,15 +80,17 @@ map z? <Plug>(incsearch-easymotion-?)
 map zg/ <Plug>(incsearch-easymotion-stay)
 
 
-" quick move
+" quick move line down/up
 Bundle "matze/vim-move"
-
+" default key is <Alt> (temporary modifier, 即必须可以和其它键同时按下的)
 " does not work for <Leader>
 "let g:move_key_modifier = '<Leader>'
 
 
-"
+" sneak: search two character cross lines
 Bundle "justinmk/vim-sneak"
+" can't use noremap
+map <CR>  <Plug>Sneak_;
 
 
 "20 SearchComplete
