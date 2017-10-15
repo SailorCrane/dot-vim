@@ -52,6 +52,16 @@ cnoremap  ;  !
 "cnoremap  ;. !./
 
 
+"cnoremap  jk <Esc>, <Esc> in macro will execute command
+cnoremap  jk <C-c>
+"<Esc>       When typed and 'x' not present in 'cpoptions', quit
+        "Command-line mode without executing.  In macros or when 'x'
+        "present in 'cpoptions', start entered command.
+        "Note: If your <Esc> key is hard to hit on your keyboard, train
+        "yourself to use CTRL-[.
+"*c_CTRL-C*
+"CTRL-C      quit command-line without executing
+
 "8 cabbv mk to make
 cabbrev  mk   make
 cabbrev  mkb  make -B
