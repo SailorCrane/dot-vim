@@ -119,7 +119,7 @@ nnoremap <C-t>  :A<CR>:call ShowBufName()<CR>
 
 
 "48 commentary from toppe: operator
-Bundle  "https://github.com/tpope/vim-commentary.git"
+Bundle  "tpope/vim-commentary.git"
 
 
 " 63

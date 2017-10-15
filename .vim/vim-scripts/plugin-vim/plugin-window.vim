@@ -60,7 +60,7 @@ let g:tagbar_left = 0
 
 
 "4-1 bufexplorer
-Bundle  "https://github.com/jlanzarotta/bufexplorer.git"
+Bundle  "jlanzarotta/bufexplorer.git"
 "{{{
 let g:bufExplorerSplitVertSize=30
 nnoremap <leader>ob :BufExplorerVerticalSplit<CR>
