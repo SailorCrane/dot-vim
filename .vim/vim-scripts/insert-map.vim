@@ -94,7 +94,7 @@ inoremap  <Leader><Leader>#     <C-r>#
 
 " 7 search
 " 这里需要使用imap, 而不是inoremap. 因为后面有连续映射.
-imap  <Leader><Leader>  <ESC><Plug>(easymotion-prefix)
+" imap  <Leader><Leader>  <ESC><Plug>(easymotion-prefix)
 " 这里必须使用map/nmap, 而不可以使用nnoremap, 因为使用了连续映射如下所示
 " <Leader><Leader>             <Plug>(easymotion-prefix)
 " <Plug>(easymotion-prefix)N   <Plug>(easymotion-N)

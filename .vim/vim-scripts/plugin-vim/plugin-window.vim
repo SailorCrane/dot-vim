@@ -122,6 +122,10 @@ let g:ctrlp_max_files=350
 " CtrlP 插件 似乎是只要设置别的映射,映射到了CtrlP命令,那么<C-p>的映射就会自动取消.CtrlP的这个功能还是很棒的
 " 这样<C-p> 就可以用在Yankring中了
 " s stand for "search"
+"let g:ctrlp_map = '<Leader>sp'  also is OK.
+
+" CtrlP plugin use hasmapto(":<C-u>CtrlP<CR>") to detect is there a mapping
+" alread for :CtrlP command
 nnoremap  <Leader>sp  :<C-u>CtrlP<CR>
 
 " CtrlP 中没有什么插件可以比得上Fuzzy Find 的 FunFile, 可以搜索所有路径.

@@ -77,9 +77,9 @@ let g:ycm_cache_omnifunc=0	" 禁止缓存匹配项,每次都重新生成匹配�
 let g:ycm_seed_identifiers_with_syntax=1	" 语法关键字补全
 "nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>	"force recomile with syntastic
 
-"nnoremap <leader>lo :lopen<CR>	"open locationlist
-"nnoremap <leader>lc :lclose<CR>	"close locationlist
-inoremap <leader><leader> <C-x><C-o>
+"nnoremap <Leader>lo :lopen<CR>	"open locationlist
+"nnoremap <Leader>lc :lclose<CR>	"close locationlist
+"inoremap <Leader><Leader> <C-x><C-o>
 
 "在注释输入中也能补全
 let g:ycm_complete_in_comments = 1
@@ -88,7 +88,7 @@ let g:ycm_complete_in_strings = 1
 "注释和字符串中的文字也会被收入补全
 let g:ycm_collect_identifiers_from_comments_and_strings = 0
 
-nnoremap <leader>yd :YcmCompleter GoToDefinitionElseDeclaration<CR> " 跳转到定义处
+nnoremap <Leader>yd :YcmCompleter GoToDefinitionElseDeclaration<CR> " 跳转到定义处
 " }}}
 
 
