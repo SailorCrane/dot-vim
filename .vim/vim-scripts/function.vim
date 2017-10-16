@@ -147,3 +147,6 @@ endfun
 fun! Toggle_isk_colon()
     call Toggle_isk(",", ":")
 endfun
+
+
+"nnoremap  <Leader>em  :call <SID>EditMakefile()<CR>

@@ -70,7 +70,7 @@ nnoremap  <Leader>or  :RainbowToggleOn<CR>
 " 防止:syntax on disable Rainbow color
 if exists(':RainbowToggleOn')
     RainbowToggleOn
-    echom "exists"
+    "echom "exists"
 endif
 
 "augroup Rainbow
