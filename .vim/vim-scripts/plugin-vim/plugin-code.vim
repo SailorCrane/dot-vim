@@ -114,7 +114,7 @@ Bundle "a.vim.git"
 nnoremap <C-t>  :A<CR>:call ShowBufName()<CR>
 
 
-"14:  quick fix
+"14:  quick fix/locatioon window about
 "Bundle "romainl/vim-qf.git"
 
 
