@@ -245,12 +245,12 @@ nnoremap <A-0>     10gt<CR>
 " 上下左右切换窗口: 并显示文件名
 " 用<C-> 切换窗口, 比<Leader>快多了
 " {{{
-nnoremap  <C-h>  <C-w>h:ShowBufName<CR>
-nnoremap  <C-l>  <C-w>l:ShowBufName<CR>
-" <C-j> 在c/cpp文件中, 被c-support映射为进入插入模式到空格附近
-" 把c-support中的<C-j> 映射为了c<C-j>, 寻找时搜索c<C-j>即可
-nnoremap  <C-j>  <C-w>j:ShowBufName<CR>
-nnoremap  <C-k>  <C-w>k:ShowBufName<CR>
+
+" tmux 插件中已经有相应的映射了, 并且做的更好可以跳转到tmux pane
+"nnoremap  <C-h>  <C-w>h:ShowBufName<CR>
+"nnoremap  <C-l>  <C-w>l:ShowBufName<CR>
+"nnoremap  <C-j>  <C-w>j:ShowBufName<CR>
+"nnoremap  <C-k>  <C-w>k:ShowBufName<CR>
 
 " 用<Leader>切换窗口: 几乎是鸡肋了. 因为现在设置为了<C-h>, <C-L>, <C-j>, <C-k>跳转窗口
 " 虽然现在还在用.但也仅仅是因为习惯的问题
@@ -266,6 +266,7 @@ nnoremap  <C-k>  <C-w>k:ShowBufName<CR>
 "nnoremap  <Leader>k  <C-w>k
 
 " 上下左右切换窗口, 并将切换到的窗口最大化: 最大化函数会显示文件名
+" 很少用
 nnoremap  <C-w>h     <C-w>h:call MaxCurrentWindow()<Cr>
 nnoremap  <C-w>l     <C-w>l:call MaxCurrentWindow()<Cr>
 nnoremap  <C-w>j     <C-w>j:call MaxCurrentWindow()<Cr>

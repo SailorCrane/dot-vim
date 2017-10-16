@@ -44,8 +44,13 @@ setlocal foldlevel=99
 
 
 " 3:  <F5> run current file
-nnoremap <F5>          :!python  %<CR>
-nnoremap <Leader><F5>  :!python3 %<CR>
+" 正统留给<f5>, python3当然才是正统
+nnoremap <F5>          :!clear && python3  %<CR>
+nnoremap <Leader><F5>  :!clear && python2  %<CR>
+
+" c stand for non "clear"
+nnoremap c<F5>         :!python3  %<CR>
+"nnoremap c<F5>         :!python3  %<CR>
 
 
 " 4: <C-w>a dont'  effect  NerdTree width, only max height
