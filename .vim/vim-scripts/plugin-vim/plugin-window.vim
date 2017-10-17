@@ -40,7 +40,7 @@ nnoremap <leader>tn :NERDTreeToggle<cr>
 
 "3: code file tag about
 " {{{
-Bundle "Tagbar.git"
+Bundle "vim-scripts/Tagbar.git"
 "5-2 Tagbar in vim-scripts's repo
 " <leader>tt 被vim-scripts/Align使用了
 " 所以这里使用ti: tag invert, tt :tag toggle
@@ -112,7 +112,7 @@ nnoremap  <Leader>tu :UndotreeToggle<cr>
 "10 ctrlp
 let g:ctrlp_working_path_mode = 0
 Bundle "kien/ctrlp.vim.git"
-Bundle "FuzzyFinder.git"
+Bundle "vim-scripts/FuzzyFinder.git"
 " {{{
 " in dir, search more file
 let g:ctrlp_max_files=350

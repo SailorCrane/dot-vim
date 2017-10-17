@@ -108,7 +108,7 @@ Bundle "WolfgangMehner/c-support.git"
 " }}}
 
 "12-2: a.vim :switch between header and source file
-Bundle "a.vim.git"
+Bundle "vim-scripts/a.vim.git"
 "cnoreabbrev  a  A
 " i stand for  include
 nnoremap <C-t>  :A<CR>:call ShowBufName()<CR>

@@ -2,10 +2,10 @@
 
 
 "54 python 相关
-Bundle  "pyflakes.git"
-Bundle  "pydoc.vim.git"
-Bundle  "indentpython.vim.git"
-Bundle  "python.vim.git"
+Bundle  "vim-scripts/pyflakes.git"
+Bundle  "vim-scripts/pydoc.vim.git"
+Bundle  "vim-scripts/indentpython.vim.git"
+Bundle  "SailorCrane/python.vim.git"
 Bundle  "hdima/python-syntax.git"
 
 

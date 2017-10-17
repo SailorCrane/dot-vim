@@ -103,7 +103,7 @@ map <CR>  <Plug>Sneak_;
 " 难道是因为我没有好好读读文档,所以不会使用?
 "Bundle "SailorCrane/SearchComplete.git"
 "20-1 CmdlineComplete
-Bundle "CmdlineComplete.git"
+Bundle "vim-scripts/CmdlineComplete.git"
 
 
 "21 ShowMarks 显示使用m所下的标记
@@ -149,7 +149,7 @@ Bundle "airblade/vim-gitgutter"
 
 
 "27 EasyGrep
-Bundle "EasyGrep.git"
+Bundle "vim-scripts/EasyGrep.git"
 
 
 " tlib: vim util fun
@@ -159,7 +159,7 @@ Bundle "tomtom/tlib_vim.git"
 
 "34 L9: vim library, vim script util.(和tlib一样)
 "暂时先不启用这个库,需要时再打开注释:<leader>ci toggle注释
-Bundle "L9.git"
+Bundle "vim-scripts/L9.git"
 
 
 "28 SnipMate
@@ -178,7 +178,7 @@ Bundle "Chiel92/vim-autoformat.git"
 
 
 "31 Yankring,因为很多快捷键冲突,所以先将这个插件注释
-Bundle "YankRing.vim.git"
+Bundle "vim-scripts/YankRing.vim.git"
 nnoremap  <leader>ys  :YRShow<cr>
 nnoremap  <leader>yc  :YRClear<cr>
 
@@ -230,11 +230,11 @@ let g:targets_pairs = '()b {}B [] <>'
 
 
 "38 gundo stand for gnu undo
-Bundle "gundo.git"
+Bundle "vim-scripts/gundo.git"
 
 
 "40 ShowTrailingWhiteSpace
-Bundle "ShowTrailingWhitespace.git"
+Bundle "vim-scripts/ShowTrailingWhitespace.git"
 
 
 "42 FencView: fencview
@@ -243,7 +243,7 @@ Bundle  "mbbill/fencview.git"
 
 
 "43 ack.vim
-Bundle "ack.vim.git"
+Bundle "vim-scripts/ack.vim.git"
 
 
 "44 mkdir, very simple
@@ -271,7 +271,7 @@ Bundle "kana/vim-textobj-entire.git"
 
 
 "50 VOoM
-Bundle "VOoM.git"
+Bundle "vim-scripts/VOoM.git"
 
 
 "51 calendar
@@ -279,11 +279,11 @@ Bundle "itchyny/calendar.vim.git"
 
 
 "52 visincr 提供增长数列功能
-Bundle "VisIncr.git"
+Bundle "vim-scripts/VisIncr.git"
 
 
 "55 ReplaceWithRegister
-Bundle "ReplaceWithRegister.git"
+Bundle "vim-scripts/ReplaceWithRegister.git"
 
 
 "56  vim-exchange :learned from vimcasts
@@ -331,7 +331,7 @@ let g:templates_directory = $Crane_Dot_Vim . "/templates"
 
 " 68 速写 html/css/js(javascript) : 官方插件. ZenCoding renamed to Emmet.vim
 "Bundle  "ZenCoding.vim.git"
-Bundle  "Emmet.vim.git"
+Bundle "vim-scripts/Emmet.vim.git"
 
 
 " 71-1

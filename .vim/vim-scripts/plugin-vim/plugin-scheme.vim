@@ -24,7 +24,7 @@ Bundle "SailorCrane/vim-monokai.git"
 Bundle  "altercation/vim-colors-solarized.git"
 
 "5: color sampler
-Bundle  "Colour-Sampler-Pack.git"
+Bundle  "vim-scripts/Colour-Sampler-Pack.git"
 
 
 "6: railscast
