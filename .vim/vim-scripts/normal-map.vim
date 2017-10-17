@@ -602,7 +602,9 @@ nnoremap  <Leader>ly     yyI//<ESC>
 " :Man 命令, 是通过"runtime ftplugin/man.vim"命令激活的
 " {{{
 if  exists(":Man")
-    nmap  K  <Leader>K
+    "if maparg('K') == ""    " has no map
+        "nmap  <unique> K  <Leader>K
+    "endif
     "注意,因为<Leader>K,也是一个man.vim的映射,而不是vim内部的基本功能,所以不能使用noremap映射,而要使用nmap
     "只有当最终映射目标为vim直接输入后的功能时:比如vim自带功能,或者命令行输入...才能使用nnoremap
     "nmap <Leader>K 可以查看到 映射的最终函数

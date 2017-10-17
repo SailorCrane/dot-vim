@@ -365,3 +365,7 @@ Bundle "tpope/vim-projectionist"
 Bundle "junegunn/goyo.vim"
 nnoremap <Leader>tg  :Goyo<CR>
 nnoremap <Leader>cg  :Goyo!<CR>
+
+
+" vim help plugin
+Bundle "powerman/vim-plugin-viewdoc"
