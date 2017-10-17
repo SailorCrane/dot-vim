@@ -43,15 +43,15 @@ let g:syntastic_cpp_check_header = 1
 "Bundle "Valloric/YouCompleteMe.git"
 " {{{
 " 自动补全配置
-set completeopt=longest,menu    "让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif  "离开插入模式后自动关闭预览窗口
+"set completeopt=longest,menu    "让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
+"autocmd InsertLeave * if pumvisible() == 0|pclose|endif  "离开插入模式后自动关闭预览窗口
 "回车即选中当前项
-inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
+"inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
 "上下左右键的行为 会显示其他信息
-inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
-inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
-inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
-inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
+"inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
+"inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
+"inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
+"inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
 
 
 "不使用 ycm 的语法提示.
@@ -88,7 +88,7 @@ let g:ycm_complete_in_strings = 1
 "注释和字符串中的文字也会被收入补全
 let g:ycm_collect_identifiers_from_comments_and_strings = 0
 
-nnoremap <Leader>yd :YcmCompleter GoToDefinitionElseDeclaration<CR> " 跳转到定义处
+"nnoremap <Leader>yd :YcmCompleter GoToDefinitionElseDeclaration<CR> " 跳转到定义处
 " }}}
 
 
