@@ -38,7 +38,7 @@ let g:rbpt_loadcmd_toggle = 1
 
 
 "1-2
-Bundle "luochen1990/rainbow"
+Bundle "luochen1990/rainbow.git"
 " 和syntax on有冲突
 "{{{
 let g:rainbow_conf = {

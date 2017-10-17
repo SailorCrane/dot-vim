@@ -100,7 +100,7 @@ Bundle "mbbill/echofunc.git"
 " {{{
 " c-support 就是 vim-scripts官网的c.vim, 二者是一个东西
 " 修改了<c-j>
-Bundle "WolfgangMehner/c-support.git"
+Bundle "SailorCrane/c-support.git"
 
 "12-1: 放在SailorCrane自己用户下
 " c-support 就是 vim-scripts官网的c.vim, 二者是一个东西
