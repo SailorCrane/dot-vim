@@ -377,3 +377,7 @@
 [submodule ".vim/bundle/vim-plugin-viewdoc"]
     path = .vim/bundle/vim-plugin-viewdoc
     url = https://github.com/powerman/vim-plugin-viewdoc
+
+[submodule ".vim/bundle/vim-endwise"]
+    path = .vim/bundle/vim-endwise
+    url = https://github.com/tpope/vim-endwise
