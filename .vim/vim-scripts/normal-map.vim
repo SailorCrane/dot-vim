@@ -526,10 +526,10 @@ nnoremap  <Leader>d;    vf:;d
 " {{{
 "nnoremap  <Space><CR>   o<ESC>k
 
-"nnoremap  <Leader>o     o<ESC>k
-"nnoremap  <Leader>O     O<ESC>j
-nnoremap         go     o<ESC>k
-nnoremap         gO     O<ESC>j
+" unimpaired "[<Space>"  "]<Space>" 在行前后添加空格, 不需要自己再实现
+"nnoremap         go     o<ESC>k
+"nnoremap         gO     O<ESC>j
+"
 "nnoremap  <Leader>go    o<ESC>
 "nnoremap  <Leader>gO    O<ESC>
 
