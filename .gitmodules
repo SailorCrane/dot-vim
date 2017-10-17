@@ -211,9 +211,11 @@
 [submodule ".vim/bundle/pyflakes"]
 	path = .vim/bundle/pyflakes
 	url = https://github.com/vim-scripts/pyflakes.git
+
 [submodule ".vim/bundle/python.vim"]
 	path = .vim/bundle/python.vim
-	url = https://github.com/vim-scripts/python.vim.git
+	url = https://github.com/SailorCrane/python.vim
+
 [submodule ".vim/bundle/vim-repeat"]
 	path = .vim/bundle/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
