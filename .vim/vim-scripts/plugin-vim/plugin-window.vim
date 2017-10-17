@@ -81,7 +81,7 @@ nnoremap <leader>tb :ToggleBufExplorer<cr>
 
 
 "5 mru files
-Bundle "vim-scripts/mru.vim"
+Bundle "vim-scripts/mru.vim.git"
 nnoremap  <Leader>om   :MRU<CR>
 nnoremap  <Leader>ov   :MRU vim<CR>
 nnoremap  <Leader>op   :MRU py<CR>
