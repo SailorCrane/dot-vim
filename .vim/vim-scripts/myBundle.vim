@@ -24,5 +24,15 @@ source   $Plugin_Script/plugin-python.vim
 source   $Plugin_Script/plugin-ft.vim          " 和文件类型相关关:markdown, vim-tmux
 
 
+" 必须讲filetype on放在最后
+" 因为filetype on时vim会执行ftplugin.vim 一次, 并且只执行一次(标志位控制)
+" locate  ftplugin.vim 可以查看
+
+" 在ftplugin.vim 中会执行runtimepath下的
+" runtime/ftplugin/type.vim     比如python.vim
+" runtime/ftplugin/type/*.vim   比如python/some.vim
+
+" 而runtime在Bundle命令执行后, 才会添加到runtimepath中
+" 所以将Bundle命令放在filetype on命令之前
 filetype plugin indent on
 filetype on
