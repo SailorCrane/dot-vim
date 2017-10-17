@@ -32,12 +32,12 @@ Bundle "jpo/vim-railscasts-theme.git"
 
 
 "7: seoul256 colorschemes (awesome-vim-colorschemes中已有)
-"Bundle "junegunn/seoul256.vim"
+"Bundle "junegunn/seoul256.vim.git"
 
 
 "===================thematic=======================
 "1: thematic
-Bundle "reedes/vim-thematic"
+Bundle "reedes/vim-thematic.git"
 "{{{
 let g:thematic#themes = {
 \ 'molokai'  : {   'typeface': 'Menlo',

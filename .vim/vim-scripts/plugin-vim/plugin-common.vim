@@ -74,8 +74,8 @@ map <Leader><leader>l <Plug>(easymotion-lineforward)
 " }}}
 
 " 19-2 easy incsearch
-Bundle "haya14busa/incsearch.vim"
-Bundle "haya14busa/incsearch-easymotion.vim"
+Bundle "haya14busa/incsearch.vim.git"
+Bundle "haya14busa/incsearch-easymotion.vim.git"
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
@@ -85,14 +85,14 @@ map zg/ <Plug>(incsearch-easymotion-stay)
 
 
 " quick move line down/up
-Bundle "matze/vim-move"
+Bundle "matze/vim-move.git"
 " default key is <Alt> (temporary modifier, 即必须可以和其它键同时按下的)
 " does not work for <Leader>
 "let g:move_key_modifier = '<Leader>'
 
 
 " sneak: search two character cross lines
-Bundle "justinmk/vim-sneak"
+Bundle "justinmk/vim-sneak.git"
 " can't use noremap
 map <CR>  <Plug>Sneak_;
 
@@ -109,7 +109,7 @@ Bundle "vim-scripts/CmdlineComplete.git"
 "21 ShowMarks 显示使用m所下的标记
 "Bundle "ShowMarks.git"
 
-Bundle "kshenoy/vim-signature"
+Bundle "kshenoy/vim-signature.git"
 
 
 "22 vim-surround
@@ -136,9 +136,9 @@ nnoremap <leader>gl :Glog<cr>
 nnoremap <leader>gp :Git push<cr>
 nnoremap <leader>gw :Gwrite<cr>
 
-Bundle "airblade/vim-gitgutter"
+Bundle "airblade/vim-gitgutter.git"
 
-"Bundle "mhinz/vim-signify"
+"Bundle "mhinz/vim-signify.git"
 " this support git/vcs..., no use now
 " }}}
 
@@ -358,14 +358,14 @@ Bundle "christoomey/vim-sort-motion.git"
 
 
 " projectionist
-Bundle "tpope/vim-projectionist"
+Bundle "tpope/vim-projectionist.git"
 
 
 " goyo.vim
-Bundle "junegunn/goyo.vim"
+Bundle "junegunn/goyo.vim.git"
 nnoremap <Leader>tg  :Goyo<CR>
 nnoremap <Leader>cg  :Goyo!<CR>
 
 
 " vim help plugin
-Bundle "powerman/vim-plugin-viewdoc"
+Bundle "powerman/vim-plugin-viewdoc.git"
