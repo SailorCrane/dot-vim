@@ -371,3 +371,7 @@
 [submodule ".vim/bundle/XML-Folding"]
     path = .vim/bundle/XML-Folding
     url = https://github.com/vim-scripts/XML-Folding
+
+[submodule ".vim/bundle/vim-plugin-viewdoc"]
+    path = .vim/bundle/vim-plugin-viewdoc
+    url = https://github.com/powerman/vim-plugin-viewdoc
