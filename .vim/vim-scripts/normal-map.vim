@@ -923,17 +923,18 @@ nnoremap  <Leader>ls   :set  list!  list?<CR>
 
 " tab to space(4 space), need set expandtab
 " tab to space(4 space), need set noexpandtab
-nnoremap  <Leader>rt  :set expandtab   tabstop=4<CR>:%retab <CR>
-nnoremap  <Leader>rT  :set noexpandtab tabstop=4<CR>:%retab!<CR>
+" 使用 "|" 去分割命令, 而不是多次执行":"命令
+nnoremap  <Leader>rt  :set expandtab   tabstop=4 <bar> %retab <CR>
+nnoremap  <Leader>rT  :set noexpandtab tabstop=4 <bar> %retab!<CR>
 
 " visual模式下的retab, 注意1. 执行两次命令之间需要gv再次选中选取选区
 "                      注意2. 执行第一次命令时, 要使用<C-u> 去掉":'<,'>"
 "
-" 使用 "|" 去分割命令, 而不是多次执行":"命令
-"vnoremap  <Leader>rt  :<C-u>set expandtab   tabstop=4<CR>gv: retab <CR>
-"vnoremap  <Leader>rT  :<C-u>set noexpandtab tabstop=4<CR>gv: retab!<CR>
-vnoremap  <Leader>rt  :<C-u>set expandtab   tabstop=4<CR> | retab <CR>
-vnoremap  <Leader>rT  :<C-u>set noexpandtab tabstop=4<CR> | retab!<CR>
+vnoremap  <Leader>rt  :<C-u>set expandtab   tabstop=4<CR>gv: retab <CR>
+vnoremap  <Leader>rT  :<C-u>set noexpandtab tabstop=4<CR>gv: retab!<CR>
+" '<,'> 不支持  :set expandtab
+"vnoremap  <Leader>rt  :set expandtab   tabstop=4 <bar> retab <CR>
+"vnoremap  <Leader>rT  :set noexpandtab tabstop=4 <bar> retab!<CR>
 "}}}
 
 

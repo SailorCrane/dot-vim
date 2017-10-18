@@ -128,13 +128,14 @@ Bundle "tpope/vim-repeat.git"
 "25 git and vertion control about
 " {{{
 Bundle "tpope/vim-fugitive.git"
-nnoremap <leader>gs :Gstatus<cr>
-nnoremap <leader>gd :Gdiff<cr>
-nnoremap <leader>gc :Gcommit<cr>
-nnoremap <leader>gb :Gblame<cr>
-nnoremap <leader>gl :Glog<cr>
-nnoremap <leader>gp :Git push<cr>
-nnoremap <leader>gw :Gwrite<cr>
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gd :Gdiff<CR>
+"nnoremap <leader>gc :Gcommit<CR>
+nnoremap <leader>gc :Git commit -v<CR>
+nnoremap <leader>gb :Gblame<CR>
+nnoremap <leader>gl :Glog<CR>
+nnoremap <leader>gp :Git push<CR>
+nnoremap <leader>gw :Gwrite<CR>
 
 Bundle "airblade/vim-gitgutter.git"
 
@@ -179,8 +180,8 @@ Bundle "Chiel92/vim-autoformat.git"
 
 "31 Yankring,因为很多快捷键冲突,所以先将这个插件注释
 Bundle "vim-scripts/YankRing.vim.git"
-nnoremap  <leader>ys  :YRShow<cr>
-nnoremap  <leader>yc  :YRClear<cr>
+nnoremap  <leader>ys  :YRShow<CR>
+nnoremap  <leader>yc  :YRClear<CR>
 
 
 "32 color view
