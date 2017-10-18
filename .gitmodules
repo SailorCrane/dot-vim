@@ -101,7 +101,7 @@
     url = https://github.com/hdima/python-syntax.git
 [submodule ".vim/bundle/vim-snippets"]
     path = .vim/bundle/vim-snippets
-    url = https://github.com/honza/vim-snippets.git
+    url = https://github.com/SailorCrane/vim-snippets.git
 [submodule ".vim/bundle/vim-DrawIt"]
     path = .vim/bundle/vim-DrawIt
     url = https://github.com/hrj/vim-DrawIt.git

@@ -138,7 +138,7 @@ let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 "let g:UltiSnipsExpandTrigger="<space>"
 "let g:UltiSnipsJumpForwardTrigger="<space>"
 "let g:UltiSnipsJumpBackwardTrigger="<S-space>"
-Bundle "honza/vim-snippets.git"
+Bundle "SailorCrane/vim-snippets.git"
 "}}}
 
 " argwrap
