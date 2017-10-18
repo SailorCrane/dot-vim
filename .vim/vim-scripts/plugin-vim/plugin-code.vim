@@ -150,11 +150,13 @@ inoremap  <Leader>aw  <ESC>:ArgWrap<CR>
 "62 indent-guide
 Bundle "nathanaelkane/vim-indent-guides.git"
 "{{{
-if &expandtab   " 如果是tab, 就不要enable了, 因为会显示很宽
-    let g:indent_guides_enable_on_vim_startup = 1
-else    " use tab(noexpandtab)
-    let g:indent_guides_enable_on_vim_startup = 0
-endif
+"if &expandtab   " 如果是tab, 就不要enable了, 因为会显示很宽
+    "let g:indent_guides_enable_on_vim_startup = 1
+"else    " use tab(noexpandtab)
+    "let g:indent_guides_enable_on_vim_startup = 0
+"endif
+
+let g:indent_guides_enable_on_vim_startup = 0   " 不要启动, 手动启动
 
 " 注意如果是tab缩进, size=1不管用, 会对整个tab显示indent(对于这里不要存在疑惑)
 let g:indent_guides_guide_size=1
