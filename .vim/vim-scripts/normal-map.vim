@@ -897,13 +897,6 @@ nnoremap <Leader>S     /\S\+<CR>
 nnoremap  ,,n   o<ESC>0i 1<CR>2<CR>3<CR>4<CR>5<CR>6<CR>7<CR>8<CR>9<CR><Backspace>10<ESC>9k
 nnoremap  ,,N   <ESC>0i 1<CR>2<CR>3<CR>4<CR>5<CR>6<CR>7<CR>8<CR>9<CR><Backspace>10<CR><ESC>10k
 
-" 50 toggle isk: some special symbol
-nnoremap  <Leader>t-  :call Toggle_isk_hypen()<CR>
-nnoremap  <Leader>t_  :call Toggle_isk_underline()<CR>
-nnoremap  <Leader>t.  :call Toggle_isk_dot()<CR>
-nnoremap  <Leader>t/  :call Toggle_isk_slash()<CR>
-nnoremap  <Leader>t:  :call Toggle_isk_colon()<CR>
-
 
 " 51 toggle fold(closed <------> opend)
 nnoremap <Space> za

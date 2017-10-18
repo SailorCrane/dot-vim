@@ -370,3 +370,6 @@ nnoremap <Leader>cg  :Goyo!<CR>
 
 " vim help plugin
 Bundle "powerman/vim-plugin-viewdoc.git"
+
+
+Bundle "SailorCrane/ToggleIsk.git"
