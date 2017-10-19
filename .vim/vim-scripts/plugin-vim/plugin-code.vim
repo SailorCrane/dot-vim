@@ -12,7 +12,7 @@ Bundle "scrooloose/nerdcommenter.git"
 
 
 "4: syntastic in scrooloose
-Bundle "scrooloose/syntastic.git"
+"Bundle "scrooloose/syntastic.git"
 " {{{
 " 为了使syntastic 和 YCM一起工作, 将他们的 error 和 warning
 " symbol设置为不同标志
@@ -37,6 +37,19 @@ let g:syntastic_cpp_check_header = 1
 " 使语法检测, 支持c++11语法, 比如 auto iter = nodes.begin()
 "let g:syntastic_cpp_compiler = 'g++'  "change the compiler to g++ to support c++11.
 " }}}
+
+
+"4-2: ale: syntax check(need vim8)
+Bundle "w0rp/ale.git"
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = '⚠'
+
+let g:ale_sign_column_always = 1
+
+
+
 
 
 "6: YouCompleteMe

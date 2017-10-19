@@ -293,9 +293,15 @@
 [submodule ".vim/bundle/winmanager"]
     path = .vim/bundle/winmanager
     url = https://github.com/vim-scripts/winmanager.git
+
 [submodule ".vim/bundle/syntastic"]
     path = .vim/bundle/syntastic
     url = https://github.com/scrooloose/syntastic.git
+
+[submodule ".vim/bundle/ale"]
+    path = .vim/bundle/ale
+    url = https://github.com/w0rp/ale
+
 [submodule ".vim/bundle/ultisnips"]
     path = .vim/bundle/ultisnips
     url = https://github.com/SirVer/ultisnips.git
