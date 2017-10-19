@@ -103,4 +103,8 @@ augroup CraneGroup
     "13 python
     au   FileType  python  source  $Vim_Scripts/python.vim
 
+
+    "14 vim
+    au   FileType  vim     nnoremap <F5>  :so %<CR>
+
 augroup END "end of CraneGroup

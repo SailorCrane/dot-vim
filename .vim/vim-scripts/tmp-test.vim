@@ -1,9 +1,9 @@
 
 " 事件之间用逗号分隔，不能含有空格
-autocmd BufNewFile,BufRead *.html   :setlocal  nowrap
+"autocmd BufNewFile,BufRead *.html   :setlocal  nowrap
 
-autocmd FileType python  :iabb <buffer> iff  if:<left>
-autocmd FileType c  :iabb <buffer> iff  if()<left>
+"autocmd FileType python  :iabb <buffer> iff  if:<left>
+"autocmd FileType c  :iabb <buffer> iff  if()<left>
 "autocmd BufWrite  *  :sleep 200m
 "autogrup BufWrite  *  :sleep 200m
 "
@@ -16,3 +16,14 @@ autocmd FileType c  :iabb <buffer> iff  if()<left>
 ":augroup testgroup
 ":    autocmd BufWrite * :echomsg "Baz--------------------------------------"
 ":augroup END
+"
+
+
+" command to call function
+"com -nargs=* Mycmd call Myfunc(<f-args>)
+"fun! Test_here(a, b, c)
+    "echom "in test"
+    "echom a:a
+    "echom a:b
+    "echom a:c
+"endf
