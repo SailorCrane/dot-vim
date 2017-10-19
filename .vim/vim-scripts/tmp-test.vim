@@ -20,8 +20,9 @@
 
 
 " command to call function
-"com -nargs=* Mycmd call Myfunc(<f-args>)
-"fun! Test_here(a, b, c)
+"com! -nargs=* Mycmd call Myfunc(<f-args>)
+"com! -nargs=* Mycmd call Myfunc(<f-args>)
+"fun! Myfunc(a, b, c)
     "echom "in test"
     "echom a:a
     "echom a:b
