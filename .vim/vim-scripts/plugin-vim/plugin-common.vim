@@ -44,8 +44,8 @@ nmap <Leader><Leader>l <Plug>(easymotion-overwin-line)
 map  <Leader><Leader>w <Plug>(easymotion-bd-w)
 nmap  <Leader><Leader>w <Plug>(easymotion-overwin-w)
 
-map <Leader><leader>h <Plug>(easymotion-linebackward)
-map <Leader><leader>l <Plug>(easymotion-lineforward)
+"map <Leader><leader>h <Plug>(easymotion-linebackward)
+"map <Leader><leader>l <Plug>(easymotion-lineforward)
 "map <Leader><Leader>j <Plug>(easymotion-j)
 "map <Leader><Leader>k <Plug>(easymotion-k)
 " 重复上一次操作, 类似repeat插件, 很强大
