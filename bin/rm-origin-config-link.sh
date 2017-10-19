@@ -12,7 +12,7 @@ delLink() {
     then
         rm -rf  $file
     else
-        echo "$file is not a symbo link file or doesn't exists"
+        echo "$file is not a symbo link file or doesn't exists(OK)"
     fi
 }
 
