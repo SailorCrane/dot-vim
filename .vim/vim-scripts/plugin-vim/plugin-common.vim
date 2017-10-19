@@ -373,3 +373,7 @@ Bundle "powerman/vim-plugin-viewdoc.git"
 
 
 Bundle "SailorCrane/ToggleIsk.git"
+
+
+"rename current file
+Bundle "danro/rename.vim.git"

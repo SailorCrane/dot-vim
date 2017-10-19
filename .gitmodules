@@ -385,3 +385,7 @@
 [submodule ".vim/bundle/ToggleIsk"]
     path = .vim/bundle/ToggleIsk
     url = https://github.com/SailorCrane/ToggleIsk.git
+
+[submodule ".vim/bundle/rename.vim"]
+    path = .vim/bundle/rename.vim
+    url = https://github.com/danro/rename.vim
