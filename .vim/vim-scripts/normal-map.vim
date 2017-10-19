@@ -147,6 +147,7 @@ nnoremap  <Leader>q  :q<CR>
 " 会影响<Leader>q速度. 现在映射未<Leader>aq, 太棒了.
 " 因为有很多<Leader>a 前缀的映射, 所以不会影响
 nnoremap  <Leader>aq :qa<CR>
+nnoremap  <C-c>      :qa<CR>
 " Quit all windows
 "nnoremap  <Leader>r  :qa<CR>
 " Refresh file, or restore file from file name
