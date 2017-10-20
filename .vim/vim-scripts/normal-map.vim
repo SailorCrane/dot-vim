@@ -400,12 +400,12 @@ nnoremap  gC  gul
 " {{{
 " 这样上下左右, 都和g有关了, 非常棒
 " gh本来是进入select模式, 比较鸡肋, 不需要
-"nnoremap gh  ^
-"nnoremap gl  $
+nnoremap gh  ^
+nnoremap gl  $
 
 " 督促使用I, A去插入
-nnoremap gh  <nop>
-nnoremap gl  <nop>
+"nnoremap gh  <nop>
+"nnoremap gl  <nop>
 
 " 几乎用不到了, 但是留在这里, 为以后再添加映射,保留灵感
 " 还是让他们恢复自己本来的功能吧
