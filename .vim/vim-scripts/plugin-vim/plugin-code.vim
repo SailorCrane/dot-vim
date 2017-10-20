@@ -22,7 +22,9 @@ let g:syntastic_check_on_wq = 0
 
 let g:syntastic_python_checkers = ['pylint']
 "let g:syntastic_python_pylint_args = "--no-docstring-rgx='.*'"
-let g:syntastic_python_pylint_args = "--no-docstring-rgx='.*'  --ignore-imports='yes'  --indent-string='\t' -E"
+"let g:syntastic_python_pylint_args = "--no-docstring-rgx='.*'  --ignore-imports='yes'  --indent-string='\t' -E "
+"let g:syntastic_python_pylint_args = " --indent-string='\t' --disable=E0401"
+"let g:syntastic_python_pylint_args = "-E"
 
 " 为了使syntastic 和 YCM一起工作, 将他们的 error 和 warning
 " symbol设置为不同标志
