@@ -404,8 +404,8 @@ nnoremap  gC  gul
 "nnoremap gl  $
 
 " 督促使用I, A去插入
-nnoremap gh  nop
-nnoremap gl nop
+nnoremap gh  <nop>
+nnoremap gl  <nop>
 
 " 几乎用不到了, 但是留在这里, 为以后再添加映射,保留灵感
 " 还是让他们恢复自己本来的功能吧
