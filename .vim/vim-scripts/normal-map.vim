@@ -398,22 +398,14 @@ nnoremap  gC  gul
 
 "11 快速在文件内部跳转:第一行,最后一行,当前行最左,最右
 " {{{
-" H to line begin: but H to screen top can not use
-" L to lien end  : but L to screen bottom can not use
-" 这组映射用的很多, 因为ctrl 和 caplock交换后, 很方便按
-
-" 这几个映射C-k, C-j没什么用
-"nnoremap  <C-k>  gg
-"nnoremap  <C-j>  G
-
-" 因为<C-h>, <C-l> 转给窗口切换了, 所以使用gh, gl代替原来
-"nnoremap  <C-h>  ^
-"nnoremap  <C-l>  $
-
 " 这样上下左右, 都和g有关了, 非常棒
 " gh本来是进入select模式, 比较鸡肋, 不需要
-nnoremap gh  ^
-nnoremap gl  $
+"nnoremap gh  ^
+"nnoremap gl  $
+
+" 督促使用I, A去插入
+nnoremap gh  nop
+nnoremap gl nop
 
 " 几乎用不到了, 但是留在这里, 为以后再添加映射,保留灵感
 " 还是让他们恢复自己本来的功能吧
