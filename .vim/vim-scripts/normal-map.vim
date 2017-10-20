@@ -217,8 +217,11 @@ nnoremap <Leader>0      :b 10<CR>
 
 "7-2: tabpage 下面是vim 相关tabpage映射
 " {{{
-nnoremap <tab>   gt
-nnoremap <s-tab> gT
+nnoremap L  gt
+nnoremap H  gT
+
+nnoremap <Left>   gt
+nnoremap <Right>  gT
 "nnoremap tn      :tabnew<CR>:NERDTreeFocus<CR>
 " 一般使用tn, 都是为了打开新文件, 所以不使用Focus
 "nnoremap tn      :tabnew<CR>:NERDTree<CR>
@@ -240,6 +243,12 @@ nnoremap <A-9>      9gt<CR>
 nnoremap <A-0>     10gt<CR>
 " }}}
 
+
+"7-3: postion: <c-o>: <tab> go ahead, <s-tab> go behind
+" tab is <C-i>, go ahead
+" s-tab go behind
+" <tab>           <c-i>
+nnoremap <s-tab>  <c-o>
 
 "8 Window  motion and manager: 快速窗口移动和管理
 
@@ -687,12 +696,6 @@ nmap <Leader>sc :cs find c <C-R>=expand("<cword>")<CR><CR>
 "nmap <Leader>si :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 
 
-" 30 因为<C-i> 就是<tab>,被用来在vim顶上的tabpage间跳转,
-" 所以这里使用g_ctrl-o代替原来ctrl-i功能(向前跳跃)
-" 对应于<C-o>
-nnoremap  g<C-o>  <C-i>
-
-
 " 31 black hole delete
 " h stand for hole, 之所以不使用db, 是因为b是一个motion, 移动到上一个单词
 " 相比之下,dh功能就弱的多,仅仅是删除左边字符,并且可以使用X代替
@@ -945,8 +948,6 @@ vnoremap  <Leader>xD  : !xxd -r <CR>
 " Multiple Cursor 的 C-n 被 g<C-n>所取代
 " <C-p> 和 <C-n>被映射到了 YankRing中:让n永远和p快乐的在一起窝
 " <Leader>n <Leader>p 还是buffer next 和 buffer previous, 自己已经用习惯了
-" 至于tabpage的前一个,和下一个,使用<tab> 和 <s-tab>完成.
-" 但是如此以来<C-i>,也就是<C-o>的反向功能,就不能再使用<tab>了,因为<tab> 和 <C-i>是同一个按键(同一个编码)
 
 
 "100
