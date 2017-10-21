@@ -233,6 +233,8 @@ hi ColorColumn ctermbg=lightgrey guibg=Red
 
 " 28 grep setting
 set grepprg=grep\ -E\ -n\ $*\ /dev/null  " add -E to default setting
+"set grepprg=ack\ -H\ --nocolor\ --nogroup
+
 
 "100  vim colorscheme, gvim colorscheme in ~/.gvimrc
 "colorscheme  slate

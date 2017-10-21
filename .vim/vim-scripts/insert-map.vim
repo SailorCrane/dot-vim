@@ -124,3 +124,10 @@ inoremap  <Leader>ra  <------
 " 9 toggle, isk_hypen, isk_dot
 inoremap  <Leader>t-  <ESC>:call Toggole_isk_hypen()<CR>a
 inoremap  <Leader>t.  <ESC>:call Toggole_isk_dot()<CR>a
+
+
+" 10 <c-u>: from tpope sensiable vim config
+" It's awesome
+" CTRL-U in insert mode deletes a lot. Use CTRL-G u to first break undo, so
+" that you can undo CTRL-U without undoing what you typed before it.
+inoremap  <C-U>  <C-G>u<C-U>
