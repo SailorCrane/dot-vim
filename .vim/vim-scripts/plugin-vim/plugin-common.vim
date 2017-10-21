@@ -226,8 +226,12 @@ vmap V <Plug>(expand_region_shrink)
 
 
 " extend target
-Bundle "wellle/targets.vim"
+Bundle "wellle/targets.vim.git"
 let g:targets_pairs = '()b {}B [] <>'
+
+
+" 37 split window by visual-text
+Bundle "wellle/visual-split.vim.git"
 
 
 "38 gundo stand for gnu undo

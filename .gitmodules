@@ -360,6 +360,10 @@
     path = .vim/bundle/targets.vim
     url = https://github.com/wellle/targets.vim.git
 
+[submodule ".vim/bundle/visual-split.vim"]
+    path = .vim/bundle/visual-split.vim
+    url = https://github.com/wellle/visual-split.vim
+
 [submodule ".vim/bundle/vim-projectionist"]
     path = .vim/bundle/vim-projectionist
     url = https://github.com/tpope/vim-projectionist.git
