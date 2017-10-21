@@ -199,5 +199,9 @@ cnoreabbrev sp  Ack  ""    --python    <C-b><Right><Right><Right><Right><Right><
 cnoreabbrev sc  Ack  ""    --cpp       <C-b><Right><Right><Right><Right><Right><Right>
 
 
+cnoreabbrev red   redir  > /tmp/re.txt
+cnoreabbrev ree   redir  END
+cnoreabbrev ere   e  /tmp/re.txt
+
 " 19 <C-a> to line begin
 cnoremap <C-a>  <C-b>
