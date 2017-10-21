@@ -274,9 +274,6 @@ nnoremap <s-tab>  <c-o>
 "nnoremap  <Leader>l  <C-w>l
 " 因为<Leader>l前缀太多:对于行结尾的操作, 所以这里添加<Leader>ll
 " 其实还不如vim自带的<C-w>l 方便, 但为了和其它映射一致, 还是添加上吧
-"nnoremap  <Leader>ll <C-w>l
-"nnoremap  <Leader>j  <C-w>j
-"nnoremap  <Leader>k  <C-w>k
 
 " 上下左右切换窗口, 并将切换到的窗口最大化: 最大化函数会显示文件名
 " 很少用
@@ -361,12 +358,14 @@ nnoremap <C-w>b   <C-w>=<C-w>b:call MaxCurrentWindow()<CR>:let g:tagbar_left = 0
 
 "9 quick line switch:快速交换两行
 " 将当前行'-'下移 或者'_'上移, 支持连续移动
+" 交换当前行和前后行
+" unimpaired: 中 [e  和]e 已经可以exchanged了
 " {{{
-nnoremap  -  ddp
-nnoremap  _  kddpk
+"nnoremap  -  ddp
+"nnoremap  _  kddpk
 
-nnoremap  <Leader>j  ddp
-nnoremap  <Leader>k  kddpk
+"nnoremap  <Leader>j  ddp
+"nnoremap  <Leader>k  kddpk
 " }}}
 
 
