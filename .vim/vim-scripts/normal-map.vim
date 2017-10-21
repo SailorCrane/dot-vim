@@ -35,7 +35,10 @@ nnoremap  q;  q:
 "  Toggle  number line/relative number line/Toggle  highlight / sensitive case
 "nnoremap  <Leader>o   :set nu!  rnu!    nu? rnu? <CR>
 " toggle line number: ln stand for line number
-nnoremap  <Leader>ln   :set nu!  rnu!    nu? rnu? <CR>
+nnoremap  <Leader>tl   :set nu!  rnu!    nu? rnu? <CR>
+" 在 paste模式 enable下, 粘贴才不会缩进
+nnoremap  <Leader>tp   :set paste! paste?<CR>
+
 
 " 使用n 和 N搜索前, 先激活hlsearch选项
 " {{{

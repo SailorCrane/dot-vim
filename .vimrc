@@ -207,7 +207,8 @@ set listchars=tab:\|\        " show tab in python/Makefile file
 " 24 注意set 选项和值之间不能有空格: 否则vim不识别
 " 无论insert 和 normal模式,都可以用, 插入模式也可以用
 " 注意这不是一个自定义映射, 是vim帮我们设置的一个映射
-set pastetoggle=<f9>
+" 因为执行之后, 不能显示paste的当前值,所以不用, 还是手动映射
+"set pastetoggle=<Leader>tp
 
 
 " set laststatus=2: always show laststatus
