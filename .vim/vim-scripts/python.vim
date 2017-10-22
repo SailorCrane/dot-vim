@@ -45,23 +45,23 @@ setlocal foldlevel=99
 
 " 3:  <F5> run current file
 " 正统留给<f5>, python3当然才是正统
-nnoremap <F5>          :!clear && python3  %<CR>
-nnoremap <Leader><F5>  :!clear && python2  %<CR>
+nnoremap <buffer>  <F5>          :!clear && python3  %<CR>
+nnoremap <buffer>  <Leader><F5>  :!clear && python2  %<CR>
 
 " c stand for non "clear"
-nnoremap c<F5>         :!python3  %<CR>
+"nnoremap c<F5>         :!python3  %<CR>
 "nnoremap c<F5>         :!python3  %<CR>
 
 
 " 4: <C-w>a dont'  effect  NerdTree width, only max height
 " NerdTree  : set   winfixwidth
-nnoremap <C-w>a   <C-w>_<CR>
+nnoremap <buffer>  <C-w>a   <C-w>_<CR>
 
 
 " 5: template
-inoreabbrev rstu <ESC>:read $TEMPLATE_PYTHON/Stu.py<CR>
-inoreabbrev rcom <ESC>:read $TEMPLATE_PYTHON/common.py<CR>
+inoreabbrev <buffer> rstu <ESC>:read $TEMPLATE_PYTHON/Stu.py<CR>
+inoreabbrev <buffer> rcom <ESC>:read $TEMPLATE_PYTHON/common.py<CR>
 
 
 " 6: <Leader>ci <leader>cs
-vnoremap    ,cs   do"""<CR>"""<ESC>kp
+vnoremap    <buffer> ,cs   do"""<CR>"""<ESC>kp
