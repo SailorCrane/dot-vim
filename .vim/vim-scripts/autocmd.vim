@@ -6,7 +6,7 @@ augroup CraneGroup
     "1: quickfix
     " 打开QuickFix时, <CR> 恢复 <CR>功能.因为我将<CR>映射为了查找下一个
     au   FileType  qf  nnoremap <buffer>  <CR>  <CR>
-    au   FileType  qf  set nu rnu
+    au   FileType  qf  setlocal nu rnu
     "au   FileType  qf   echo "MyFix"
 
     "1-1:
@@ -64,37 +64,32 @@ augroup CraneGroup
 
     "7: diff
     " undotree 插件下面的diff窗口类型为diff
-    au   FileType  diff  setlocal nu
-    au   FileType  diff  setlocal rnu
+    au   FileType  diff  setlocal nu rnu
     au   FileType  diff  nnoremap  <buffer> <Leader>n  <nop>
     au   FileType  diff  nnoremap  <buffer> <Leader>p  <nop>
 
 
     "8: minibufexpl  注意:映射一定要加上<buffer>,不然会影响全局映射
-    au   FileType  minibufexpl  nnoremap  <buffer> <Leader>n  <nop>
-    au   FileType  minibufexpl  nnoremap  <buffer> <Leader>p  <nop>
-    au   FileType  minibufexpl  nnoremap  <buffer> <C-^>      <nop>
-    au   FileType  minibufexpl  nmap      <buffer> <tab>      l
+    "au   FileType  minibufexpl  nnoremap  <buffer> <Leader>n  <nop>
+    "au   FileType  minibufexpl  nnoremap  <buffer> <Leader>p  <nop>
+    "au   FileType  minibufexpl  nnoremap  <buffer> <C-^>      <nop>
+    "au   FileType  minibufexpl  nmap      <buffer> <tab>      l
 
 
     "9: conque_term  注意:映射一定要加上<buffer>,不然会影响全局映射
-    au   FileType  conque_term  nnoremap  <buffer>  <Leader>n  <nop>
-    au   FileType  conque_term  nnoremap  <buffer>  <Leader>p  <nop>
-    au   FileType  conque_term  nnoremap  <buffer>  q          :bd<CR>
     au   FileType  conque_term  nnoremap  <buffer>  <Leader>q  :bd<CR>
     au   FileType  conque_term  setlocal   nocursorline
 
 
-    "10: conque_term  注意:映射一定要加上<buffer>,不然会影响全局映射
+    "10: nerdtree  注意:映射一定要加上<buffer>,不然会影响全局映射
     au   FileType  nerdtree  nnoremap  <buffer>  <Leader>n  <nop>
     au   FileType  nerdtree  nnoremap  <buffer>  <Leader>p  <nop>
-    au   FileType  nerdtree  nnoremap  <buffer>  q          :bd<CR>
     au   FileType  nerdtree  nnoremap  <buffer>  <Leader>q  :bd<CR>
     au   FileType  nerdtree  setlocal  nu  rnu
     "au   FileType  nerdtree  setlocal   nocursorline
 
-    "11 many file
-    au   FileType  c,cpp,python,vim match  ErrorMsg  /"　"/
+    "11  中文空格:不要出现在编程语言中
+    au   FileType  c,cpp,sh,python,vim  match  ErrorMsg  /"　"/
 
     "12 c/cpp
     au   FileType  c,cpp   source  $Vim_Scripts/c.vim
@@ -105,6 +100,6 @@ augroup CraneGroup
 
 
     "14 vim
-    au   FileType  vim     nnoremap <F5>  :so %<CR>
+    au   FileType  vim     nnoremap <buffer>  <F5>  :so %<CR>
 
 augroup END "end of CraneGroup
