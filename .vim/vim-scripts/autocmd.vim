@@ -91,15 +91,15 @@ augroup CraneGroup
     "11  中文空格:不要出现在编程语言中
     au   FileType  c,cpp,sh,python,vim  match  ErrorMsg  /"　"/
 
-    "12 c/cpp
-    au   FileType  c,cpp   source  $Vim_Scripts/c.vim
-    au   FileType  cpp     source  $Vim_Scripts/cpp.vim
+    "12 vim
+    au   FileType  vim     nnoremap <buffer>  <F5>  :so %<CR>
+    au   FileType  vim     setlocal  foldmethod=marker foldlevel=0
 
     "13 python
     au   FileType  python  source  $Vim_Scripts/python.vim
 
-
-    "14 vim
-    au   FileType  vim     nnoremap <buffer>  <F5>  :so %<CR>
+    "14 c/cpp
+    au   FileType  c,cpp   source  $Vim_Scripts/c.vim
+    au   FileType  cpp     source  $Vim_Scripts/cpp.vim
 
 augroup END "end of CraneGroup
