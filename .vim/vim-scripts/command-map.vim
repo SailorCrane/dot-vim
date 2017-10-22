@@ -1,5 +1,7 @@
 
 
+" =================== cabbrev =====================
+
 "1 Toggle verbose
 fun! Set_verbose()
     if( 0 == &verbose )
@@ -157,7 +159,7 @@ cnoreabbrev ree   redir  END
 cnoreabbrev ere   e  /tmp/re.txt
 
 
-" ===================== map ===================
+" ===================== cmap ===================
 
 " 1 <C-a> to line begin
 cnoremap <C-a>  <C-b>
@@ -209,3 +211,8 @@ cnoremap  <C-r>a  <C-r><C-a>
 cnoremap  <C-r>W  <C-r><C-a>
 cnoremap  <C-r>f  <C-r><C-f>
 cnoremap  <C-r>p  <C-r><C-p>
+
+
+" 7 left, right word
+cnoremap <C-b>   <S-Left>
+cnoremap <C-f>   <S-Right>
