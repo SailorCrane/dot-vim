@@ -110,6 +110,7 @@ runtime   macros/matchit.vim    "激活vim自带的matchit.vim, 这样就不用�
 source  $Crane_Dot_Vim/vim-scripts/myBundle.vim
 source  $Crane_Dot_Vim/vim-scripts/function.vim
 source  $Crane_Dot_Vim/vim-scripts/normal-map.vim
+source  $Crane_Dot_Vim/vim-scripts/opending-map.vim     " operator-pending.vim
 source  $Crane_Dot_Vim/vim-scripts/insert-map.vim
 
 source  $Crane_Dot_Vim/vim-scripts/command-map.vim

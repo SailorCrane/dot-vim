@@ -618,10 +618,11 @@ endif
 
 "23 quick fix 快速切换
 " {{{
-nnoremap cn  :cnext<CR>
-nnoremap cp  :cprevious<CR>
-nnoremap co  :cclose<CR>
-nnoremap coo :cclose<CR>
+" unimpaired [q ]q to 就可以在quickfix之间切换
+"nnoremap cn  :cnext<CR>
+"nnoremap cp  :cprevious<CR>
+nnoremap <Leader>co  :cclose<CR>
+"nnoremap coo :cclose<CR>
 " }}}
 
 
@@ -657,8 +658,9 @@ nnoremap  yp  yyp
 " 光标位于旧行
 nnoremap  yP  yyP
 
-nnoremap  dp  ddp
-nnoremap  dP  ddP
+" unimmpaired ]e, [e 交换前后行
+"nnoremap  dp  ddp
+"nnoremap  dP  ddP
 " }}}
 
 
@@ -853,7 +855,7 @@ nnoremap  <Leader>ex  :!chmod +x %<CR><CR>:w<CR>
 "nnoremap  <Leader>eo  :!gnome-open %<CR><CR>
 " 如果是普通文件: 使用gnome-open 打开
 " 如果是.md文件, 使用markdown插件的 :InstantMarkdownPreview命令打开
-nnoremap  <Leader>eo  :call OpenFile()<CR>
+nnoremap  <Leader>of  :call OpenFile()<CR>
 
 
 "45 将下一行和当前行合并为一行, 下一行在前.
