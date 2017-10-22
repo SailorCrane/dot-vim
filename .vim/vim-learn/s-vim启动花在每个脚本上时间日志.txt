@@ -1,0 +1,18 @@
+s-vim启动花在每个脚本上时间日志.txt
+
+:Author: crane
+:Email: crane@crane-pc
+:Date: 2017-10-22 17:12
+
+:h  --startuptime
+
+                 --startuptime {fname}
+    During startup write timing messages to the file {fname}.
+    This can be used to find out where time is spent while loading
+    your .vimrc, plugins and opening the first file.
+    When {fname} already exists new messages are appended.
+    (Only available when compiled with the |+startuptime|
+    feature).
+
+vim  --startuptime  ${logfile}
+vim  --startuptime  ${logfile}  ${edit_file}
