@@ -381,3 +381,13 @@ Bundle "SailorCrane/ToggleIsk.git"
 
 "rename current file
 Bundle "danro/rename.vim.git"
+
+
+" gvim fontzoom
+Bundle "thinca/vim-fontzoom.git"
+
+if has('gui_running')
+    "nmap  +  <Plug>(fontzoom-larger)
+    nmap  =   <Plug>(fontzoom-larger)
+    nmap  -   <Plug>(fontzoom-smaller)
+endif

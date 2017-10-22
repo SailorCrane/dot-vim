@@ -82,11 +82,11 @@ fun! MaxCurrentWindow()
     "h :Ctrl-w_|
 
     ":res[ize] [N]
-    "CTRL-W CTRL-_					*CTRL-W_CTRL-_* *CTRL-W__*
-    "CTRL-W _	Set current window height to N (default: highest possible).
+    "CTRL-W CTRL-_                  *CTRL-W_CTRL-_* *CTRL-W__*
+    "CTRL-W _   Set current window height to N (default: highest possible).
 
-    ":vertical res[ize] [N]			*:vertical-resize* *CTRL-W_bar*
-    "CTRL-W |	Set current window width to N (default: widest possible).
+    ":vertical res[ize] [N]         *:vertical-resize* *CTRL-W_bar*
+    "CTRL-W |   Set current window width to N (default: widest possible).
 
     resize          " equal <C-w>_, set windows to hightest
     vertical resize " equal to <C-w>|
@@ -95,4 +95,9 @@ fun! MaxCurrentWindow()
 endfun
 
 
-"nnoremap  <Leader>em  :call <SID>EditMakefile()<CR>
+" 6: full screen gvim
+fun! Full_screen_gvim()
+    "if has('gui_running')
+    set lines=999 columns=999
+    "endif
+endf
