@@ -97,6 +97,7 @@ nnoremap  <Leader>ef  :vsplit  $Vim_Scripts/function.vim<CR>
 nnoremap  <Leader>en  :vsplit  $Vim_Scripts/normal-map.vim<CR>
 nnoremap  <Leader>ei  :vsplit  $Vim_Scripts/insert-map.vim<CR>
 nnoremap  <Leader>ec  :vsplit  $Vim_Scripts/command-map.vim<CR>
+nnoremap  <Leader>eo  :vsplit  $Vim_Scripts/opending-map.vim<CR>
 
 nnoremap  <Leader>ea  :vsplit  $Vim_Scripts/abbrev-map.vim<CR>
 
