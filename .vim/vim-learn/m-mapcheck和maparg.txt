@@ -1,0 +1,13 @@
+
+
+" name 是前缀匹配: 比如Sneak 中mapcheck('s')
+" 查看是否有map匹配name前缀
+mapcheck(name, mode, isAbbr)
+
+" 示例
+mapcheck('s')
+
+
+" name 完全匹配
+maparg(name, mode, isAbbr)
+maparg('<Leader>sr')
