@@ -873,6 +873,11 @@ nnoremap  gm  /\v(int)?\s+main\s*\(.*<CR>
 " 插入后, 直接进入插入模式, 不再返回normal mode
 nnoremap  <Leader>ar  a------>
 nnoremap  <Leader>ra  a<------
+inoremap  <Leader>ar  ------>
+inoremap  <Leader>ra  <------
+
+nnoremap  <Leader>a=       40a=<ESC>20hi<Space><Space><Left>
+imap      <Leader>a=  <ESC><Leader>a=
 
 
 " 47 set fileencoding=utf-8

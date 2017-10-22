@@ -117,10 +117,6 @@ inoremap  <Leader><Leader>#     <C-r>#
 " <Plug>(easymotion-f)         :<C-U>call EasyMotion#S(1,0,0)<CR>
 
 
-" 8 画箭头
-inoremap  <Leader>ar  ------>
-inoremap  <Leader>ra  <------
-
 " 9 toggle, isk_hypen, isk_dot
 inoremap  <Leader>t-  <ESC>:call Toggole_isk_hypen()<CR>a
 inoremap  <Leader>t.  <ESC>:call Toggole_isk_dot()<CR>a
