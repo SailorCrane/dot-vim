@@ -10,4 +10,4 @@ mapcheck('s')
 
 " name 完全匹配
 maparg(name, mode, isAbbr)
-maparg('<Leader>sr')
+Maparg('<Leader>sr')
