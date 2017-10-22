@@ -55,77 +55,77 @@ nnoremap  <Leader>i   :set ignorecase!  ignorecase?<CR>
 "3  quick edit
 " quick edit script v:vimrc, n:normal, i:insert, p:plugin-bundle, a:abbrev
 " {{{
-nnoremap  <Leader>eb  :e ~/.bashrc<CR>
-nnoremap  <Leader>ez  :e ~/.zshrc<CR>
-"nnoremap  <Leader>eP  :e ~/.profile<CR>    # 太容易编辑了, "让出快捷键给plugin-python.vim
+nnoremap  <Leader>eb  :vsplit ~/.bashrc<CR>
+nnoremap  <Leader>ez  :vsplit ~/.zshrc<CR>
+"nnoremap  <Leader>eP  :vsplit ~/.profile<CR>    # 太容易编辑了, "让出快捷键给plugin-python.vim
 
 " jquery edit
-nnoremap  <Leader>ej  :e https://code.jquery.com/jquery-3.2.1.js<CR>
+nnoremap  <Leader>ej  :vsplit https://code.jquery.com/jquery-3.2.1.js<CR>
 
-nnoremap  <Leader>eA  :e ~/.subdir/myAlias.sh<CR>
-nnoremap  <Leader>eF  :e ~/.subdir/myFunctions.sh<CR>
-nnoremap  <Leader>eN  :e ~/.subdir/net-operation.sh<CR>
+nnoremap  <Leader>eA  :vsplit ~/.subdir/myAlias.sh<CR>
+nnoremap  <Leader>eF  :vsplit ~/.subdir/myFunctions.sh<CR>
+nnoremap  <Leader>eN  :vsplit ~/.subdir/net-operation.sh<CR>
 
 " eD stand for:  edit  Debug.
-nnoremap  <Leader>eD  :e ~/.gdbinit<CR>
-nnoremap  <Leader>eG  :e ~/.gitconfig<CR>
-nnoremap  <Leader>es  :e ~/.subversion/config<CR>
-nnoremap  <Leader>eT  :e ~/.tmux.conf<CR>
+nnoremap  <Leader>eD  :vsplit ~/.gdbinit<CR>
+nnoremap  <Leader>eG  :vsplit ~/.gitconfig<CR>
+nnoremap  <Leader>es  :vsplit ~/.subversion/config<CR>
+nnoremap  <Leader>eT  :vsplit ~/.tmux.conf<CR>
 
 " ./file  edit
-"nnoremap  <Leader>em  :e ./makefile<CR>
+"nnoremap  <Leader>em  :vsplit ./makefile<CR>
 " <leader>em 编辑当前目录下的Makefile/makefile, 如果不存在, 编辑Makefile
 nnoremap  <Leader>em  :call EditMakefile()<CR>
 nnoremap  <Leader>eM  :call EditCMakeLists()<CR>
 
 " 记录问题
-nnoremap  <Leader>eq  :e ./question-thunder.txt<CR>
+nnoremap  <Leader>eq  :vsplit ./question-thunder.txt<CR>
 " 记录工作Iterms
-nnoremap  <Leader>ew  :e ./work-record.txt<CR>
+nnoremap  <Leader>ew  :vsplit ./work-record.txt<CR>
 
 " local  ./.vimrc  and  ./.gvimrc edit
-nnoremap  <Leader>elv :e $MYVIMRC<CR>
-nnoremap  <Leader>elg :e $MYGVIMRC<CR>
+nnoremap  <Leader>elv :vsplit $MYVIMRC<CR>
+nnoremap  <Leader>elg :vsplit $MYGVIMRC<CR>
 
 " mobile rc  ./.vimrc and ./.gvimrc  edit
-nnoremap  <Leader>ev  :e  $Crane_Vim_Home/.vimrc<CR>
-nnoremap  <Leader>eg  :e  $Crane_Vim_Home/.gvimrc<CR>
+nnoremap  <Leader>ev  :vsplit  $Crane_Vim_Home/.vimrc<CR>
+nnoremap  <Leader>eg  :vsplit  $Crane_Vim_Home/.gvimrc<CR>
 
 " vim script edit
-nnoremap  <Leader>eV  :e  $Vim_Scripts/visual-map.vim<CR>
-nnoremap  <Leader>ef  :e  $Vim_Scripts/function.vim<CR>
-nnoremap  <Leader>en  :e  $Vim_Scripts/normal-map.vim<CR>
-nnoremap  <Leader>ei  :e  $Vim_Scripts/insert-map.vim<CR>
-nnoremap  <Leader>ec  :e  $Vim_Scripts/command-map.vim<CR>
+nnoremap  <Leader>eV  :vsplit  $Vim_Scripts/visual-map.vim<CR>
+nnoremap  <Leader>ef  :vsplit  $Vim_Scripts/function.vim<CR>
+nnoremap  <Leader>en  :vsplit  $Vim_Scripts/normal-map.vim<CR>
+nnoremap  <Leader>ei  :vsplit  $Vim_Scripts/insert-map.vim<CR>
+nnoremap  <Leader>ec  :vsplit  $Vim_Scripts/command-map.vim<CR>
 
-nnoremap  <Leader>ea  :e  $Vim_Scripts/abbrev-map.vim<CR>
+nnoremap  <Leader>ea  :vsplit  $Vim_Scripts/abbrev-map.vim<CR>
 
-nnoremap  <Leader>et  :e  $Crane_Dot_Vim/test/HarryPotter-Stone.txt<CR>
+nnoremap  <Leader>et  :vsplit  $Crane_Dot_Vim/test/HarryPotter-Stone.txt<CR>
 
 " <Leader>eb b stand for bundle
-nnoremap  <Leader>eb  :e  $Vim_Scripts/myBundle.vim<CR>
-nnoremap  <Leader>ep  :e  $Vim_Scripts/python.vim<CR>
-"nnoremap  <Leader>ef  :e  $Vim_Scripts/autocmd.vim<CR>
+nnoremap  <Leader>eb  :vsplit  $Vim_Scripts/myBundle.vim<CR>
+nnoremap  <Leader>ep  :vsplit  $Vim_Scripts/python.vim<CR>
+"nnoremap  <Leader>ef  :vsplit  $Vim_Scripts/autocmd.vim<CR>
 " eC C stand for command: command mode/autocmd
-nnoremap  <Leader>eC  :e  $Vim_Scripts/autocmd.vim<CR>
+nnoremap  <Leader>eC  :vsplit  $Vim_Scripts/autocmd.vim<CR>
 
-"nnoremap  <Leader>ee  :e  $Vim_Scripts/example/vimrc_example.vim<CR>
-nnoremap  <Leader>eE  :e  $Vim_Scripts/example/<CR>
+"nnoremap  <Leader>ee  :vsplit  $Vim_Scripts/example/vimrc_example.vim<CR>
+nnoremap  <Leader>eE  :vsplit  $Vim_Scripts/example/<CR>
 
-nnoremap  <Leader>eO  :e  $Plugin_Script/plugin-common.vim<CR>
-nnoremap  <Leader>eP  :e  $Plugin_Script/plugin-python.vim<CR>
-nnoremap  <Leader>eS  :e  $Plugin_Script/plugin-scheme.vim<CR>
+nnoremap  <Leader>eO  :vsplit  $Plugin_Script/plugin-common.vim<CR>
+nnoremap  <Leader>eP  :vsplit  $Plugin_Script/plugin-python.vim<CR>
+nnoremap  <Leader>eS  :vsplit  $Plugin_Script/plugin-scheme.vim<CR>
 
-nnoremap  <Leader>ed  :e  $Crane_Dot_Vim/doc/<CR>
+nnoremap  <Leader>ed  :vsplit  $Crane_Dot_Vim/doc/<CR>
 
 " 编辑good-idea-script.vim, 记录最新学习情况
 " I表示Idea
-nnoremap  <Leader>eI  :e  $Vim_Scripts/good-idea-script.vim<CR>
+nnoremap  <Leader>eI  :vsplit  $Vim_Scripts/good-idea-script.vim<CR>
 
 " Prompt to open file with same name, different extension
 " from  https://github.com/nelstrom/dotfiles/blob/master/vimrc
 " <CR>用来完成 <C-r>=
-noremap  <Leader>er   :e <C-R>=expand("%:r")."."<CR>
+noremap  <Leader>er   :vsplit <C-R>=expand("%:r")."."<CR>
 " }}}
 
 
