@@ -328,7 +328,9 @@ Bundle "hrj/vim-DrawIt.git"
 
 " 66 file-template
 Bundle "aperezdc/vim-template.git"
-let g:templates_directory = $Crane_Dot_Vim . "/templates"
+if !exists('g:templates_directory')
+    let g:templates_directory = [  $Crane_Dot_Vim . "/templates", ]
+endif
 
 " 67 Mark.vim 可以同时高亮多个词: 比如同时高亮好几个变量.
 "Bundle  "Tuxdude/mark.vim.git"
