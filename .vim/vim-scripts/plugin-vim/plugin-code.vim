@@ -179,7 +179,15 @@ let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 Bundle "SailorCrane/vim-snippets.git"
 "}}}
 
-" argwrap
+"28 SnipMate
+"Bundle "garbas/vim-snipmate.git"
+" the tow plugins below is necessary for snipmate
+"Bundle "MarcWeber/vim-addon-mw-utils.git"
+" snippets is  optional for snipmate
+"Bundle  "honza/vim-snippets.git"
+
+
+" argwrap: awesome
 Bundle "FooSoft/vim-argwrap.git"
 nnoremap  <Leader>aw  :ArgWrap<CR>
 inoremap  <Leader>aw  <ESC>:ArgWrap<CR>
@@ -216,3 +224,7 @@ let g:CCTreeKeyToggleWindow = '<C-\>w'
 " 对于sh的支持一般: 输出if then 才会输出fi, 输入do回车输出done
 " 可以由ultisnips.git代替
 Bundle "tpope/vim-endwise.git"
+
+
+" 68 速写 html/css/js(javascript) : 官方插件. ZenCoding renamed to Emmet.vim
+Bundle "vim-scripts/Emmet.vim.git"

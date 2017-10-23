@@ -21,8 +21,8 @@ let g:AutoPairsMapCh = 0    " 不要将<c-h> 映射为<Backspace>删除键
 
 
 "19: easy-motion
-" {{{
 Bundle "easymotion/vim-easymotion.git"
+" {{{
 let g:EasyMotion_smartcase = 1
 "let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
 
@@ -74,14 +74,15 @@ nmap  <Leader><Leader>w <Plug>(easymotion-overwin-w)
 " }}}
 
 " 19-2 easy incsearch
-" incsearch 没啥卵用, 除了给incsearch-easymotion支持
 Bundle "haya14busa/incsearch.vim.git"
 Bundle "haya14busa/incsearch-easymotion.vim.git"
+"{{{
+" incsearch 没啥卵用, 除了给incsearch-easymotion支持
 " 需要 incsearch.vim 作为支持
 map z/ <Plug>(incsearch-easymotion-/)
 map z? <Plug>(incsearch-easymotion-?)
 map zg/ <Plug>(incsearch-easymotion-stay)
-
+"}}}
 
 " quick move line down/up
 " 卵用不大, unimpaired 的[e 和]e exchange做的很好
@@ -162,16 +163,7 @@ Bundle "tomtom/tlib_vim.git"
 "暂时先不启用这个库,需要时再打开注释:<leader>ci toggle注释
 Bundle "vim-scripts/L9.git"
 
-
-"28 SnipMate
-"Bundle "garbas/vim-snipmate.git"
-" the tow plugins below is necessary for snipmate
-"Bundle "MarcWeber/vim-addon-mw-utils.git"
-" snippets is  optional for snipmate
-"Bundle  "honza/vim-snippets.git"
-
-
-"29 vimim
+"29 vimim, vim中文输入法
 "Bundle "vimim/vimim.git"
 
 "30 Chiel92/vim-autoformat
@@ -196,9 +188,9 @@ let g:multi_cursor_start_key='gi<C-n>'           "在单词中的,也被选择"
 
 
 " Align plugin
+Bundle "godlygeek/tabular.git"
 " {{{
 "36-1 godlygeek/tabular
-Bundle "godlygeek/tabular.git"
 
 "36-2 Align  vim-script 294
 "Bundle "Align.git"
@@ -326,12 +318,6 @@ endif
 
 " 67 Mark.vim 可以同时高亮多个词: 比如同时高亮好几个变量.
 "Bundle  "Tuxdude/mark.vim.git"
-
-
-" 68 速写 html/css/js(javascript) : 官方插件. ZenCoding renamed to Emmet.vim
-"Bundle  "ZenCoding.vim.git"
-Bundle "vim-scripts/Emmet.vim.git"
-
 
 " 71-1
 Bundle "thaerkh/vim-workspace.git"
