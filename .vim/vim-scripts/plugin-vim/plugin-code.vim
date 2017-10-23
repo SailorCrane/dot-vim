@@ -21,6 +21,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_python_checkers = ['pylint']
+"let g:syntastic_python_checkers = ['flake8']
 "let g:syntastic_python_pylint_args = "--no-docstring-rgx='.*'"
 "let g:syntastic_python_pylint_args = "--no-docstring-rgx='.*'  --ignore-imports='yes'  --indent-string='\t' -E "
 "let g:syntastic_python_pylint_args = " --indent-string='\t' --disable=E0401"
