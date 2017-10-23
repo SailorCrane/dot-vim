@@ -1,0 +1,24 @@
+g-vim中设置operatorfunc.txt
+
+:Author: crane
+:Email: crane@crane-pc
+:Date: 2017-10-23 20:46
+
+
+h "g@" 查看帮助文档
+下面是一个示例
+
+1:
+fun! Abc(...)
+   echom "num is " . a:0    " list个数
+   echom "type is " . a:1   " list第一个参数
+   echo  a:000              " list本身
+   echom  a:000[0]          " list第一个参数 list[0]
+   exec "normal `[v`]y"     " '[ 和 ]' mark 复制之间内容
+   echom @@                 " 复制到@register中, 打印@@变量(@1, @2)
+endf
+
+
+2: set operatorfunc=Abc
+
+3: g@iw, g@G, g@gg, g@i(, g@a(
