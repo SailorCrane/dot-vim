@@ -276,8 +276,9 @@ Bundle "kana/vim-textobj-entire.git"
 
 
 "50 VOoM
-Bundle "vim-scripts/VOoM.git"
-
+"Bundle "vim-scripts/VOoM.git"
+" newer
+Bundle "vim-voom/VOoM.git"
 
 "51 calendar
 Bundle "itchyny/calendar.vim.git"
