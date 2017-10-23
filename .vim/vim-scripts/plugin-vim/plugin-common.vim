@@ -74,18 +74,18 @@ nmap  <Leader><Leader>w <Plug>(easymotion-overwin-w)
 " }}}
 
 " 19-2 easy incsearch
+" incsearch 没啥卵用, 除了给incsearch-easymotion支持
 Bundle "haya14busa/incsearch.vim.git"
 Bundle "haya14busa/incsearch-easymotion.vim.git"
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
+" 需要 incsearch.vim 作为支持
 map z/ <Plug>(incsearch-easymotion-/)
 map z? <Plug>(incsearch-easymotion-?)
 map zg/ <Plug>(incsearch-easymotion-stay)
 
 
 " quick move line down/up
-Bundle "matze/vim-move.git"
+" 卵用不大, unimpaired 的[e 和]e exchange做的很好
+"Bundle "matze/vim-move.git"
 " default key is <Alt> (temporary modifier, 即必须可以和其它键同时按下的)
 " does not work for <Leader>
 "let g:move_key_modifier = '<Leader>'
