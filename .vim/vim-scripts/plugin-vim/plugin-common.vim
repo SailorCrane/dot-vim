@@ -267,6 +267,7 @@ Bundle "vim-voom/VOoM.git"
 
 "51 calendar
 Bundle "itchyny/calendar.vim.git"
+nnoremap <Leader>oc :Calendar<CR>
 
 
 "52 visincr 提供增长数列功能
