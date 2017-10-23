@@ -99,9 +99,8 @@ map <CR>  <Plug>Sneak_;
 
 
 "20 SearchComplete
-" 一个很烂的插件,将我command
-" 模式下的<tab>映射为对buffer的补全,当我想补全命令时,总是刷新我的输入. Shit
-" 难道是因为我没有好好读读文档,所以不会使用?
+" 一个很烂的插件,将我cmd模式下的<tab>映射为对buffer的补全
+" 当我想补全vim cmd时总是刷新我的输入. shit
 "Bundle "SailorCrane/SearchComplete.git"
 "20-1 CmdlineComplete
 Bundle "vim-scripts/CmdlineComplete.git"

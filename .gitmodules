@@ -99,9 +99,6 @@
 [submodule ".vim/bundle/xterm-color-table.vim"]
     path = .vim/bundle/xterm-color-table.vim
     url = http://git.oschina.net/CraneAgain/xterm-color-table.vim.git
-[submodule ".vim/bundle/SearchComplete"]
-    path = .vim/bundle/SearchComplete
-    url = https://github.com/SailorCrane/SearchComplete.git
 
 [submodule ".vim/bundle/vim-easymotion"]
     path = .vim/bundle/vim-easymotion
