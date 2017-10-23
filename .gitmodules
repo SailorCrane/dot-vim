@@ -1,3 +1,5 @@
+; g!/\v(^\s*$|submodule|path|https.*git$)/ co $
+
 [submodule ".vim/bundle/Align"]
     path = .vim/bundle/Align
     url = https://github.com/vim-scripts/Align.git
@@ -300,7 +302,7 @@
 
 [submodule ".vim/bundle/ale"]
     path = .vim/bundle/ale
-    url = https://github.com/w0rp/ale
+    url = https://github.com/w0rp/ale.git
 
 [submodule ".vim/bundle/ultisnips"]
     path = .vim/bundle/ultisnips
@@ -362,7 +364,7 @@
 
 [submodule ".vim/bundle/visual-split.vim"]
     path = .vim/bundle/visual-split.vim
-    url = https://github.com/wellle/visual-split.vim
+    url = https://github.com/wellle/visual-split.vim.git
 
 [submodule ".vim/bundle/vim-projectionist"]
     path = .vim/bundle/vim-projectionist
@@ -398,8 +400,8 @@
 
 [submodule ".vim/bundle/rename.vim"]
     path = .vim/bundle/rename.vim
-    url = https://github.com/danro/rename.vim
+    url = https://github.com/danro/rename.vim.git
 
 [submodule ".vim/bundle/vim-fontzoom"]
     path = .vim/bundle/vim-fontzoom
-    url = https://github.com/thinca/vim-fontzoom
+    url = https://github.com/thinca/vim-fontzoom.git

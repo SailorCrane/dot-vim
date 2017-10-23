@@ -1,0 +1,9 @@
+g查找gitmodule中不以git结尾的url.txt
+
+:Author: crane
+:Email: crane@crane-pc
+:Date: 2017-10-23 09:47
+
+g! 反向选择
+co $ 拷贝到$之下(最后一行)的下一行
+:g!/\v(^\s*$|submodule|path|https.*git$)/ co $
