@@ -254,9 +254,11 @@ Bundle "nelstrom/vim-qargs.git"
 Bundle "kana/vim-textobj-user.git"
 Bundle "kana/vim-textobj-entire.git"
 
-"49 Mark
+"49-1  Mark
 " 因为'r 和 'n寄存器重复, 所以先注释掉这个插件
 "Bundle "Mark.git"
+"49-2 mark.vim 可以同时高亮多个词: 比如同时高亮好几个变量.
+"Bundle  "Tuxdude/mark.vim.git"
 
 
 "50 VOoM
@@ -315,9 +317,6 @@ Bundle "aperezdc/vim-template.git"
 if !exists('g:templates_directory')
     let g:templates_directory = [  $Crane_Dot_Vim . "/templates", ]
 endif
-
-" 67 Mark.vim 可以同时高亮多个词: 比如同时高亮好几个变量.
-"Bundle  "Tuxdude/mark.vim.git"
 
 " 71-1
 Bundle "thaerkh/vim-workspace.git"

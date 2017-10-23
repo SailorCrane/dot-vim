@@ -30,9 +30,6 @@
 [submodule ".vim/bundle/vim-addon-mw-utils"]
     path = .vim/bundle/vim-addon-mw-utils
     url = https://github.com/MarcWeber/vim-addon-mw-utils.git
-[submodule ".vim/bundle/Mark"]
-    path = .vim/bundle/Mark
-    url = https://github.com/vim-scripts/Mark.git
 [submodule ".vim/bundle/ReplaceWithRegister"]
     path = .vim/bundle/ReplaceWithRegister
     url = https://github.com/vim-scripts/ReplaceWithRegister.git
@@ -48,9 +45,6 @@
 [submodule ".vim/bundle/Tagbar"]
     path = .vim/bundle/Tagbar
     url = https://github.com/vim-scripts/Tagbar.git
-[submodule ".vim/bundle/mark.vim"]
-    path = .vim/bundle/mark.vim
-    url = https://github.com/Tuxdude/mark.vim.git
 
 [submodule ".vim/bundle/VisIncr"]
     path = .vim/bundle/VisIncr
