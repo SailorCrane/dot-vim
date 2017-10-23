@@ -1,15 +1,15 @@
 " vim: set fdm=marker foldlevel=0: vim modeline( set )
 
 
-"1: WinManager
+"0: WinManager: 形同鸡肋
 "{{{
-Bundle  "vim-scripts/winmanager.git"
+"Bundle  "vim-scripts/winmanager.git"
 "let g:winManagerWindowLayout = "TagList|FileExplorer"
 "let g:winManagerWindowLayout = "TagList"
 
-let g:winManagerWidth = 30 "设置winmanager的宽度，默认为25
+"let g:winManagerWidth = 30 "设置winmanager的宽度，默认为25
 "定义打开关闭winmanager快捷键为F8
-nnoremap  <leader>ow  :WMToggle<cr>
+"nnoremap  <leader>ow  :WMToggle<cr>
 "imap  <leader>z <esc>:WMToggle<cr> "定义打开关闭winmanager快捷键为F8
 
 "let g:AutoOpenWinManager = 1 "在进入vim时自动打开winmanager

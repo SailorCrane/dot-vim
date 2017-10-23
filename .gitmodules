@@ -290,9 +290,6 @@
 [submodule ".vim/bundle/vim-wakatime"]
     path = .vim/bundle/vim-wakatime
     url = https://github.com/wakatime/vim-wakatime.git
-[submodule ".vim/bundle/winmanager"]
-    path = .vim/bundle/winmanager
-    url = https://github.com/vim-scripts/winmanager.git
 
 [submodule ".vim/bundle/syntastic"]
     path = .vim/bundle/syntastic
@@ -403,3 +400,7 @@
 [submodule ".vim/bundle/vim-fontzoom"]
     path = .vim/bundle/vim-fontzoom
     url = https://github.com/thinca/vim-fontzoom.git
+
+[submodule ".vim/bundle/VOoM"]
+    path = .vim/bundle/VOoM
+    url = https://github.com/vim-voom/VOoM.git
