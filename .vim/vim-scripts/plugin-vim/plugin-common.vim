@@ -180,16 +180,13 @@ Bundle "Chiel92/vim-autoformat.git"
 
 "31 Yankring,因为很多快捷键冲突,所以先将这个插件注释
 Bundle "vim-scripts/YankRing.vim.git"
-nnoremap  <leader>ys  :YRShow<CR>
-nnoremap  <leader>yc  :YRClear<CR>
+nnoremap  <leader>oy  :YRShow<CR>
+" 因为是clear, 不是关闭窗口, 所以用Cy
+nnoremap  <leader>Cy  :YRClear<CR>
 
 
 "32 color view
 Bundle "http://git.oschina.net/CraneAgain/xterm-color-table.vim.git"
-
-
-" no vundle#end
-"call vundle#end()           " required with vundle#begin()
 
 
 "35 multiple-cursor
@@ -244,8 +241,6 @@ Bundle "vim-scripts/ShowTrailingWhitespace.git"
 
 "42 FencView: fencview
 Bundle  "mbbill/fencview.git"
-"Bundle  "fencview.git"
-
 
 "43 ack.vim
 Bundle "vim-scripts/ack.vim.git"
@@ -260,15 +255,12 @@ Bundle  "pbrisbin/vim-mkdir.git"
 " 在«vim-practical»技巧86中, 有这个技巧的实现, 并且书中还有一个关于/ 和?的bug
 Bundle "nelstrom/vim-visual-star-search.git"
 
-
 "46 qargs
 Bundle "nelstrom/vim-qargs.git"
-
 
 "47 text-object-entire: file object
 Bundle "kana/vim-textobj-user.git"
 Bundle "kana/vim-textobj-entire.git"
-
 
 "49 Mark
 " 因为'r 和 'n寄存器重复, 所以先注释掉这个插件
@@ -276,9 +268,8 @@ Bundle "kana/vim-textobj-entire.git"
 
 
 "50 VOoM
-"Bundle "vim-scripts/VOoM.git"
-" newer
 Bundle "vim-voom/VOoM.git"
+
 
 "51 calendar
 Bundle "itchyny/calendar.vim.git"
