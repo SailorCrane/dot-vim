@@ -370,3 +370,7 @@ if has('gui_running')
     nmap  =   <Plug>(fontzoom-larger)
     nmap  -   <Plug>(fontzoom-smaller)
 endif
+
+
+" 25 easy sudo eidt
+Bundle "vim-scripts/sudo.vim.git"

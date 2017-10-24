@@ -382,3 +382,7 @@
 [submodule ".vim/bundle/VOoM"]
     path = .vim/bundle/VOoM
     url = https://github.com/vim-voom/VOoM.git
+
+[submodule ".vim/bundle/sudo.vim"]
+    path = .vim/bundle/sudo.vim
+    url = https://github.com/vim-scripts/sudo.vim.git
