@@ -1,5 +1,12 @@
-; g!/\v(^\s*$|submodule|path|https.*git$)/ co $
+# g!/\v(^\s*$|submodule|path|https.*git$)/ co $
 
+# =================== book =====================
+[submodule ".vim/book/vim-galore-zh_cn"]
+    path = .vim/book/vim-galore-zh_cn
+    url = https://github.com/wsdjeg/vim-galore-zh_cn
+
+
+# =================== plugin =====================
 [submodule ".vim/bundle/Align"]
     path = .vim/bundle/Align
     url = https://github.com/vim-scripts/Align.git
