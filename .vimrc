@@ -42,6 +42,11 @@ set fileencodings=ucs-bom,utf-8,iso-8859,gbk,cp936,gb2312,big5,gb18030,latin1
 "3 no compatible with vi
 set nocompatible
 
+" error bell setting
+set noerrorbells
+set visualbell
+set t_vb=
+
 
 "4  command line height ":"
 set cmdheight=2
