@@ -181,10 +181,10 @@ cnoremap  jk <C-c>
 
 
 " 4 next prev cmd
-cnoremap  <C-k>  <C-p>
-cnoremap  <C-j>  <C-n>
-"cnoremap  <C-k>  <up>
-"cnoremap  <C-j>  <down>
+"cnoremap  <C-k>  <C-p>
+"cnoremap  <C-j>  <C-n>
+cnoremap  <C-k>  <Up>
+cnoremap  <C-j>  <Down>
 " <C-k>, <C-j>
 " 因为cmdlinecomplete 将cmd mode下的<C-n> <C-p>占用了
 " 所以使用<C-k>, <C-j>作为重复上一条命令,下一条命令
