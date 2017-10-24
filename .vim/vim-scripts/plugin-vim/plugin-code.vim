@@ -224,7 +224,3 @@ let g:CCTreeKeyToggleWindow = '<C-\>w'
 " 对于sh的支持一般: 输出if then 才会输出fi, 输入do回车输出done
 " 可以由ultisnips.git代替
 Bundle "tpope/vim-endwise.git"
-
-
-" 68 速写 html/css/js(javascript) : 官方插件. ZenCoding renamed to Emmet.vim
-Bundle "vim-scripts/Emmet.vim.git"

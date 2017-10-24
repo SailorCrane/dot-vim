@@ -1,6 +1,6 @@
 " vim: set fdm=marker  foldlevel=0: vim modeline( set )
 
-"1:  rainbow  parentheses
+"1-1:  rainbow  parentheses
 "Bundle "kien/rainbow_parentheses.vim.git"
 " {{{
 let g:rbpt_colorpairs = [
@@ -79,7 +79,7 @@ endif
 "augroup END
 "}}}
 
-"2:  powerline and airline
+"2-1:  powerline and airline
 " {{{
 "Powerline 字体github可下载: https://github.com/runsisi/consolas-font-for-powerline
 "Bundle "Lokaltog/vim-powerline.git"
@@ -104,10 +104,12 @@ endif
 ""let g:airline_symbols.paste = '∥'
 ""let g:airline_symbols.whitespace = 'Ξ'
 
+" }}}
 
-"11-2 air-line : 使用tabline, 必须设置laststatus=2
+"2-2 air-line : 使用tabline, 必须设置laststatus=2
 Bundle "vim-airline/vim-airline.git"
 Bundle "vim-airline/vim-airline-themes.git"
+" {{{
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
