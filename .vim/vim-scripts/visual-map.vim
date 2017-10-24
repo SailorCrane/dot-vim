@@ -82,8 +82,12 @@ xnoremap  .   :normal .<CR>
 
 "10: sort selected(visual) lines
 " vim 自带:sort命令, 不需要 :!sort 外部命令
-vnoremap  ,so  :sort<CR>
+vnoremap  <Leader>so  :sort<CR>
 
+
+"11: visual indent(also in visual), 可在visual模式下连续缩进
+xnoremap  >  >gv
+xnoremap  <  <gv
 
 "vnoremap  <Leader>in  :let i=1|'<,'>g/^/ s//\=i . " "/ | let i+=2<CR>
 "vnoremap  <Leader>in  :call InsertNum()<CR>
