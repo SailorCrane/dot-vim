@@ -42,6 +42,10 @@ nnoremap  <Leader>tp   :set paste! paste?<CR>
 
 " 使用n 和 N搜索前, 先激活hlsearch选项
 " {{{
+" 智能的'n' 和'N'不习惯
+"nnoremap <expr> n  'Nn'[v:searchforward]
+"nnoremap <expr> N  'nN'[v:searchforward]
+
 nnoremap  n           :set hlsearch<CR>n
 nnoremap  N           :set hlsearch<CR>N
 nnoremap  <Leader>/   :set hlsearch!  hlsearch?<CR>
