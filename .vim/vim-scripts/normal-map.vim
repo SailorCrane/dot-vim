@@ -770,7 +770,8 @@ nnoremap  <Leader>ss  :%s///g<left><left><left>
 "这个主要是针对 c-support 的 \pind, 因为默认生成的是 FILE_INC 宏
 nnoremap  <Leader>sh  :%s/INC/H_/g<CR>
 
-nnoremap  <Leader>gm  :g!// copy $<Home><Right><Right><Right>
+nnoremap  <Leader>gm  :g// copy $<Left><Left><Left><Left><Left><Left><Left><Left>
+vnoremap  <Leader>gm  :g// copy $<Left><Left><Left><Left><Left><Left><Left><Left>
 " }}}
 
 
