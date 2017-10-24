@@ -9,7 +9,12 @@ augroup CraneGroup
     au   FileType  qf  setlocal nu rnu
     "au   FileType  qf   echo "MyFix"
 
-    "1-1:
+    "1-1: cursor(from vim galore)
+    " 很喜欢cursorline)这个功能,我只想让这个效果出现在当前窗口,而且在插入模式中关闭这个效果:
+    autocmd InsertLeave * set cursorline
+    autocmd InsertEnter * set nocursorline
+    "autocmd WinEnter * set cursorline
+    "autocmd WinLeave * set nocursorline
 
 
     "2: help
