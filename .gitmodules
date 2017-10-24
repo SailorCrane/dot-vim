@@ -24,9 +24,6 @@
 [submodule ".vim/bundle/L9"]
     path = .vim/bundle/L9
     url = https://github.com/vim-scripts/L9.git
-[submodule ".vim/bundle/vim-powerline"]
-    path = .vim/bundle/vim-powerline
-    url = https://github.com/Lokaltog/vim-powerline.git
 [submodule ".vim/bundle/vim-addon-mw-utils"]
     path = .vim/bundle/vim-addon-mw-utils
     url = https://github.com/MarcWeber/vim-addon-mw-utils.git
