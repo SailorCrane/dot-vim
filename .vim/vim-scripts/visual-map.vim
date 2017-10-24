@@ -77,7 +77,7 @@ vnoremap  <Leader>lc   I//<ESC>
 
 
 "9: visual map dot
-vnoremap  .   :normal .<CR>
+xnoremap  .   :normal .<CR>
 
 
 "10: sort selected(visual) lines
