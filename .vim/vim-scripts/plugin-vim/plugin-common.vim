@@ -1,12 +1,13 @@
 " vim: set foldmethod=marker  foldlevel=2: vim modeline( set )
 "
 
-"9: Conque-Shell
-" {{{
+"1: Conque-Shell
 Bundle  "oplatek/Conque-Shell.git"
+" {{{
 "nnoremap   <C-n>  :ConqueTermVSplit bash<CR>
 "nnoremap   <C-b>  :ConqueTermVSplit bash<CR>
 noremap  <leader>ba  :ConqueTermVSplit bash<CR>
+let g:ConqueTerm_StartMessages = 0
 " }}}
 
 
