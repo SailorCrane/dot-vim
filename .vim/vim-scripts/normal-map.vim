@@ -558,8 +558,11 @@ nnoremap  <Leader>l{    $a {  }<left><left>
 "nnoremap  <Leader>d{    <down>f{d%
 
 "21-2 在当前字符前, 后添加 <Space>, "&", ":"
-nnoremap  <Leader>i<Space>   i<Space><ESC>l
-nnoremap  <Leader>a<Space>   a<Space><ESC>h
+"nnoremap  <Leader>i<Space>   i<Space><ESC>l
+"nnoremap  <Leader>a<Space>   a<Space><ESC>h
+"w means whitespace
+nnoremap  [w   i<Space><ESC>l
+nnoremap  ]w   a<Space><ESC>h
 
 " 在字符左右都添加空格.
 nnoremap  <Leader><Space>    i<Space><Right><Space><ESC>h
