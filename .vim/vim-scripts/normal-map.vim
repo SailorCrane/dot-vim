@@ -570,14 +570,13 @@ nnoremap  <Leader>l{    $a {  }<left><left>
 "w means whitespace
 nnoremap  [w   i<Space><ESC>l
 nnoremap  ]w   a<Space><ESC>h
+nnoremap  [W    i<Space><Right><Space><ESC>h
 
-"xnoremap  <Leader>i<Space>   I<Space><ESC>
-"xnoremap  <Leader>a<Space>   A<Space><ESC>
 xnoremap  [w   I<Space><ESC>
 xnoremap  ]w   A<Space><ESC>
-
-nnoremap  [W    i<Space><Right><Space><ESC>h
 xnoremap  [W    I<Space><Right><Space><ESC>h
+"xnoremap  <Leader>i<Space>   I<Space><ESC>
+"xnoremap  <Leader>a<Space>   A<Space><ESC>
 "nnoremap  <Leader><Space>    i<Space><Right><Space><ESC>h
 
 " 在字符左右都添加空格.

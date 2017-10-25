@@ -1,18 +1,10 @@
 
 
-"3: visual copy, 因为j按的最顺手,并且ctrl在一般键盘caplock位置时,ctrl-j简直无敌组合"fast"
-vnoremap  <C-j>  "+y
+"3: visual copy, 因为j按的最顺手,
+" 并且ctrl在一般键盘caplock位置时,ctrl-j简直无敌组合"fast"
 
-
-"4: visual 模式下粘贴"+ 系统寄存器中内容, 和normal模式下统一起来
-vnoremap  <Leader><Leader>p  "+p
-vnoremap  <Leader><Leader>P  "+P
-
-
-"5: blocl visual 模式下, 在列最前面添加空格
-vnoremap  <Leader>i<Space>   I<Space><ESC>
-vnoremap  <Leader>a<Space>   A<Space><ESC>
-"vnoremap  <Leader>a<Space>   I<Space><ESC>
+xnoremap  <Leader><Leader>p  "+p
+xnoremap  <Leader><Leader>P  "+P
 
 
 "6: visual align use Tabularize
