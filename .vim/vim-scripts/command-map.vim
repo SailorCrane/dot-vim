@@ -185,6 +185,10 @@ cnoremap  jk <C-c>
 "cnoremap  <C-j>  <C-n>
 cnoremap  <C-k>  <Up>
 cnoremap  <C-j>  <Down>
+
+cnoremap  <C-y>  <C-p>
+cnoremap  <C-t>  <C-n>
+"{{{
 " <C-k>, <C-j>
 " 因为cmdlinecomplete 将cmd mode下的<C-n> <C-p>占用了
 " 所以使用<C-k>, <C-j>作为重复上一条命令,下一条命令
@@ -197,11 +201,15 @@ cnoremap  <C-j>  <Down>
 " 但是因为当前Ex行已经上翻导致存在内容, 所以过滤后, 无法找出上一条命令:只能找到上一条过滤后的命令
 " 所以这里依然使用<C-p> 和 <C-n>
 " 有需求时, 再使用<Up> 和 <Down>
-
+"}}}
 
 " 5 left and right char
 cnoremap  <C-h>  <left>
 cnoremap  <C-l>  <right>
+
+" 6 left, right word
+cnoremap <C-b>   <S-Left>
+cnoremap <C-f>   <S-Right>
 
 
 " 6 :快速键入当前光标下单词, 第二次可以不用键入ctrl
@@ -213,6 +221,3 @@ cnoremap  <C-r>f  <C-r><C-f>
 cnoremap  <C-r>p  <C-r><C-p>
 
 
-" 7 left, right word
-cnoremap <C-b>   <S-Left>
-cnoremap <C-f>   <S-Right>
