@@ -407,13 +407,16 @@ nnoremap gl  $
 " }}}
 
 
-"12-1 屏幕顶部,中央,下端
-" "'" is used for mark, there to top, bottom, middle
+"12-1 屏幕顶部,中央,下端:H, L, M
 " {{{
-"noremap   't H
-"noremap   'b L
-" }}}
+nnoremap   <h    H
+nnoremap   <l    L
+nnoremap   <m    M
+
+"nnoremap   't H
+"nnoremap   'b L
 "noremap   'm M
+" }}}
 
 
 "12-2 很常用
@@ -427,14 +430,11 @@ nnoremap gl  $
 "nnoremap  <Leader>f   5<C-e>
 nnoremap  <C-y>   8<C-y>
 nnoremap  <C-e>   8<C-e>
-"xnoremap  <Leader>f   5<C-e>
-"xnoremap  <Leader>b   5<C-y>
-" xmap
-xnoremap  <C-e>   5<C-e>
-xnoremap  <C-y>   5<C-y>
 
+xnoremap  <C-e>   8<C-e>
+xnoremap  <C-y>   8<C-y>
 
-" 之前的<C-d> down半页, 太多了
+" 之前的<C-d> down/up半页, 太多了
 nnoremap  <C-d>   8j
 nnoremap  <C-u>   8k
 
@@ -442,7 +442,6 @@ nnoremap  <C-u>   8k
 nnoremap  <Leader><C-d>   <C-d>
 nnoremap  <Leader><C-u>   <C-u>
 " }}}
-"nnoremap  <Leader>d   5<C-e>
 
 
 "14 To segment a line ----> two line
@@ -479,12 +478,6 @@ nnoremap  <Leader>xw  :%s/\s\+$//g<CR>:let @/=''<CR>
 "!cscope  -Rbq
 "nnoremap  <Leader>ct  :!ctags -R --fields=+lS .<CR>:!cscope  -Rbq<CR><CR>
 nnoremap  <Leader>ct  :!ctags -R --fields=+lS .<CR>:!cscope  -Rbq<CR><CR>
-
-
-"20 释放<C-n>在multiple cursor中功能,由<C-m>去完成
-" <C-m> 在vim中代表回车,就像<C-i>代表 <tab>一样,都不可以映射
-" nnoremap  <C-m>  :call multiple_cursors#new("n", 1)<CR>
-" xnoremap  <C-m>  :call multiple_cursors#new("v", 0)<CR>
 
 
 "21 关于行的操作
