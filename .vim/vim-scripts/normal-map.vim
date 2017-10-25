@@ -574,7 +574,9 @@ nnoremap  [W    i<Space><Right><Space><ESC>h
 
 xnoremap  [w   I<Space><ESC>
 xnoremap  ]w   A<Space><ESC>
-xnoremap  [W    I<Space><Right><Space><ESC>h
+xnoremap  [W    I<Space><ESC>gvlolA<Space><ESC>
+" [W 实现略复杂: 先在左边插入空格, 再在右边插入
+" 支持多列block-visual
 "xnoremap  <Leader>i<Space>   I<Space><ESC>
 "xnoremap  <Leader>a<Space>   A<Space><ESC>
 "nnoremap  <Leader><Space>    i<Space><Right><Space><ESC>h
