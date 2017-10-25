@@ -168,7 +168,7 @@ nnoremap  <C-c>      :qa<CR>
 nnoremap  <Leader>ee :e!<CR>
 nnoremap  <Leader>w  :update<CR>
 " 这里<Leader>ww 和上述<Leader>情况相似
-nnoremap  <Leader>ww :update<CR>
+"nnoremap  <Leader>ww :update<CR>
 
 " save as : gvim可用, console下<C-s>会导致终端不可回显
 "nnoremap  <C-s>      :browse confirm  saveas<CR>
@@ -265,13 +265,12 @@ nnoremap <s-tab>  <c-o>
 " {{{
 
 " tmux 插件中已经有相应的映射了, 并且做的更好可以跳转到tmux pane
-
-if !maparg('<C-h>', 'n')
-    nnoremap <C-h>  <C-w>h:ShowBufName<CR>
-    nnoremap <C-l>  <C-w>l:ShowBufName<CR>
-    nnoremap <C-j>  <C-w>j:ShowBufName<CR>
-    nnoremap <C-k>  <C-w>k:ShowBufName<CR>
-endif
+"if !maparg('<C-h>', 'n')
+    "nnoremap <C-h>  <C-w>h:ShowBufName<CR>
+    "nnoremap <C-l>  <C-w>l:ShowBufName<CR>
+    "nnoremap <C-j>  <C-w>j:ShowBufName<CR>
+    "nnoremap <C-k>  <C-w>k:ShowBufName<CR>
+"endif
 
 " 用<Leader>切换窗口: 几乎是鸡肋了. 因为现在设置为了<C-h>, <C-L>, <C-j>, <C-k>跳转窗口
 " 虽然现在还在用.但也仅仅是因为习惯的问题
@@ -570,8 +569,8 @@ nnoremap  <Leader>b<Space>  bi<Space><ESC>h
 nnoremap  <Leader>B<Space>  Bi<Space><ESC>h
 
 " 在下一个单词的开头处: 插入一个空格
-nnoremap  <Leader>w<Space>  wi<Space><ESC>h
-nnoremap  <Leader>W<Space>  Wi<Space><ESC>h
+"nnoremap  <Leader>w<Space>  wi<Space><ESC>h
+"nnoremap  <Leader>W<Space>  Wi<Space><ESC>h
 
 " 主要用于C/Cpp 添加去地址符号, 获得指针
 nnoremap  <Leader>i&        i&<ESC>l
@@ -747,8 +746,8 @@ nnoremap  <Leader>cv  :set  cursorcolumn!  cursorcolumn?<CR>
 " 34 统计模式/出现次数: word count/number
 " 因为wc不是很好按, 所以用<Leader>wn
 " {{{
-nnoremap  <Leader>wn  :%s/<C-r><C-w>//gn<CR>
-nnoremap  <Leader>wc  :%s/<C-r><C-w>//gn<CR>
+"nnoremap  <Leader>wn  :%s/<C-r><C-w>//gn<CR>
+"nnoremap  <Leader>wc  :%s/<C-r><C-w>//gn<CR>
 " }}}
 
 

@@ -83,7 +83,12 @@ augroup CraneGroup
 
     "9: conque_term  注意:映射一定要加上<buffer>,不然会影响全局映射
     au   FileType  conque_term  nnoremap  <buffer>  <Leader>q  :bd<CR>
-    au   FileType  conque_term  setlocal   nocursorline
+    " 这个被 InsertLeave, InsertEnter, set cursorline替代
+    "au   FileType  conque_term  setlocal   nocursorline
+    "au   FileType  conque_term  autocmd    WinEnter * normal i
+    " use <buffer> 实现 logic-and 事件( FileType and WinEnter )
+    au   FileType  conque_term  :au WinEnter <buffer> startinsert
+
 
 
     "10: nerdtree  注意:映射一定要加上<buffer>,不然会影响全局映射
