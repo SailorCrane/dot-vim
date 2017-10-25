@@ -161,16 +161,15 @@ cnoreabbrev ere   e  /tmp/re.txt
 
 " ===================== cmap ===================
 
-" 1 <C-a> to line begin
+" 1 <C-a> to line begin(like shell command line)
 cnoremap <C-a>  <C-b>
-
 
 " 2 quick extern cmd因为在normal中";" -----> :,这样当在normal模式中按两下;;,就是:!
 cnoremap  ;  !
-"cnoremap  ;. !./
 
-" 3
+" 3 quit command line
 cnoremap  jk <C-c>
+"{{{
 "cnoremap  jk <Esc>, <Esc> in macro will execute command
 " <Esc>  "When typed and 'x' not present in 'cpoptions', quit
         "Command-line mode without executing.  In macros or when 'x'
@@ -178,16 +177,9 @@ cnoremap  jk <C-c>
         "Note: If your <Esc> key is hard to hit on your keyboard, train
         "yourself to use CTRL-[.
 " c_CTRL-C
+"}}}
 
-
-" 4 next prev cmd
-"cnoremap  <C-k>  <C-p>
-"cnoremap  <C-j>  <C-n>
-cnoremap  <C-k>  <Up>
-cnoremap  <C-j>  <Down>
-
-cnoremap  <C-y>  <C-p>
-cnoremap  <C-t>  <C-n>
+" 4-1 command prev/next
 "{{{
 " <C-k>, <C-j>
 " 因为cmdlinecomplete 将cmd mode下的<C-n> <C-p>占用了
@@ -202,17 +194,23 @@ cnoremap  <C-t>  <C-n>
 " 所以这里依然使用<C-p> 和 <C-n>
 " 有需求时, 再使用<Up> 和 <Down>
 "}}}
+"cnoremap  <C-k>  <C-p>
+"cnoremap  <C-j>  <C-n>
+cnoremap  <C-k>  <Up>
+cnoremap  <C-j>  <Down>
 
-" 5 left and right char
-cnoremap  <C-h>  <left>
-cnoremap  <C-l>  <right>
+cnoremap  <C-y>  <C-p>
+cnoremap  <C-t>  <C-n>
 
-" 6 left, right word
-cnoremap <C-b>   <S-Left>
-cnoremap <C-f>   <S-Right>
+" 4-2 command line move(left/right, fore/back)
+cnoremap  <C-h>   <left>
+cnoremap  <C-l>   <right>
+
+cnoremap  <C-b>   <S-Left>
+cnoremap  <C-f>   <S-Right>
 
 
-" 6 :快速键入当前光标下单词, 第二次可以不用键入ctrl
+" 5 :快速键入当前光标下单词, 第二次可以不用键入ctrl
 " <C-r>a 和 <C-r>W 是同一个功能:都是在Ex模式中插入当前光标的WORD
 cnoremap  <C-r>w  <C-r><C-w>
 cnoremap  <C-r>a  <C-r><C-a>
