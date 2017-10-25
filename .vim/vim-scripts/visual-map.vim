@@ -1,16 +1,4 @@
 
-"1 to command line
-vnoremap  ;    :
-"vnoremap  <CR> ;
-"map  <CR>  <Plug>Sneak_;
-
-
-"2 <Leader>f, <Leader>b to  page down up
-"vnoremap  <Leader>f   5<C-e>
-"vnoremap  <Leader>b   5<C-y>
-vnoremap  <C-e>   5<C-e>
-vnoremap  <C-y>   5<C-y>
-
 
 "3: visual copy, 因为j按的最顺手,并且ctrl在一般键盘caplock位置时,ctrl-j简直无敌组合"fast"
 vnoremap  <C-j>  "+y

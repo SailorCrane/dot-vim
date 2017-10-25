@@ -16,6 +16,7 @@
 " 详情见<Leader>ef
 " {{{
 nnoremap  ;  :
+xnoremap  ;    :
 "nnoremap  :  <nop>
 "nnoremap <CR>  <Plug>Sneak_;
 "nnoremap <CR>  ;
@@ -443,6 +444,12 @@ nnoremap gl  $
 "nnoremap  <Leader>f   5<C-e>
 nnoremap  <C-y>   8<C-y>
 nnoremap  <C-e>   8<C-e>
+"xnoremap  <Leader>f   5<C-e>
+"xnoremap  <Leader>b   5<C-y>
+" xmap
+xnoremap  <C-e>   5<C-e>
+xnoremap  <C-y>   5<C-y>
+
 
 " 之前的<C-d> down半页, 太多了
 nnoremap  <C-d>   8j
@@ -564,8 +571,16 @@ nnoremap  <Leader>l{    $a {  }<left><left>
 nnoremap  [w   i<Space><ESC>l
 nnoremap  ]w   a<Space><ESC>h
 
+"xnoremap  <Leader>i<Space>   I<Space><ESC>
+"xnoremap  <Leader>a<Space>   A<Space><ESC>
+xnoremap  [w   I<Space><ESC>
+xnoremap  ]w   A<Space><ESC>
+
+nnoremap  [W    i<Space><Right><Space><ESC>h
+xnoremap  [W    I<Space><Right><Space><ESC>h
+"nnoremap  <Leader><Space>    i<Space><Right><Space><ESC>h
+
 " 在字符左右都添加空格.
-nnoremap  <Leader><Space>    i<Space><Right><Space><ESC>h
 
 " 在前一个单词(或者当前单词: 如果处于单词中间)开头, 插入一个空格
 nnoremap  <Leader>b<Space>  bi<Space><ESC>h
@@ -777,7 +792,7 @@ nnoremap  <Leader>ss  :%s///g<left><left><left>
 nnoremap  <Leader>sh  :%s/INC/H_/g<CR>
 
 nnoremap  <Leader>gm  :g// copy $<Left><Left><Left><Left><Left><Left><Left><Left>
-vnoremap  <Leader>gm  :g// copy $<Left><Left><Left><Left><Left><Left><Left><Left>
+xnoremap  <Leader>gm  :g// copy $<Left><Left><Left><Left><Left><Left><Left><Left>
 " }}}
 
 
@@ -941,19 +956,19 @@ nnoremap  <Leader>rT  :set noexpandtab tabstop=4 <bar> %retab!<CR>
 " visual模式下的retab, 注意1. 执行两次命令之间需要gv再次选中选取选区
 "                      注意2. 执行第一次命令时, 要使用<C-u> 去掉":'<,'>"
 "
-vnoremap  <Leader>rt  :<C-u>set expandtab   tabstop=4<CR>gv: retab <CR>
-vnoremap  <Leader>rT  :<C-u>set noexpandtab tabstop=4<CR>gv: retab!<CR>
+xnoremap  <Leader>rt  :<C-u>set expandtab   tabstop=4<CR>gv: retab <CR>
+xnoremap  <Leader>rT  :<C-u>set noexpandtab tabstop=4<CR>gv: retab!<CR>
 " '<,'> 不支持  :set expandtab
-"vnoremap  <Leader>rt  :set expandtab   tabstop=4 <bar> retab <CR>
-"vnoremap  <Leader>rT  :set noexpandtab tabstop=4 <bar> retab!<CR>
+"xnoremap  <Leader>rt  :set expandtab   tabstop=4 <bar> retab <CR>
+"xnoremap  <Leader>rT  :set noexpandtab tabstop=4 <bar> retab!<CR>
 "}}}
 
 
 " 54 xxd(在文本和hex之间切换)
 nnoremap  <Leader>xd  :%!xxd    <CR>
 nnoremap  <Leader>xD  :%!xxd -r <CR>
-vnoremap  <Leader>xd  : !xxd    <CR>
-vnoremap  <Leader>xD  : !xxd -r <CR>
+xnoremap  <Leader>xd  : !xxd    <CR>
+xnoremap  <Leader>xD  : !xxd -r <CR>
 
 
 " 55 search error + trace(ignore case)
@@ -970,6 +985,6 @@ noremap  <Leader>er   :e!<Cr>/\v(error\|trace)/c<CR>
 
 "100
 " map <C-a> to visual all content, then select to "+, then go to previous position
-" 因为有了 text-obj entire 和 vnoremap  <C-j> "+y,
+" 因为有了 text-obj entire 和 xnoremap  <C-j> "+y,
 " 还是继续让<C-a>去对行内数字做加法吧
 "nnoremap  <C-a>  <ESC>ggVG"+y<C-o>
