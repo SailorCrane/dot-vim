@@ -3,18 +3,18 @@ augroup CraneGroup
     "0 clear autocmd in group
     au!
 
-    "1: quickfix
-    " 打开QuickFix时, <CR> 恢复 <CR>功能.因为我将<CR>映射为了查找下一个
-    au   FileType  qf  nnoremap <buffer>  <CR>  <CR>
-    au   FileType  qf  setlocal nu rnu
-    "au   FileType  qf   echo "MyFix"
-
-    "1-1: cursor(from vim galore)
+    "0 cursor(from vim galore)
     " 很喜欢cursorline)这个功能,我只想让这个效果出现在当前窗口,而且在插入模式中关闭这个效果:
     autocmd InsertLeave * set cursorline
     autocmd InsertEnter * set nocursorline
     "autocmd WinEnter * set cursorline
     "autocmd WinLeave * set nocursorline
+
+    "1: quickfix
+    " 打开QuickFix时, <CR> 恢复 <CR>功能.因为我将<CR>映射为了查找下一个
+    au   FileType  qf  nnoremap <buffer>  <CR>  <CR>
+    au   FileType  qf  setlocal nu rnu
+    "au   FileType  qf   echo "MyFix"
 
 
     "2: help
@@ -26,7 +26,7 @@ augroup CraneGroup
     au   FileType  man  setlocal nu rnu
 
 
-    "3: make file
+    "3: Makefile
     " 设置所有的"make-"打头的文件名的文件类型都为make,注意vim使用"make"表示makefile文件类型,而不是"makefile"
     au   BufNewFile,BufRead   make-*  setlocal filetype=make
 
@@ -111,5 +111,13 @@ augroup CraneGroup
     "14 c/cpp
     au   FileType  c,cpp   source  $Vim_Scripts/c.vim
     au   FileType  cpp     source  $Vim_Scripts/cpp.vim
+
+
+    "15 command-line(history) Event: 完美
+    " 恢复<CR>原功能, 在这里是执行命令功能, 注意使用<buffer>映射
+    "nnoremap <Leader><CR>    <CR>
+    au   CmdWinEnter  * nnoremap <buffer> <CR>  <CR>
+    " 现在有了 CmdWinEnter事件, 不需要如下映射
+    "nnoremap <Leader><CR>    <CR>
 
 augroup END "end of CraneGroup

@@ -14,17 +14,18 @@
 " 而在qf(QuickFix)文件类型中的<CR>,选择光标所在行的搜索结果,
 " 所以在quickfix文件类型中(即quickfix窗口中)可以使用autocmd  FileType  qx中针对filetype项,设置自动命令,将<CR>重新映射回<CR>
 " 详情见<Leader>ef
+
 " {{{
 nnoremap  ;  :
-xnoremap  ;    :
-"nnoremap  :  <nop>
-"nnoremap <CR>  <Plug>Sneak_;
-"nnoremap <CR>  ;
-" 在一些特殊情况下:比如 vim的命令窗口中, q:中, 需要回车执行命令时使用
-nnoremap <Leader><CR>    <CR>
+xnoremap  ;  :
 
-" <Space><Space>  替换当前元素为空格.
-"nnoremap <Space><Space>  r<Space>l
+nnoremap  :  ;
+xnoremap  :  ;
+
+" 回车功能由<Plug>Sneak_; 替代
+"nmap <CR>  <Plug>Sneak_;
+"xmap <CR>  <Plug>Sneak_;
+
 " }}}
 
 
