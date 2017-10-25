@@ -8,13 +8,9 @@
 " 每个项目内如果隔开, 使用一行. 项目和项目之前分隔使用两行
 
 
-"1 Quick into command line
+"1-1 Quick into command line
 " 将';'映射到':',因为';'更容易敲击,但是':'功能用的更多
 " 因为<CR>默认功能,可以使用j代替,所以将<CR>映射到';',即'f'后,查看下一个.
-" 而在qf(QuickFix)文件类型中的<CR>,选择光标所在行的搜索结果,
-" 所以在quickfix文件类型中(即quickfix窗口中)可以使用autocmd  FileType  qx中针对filetype项,设置自动命令,将<CR>重新映射回<CR>
-" 详情见<Leader>ef
-
 " {{{
 nnoremap  ;  :
 xnoremap  ;  :
@@ -42,7 +38,7 @@ nnoremap  <Leader>tl   :set nu!  rnu!    nu? rnu? <CR>
 nnoremap  <Leader>tp   :set paste! paste?<CR>
 
 
-" 使用n 和 N搜索前, 先激活hlsearch选项
+"2-2 使用n 和 N搜索前, 先激活hlsearch选项
 " {{{
 " 智能的'n' 和'N'不习惯
 "nnoremap <expr> n  'Nn'[v:searchforward]
@@ -136,7 +132,7 @@ nnoremap  <Leader>eI  :vsplit  $Vim_Scripts/good-idea-script.vim<CR>
 " }}}
 
 
-"4 source .vimrc  and  source  .gvimrc
+"4 source '.vimrc'/'.gvimrc'
 " <Leader>sv source .vimrc or .gvimrc
 " {{{
 " :let &filetype=&filetype equals to  :set filetype=<tab>目的是为了设置filetype, 触发autocmd
@@ -158,19 +154,14 @@ nnoremap  <Leader>q  :q<CR>
 " 因为有很多<Leader>a 前缀的映射, 所以不会影响
 nnoremap  <Leader>aq :qa<CR>
 nnoremap  <C-c>      :qa<CR>
-" Quit all windows
-"nnoremap  <Leader>r  :qa<CR>
-" Refresh file, or restore file from file name
-
-" 用的不多, 还老是误按, 所以注释掉, 使用<Leader>ee就够了
-"nnoremap  <Leader>e  :e!<CR>
 
 " 因为<Leader>e 前缀的edit很多, 所以这里添加 <Leader>ee,
 " 这是我的命名风格, 如果有相同前缀, 那么就重复字母
 nnoremap  <Leader>ee :e!<CR>
-nnoremap  <Leader>w  :update<CR>
+
 " 这里<Leader>ww 和上述<Leader>情况相似
 "nnoremap  <Leader>ww :update<CR>
+nnoremap  <Leader>w  :update<CR>
 
 " save as : gvim可用, console下<C-s>会导致终端不可回显
 "nnoremap  <C-s>      :browse confirm  saveas<CR>
@@ -181,7 +172,8 @@ nnoremap  <C-s>       :Ack  <C-r><C-w> <CR>
 " }}}
 
 
-"6  word  operation: 感觉很鸡肋
+"6  word  operation: 鸡肋, 已删除
+"{{{
 " 不如yiw, diw, diW更有思考连贯性, 虽然似乎少了一个按键还是注释掉吧
 
 " 快速删除一个词：word 或者Word
@@ -192,15 +184,17 @@ nnoremap  <C-s>       :Ack  <C-r><C-w> <CR>
 
 "nnoremap  <Leader>c  ciw
 "nnoremap  <Leader>C  ciW
+"}}}
 
 
 "7 buffer:next/previous/delete
 " buf and tabpage
 " {{{
-nnoremap <Leader>n :bn<CR>
-nnoremap <Leader>p :bp<CR>
+"nnoremap <Leader>n :bn<CR>
+"nnoremap <Leader>p :bp<CR>
+"unimpaired : [b, ]b
 
-" 切换"＃"buf时,显示文件名
+" 切换"#"buf时 + 显示绝对文件名
 nnoremap <C-^>     <C-^>:call ShowBufName()<CR>
 
 " 因为如果不先关掉 TabBar窗口就 delete buffer,
@@ -230,15 +224,12 @@ nnoremap <Leader>0      :b 10<CR>
 nnoremap L  gt
 nnoremap H  gT
 
-nnoremap <Left>   gt
-nnoremap <Right>  gT
 "nnoremap tn      :tabnew<CR>:NERDTreeFocus<CR>
 " 一般使用tn, 都是为了打开新文件, 所以不使用Focus
 "nnoremap tn      :tabnew<CR>:NERDTree<CR>
 nnoremap tn      :tabnew   <CR>
 nnoremap tc      :tabclose <CR>
 nnoremap to      :tabonly  <CR>
-" 可以用"\ " 代表<space>, 但不好
 nnoremap tm      :tabmove<Space>
 
 nnoremap <A-1>      1gt<CR>
@@ -365,7 +356,7 @@ nnoremap <C-w>b   <C-w>=<C-w>b:call MaxCurrentWindow()<CR>:let g:tagbar_left = 0
 " }}}
 
 
-"9 quick line switch:快速交换两行
+"9 quick line switch:快速交换两行, 已删除
 " 将当前行'-'下移 或者'_'上移, 支持连续移动
 " 交换当前行和前后行
 " unimpaired: 中 [e  和]e 已经可以exchanged了
@@ -378,7 +369,7 @@ nnoremap <C-w>b   <C-w>=<C-w>b:call MaxCurrentWindow()<CR>:let g:tagbar_left = 0
 " }}}
 
 
-"10 quick  up case : 感觉这里的映射, 也很鸡肋
+"10 quick  up case :也很鸡肋, 已删除
 " 仅仅是按键少了, 但是思考方式和vim完全不同了. 后期估计会注释掉
 " g motion and operation on word
 " w:word, b:back, c:current character, e:end of word
@@ -386,25 +377,22 @@ nnoremap <C-w>b   <C-w>=<C-w>b:call MaxCurrentWindow()<CR>:let g:tagbar_left = 0
 " 并且讲gC设置为修改当前字母为大写.
 " This is the test Sentence
 " {{{
-nnoremap  gw  wgul
-nnoremap  gW  wgUl
+"nnoremap  gw  wgul
+"nnoremap  gW  wgUl
 
-nnoremap  gb  bgul
-nnoremap  gB  BgUl
+"nnoremap  gb  bgul
+"nnoremap  gB  BgUl
 
-nnoremap  ge  egul
-nnoremap  gE  egUl
+"nnoremap  ge  egul
+"nnoremap  gE  egUl
 " }}}
 
 
 "10-2 因为gt经常使用, 所以单独列出来: 这样如果回头注释上面, 这里可以防止被注释
-" gt: g toggle: 因为'~'会向右移动一位,所以这里使用visual模式,使其作用于光标下的文字而不在移动
-" gt 用的比较多
-" {{{
+" gt: g toggle: 因为'~'会向右移动一位,
+" 所以这里使用visual模式,使其作用于光标下的文字而不再移动
+" 这个toggle用的非常多
 nnoremap  gt  v~
-nnoremap  gc  gUl
-nnoremap  gC  gul
-" }}}
 
 
 "11 快速在文件内部跳转:第一行,最后一行,当前行最左,最右
@@ -414,12 +402,6 @@ nnoremap  gC  gul
 nnoremap gh  ^
 nnoremap gl  $
 
-" 督促使用I, A去插入
-"nnoremap gh  <nop>
-"nnoremap gl  <nop>
-
-" 几乎用不到了, 但是留在这里, 为以后再添加映射,保留灵感
-" 还是让他们恢复自己本来的功能吧
 "nnoremap  H  ^
 "nnoremap  L  $
 " }}}

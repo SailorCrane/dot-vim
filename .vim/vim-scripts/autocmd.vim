@@ -5,10 +5,10 @@ augroup CraneGroup
 
     "0 cursor(from vim galore)
     " 很喜欢cursorline)这个功能,我只想让这个效果出现在当前窗口,而且在插入模式中关闭这个效果:
-    autocmd InsertLeave * set cursorline
-    autocmd InsertEnter * set nocursorline
-    "autocmd WinEnter * set cursorline
-    "autocmd WinLeave * set nocursorline
+    autocmd InsertLeave * setlocal cursorline
+    autocmd InsertEnter * setlocal nocursorline
+    "autocmd WinEnter * setlocal cursorline
+    "autocmd WinLeave * setlocal nocursorline
 
     "1: quickfix
     " 打开QuickFix时, <CR> 恢复 <CR>功能.因为我将<CR>映射为了查找下一个
@@ -83,7 +83,7 @@ augroup CraneGroup
 
     "9: conque_term  注意:映射一定要加上<buffer>,不然会影响全局映射
     au   FileType  conque_term  nnoremap  <buffer>  <Leader>q  :bd<CR>
-    " 这个被 InsertLeave, InsertEnter, set cursorline替代
+    " 这个被 InsertLeave, InsertEnter, setlocal cursorline替代
     "au   FileType  conque_term  setlocal   nocursorline
     "au   FileType  conque_term  autocmd    WinEnter * normal i
     " use <buffer> 实现 logic-and 事件( FileType and WinEnter )
