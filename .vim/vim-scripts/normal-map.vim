@@ -784,12 +784,13 @@ nnoremap  >#  ]#
 " 36 quick :substitute, copy, move
 " {{{
 "nnoremap  <Leader>ss  :%s<Space>///g<left><left><left>  "有空格是个bug,
-"刚开始添加空格, 是因为觉得命令和后面的操作参数/pattern/之间可以用空格隔开.
 nnoremap  <Leader>ss  :%s///g<left><left><left>
+nnoremap  <Leader>sC  :call Sub_chinese_punc()<CR>
 
 "这个主要是针对 c-support 的 \pind, 因为默认生成的是 FILE_INC 宏
 nnoremap  <Leader>sh  :%s/INC/H_/g<CR>
 
+" move/copy
 nnoremap  <Leader>gm  :g// copy $<Left><Left><Left><Left><Left><Left><Left><Left>
 xnoremap  <Leader>gm  :g// copy $<Left><Left><Left><Left><Left><Left><Left><Left>
 " }}}

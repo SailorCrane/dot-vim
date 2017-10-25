@@ -48,7 +48,7 @@ fun! EditCMakeLists()
 endfun
 
 
-" 3: =================open file=======================
+" 3: open file by gui app
 " used in <Leader>eo, to open current file
 fun! OpenFile()
 "{{{
@@ -65,7 +65,7 @@ fun! OpenFile()
 endfun
 
 
-" 4: =================显示当前文件名, 绝对路径=======================
+" 4: 显示当前文件名(绝对路径)
 fun! ShowBufName()
     echo expand("%:p")
 endfun
@@ -74,7 +74,7 @@ endfun
 command!  ShowBufName  call ShowBufName()
 
 
-" 5: =================最大化当前窗口, 并显示文件名====================
+" 5: 最大化当前窗口, 并显示文件名
 fun! MaxCurrentWindow()
 "{{{
     "resize 和 vertical resize命令如果不加尺寸参数, 参数就是widest 和
@@ -100,4 +100,13 @@ fun! Full_screen_gvim()
     "if has('gui_running')
     set lines=999 columns=999
     "endif
+endf
+
+
+" 7 substitude 中文符号
+fun! Sub_chinese_punc()
+    :s/，/,/g
+    :s/．/./g
+    ":s/＞/>/g
+    ":s/＞/>/g
 endf

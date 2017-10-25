@@ -1,6 +1,7 @@
 
+" xmap only for visual-mode, not for select mode(snippet mode)
 
-"3: visual copy, 因为j按的最顺手,
+"1: visual copy, 因为j按的最顺手,
 " 并且ctrl在一般键盘caplock位置时,ctrl-j简直无敌组合"fast"
 xnoremap  <C-j>  "+y
 
@@ -8,7 +9,7 @@ xnoremap  <Leader><Leader>p  "+p
 xnoremap  <Leader><Leader>P  "+P
 
 
-"6: visual align use Tabularize
+"2: visual align use Tabularize
 "xnoremap  <Leader>h=   :'<,'>Tabularize  /=<CR>
 " 这里不要再添加'<,'> 了, 如果visual模式按下":"
 " vim会自动添加'<, '>
@@ -44,9 +45,10 @@ xnoremap  <Leader>h&   :Tabularize  /&<CR>
 xnoremap  <Leader>hl   :Tabularize  /\/\*<CR>
 xnoremap  <Leader>hr   :Tabularize  /\*\/<CR>
 
-"7: 对于已经含有/* */ 注释的行, 的注释.
+
+" 对于已经含有/* */ 注释的行, 的注释.
 " 主要用来进行多行注释, 在ctrl-v: block visual模式下
-xnoremap  <Leader>lc   I//<ESC>
+"xnoremap  <Leader>lc   I//<ESC>
 
 
 "8: 对选中的行, 插入顺序数字: "in" stand for "insert number"
@@ -57,11 +59,11 @@ xnoremap  <Leader>lc   I//<ESC>
 "endfun
 
 
-"9: visual map dot
+"3 visual map dot
 xnoremap  .   :normal .<CR>
 
 
-"10: sort selected(visual) lines
+"4 sort selected(visual) lines
 " vim 自带:sort命令, 不需要 :!sort 外部命令
 xnoremap  <Leader>so  :sort<CR>
 
