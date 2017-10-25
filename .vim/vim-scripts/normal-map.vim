@@ -130,7 +130,7 @@ nnoremap  <Leader>eI  :vsplit  $Vim_Scripts/good-idea-script.vim<CR>
 " Prompt to open file with same name, different extension
 " from  https://github.com/nelstrom/dotfiles/blob/master/vimrc
 " <CR>用来完成 <C-r>=
-noremap  <Leader>er   :vsplit <C-R>=expand("%:r")."."<CR>
+"noremap  <Leader>er   :vsplit <C-R>=expand("%:r")."."<CR>
 " }}}
 
 
@@ -954,6 +954,10 @@ nnoremap  <Leader>xd  :%!xxd    <CR>
 nnoremap  <Leader>xD  :%!xxd -r <CR>
 vnoremap  <Leader>xd  : !xxd    <CR>
 vnoremap  <Leader>xD  : !xxd -r <CR>
+
+
+" 55 search error + trace(ignore case)
+noremap  <Leader>er   :e!<Cr>/\v(error\|trace)/c<CR>
 
 
 "99 关于normal 模式中惯用的n 和 p的总结:
