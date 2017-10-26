@@ -83,6 +83,10 @@ augroup CraneGroup
 
     "9: conque_term  注意:映射一定要加上<buffer>,不然会影响全局映射
     au   FileType  conque_term  nnoremap  <buffer>  <Leader>q  :bd<CR>
+
+    " conque_term 已经映射了<c-h>
+    "au   FileType  conque_term  inoremap  <buffer> <unique>  <C-h>      <ESC><C-w><c-h>
+
     " 这个被 InsertLeave, InsertEnter, setlocal cursorline替代
     "au   FileType  conque_term  setlocal   nocursorline
     "au   FileType  conque_term  autocmd    WinEnter * normal i
