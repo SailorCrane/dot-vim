@@ -542,6 +542,7 @@ nnoremap  <Leader>l{    $a {  }<left><left>
 "nnoremap  <Leader>a<Space>   a<Space><ESC>h
 "w means whitespace
 nnoremap  [w   i<Space><ESC>l
+"nnoremap  [w   :exec "normal =(v:count1)i<Space><ESC>
 nnoremap  ]w   a<Space><ESC>h
 nnoremap  [W    i<Space><Right><Space><ESC>h
 
