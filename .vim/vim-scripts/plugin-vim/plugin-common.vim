@@ -192,11 +192,10 @@ Bundle "godlygeek/tabular.git"
 " {{{
 "36-1 godlygeek/tabular
 
-"36-2 Align  vim-script 294
-"Bundle "Align.git"
+"36-2 Align vim-script 294, it's old
+"Bundle "vim-scripts/Align.git"
 
 "36-3 junegunn/vim-easy-align
-" 注意这里使用nore非递归映射是不起作用的,可能因为这里使用了<Plug>的原因,<Plug>不是vim底层的操作,所以映射之后也没有意义
 "Bundle "junegunn/vim-easy-align.git"
 "vmap <Leader>a <Plug>(EasyAlign)
 "nmap <Leader>a <Plug>(EasyAlign)

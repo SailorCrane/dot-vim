@@ -7,9 +7,6 @@
 
 
 # =================== plugin =====================
-[submodule ".vim/bundle/Align"]
-    path = .vim/bundle/Align
-    url = https://github.com/vim-scripts/Align.git
 [submodule ".vim/bundle/AutoFold.vim"]
     path = .vim/bundle/AutoFold.vim
     url = https://github.com/vim-scripts/AutoFold.vim.git
