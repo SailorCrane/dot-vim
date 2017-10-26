@@ -134,9 +134,9 @@ nnoremap  <Leader>eI  :vsplit  $Vim_Scripts/good-idea-script.vim<CR>
 " {{{
 " :let &filetype=&filetype equals to  :set filetype=<tab>目的是为了设置filetype, 触发autocmd
 if has("gui_running")
-    nnoremap  <Leader>sv  :source $MYVIMRC<CR>:source $MYGVIMRC<CR>:let &filetype=&filetype<CR>
+    nnoremap <silent>  <Leader>sv  :source $MYVIMRC<CR>:source $MYGVIMRC<CR>:let &filetype=&filetype<CR>
 else
-    nnoremap  <Leader>sv  :source $MYVIMRC<CR>:let &filetype=&filetype<CR>
+    nnoremap <silent>  <Leader>sv  :source $MYVIMRC<CR>:let &filetype=&filetype<CR>
 endif
 " }}}
 
