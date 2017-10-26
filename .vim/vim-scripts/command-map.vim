@@ -51,6 +51,7 @@ cabb  lp  :echo  expand("%:p")
 
 
 "8 cabbv mk to make
+"{{{
 cabbrev  mk   make
 cabbrev  mkb  make -B
 
@@ -73,6 +74,7 @@ cabbrev  mkr  make run
 
 cabbrev  mkbj  make -j -B
 cabbrev  mkj  make -j
+"}}}
 
 "9 cdt to cd test: 不信这么多父级目录,还不够你返回的.
 " r stand for root
@@ -111,7 +113,7 @@ cnoreabbrev  cle   !clear
 
 
 "14 映射 :co 为 :cclose, 因为:co 也可以用:t 表示(用to记忆)
-cnoreabbrev  co   cclose
+"cnoreabbrev  co   cclose
 
 
 "15 quick :%s

@@ -22,11 +22,8 @@ xnoremap  :  ;
 "nmap <CR>  <Plug>Sneak_;
 "xmap <CR>  <Plug>Sneak_;
 
-" }}}
-
-
-"1-2 查看命令历史
 nnoremap  q;  q:
+" }}}
 
 
 "2 Toggle  something
