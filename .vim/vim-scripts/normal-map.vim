@@ -948,7 +948,7 @@ xnoremap  <Leader>xD  : !xxd -r <CR>
 
 
 " 55 search error + trace(ignore case)
-noremap  <Leader>er   :e!<Cr>/\v(error\|trace)/c<CR>
+noremap  <Leader>er   :e!<Cr>/\v(error\|trace)\c<CR>
 
 
 "99 关于normal 模式中惯用的n 和 p的总结:
