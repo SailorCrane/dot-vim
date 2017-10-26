@@ -1,0 +1,13 @@
+e-executable函数检测可执行文件.txt
+
+:Author: crane
+:Email: crane@crane-pc
+:Date: 2017-10-26 23:30
+
+:h executable()
+
+echo executable('ls')
+echo executable('grep')
+echo executable('ack')
+echo executable('pylint')
+
