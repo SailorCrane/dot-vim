@@ -266,7 +266,7 @@ Bundle "vim-voom/VOoM.git"
 
 "51 calendar
 Bundle "itchyny/calendar.vim.git"
-nnoremap <Leader>oc :Calendar<CR>
+nnoremap <Leader>oC :Calendar<CR>
 
 
 "52 visincr 提供增长数列功能
@@ -374,3 +374,7 @@ endif
 
 " 25 easy sudo eidt
 Bundle "vim-scripts/sudo.vim.git"
+
+
+" 26 start page for vim
+Bundle "mhinz/vim-startify.git"
