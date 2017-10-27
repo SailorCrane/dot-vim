@@ -117,12 +117,30 @@
 [submodule ".vim/bundle/calendar.vim"]
     path = .vim/bundle/calendar.vim
     url = https://github.com/itchyny/calendar.vim.git
+
+[submodule ".vim/bundle/targets.vim"]
+    path = .vim/bundle/targets.vim
+    url = https://github.com/wellle/targets.vim.git
+
 [submodule ".vim/bundle/vim-textobj-entire"]
     path = .vim/bundle/vim-textobj-entire
     url = https://github.com/kana/vim-textobj-entire.git
+
 [submodule ".vim/bundle/vim-textobj-user"]
     path = .vim/bundle/vim-textobj-user
     url = https://github.com/kana/vim-textobj-user.git
+
+[submodule ".vim/bundle/textobj-word-column.vim"]
+    path = .vim/bundle/textobj-word-column.vim
+    url = https://github.com/coderifous/textobj-word-column.vim.git
+
+[submodule ".vim/bundle/vim-indent-object"]
+    path = .vim/bundle/vim-indent-object
+    url = https://github.com/michaeljsmith/vim-indent-object.git
+
+[submodule ".vim/bundle/vim-textobj-comment"]
+    path = .vim/bundle/vim-textobj-comment
+    url = https://github.com/glts/vim-textobj-comment.git
 
 [submodule ".vim/bundle/ctrlp.vim"]
     path = .vim/bundle/ctrlp.vim
@@ -335,10 +353,6 @@
     path = .vim/bundle/vim-thematic
     url = https://github.com/reedes/vim-thematic.git
 
-[submodule ".vim/bundle/targets.vim"]
-    path = .vim/bundle/targets.vim
-    url = https://github.com/wellle/targets.vim.git
-
 [submodule ".vim/bundle/visual-split.vim"]
     path = .vim/bundle/visual-split.vim
     url = https://github.com/wellle/visual-split.vim.git
@@ -394,10 +408,6 @@
 [submodule ".vim/bundle/vim-startify"]
     path = .vim/bundle/vim-startify
     url = https://github.com/mhinz/vim-startify.git
-
-[submodule ".vim/bundle/textobj-word-column.vim"]
-    path = .vim/bundle/textobj-word-column.vim
-    url = https://github.com/coderifous/textobj-word-column.vim.git
 
 [submodule ".vim/bundle/jellybeans.vim"]
     path = .vim/bundle/jellybeans.vim

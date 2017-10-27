@@ -213,6 +213,7 @@ vmap v <Plug>(expand_region_expand)
 vmap V <Plug>(expand_region_shrink)
 
 
+" object/target plugins
 "36-1 extend vim target
 Bundle "wellle/targets.vim.git"
 let g:targets_pairs = '()b {}B [] <>'
@@ -220,9 +221,14 @@ let g:targets_pairs = '()b {}B [] <>'
 "36-2 text-object-entire: file object
 Bundle "kana/vim-textobj-user.git"
 Bundle "kana/vim-textobj-entire.git"
+Bundle "glts/vim-textobj-comment.git"
 
-"36-3 column target
-Bundle "coderifous/textobj-word-column.vim"
+"36-3 column object
+Bundle "coderifous/textobj-word-column.vim.git"
+
+"36-4 indent object
+Bundle "michaeljsmith/vim-indent-object.git"
+
 
 
 " 37 split window by visual-text

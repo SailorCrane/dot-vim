@@ -7,7 +7,9 @@ inoremap  jk <Esc>:update<CR>
 inoremap  kj <Esc>:update<CR>
 
 cnoremap  jk <C-c>
-xnoremap  jk <Esc>
+cnoremap  kj <C-c>
+
+xnoremap  q  <Esc>
 "inoremap  jk <Esc>
 "inoremap  kj <Esc>
 
