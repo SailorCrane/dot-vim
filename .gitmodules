@@ -425,5 +425,14 @@
     path = .vim/bundle/denite.nvim
     url = https://github.com/Shougo/denite.nvim
 
+[submodule ".vim/bundle/vim-janah"]
+    path = .vim/bundle/vim-janah
+    url = https://github.com/mhinz/vim-janah.git
+
+[submodule ".vim/bundle/base16-vim"]
+    path = .vim/bundle/base16-vim
+    url = https://github.com/chriskempson/base16-vim.git
+
+
 # paste
 # https://github.com/ConradIrwin/vim-bracketed-paste
