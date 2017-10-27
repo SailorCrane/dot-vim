@@ -392,5 +392,9 @@ Bundle "mhinz/vim-startify.git"
 " 27
 "Bundle "wincent/terminus.git"
 
-
+" 28 搜索文件
 Bundle "wincent/ferret.git"
+
+
+" 29 unite(for vim8, nicer)
+Bundle "Shougo/denite.nvim.git"

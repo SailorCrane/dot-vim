@@ -417,6 +417,13 @@
     path = .vim/bundle/terminus
     url = https://github.com/wincent/terminus.git
 
+[submodule ".vim/bundle/ferret"]
+    path = .vim/bundle/ferret
+    url = https://github.com/wincent/ferret.git
+
+[submodule ".vim/bundle/denite.nvim"]
+    path = .vim/bundle/denite.nvim
+    url = https://github.com/Shougo/denite.nvim
 
 # paste
 # https://github.com/ConradIrwin/vim-bracketed-paste
