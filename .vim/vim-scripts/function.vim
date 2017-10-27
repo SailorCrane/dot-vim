@@ -106,7 +106,7 @@ endf
 " 7 substitude 中文符号
 fun! Sub_chinese_punc()
     :%s/，/,/g
-    :%s/．/./g
+    :%s/．/./ge
     ":s/＞/>/g
     ":s/＞/>/g
 endf
