@@ -35,7 +35,11 @@ Bundle "jpo/vim-railscasts-theme.git"
 "Bundle "junegunn/seoul256.vim.git"
 
 
+"8: jellybeans
+Bundle "nanotech/jellybeans.vim.git"
+
 "===================thematic=======================
+" organize  theme
 "1: thematic
 Bundle "reedes/vim-thematic.git"
 "{{{
