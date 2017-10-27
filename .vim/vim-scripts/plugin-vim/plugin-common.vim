@@ -387,3 +387,7 @@ Bundle "vim-scripts/sudo.vim.git"
 
 " 26 start page for vim
 Bundle "mhinz/vim-startify.git"
+
+
+" 27
+"Bundle "wincent/terminus.git"
