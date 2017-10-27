@@ -110,3 +110,75 @@ fun! Sub_chinese_punc()
     ":s/＞/>/g
     ":s/＞/>/g
 endf
+
+
+"8
+
+function InsertBlock(foldlevel, ...)
+"{{{
+    let line=getline('.')
+    if !empty(a:000)
+        let text=a:000[0]
+    else
+        let text=matchstr(line, '\S.*\S\@<=')
+    endif
+    if empty(line)
+        normal! "_cc_"
+        let indent=getline('.')[:-3]
+    else
+        let indent=matchstr(line, '^\s*')
+    endif
+    let cmsl=split(&commentstring, '%s', 1)
+    let [startmarker, endmarker]=split(&foldmarker, ',')
+    let left=(indent).get(cmsl, 0, '').startmarker
+    if a:foldlevel>0
+        let left.=a:foldlevel
+    elseif a:foldlevel==0
+        let left.='1'
+    endif
+    let left.=' '.text
+    let right=''
+    if !empty(get(cmsl, 1, ''))
+        let right=' '.cmsl[1]
+    endif
+    call setline('.', left)
+    normal! $
+    if !empty(right)
+        call setline('.', left.right)
+        normal! l
+    endif
+    if a:foldlevel==-1
+        call append('.', (indent).get(cmsl, 0, '').endmarker)
+    endif
+"}}}
+endfunction
+
+function CloseBlock(foldlevel)
+"{{{
+    if a:foldlevel==0
+        return
+    endif
+    let [startmarker, endmarker]=split(&foldmarker, ',')
+    let foldstart=search('\V'.escape(startmarker, '\').a:foldlevel, 'bnW')
+    let cmsl=split(&commentstring, '%s', 1)
+    if foldstart
+        let indent=matchstr(getline(foldstart), '^\s*')
+    else
+        normal! "_cc_"
+        let indent=getline('.')[:-3]
+    endif
+    call setline('.', (indent).get(cmsl, 0, '').endmarker.a:foldlevel.
+                \              get(cmsl, 1, ''))
+"}}}
+endfunction
+
+"nnoremap ,{          o<C-o>:call InsertBlock(foldlevel('.'))<CR><Esc>
+"nnoremap ,}          o<C-o>:call InsertBlock(foldlevel('.')+1)<CR><Esc>
+"nnoremap ,[          o<C-o>:call InsertBlock(foldlevel('.')-1)<CR><Esc>
+"nnoremap ,-          o<C-o>:call CloseBlock(foldlevel('.'))<CR><Esc>
+
+"inoremap ,{           <C-o>:call InsertBlock(foldlevel('.'))<CR>
+"inoremap ,}           <C-o>:call InsertBlock(foldlevel('.')+1)<CR>
+"inoremap ,[           <C-o>:call InsertBlock(foldlevel('.')-1)<CR>
+"inoremap ,-           <C-o>:call CloseBlock(foldlevel('.'))<CR>
+"inoremap ,+           <C-o>:call InsertBlock(foldlevel('.')+1)<CR><CR><C-o>:call CloseBlock(foldlevel('.'))<CR>

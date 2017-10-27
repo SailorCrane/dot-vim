@@ -391,3 +391,6 @@ Bundle "mhinz/vim-startify.git"
 
 " 27
 "Bundle "wincent/terminus.git"
+
+
+Bundle "wincent/ferret.git"

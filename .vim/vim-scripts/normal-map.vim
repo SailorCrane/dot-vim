@@ -228,6 +228,7 @@ nnoremap tn      :tabnew   <CR>
 nnoremap tc      :tabclose <CR>
 nnoremap to      :tabonly  <CR>
 nnoremap tm      :tabmove<Space>
+nnoremap te      1gtgT
 
 nnoremap <A-1>      1gt<CR>
 nnoremap <A-2>      2gt<CR>
