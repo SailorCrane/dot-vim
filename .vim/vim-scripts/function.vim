@@ -114,7 +114,7 @@ endf
 
 "8
 
-function InsertBlock(foldlevel, ...)
+fun! InsertBlock(foldlevel, ...)
 "{{{
     let line=getline('.')
     if !empty(a:000)
@@ -153,7 +153,7 @@ function InsertBlock(foldlevel, ...)
 "}}}
 endfunction
 
-function CloseBlock(foldlevel)
+fun! CloseBlock(foldlevel)
 "{{{
     if a:foldlevel==0
         return

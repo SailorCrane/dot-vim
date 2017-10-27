@@ -10,6 +10,9 @@ Bundle "scrooloose/nerdcommenter.git"
 "nmap <C-_>  <Plug>NERDCommenterInvert
 " }}}
 
+"3-2
+Bundle "tpope/vim-commentary.git"
+
 
 "4: syntastic in scrooloose
 Bundle "scrooloose/syntastic.git"
@@ -154,10 +157,6 @@ nnoremap <C-t>  :A<CR>:call ShowBufName()<CR>
 
 "14:  quick fix/locatioon window about
 "Bundle "romainl/vim-qf.git"
-
-
-"48 commentary from toppe: operator
-Bundle  "tpope/vim-commentary.git"
 
 
 " 63
