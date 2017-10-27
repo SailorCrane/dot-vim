@@ -213,9 +213,16 @@ vmap v <Plug>(expand_region_expand)
 vmap V <Plug>(expand_region_shrink)
 
 
-" extend target
+"36-1 extend vim target
 Bundle "wellle/targets.vim.git"
 let g:targets_pairs = '()b {}B [] <>'
+
+"36-2 text-object-entire: file object
+Bundle "kana/vim-textobj-user.git"
+Bundle "kana/vim-textobj-entire.git"
+
+"36-3 column target
+Bundle "coderifous/textobj-word-column.vim"
 
 
 " 37 split window by visual-text
@@ -248,10 +255,6 @@ Bundle "nelstrom/vim-visual-star-search.git"
 
 "46 qargs
 Bundle "nelstrom/vim-qargs.git"
-
-"47 text-object-entire: file object
-Bundle "kana/vim-textobj-user.git"
-Bundle "kana/vim-textobj-entire.git"
 
 "49-1  Mark
 " 因为'r 和 'n寄存器重复, 所以先注释掉这个插件
