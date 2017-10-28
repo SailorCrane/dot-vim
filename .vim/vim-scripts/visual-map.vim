@@ -40,6 +40,7 @@ xnoremap  <Leader>h*   :Tabularize  /\*<CR>
 xnoremap  <Leader>h\   :Tabularize  /\<CR>
 
 xnoremap  <Leader>h&   :Tabularize  /&<CR>
+xnoremap  <Leader>h#   :Tabularize  /#<CR>
 
 " 对C/C++注释的左边和右边进行对齐.
 xnoremap  <Leader>hl   :Tabularize  /\/\*<CR>
