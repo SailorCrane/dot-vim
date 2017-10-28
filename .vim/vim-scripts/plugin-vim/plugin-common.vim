@@ -196,9 +196,13 @@ Bundle "godlygeek/tabular.git"
 "Bundle "vim-scripts/Align.git"
 
 "36-3 junegunn/vim-easy-align
-"Bundle "junegunn/vim-easy-align.git"
-"vmap <Leader>a <Plug>(EasyAlign)
-"nmap <Leader>a <Plug>(EasyAlign)
+Bundle "junegunn/vim-easy-align.git"
+vmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+
+" example
+" gaip<cr><cr>*<c-x>\[a.*b\]
+" :EasyAlign */\[a.*b\]/ {'a': 'c'}
 
 "if !exists('g:easy_align_delimiters')
       "let g:easy_align_delimiters = {}
