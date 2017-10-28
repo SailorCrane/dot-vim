@@ -341,7 +341,9 @@ nnoremap <Leader>rv  :RestartVim<CR>
 " 72 vim-tmux-navigator
 Bundle "christoomey/vim-tmux-navigator.git"
 Bundle "wellle/tmux-complete.vim.git"
-let g:tmuxcomplete#trigger = 'completefunc'
+let g:tmuxcomplete#trigger = 'completefunc'     " c-x c-u
+"let g:tmuxcomplete#trigger = 'omnifunc'        " c-x c-o
+'
 
 
 " 72 vimwiki
