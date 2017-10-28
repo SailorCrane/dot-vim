@@ -246,6 +246,11 @@
     path = .vim/bundle/vim-tmux-navigator
     url = https://github.com/christoomey/vim-tmux-navigator.git
 
+[submodule ".vim/bundle/tmux-complete.vim"]
+    path = .vim/bundle/tmux-complete.vim
+    url = https://github.com/wellle/tmux-complete.vim.git
+
+
 [submodule ".vim/bundle/molokai"]
     path = .vim/bundle/molokai
     url = https://github.com/SailorCrane/molokai.git
