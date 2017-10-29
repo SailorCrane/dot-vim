@@ -10,6 +10,10 @@ augroup CraneGroup
     "autocmd WinEnter * setlocal cursorline
     "autocmd WinLeave * setlocal nocursorline
 
+    "0-1
+    autocmd WinEnter * call  ShowBufName()
+
+
     "1: quickfix
     " 打开QuickFix时, <CR> 恢复 <CR>功能.因为我将<CR>映射为了查找下一个
     au   FileType  qf  nnoremap <buffer>  <CR>  <CR>
