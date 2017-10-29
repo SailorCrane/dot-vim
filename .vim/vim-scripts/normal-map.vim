@@ -257,10 +257,10 @@ nnoremap <s-tab>  <c-o>
 
 " tmux 插件中已经有相应的映射了, 并且做的更好可以跳转到tmux pane
 "if !maparg('<C-h>', 'n')
-    "nnoremap <C-h>  <C-w>h:ShowBufName<CR>
-    "nnoremap <C-l>  <C-w>l:ShowBufName<CR>
-    "nnoremap <C-j>  <C-w>j:ShowBufName<CR>
-    "nnoremap <C-k>  <C-w>k:ShowBufName<CR>
+    "nnoremap <C-h>  <C-w>h
+    "nnoremap <C-l>  <C-w>l
+    "nnoremap <C-j>  <C-w>j
+    "nnoremap <C-k>  <C-w>k
 "endif
 
 " 用<Leader>切换窗口: 几乎是鸡肋了. 因为现在设置为了<C-h>, <C-L>, <C-j>, <C-k>跳转窗口
