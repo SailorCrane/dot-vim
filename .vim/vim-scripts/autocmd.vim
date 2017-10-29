@@ -12,7 +12,7 @@ augroup CraneGroup
 
     "0-1 进入窗口时显示buff file name
     autocmd WinEnter * file
-    autocmd TabEnter * file
+    "autocmd TabEnter * file
     "autocmd WinEnter * call  ShowBufName()
     "autocmd WinEnter * exec "normal  <C-g>"
     "file命令即normal下的<C-g>, 类似于自己写的ShowBufName()函数
