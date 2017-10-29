@@ -36,8 +36,6 @@ augroup CraneGroup
     " 不起作用呢
     au   FileType  tagbar  setlocal  nu
     au   FileType  tagbar  setlocal  rnu
-    au   FileType  tagbar  nnoremap  <buffer> <Leader>n  <nop>
-    au   FileType  tagbar  nnoremap  <buffer> <Leader>p  <nop>
     "注意:映射要使用 :<cmd><CR>的方式去映射,因为这里的命令是映射,而不是映射后的命令
     au   FileType  tagbar  nnoremap  <buffer> ?      :call <SNR>141_ToggleHelp()<CR>
     "au   BufNewFile,BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx    call tagbar#autoopen()
@@ -47,8 +45,6 @@ augroup CraneGroup
     "4-2: taglist
     au   FileType  taglist  setlocal  nu
     au   FileType  taglist  setlocal  rnu
-    au   FileType  taglist  nnoremap  <buffer> <Leader>n  <nop>
-    au   FileType  taglist  nnoremap  <buffer> <Leader>p  <nop>
     au   FileType  taglist  nnoremap  <buffer> ?          :call <SNR>57_Tlist_Window_Toggle_Help_Text()<CR>
 
 
@@ -56,27 +52,19 @@ augroup CraneGroup
     " 打开undotree 插件时<f2>， 设置行号: undotree的文件类型为undotree
     au   FileType  undotree setlocal nu
     au   FileType  undotree setlocal rnu
-    au   FileType  undotree  nnoremap  <buffer> <Leader>n  <nop>
-    au   FileType  undotree  nnoremap  <buffer> <Leader>p  <nop>
 
 
     "6: vundle FileType
     au   FileType  vundle setlocal nu
     au   FileType  vundle setlocal rnu
-    au   FileType  vundle  nnoremap  <buffer> <Leader>n  <nop>
-    au   FileType  vundle  nnoremap  <buffer> <Leader>p  <nop>
 
 
     "7: diff
     " undotree 插件下面的diff窗口类型为diff
     au   FileType  diff  setlocal nu rnu
-    au   FileType  diff  nnoremap  <buffer> <Leader>n  <nop>
-    au   FileType  diff  nnoremap  <buffer> <Leader>p  <nop>
 
 
     "8: minibufexpl  注意:映射一定要加上<buffer>,不然会影响全局映射
-    "au   FileType  minibufexpl  nnoremap  <buffer> <Leader>n  <nop>
-    "au   FileType  minibufexpl  nnoremap  <buffer> <Leader>p  <nop>
     "au   FileType  minibufexpl  nnoremap  <buffer> <C-^>      <nop>
     "au   FileType  minibufexpl  nmap      <buffer> <tab>      l
 
@@ -96,8 +84,6 @@ augroup CraneGroup
 
 
     "10: nerdtree  注意:映射一定要加上<buffer>,不然会影响全局映射
-    au   FileType  nerdtree  nnoremap  <buffer>  <Leader>n  <nop>
-    au   FileType  nerdtree  nnoremap  <buffer>  <Leader>p  <nop>
     au   FileType  nerdtree  nnoremap  <buffer>  <Leader>q  :bd<CR>
     au   FileType  nerdtree  setlocal  nu  rnu
     "au   FileType  nerdtree  setlocal   nocursorline
