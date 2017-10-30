@@ -1,7 +1,7 @@
 " vim: set foldmethod=marker  foldlevel=0: vim modeline( set )
 
 "3: nerdcommenter in scrooloose
-Plug 'scrooloose/nerdcommenter.git'
+Plug 'scrooloose/nerdcommenter'
 " {{{
 
 " <C-_> stand for <C-/>, 可以插入模式下使用: <C-v><C-/> 查看
@@ -11,11 +11,11 @@ Plug 'scrooloose/nerdcommenter.git'
 " }}}
 
 "3-2
-Plug 'tpope/vim-commentary.git'
+Plug 'tpope/vim-commentary'
 
 
 "4: syntastic in scrooloose
-Plug 'scrooloose/syntastic.git'
+Plug 'scrooloose/syntastic'
 " {{{
 " loc for location: lnext, lpre
 let g:syntastic_always_populate_loc_list = 1
@@ -56,7 +56,7 @@ let g:syntastic_cpp_check_header = 1
 
 
 "4-2: ale: syntax check(need vim8)
-"Plug 'w0rp/ale.git'
+"Plug 'w0rp/ale'
 "{{{
 ""let g:ale_sign_error = '✗'
 ""let g:ale_sign_warning = '⚠'
@@ -81,7 +81,7 @@ let g:syntastic_cpp_check_header = 1
 "}}}
 
 "6: YouCompleteMe
-"Plug 'Valloric/YouCompleteMe.git'
+"Plug 'Valloric/YouCompleteMe'
 " {{{
 " 自动补全配置
 "set completeopt=longest,menu    "让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
@@ -134,39 +134,39 @@ let g:ycm_collect_identifiers_from_comments_and_strings = 0
 
 
 "8: echofunc
-Plug 'mbbill/echofunc.git'
+Plug 'mbbill/echofunc'
 
 
 "12:  c-support用来支持c或者cpp的快捷键
 " {{{
 " c-support 就是 vim-scripts官网的c.vim, 二者是一个东西
 " 修改了<c-j>
-Plug 'SailorCrane/c-support.git'
+Plug 'SailorCrane/c-support'
 
 "12-1: 放在SailorCrane自己用户下
 " c-support 就是 vim-scripts官网的c.vim, 二者是一个东西
-"Plug 'SailorCrane/c.vim.git'
+"Plug 'SailorCrane/c.vim'
 " }}}
 
 "12-2: a.vim :switch between header and source file
-Plug 'vim-scripts/a.vim.git'
+Plug 'vim-scripts/a.vim'
 "cnoreabbrev  a  A
 " i stand for  include
 nnoremap <C-t>  :A<CR>:call ShowBufName()<CR>
 
 
 "14:  quick fix/locatioon window about
-Plug 'romainl/vim-qf.git'
+Plug 'romainl/vim-qf'
 
 
 " 63
-Plug 'thinca/vim-quickrun.git'
+Plug 'thinca/vim-quickrun'
 
 
 " 69 ultisnips +  vim-snippets
 "{{{
 "    ultisnips 是一个snippet引擎(类似于snipMate), vim-snippets是代码片段定义.
-Plug 'SirVer/ultisnips.git'
+Plug 'SirVer/ultisnips'
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
@@ -175,25 +175,25 @@ let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 "let g:UltiSnipsExpandTrigger="<space>"
 "let g:UltiSnipsJumpForwardTrigger="<space>"
 "let g:UltiSnipsJumpBackwardTrigger="<S-space>"
-Plug 'SailorCrane/vim-snippets.git'
+Plug 'SailorCrane/vim-snippets'
 "}}}
 
 "28 SnipMate
-"Plug 'garbas/vim-snipmate.git'
+"Plug 'garbas/vim-snipmate'
 " the tow plugins below is necessary for snipmate
-"Plug 'MarcWeber/vim-addon-mw-utils.git'
+"Plug 'MarcWeber/vim-addon-mw-utils'
 " snippets is  optional for snipmate
-"Plug  'honza/vim-snippets.git'
+"Plug  'honza/vim-snippets'
 
 
 " argwrap: awesome
-Plug 'FooSoft/vim-argwrap.git'
+Plug 'FooSoft/vim-argwrap'
 nnoremap  <Leader>aw  :ArgWrap<CR>
 inoremap  <Leader>aw  <ESC>:ArgWrap<CR>
 
 
 "62 indent-guide
-Plug 'nathanaelkane/vim-indent-guides.git'
+Plug 'nathanaelkane/vim-indent-guides'
 "{{{
 "if &expandtab   " 如果是tab, 就不要enable了, 因为会显示很宽
     "let g:indent_guides_enable_on_vim_startup = 1
@@ -213,7 +213,7 @@ nnoremap  <Leader>oi  :IndentGuidesEnable<CR>
 
 
 " cctree: 生成函数调用Tree
-Plug 'hari-rangarajan/CCTree.git'
+Plug 'hari-rangarajan/CCTree'
 
 let g:CCTreeKeyTraceForwardTree = '<C-\>>'
 let g:CCTreeKeyToggleWindow = '<C-\>w'
@@ -222,4 +222,4 @@ let g:CCTreeKeyToggleWindow = '<C-\>w'
 " endwise from tpope
 " 对于sh的支持一般: 输出if then 才会输出fi, 输入do回车输出done
 " 可以由ultisnips.git代替
-Plug 'tpope/vim-endwise.git'
+Plug 'tpope/vim-endwise'

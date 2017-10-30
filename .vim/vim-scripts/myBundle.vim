@@ -13,8 +13,8 @@ set  rtp+=$Crane_Vim_Bundle/vim-plug/
 call plug#begin("~/.vim/bundle")  " let Vundle manage Vundle,  required!
 
 
-Plug 'gmarik/vundle.git'
-Plug 'junegunn/vim-plug.git'
+Plug 'gmarik/vundle'
+Plug 'junegunn/vim-plug'
 
 
 " 将插件按功能分在不同目录
