@@ -2,17 +2,17 @@
 
 
 "54 python 相关
-Plug  "vim-scripts/pyflakes.git"
-Plug  "vim-scripts/pydoc.vim.git"
-Plug  "vim-scripts/indentpython.vim.git"
-Plug  "SailorCrane/python.vim.git"
-Plug  "hdima/python-syntax.git"
+Plug  'vim-scripts/pyflakes.git'
+Plug  'vim-scripts/pydoc.vim.git'
+Plug  'vim-scripts/indentpython.vim.git'
+Plug  'SailorCrane/python.vim.git'
+Plug  'hdima/python-syntax.git'
 
 
 " python 的一款补全插件
-Plug  "davidhalter/jedi-vim.git"
+Plug  'davidhalter/jedi-vim.git'
 
-Plug "python-rope/ropevim.git"
+Plug 'python-rope/ropevim.git'
 
 " 暂不启用
-"Plug "python-mode/python-mode.git"
+"Plug 'python-mode/python-mode.git'
