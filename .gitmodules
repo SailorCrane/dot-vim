@@ -144,6 +144,10 @@
     path = .vim/bundle/vim-textobj-comment
     url = https://github.com/glts/vim-textobj-comment.git
 
+[submodule ".vim/bundle/vim-textobj-space"]
+    path = .vim/bundle/vim-textobj-space
+    url = https://github.com/saihoooooooo/vim-textobj-space.git
+
 [submodule ".vim/bundle/ctrlp.vim"]
     path = .vim/bundle/ctrlp.vim
     url = https://github.com/kien/ctrlp.vim.git

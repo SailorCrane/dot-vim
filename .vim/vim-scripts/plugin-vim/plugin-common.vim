@@ -7,6 +7,7 @@ Bundle  "oplatek/Conque-Shell.git"
 "nnoremap   <C-n>  :ConqueTermVSplit bash<CR>
 "nnoremap   <C-b>  :ConqueTermVSplit bash<CR>
 noremap  <leader>ba  :ConqueTermVSplit bash<CR>
+noremap  <leader>oc  :ConqueTermVSplit bash<CR>
 let g:ConqueTerm_StartMessages = 0
 " }}}
 
@@ -225,10 +226,12 @@ let g:targets_pairs = '()b {}B [] <>'
 "36-2 text-object-entire: file object
 Bundle "kana/vim-textobj-user.git"
 Bundle "kana/vim-textobj-entire.git"
-Bundle "glts/vim-textobj-comment.git"
+" 和column object冲突
+"Bundle "glts/vim-textobj-comment.git"
 
 "36-3 column object
 Bundle "coderifous/textobj-word-column.vim.git"
+Bundle "saihoooooooo/vim-textobj-space.git"
 
 "36-4 indent object
 Bundle "michaeljsmith/vim-indent-object.git"
@@ -421,3 +424,7 @@ call denite#custom#map('insert', '<C-k>', '<denite:move_to_previous_line>', 'nor
 
 " 31 stackoverflow
 "Bundle "james9909/stackanswers.vim.git"
+
+
+" google search
+Bundle "szw/vim-g.git"
