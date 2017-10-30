@@ -18,6 +18,11 @@ xnoremap  ;  :
 nnoremap  :  ;
 xnoremap  :  ;
 
+" repeat last Ex-command
+nnoremap  @:  @:
+xnoremap  @:  @:
+
+
 " 回车功能由<Plug>Sneak_; 替代
 "nmap <CR>  <Plug>Sneak_;
 "xmap <CR>  <Plug>Sneak_;
