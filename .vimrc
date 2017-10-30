@@ -242,6 +242,10 @@ set grepprg=grep\ -E\ -n\ $*\ /dev/null  " add -E to default setting
 "set grepprg=ack\ -H\ --nocolor\ --nogroup
 
 
+" 29 no foldignore
+set foldignore=
+
+
 "100  vim colorscheme, gvim colorscheme in ~/.gvimrc
 "colorscheme  slate
 "colorscheme  marklar   "from Colour-Sampler-Pack
