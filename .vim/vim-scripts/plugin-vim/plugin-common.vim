@@ -201,6 +201,18 @@ nnoremap  <leader>oy  :YRShow<CR>
 " 因为是clear, 不是关闭窗口, 所以用Cy
 nnoremap  <leader>Cy  :YRClear<CR>
 
+" yank highlight
+"Bundle 'machakann/vim-highlightedyank.git'
+"map y <Plug>(highlightedyank)
+"let g:highlightedyank_highlight_duration = 1000
+"let g:highlightedyank_highlight_duration = -1
+
+Bundle "kana/vim-operator-user.git"
+
+Bundle 'haya14busa/vim-operator-flashy.git'
+map y <Plug>(operator-flashy)
+let g:operator#flashy#flash_time = 200
+
 
 "32 color view
 Bundle "http://git.oschina.net/CraneAgain/xterm-color-table.vim.git"
@@ -423,7 +435,6 @@ call denite#custom#map('insert', '<C-j>', '<denite:move_to_next_line>', 'noremap
 call denite#custom#map('insert', '<C-k>', '<denite:move_to_previous_line>', 'noremap')
 "call denite#custom#map('insert', '<C-n>', '<denite:move_to_next_line>', 'noremap')
 "call denite#custom#map('insert', '<C-p>', '<denite:move_to_previous_line>', 'noremap')
-
 
 " 30
 "Bundle "vim-scripts/Fortune-vimtips.git"

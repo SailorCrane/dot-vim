@@ -59,9 +59,14 @@
 [submodule ".vim/bundle/c-support"]
     path = .vim/bundle/c-support
     url = https://github.com/SailorCrane/c-support.git
+
 [submodule ".vim/bundle/YankRing.vim"]
     path = .vim/bundle/YankRing.vim
     url = https://github.com/vim-scripts/YankRing.vim.git
+[submodule ".vim/bundle/vim-operator-flashy"]
+    path = .vim/bundle/vim-operator-flashy
+    url = https://github.com/haya14busa/vim-operator-flashy.git
+
 [submodule ".vim/bundle/a.vim"]
     path = .vim/bundle/a.vim
     url = https://github.com/vim-scripts/a.vim.git
@@ -129,6 +134,10 @@
     path = .vim/bundle/vim-textobj-entire
     url = https://github.com/kana/vim-textobj-entire.git
 
+#=================== operator-user and textobj-user =====================
+[submodule ".vim/bundle/vim-operator-user"]
+    path = .vim/bundle/vim-operator-user
+    url = https://github.com/kana/vim-operator-user.git
 [submodule ".vim/bundle/vim-textobj-user"]
     path = .vim/bundle/vim-textobj-user
     url = https://github.com/kana/vim-textobj-user.git
