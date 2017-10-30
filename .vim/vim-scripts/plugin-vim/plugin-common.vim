@@ -164,6 +164,9 @@ Bundle "tpope/vim-projectionist.git"
 " for tmux
 Bundle "tpope/vim-tbone.git"
 
+" unix command wrap in vim
+Bundle "tpope/vim-eunuch.git"
+
 
 "26 matchit 注释这个插件, 因为vim已经自带了
 "只用在vimrc中添加 runtime macros/matchit.vim即可
@@ -251,6 +254,7 @@ Bundle "kana/vim-textobj-entire.git"
 "36-3 column object
 Bundle "coderifous/textobj-word-column.vim.git"
 Bundle "saihoooooooo/vim-textobj-space.git"
+Bundle "Julian/vim-textobj-variable-segment.git"
 
 "36-4 indent object
 Bundle "michaeljsmith/vim-indent-object.git"

@@ -148,6 +148,10 @@
     path = .vim/bundle/vim-textobj-space
     url = https://github.com/saihoooooooo/vim-textobj-space.git
 
+[submodule ".vim/bundle/vim-textobj-variable-segment"]
+    path = .vim/bundle/vim-textobj-variable-segment
+    url = https://github.com/Julian/vim-textobj-variable-segment.git
+
 [submodule ".vim/bundle/ctrlp.vim"]
     path = .vim/bundle/ctrlp.vim
     url = https://github.com/kien/ctrlp.vim.git
@@ -286,6 +290,9 @@
 [submodule ".vim/bundle/vim-tbone"]
     path = .vim/bundle/vim-tbone
     url = https://github.com/tpope/vim-tbone.git
+[submodule ".vim/bundle/vim-eunuch"]
+    path = .vim/bundle/vim-eunuch
+    url = https://github.com/tpope/vim-eunuch.git
 
 [submodule ".vim/bundle/vim-airline"]
     path = .vim/bundle/vim-airline
