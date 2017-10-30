@@ -368,9 +368,9 @@
     url = https://github.com/FooSoft/vim-argwrap.git
 
 
-[submodule ".vim/bundle/python-mode"]
-    path = .vim/bundle/python-mode
-    url = https://github.com/python-mode/python-mode.git
+# [submodule ".vim/bundle/python-mode"]
+#     path = .vim/bundle/python-mode
+#     url = https://github.com/python-mode/python-mode.git
 
 [submodule ".vim/bundle/vim-sort-motion"]
     path = .vim/bundle/vim-sort-motion
@@ -435,10 +435,6 @@
 [submodule ".vim/bundle/jellybeans.vim"]
     path = .vim/bundle/jellybeans.vim
     url = https://github.com/nanotech/jellybeans.vim.git
-
-[submodule ".vim/bundle/terminus"]
-    path = .vim/bundle/terminus
-    url = https://github.com/wincent/terminus.git
 
 [submodule ".vim/bundle/ferret"]
     path = .vim/bundle/ferret
