@@ -43,9 +43,6 @@
 [submodule ".vim/bundle/ReplaceWithRegister"]
     path = .vim/bundle/ReplaceWithRegister
     url = https://github.com/vim-scripts/ReplaceWithRegister.git
-[submodule ".vim/bundle/ShowMarks"]
-    path = .vim/bundle/ShowMarks
-    url = https://github.com/vim-scripts/ShowMarks.git
 [submodule ".vim/bundle/ShowTrailingWhitespace"]
     path = .vim/bundle/ShowTrailingWhitespace
     url = https://github.com/vim-scripts/ShowTrailingWhitespace.git
