@@ -128,8 +128,8 @@ Bundle "tpope/vim-repeat.git"
 
 
 "25 git and vertion control about
-" {{{
 Bundle "tpope/vim-fugitive.git"
+" {{{
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gd :Gdiff<CR>
 "nnoremap <leader>gc :Gcommit<CR>
@@ -144,6 +144,25 @@ Bundle "airblade/vim-gitgutter.git"
 "Bundle "mhinz/vim-signify.git"
 " this support git/vcs..., no use now
 " }}}
+
+
+"26  vim-unimpaired : toggle twince, paste once
+" h paste
+" h pasteoggle
+Bundle  "tpope/vim-unimpaired.git"
+
+
+"27 vim-abolish
+"使用:S 命令, 交换词
+":S/{good, bad}/
+Bundle "tpope/vim-abolish.git"
+
+
+" projectionist
+Bundle "tpope/vim-projectionist.git"
+
+" for tmux
+Bundle "tpope/vim-tbone.git"
 
 
 "26 matchit 注释这个插件, 因为vim已经自带了
@@ -237,6 +256,11 @@ Bundle "saihoooooooo/vim-textobj-space.git"
 Bundle "michaeljsmith/vim-indent-object.git"
 
 
+"36-5  lastpat
+" vi/ 选择模式选中下一次匹配
+" 鸡肋, 因为vim的gn, gN 已经可以在选择模式中, 选中下一次匹配了
+"Bundle  "kana/vim-textobj-lastpat.git"
+
 
 " 37 split window by visual-text
 Bundle "wellle/visual-split.vim.git"
@@ -297,24 +321,6 @@ Bundle "vim-scripts/ReplaceWithRegister.git"
 Bundle "tommcdo/vim-exchange.git"
 
 
-"57  vim-unimpaired : toggle twince, paste once
-" h paste
-" h pasteoggle
-Bundle  "tpope/vim-unimpaired.git"
-
-
-"59  lastpat
-" vi/ 选择模式选中下一次匹配
-" 鸡肋, 因为vim的gn, gN 已经可以在选择模式中, 选中下一次匹配了
-"Bundle  "kana/vim-textobj-lastpat.git"
-
-
-"60 vim-abolish
-"使用:S 命令, 交换词
-":S/{good, bad}/
-Bundle "tpope/vim-abolish.git"
-
-
 "61 emmet-vim
 "快速写html/css
 
@@ -359,10 +365,6 @@ let g:tmuxcomplete#trigger = 'completefunc'     " c-x c-u
 
 " sort motion
 Bundle "christoomey/vim-sort-motion.git"
-
-
-" projectionist
-Bundle "tpope/vim-projectionist.git"
 
 
 " goyo.vim
