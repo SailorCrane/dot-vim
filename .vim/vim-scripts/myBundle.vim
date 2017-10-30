@@ -7,12 +7,14 @@ filetype off     " required
 " $Crane_Dot_Vim 在 本项目自带的vimrc中配置
 " 路径变量不要以 "/" 结尾
 set  rtp+=$Crane_Vim_Bundle/vundle/
+set  rtp+=$Crane_Vim_Bundle/vim-plug/
 
-call vundle#rc() " let Vundle manage Vundle,  required!
+"call vundle#rc() " let Vundle manage Vundle,  required!
+call plug#begin("~/.vim/bundle")  " let Vundle manage Vundle,  required!
 
 
-Bundle "gmarik/vundle.git"
-Bundle "junegunn/vim-plug.git"
+Plug "gmarik/vundle.git"
+Plug "junegunn/vim-plug.git"
 
 
 " 将插件按功能分在不同目录
@@ -33,7 +35,9 @@ source   $Plugin_Script/plugin-ft.vim          " 和文件类型相关关:markdo
 " runtime/ftplugin/type.vim     比如python.vim
 " runtime/ftplugin/type/*.vim   比如python/some.vim
 
-" 而runtime在Bundle命令执行后, 才会添加到runtimepath中
-" 所以将Bundle命令放在filetype on命令之前
+" 而runtime在Plug命令执行后, 才会添加到runtimepath中
+" 所以将Plug命令放在filetype on命令之前
 filetype plugin indent on
 filetype on
+
+call plug#end() " let Vundle manage Vundle,  required!

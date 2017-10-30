@@ -1,7 +1,7 @@
 " vim: set fdm=marker  foldlevel=0: vim modeline( set )
 
 "1-1:  rainbow  parentheses
-"Bundle "kien/rainbow_parentheses.vim.git"
+"Plug "kien/rainbow_parentheses.vim.git"
 " {{{
 let g:rbpt_colorpairs = [
     \ ['brown',       'RoyalBlue3'],
@@ -38,7 +38,7 @@ let g:rbpt_loadcmd_toggle = 1
 
 
 "1-2
-Bundle "luochen1990/rainbow.git"
+Plug "luochen1990/rainbow.git"
 " 和syntax on有冲突
 "{{{
 let g:rainbow_conf = {
@@ -82,7 +82,7 @@ endif
 "2-1:  powerline and airline
 " {{{
 "Powerline 字体github可下载: https://github.com/runsisi/consolas-font-for-powerline
-"Bundle "Lokaltog/vim-powerline.git"
+"Plug "Lokaltog/vim-powerline.git"
 "set guifont=PowerlineSymbols\ for\ Powerline
 "set guifont=Powerline\ Consolas\ Bold
 "set laststatus=2
@@ -107,8 +107,8 @@ endif
 " }}}
 
 "2-2 air-line : 使用tabline, 必须设置laststatus=2
-Bundle "vim-airline/vim-airline.git"
-Bundle "vim-airline/vim-airline-themes.git"
+Plug "vim-airline/vim-airline.git"
+Plug "vim-airline/vim-airline-themes.git"
 " {{{
 
 if !exists('g:airline_symbols')
