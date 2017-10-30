@@ -22,6 +22,8 @@ xnoremap  :  ;
 nnoremap  @:  @:
 xnoremap  @:  @:
 
+" '&' repeat last substitute, same as ':s'
+
 
 " 回车功能由<Plug>Sneak_; 替代
 "nmap <CR>  <Plug>Sneak_;
