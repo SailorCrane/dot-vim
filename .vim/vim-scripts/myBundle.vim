@@ -11,8 +11,8 @@ set  rtp+=$Crane_Vim_Bundle/vundle/
 call vundle#rc() " let Vundle manage Vundle,  required!
 
 
-Bundle "gmarik/vundle.git"
-Bundle "SailorCrane/vim-plug.git"
+Bundle 'gmarik/vundle'
+Bundle 'SailorCrane/vim-plug'
 
 
 " 将插件按功能分在不同目录

@@ -2,17 +2,17 @@
 
 
 "54 python 相关
-Bundle  "vim-scripts/pyflakes.git"
-Bundle  "vim-scripts/pydoc.vim.git"
-Bundle  "vim-scripts/indentpython.vim.git"
-Bundle  "SailorCrane/python.vim.git"
-Bundle  "hdima/python-syntax.git"
+Bundle  'vim-scripts/pyflakes'
+Bundle  'vim-scripts/pydoc.vim'
+Bundle  'vim-scripts/indentpython.vim'
+Bundle  'SailorCrane/python.vim'
+Bundle  'hdima/python-syntax'
 
 
 " python 的一款补全插件
-Bundle  "davidhalter/jedi-vim.git"
+Bundle  'davidhalter/jedi-vim'
 
-Bundle "python-rope/ropevim.git"
+Bundle 'python-rope/ropevim'
 
 " 暂不启用
-"Bundle "python-mode/python-mode.git"
+"Bundle 'python-mode/python-mode'

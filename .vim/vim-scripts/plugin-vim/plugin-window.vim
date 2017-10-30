@@ -3,7 +3,7 @@
 
 "0: WinManager: 形同鸡肋
 "{{{
-"Bundle  "vim-scripts/winmanager.git"
+"Bundle  'vim-scripts/winmanager'
 "let g:winManagerWindowLayout = "TagList|FileExplorer"
 "let g:winManagerWindowLayout = "TagList"
 
@@ -19,7 +19,7 @@
 
 "2: NERDTree in scrooloose
 " {{{
-Bundle "scrooloose/nerdtree.git"
+Bundle 'scrooloose/nerdtree'
 let NERDChristmasTree=0
 let NERDTreeWinSize=35
 let NERDTreeChDirMode=2
@@ -40,7 +40,7 @@ nnoremap <leader>tn :NERDTreeToggle<cr>
 
 "3: code file tag about
 " {{{
-Bundle "vim-scripts/Tagbar.git"
+Bundle 'vim-scripts/Tagbar'
 "5-2 Tagbar in vim-scripts's repo
 " <leader>tt 被vim-scripts/Align使用了
 " 所以这里使用ti: tag invert, tt :tag toggle
@@ -55,12 +55,12 @@ let g:tagbar_left = 0
 
 
 "5: taglist in vim-scripts in github
-"Bundle "taglist.vim.git"
+"Bundle 'taglist.vim'
 " }}}
 
 
 "4-1 bufexplorer
-Bundle  "jlanzarotta/bufexplorer.git"
+Bundle  'jlanzarotta/bufexplorer'
 "{{{
 let g:bufExplorerSplitVertSize=30
 nnoremap <leader>ob :BufExplorerVerticalSplit<CR>
@@ -71,7 +71,7 @@ nnoremap <leader>tb :ToggleBufExplorer<cr>
 "4-2:  minibufexplorer
 "{{{
 " 因为在 打开quickfix窗口时, 老是崩溃, 所以禁止掉,以后使用bufexplorer
-"Bundle "fholgado/minibufexpl.vim.git"
+"Bundle 'fholgado/minibufexpl.vim'
 "let g:miniBufExplMapCTabSwitchBufs = 1
 "let g:miniBufExplForceSyntaxEnable = 1
 "let g:miniBufExplModSelTarget      = 1      "不在不可编辑窗口中打开选中的文件buffer
@@ -81,7 +81,7 @@ nnoremap <leader>tb :ToggleBufExplorer<cr>
 
 
 "5 mru files
-Bundle "vim-scripts/mru.vim.git"
+Bundle 'vim-scripts/mru.vim'
 nnoremap  <Leader>om   :MRU<CR>
 nnoremap  <Leader>ov   :MRU vim<CR>
 nnoremap  <Leader>op   :MRU py<CR>
@@ -91,7 +91,7 @@ nnoremap  <Leader>os   :MRU sh<CR>
 
 "6: undotree
 " {{{
-Bundle "mbbill/undotree.git"
+Bundle 'mbbill/undotree'
 nnoremap  <Leader>ou :UndotreeShow<cr>
 nnoremap  <Leader>tu :UndotreeToggle<cr>
 " }}}
@@ -111,8 +111,8 @@ nnoremap  <Leader>tu :UndotreeToggle<cr>
 
 "10 ctrlp
 let g:ctrlp_working_path_mode = 0
-Bundle "kien/ctrlp.vim.git"
-Bundle "vim-scripts/FuzzyFinder.git"
+Bundle 'kien/ctrlp.vim'
+Bundle 'vim-scripts/FuzzyFinder'
 " {{{
 " in dir, search more file
 let g:ctrlp_max_files=350
@@ -138,7 +138,7 @@ nnoremap  <Leader>sm  :<C-u>CtrlPMixed<CR>
 
 
 "11 tabman: tab + window管理, 类似于BufExplorer
-Bundle "kien/tabman.vim.git"
+Bundle 'kien/tabman.vim'
 " 因为m 已经被MRU占用了
 let g:tabman_toggle = '<leader>tM'
 let g:tabman_focus  = '<leader>oM'

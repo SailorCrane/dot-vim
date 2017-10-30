@@ -7,50 +7,50 @@ set background=dark
 
 
 "1: more colorscheme(大多数colorschemes在这里都有了)
-Bundle "rafi/awesome-vim-colorschemes.git"
+Bundle 'rafi/awesome-vim-colorschemes'
 
 
 "2: colors/molokai.vim
-Bundle  "SailorCrane/molokai.git"
+Bundle  'SailorCrane/molokai'
 let g:molokai_original = 1
 
 
 "3: monokai
-"Bundle "sickill/vim-monokai.git"
-Bundle "SailorCrane/vim-monokai.git"
+"Bundle 'sickill/vim-monokai'
+Bundle 'SailorCrane/vim-monokai'
 
 
 "4: altercation/vim-colors-solarized
-Bundle  "altercation/vim-colors-solarized.git"
+Bundle  'altercation/vim-colors-solarized'
 
 "5: color sampler
-Bundle  "vim-scripts/Colour-Sampler-Pack.git"
+Bundle  'vim-scripts/Colour-Sampler-Pack'
 
 
 "6: railscast
-Bundle "jpo/vim-railscasts-theme.git"
+Bundle 'jpo/vim-railscasts-theme'
 
 
 "7: seoul256 colorschemes (awesome-vim-colorschemes中已有)
-"Bundle "junegunn/seoul256.vim.git"
+"Bundle 'junegunn/seoul256.vim'
 
 
 "8: jellybeans
-Bundle "nanotech/jellybeans.vim.git"
+Bundle 'nanotech/jellybeans.vim'
 
 
 "9: base16
-Bundle "chriskempson/base16-vim.git"
+Bundle 'chriskempson/base16-vim'
 
 
 "10:
-Bundle "mhinz/vim-janah.git"
+Bundle 'mhinz/vim-janah'
 
 
 "===================thematic=======================
 " organize  theme
 "1: thematic
-Bundle "reedes/vim-thematic.git"
+Bundle 'reedes/vim-thematic'
 "{{{
 let g:thematic#themes = {
 \ 'molokai'  : {   'typeface': 'Menlo',

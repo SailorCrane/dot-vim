@@ -2,7 +2,7 @@
 "
 
 "1: Conque-Shell
-Bundle  "oplatek/Conque-Shell.git"
+Bundle  'oplatek/Conque-Shell'
 " {{{
 "nnoremap   <C-n>  :ConqueTermVSplit bash<CR>
 "nnoremap   <C-b>  :ConqueTermVSplit bash<CR>
@@ -13,17 +13,17 @@ let g:ConqueTerm_StartMessages = 0
 
 
 "10: wakatime/vim-wakatime
-"Bundle "wakatime/vim-wakatime.git"
+"Bundle 'wakatime/vim-wakatime'
 
 
 "16: jiangmiao/auto-pairs.git
-Bundle  "jiangmiao/auto-pairs.git"
+Bundle  'jiangmiao/auto-pairs'
 let g:AutoPairShortcutToggle = '<C-p>'
 let g:AutoPairsMapCh = 0    " 不要将<c-h> 映射为<Backspace>删除键
 
 
 "19: easy-motion
-Bundle "easymotion/vim-easymotion.git"
+Bundle 'easymotion/vim-easymotion'
 " {{{
 let g:EasyMotion_smartcase = 1
 "let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
@@ -76,8 +76,8 @@ nmap  <Leader><Leader>w <Plug>(easymotion-overwin-w)
 " }}}
 
 " 19-2 easy incsearch
-Bundle "haya14busa/incsearch.vim.git"
-Bundle "haya14busa/incsearch-easymotion.vim.git"
+Bundle 'haya14busa/incsearch.vim'
+Bundle 'haya14busa/incsearch-easymotion.vim'
 "{{{
 " incsearch 没啥卵用, 除了给incsearch-easymotion支持
 " 需要 incsearch.vim 作为支持
@@ -88,14 +88,14 @@ map zg/ <Plug>(incsearch-easymotion-stay)
 
 " quick move line down/up
 " 卵用不大, unimpaired 的[e 和]e exchange做的很好
-"Bundle "matze/vim-move.git"
+"Bundle 'matze/vim-move'
 " default key is <Alt> (temporary modifier, 即必须可以和其它键同时按下的)
 " does not work for <Leader>
 "let g:move_key_modifier = '<Leader>'
 
 
 " sneak: search two character cross lines
-Bundle "justinmk/vim-sneak.git"
+Bundle 'justinmk/vim-sneak'
 " can't use noremap
 map <CR>  <Plug>Sneak_;
 
@@ -103,19 +103,19 @@ map <CR>  <Plug>Sneak_;
 "20 SearchComplete
 " 一个很烂的插件,将我cmd模式下的<tab>映射为对buffer的补全
 " 当我想补全vim cmd时总是刷新我的输入. shit
-"Bundle "SailorCrane/SearchComplete.git"
+"Bundle 'SailorCrane/SearchComplete'
 "20-1 CmdlineComplete
-Bundle "vim-scripts/CmdlineComplete.git"
+Bundle 'vim-scripts/CmdlineComplete'
 
 
 "21 ShowMarks 显示使用m所下的标记
-"Bundle "ShowMarks.git"
+"Bundle 'ShowMarks'
 
-Bundle "kshenoy/vim-signature.git"
+Bundle 'kshenoy/vim-signature'
 
 
 "22 vim-surround
-Bundle "tpope/vim-surround.git"
+Bundle 'tpope/vim-surround'
 " cs"'
 " ds"
 " ysiw"
@@ -124,11 +124,11 @@ Bundle "tpope/vim-surround.git"
 "23 repeat ,和surround同一个作者,主要用于 重复执行surround的操作
 "  ysiW": 给W添加"
 "  yss" : 给一行添加"
-Bundle "tpope/vim-repeat.git"
+Bundle 'tpope/vim-repeat'
 
 
 "25 git and vertion control about
-Bundle "tpope/vim-fugitive.git"
+Bundle 'tpope/vim-fugitive'
 " {{{
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gd :Gdiff<CR>
@@ -139,9 +139,9 @@ nnoremap <leader>gl :Glog<CR>
 nnoremap <leader>gp :Git push<CR>
 nnoremap <leader>gw :Gwrite<CR>
 
-Bundle "airblade/vim-gitgutter.git"
+Bundle 'airblade/vim-gitgutter'
 
-"Bundle "mhinz/vim-signify.git"
+"Bundle 'mhinz/vim-signify'
 " this support git/vcs..., no use now
 " }}}
 
@@ -149,54 +149,54 @@ Bundle "airblade/vim-gitgutter.git"
 "26  vim-unimpaired : toggle twince, paste once
 " h paste
 " h pasteoggle
-Bundle  "tpope/vim-unimpaired.git"
+Bundle  'tpope/vim-unimpaired'
 
 
 "27 vim-abolish
 "使用:S 命令, 交换词
 ":S/{good, bad}/
-Bundle "tpope/vim-abolish.git"
+Bundle 'tpope/vim-abolish'
 
 
 " projectionist
-Bundle "tpope/vim-projectionist.git"
+Bundle 'tpope/vim-projectionist'
 
 " for tmux
-Bundle "tpope/vim-tbone.git"
+Bundle 'tpope/vim-tbone'
 
 " unix command wrap in vim
-Bundle "tpope/vim-eunuch.git"
+Bundle 'tpope/vim-eunuch'
 
-Bundle "tpope/vim-scriptease.git"
+Bundle 'tpope/vim-scriptease'
 
 
 "26 matchit 注释这个插件, 因为vim已经自带了
 "只用在vimrc中添加 runtime macros/matchit.vim即可
-"Bundle "matchit.zip.git"
+"Bundle 'matchit.zip'
 
 
 "27 EasyGrep
-Bundle "vim-scripts/EasyGrep.git"
+Bundle 'vim-scripts/EasyGrep'
 
 
 " tlib: vim util fun
 " snipmate also need
-Bundle "tomtom/tlib_vim.git"
+Bundle 'tomtom/tlib_vim'
 
 
 "34 L9: vim library, vim script util.(和tlib一样)
 "暂时先不启用这个库,需要时再打开注释:<leader>ci toggle注释
-Bundle "vim-scripts/L9.git"
+Bundle 'vim-scripts/L9'
 
 "29 vimim, vim中文输入法
-"Bundle "vimim/vimim.git"
+"Bundle 'vimim/vimim'
 
 "30 Chiel92/vim-autoformat
-Bundle "Chiel92/vim-autoformat.git"
+Bundle 'Chiel92/vim-autoformat'
 
 
 "31 Yankring,因为很多快捷键冲突,所以先将这个插件注释
-Bundle "vim-scripts/YankRing.vim.git"
+Bundle 'vim-scripts/YankRing.vim'
 nnoremap  <leader>oy  :YRShow<CR>
 " 因为是clear, 不是关闭窗口, 所以用Cy
 nnoremap  <leader>Cy  :YRClear<CR>
@@ -207,33 +207,33 @@ nnoremap  <leader>Cy  :YRClear<CR>
 "let g:highlightedyank_highlight_duration = 1000
 "let g:highlightedyank_highlight_duration = -1
 
-Bundle "kana/vim-operator-user.git"
+Bundle 'kana/vim-operator-user'
 
-Bundle 'haya14busa/vim-operator-flashy.git'
+Bundle 'haya14busa/vim-operator-flashy'
 map y <Plug>(operator-flashy)
 let g:operator#flashy#flash_time = 200
 
 
 "32 color view
-Bundle "http://git.oschina.net/CraneAgain/xterm-color-table.vim.git"
+Bundle 'http://git.oschina.net/CraneAgain/xterm-color-table.vim'
 
 
 "35 multiple-cursor
-Bundle "terryma/vim-multiple-cursors.git"
+Bundle 'terryma/vim-multiple-cursors'
 let g:multi_cursor_start_word_key='g<C-n>'     "选择单词"
 let g:multi_cursor_start_key='gi<C-n>'           "在单词中的,也被选择"
 
 
 " Align plugin
-Bundle "godlygeek/tabular.git"
+Bundle 'godlygeek/tabular'
 " {{{
 "36-1 godlygeek/tabular
 
 "36-2 Align vim-script 294, it's old
-"Bundle "vim-scripts/Align.git"
+"Bundle 'vim-scripts/Align'
 
 "36-3 junegunn/vim-easy-align
-Bundle "junegunn/vim-easy-align.git"
+Bundle 'junegunn/vim-easy-align'
 vmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
@@ -249,94 +249,94 @@ nmap ga <Plug>(EasyAlign)
 
 
 "37 expand-region
-Bundle "terryma/vim-expand-region.git"
+Bundle 'terryma/vim-expand-region'
 vmap v <Plug>(expand_region_expand)
 vmap V <Plug>(expand_region_shrink)
 
 
 " object/target plugins
 "36-1 extend vim target
-Bundle "wellle/targets.vim.git"
+Bundle 'wellle/targets.vim'
 let g:targets_pairs = '()b {}B [] <>'
 
 "36-2 text-object-entire: file object
-Bundle "kana/vim-textobj-user.git"
-Bundle "kana/vim-textobj-entire.git"
+Bundle 'kana/vim-textobj-user'
+Bundle 'kana/vim-textobj-entire'
 " 和column object冲突
-"Bundle "glts/vim-textobj-comment.git"
+"Bundle 'glts/vim-textobj-comment'
 
 "36-3 column object
-Bundle "coderifous/textobj-word-column.vim.git"
-Bundle "saihoooooooo/vim-textobj-space.git"
-Bundle "Julian/vim-textobj-variable-segment.git"
+Bundle 'coderifous/textobj-word-column.vim'
+Bundle 'saihoooooooo/vim-textobj-space'
+Bundle 'Julian/vim-textobj-variable-segment'
 
 "36-4 indent object
-Bundle "michaeljsmith/vim-indent-object.git"
+Bundle 'michaeljsmith/vim-indent-object'
 
 
 "36-5  lastpat
 " vi/ 选择模式选中下一次匹配
 " 鸡肋, 因为vim的gn, gN 已经可以在选择模式中, 选中下一次匹配了
-"Bundle  "kana/vim-textobj-lastpat.git"
+"Bundle  'kana/vim-textobj-lastpat'
 
 
 " 37 split window by visual-text
-Bundle "wellle/visual-split.vim.git"
+Bundle 'wellle/visual-split.vim'
 
 
 "38 gundo stand for gnu undo
-Bundle "vim-scripts/gundo.git"
+Bundle 'vim-scripts/gundo'
 
 
 "40 ShowTrailingWhiteSpace
-Bundle "vim-scripts/ShowTrailingWhitespace.git"
+Bundle 'vim-scripts/ShowTrailingWhitespace'
 
 
 "42 FencView: fencview
-Bundle  "mbbill/fencview.git"
+Bundle  'mbbill/fencview'
 
 "43 ack.vim
-Bundle "vim-scripts/ack.vim.git"
+Bundle 'vim-scripts/ack.vim'
 
 
 "44 mkdir, very simple
-Bundle  "pbrisbin/vim-mkdir.git"
+Bundle  'pbrisbin/vim-mkdir'
 
 
 "45 visual-star search
 " 这是vim-practical 作者的一款插件, 实现很简单
 " 在«vim-practical»技巧86中, 有这个技巧的实现, 并且书中还有一个关于/ 和?的bug
-Bundle "nelstrom/vim-visual-star-search.git"
+Bundle 'nelstrom/vim-visual-star-search'
 
 "46 qargs
-Bundle "nelstrom/vim-qargs.git"
+Bundle 'nelstrom/vim-qargs'
 
 "49-1  Mark
 " 因为'r 和 'n寄存器重复, 所以先注释掉这个插件
-"Bundle "Mark.git"
+"Bundle 'Mark'
 "49-2 mark.vim 可以同时高亮多个词: 比如同时高亮好几个变量.
-"Bundle  "Tuxdude/mark.vim.git"
+"Bundle  'Tuxdude/mark.vim'
 
 
 "50 VOoM
-Bundle "vim-voom/VOoM.git"
+Bundle 'vim-voom/VOoM'
 
 
 "51 calendar
-Bundle "itchyny/calendar.vim.git"
+Bundle 'itchyny/calendar.vim'
 nnoremap <Leader>oC :Calendar<CR>
 
 
 "52 visincr 提供增长数列功能
-Bundle "vim-scripts/VisIncr.git"
+Bundle 'vim-scripts/VisIncr'
 
 
 "55 ReplaceWithRegister
-Bundle "vim-scripts/ReplaceWithRegister.git"
+Bundle 'vim-scripts/ReplaceWithRegister'
 
 
 "56  vim-exchange :learned from vimcasts
-Bundle "tommcdo/vim-exchange.git"
+Bundle 'tommcdo/vim-exchange'
 
 
 "61 emmet-vim
@@ -345,65 +345,65 @@ Bundle "tommcdo/vim-exchange.git"
 
 " 64 auto-fold: zf add marker, zd delete marker
 "" 比较烂, 自动添加marker 不太好. 而且有了这个插件, 每次写入文件, 就跳行...
-"Bundle "AutoFold.vim.git"
+"Bundle 'AutoFold.vim'
 
 
 " 65 drawit: 使用vim draw文本图.
-Bundle "hrj/vim-DrawIt.git"
+Bundle 'hrj/vim-DrawIt'
 
 
 " 66 file-template
-Bundle "aperezdc/vim-template.git"
+Bundle 'aperezdc/vim-template'
 if !exists('g:templates_directory')
     let g:templates_directory = [  $Crane_Dot_Vim . "/templates", ]
 endif
 
 " 71-1
-Bundle "thaerkh/vim-workspace.git"
+Bundle 'thaerkh/vim-workspace'
 
 " 72-2 vim-session插件比vim-workspace好用很多
-Bundle "xolox/vim-misc.git"
-Bundle "xolox/vim-session.git"
+Bundle 'xolox/vim-misc'
+Bundle 'xolox/vim-session'
 :let g:session_autosave = 'no'
 :let g:session_autoload = 'no'
 nnoremap <Leader>rv  :RestartVim<CR>
 
 
 " 72 vim-tmux-navigator
-Bundle "christoomey/vim-tmux-navigator.git"
-Bundle "wellle/tmux-complete.vim.git"
+Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'wellle/tmux-complete.vim'
 let g:tmuxcomplete#trigger = 'completefunc'     " c-x c-u
 "let g:tmuxcomplete#trigger = 'omnifunc'        " c-x c-o
 '
 
 
 " 72 vimwiki
-"Bundle "vimwiki/vimwiki.git"
+"Bundle 'vimwiki/vimwiki'
 
 
 " sort motion
-Bundle "christoomey/vim-sort-motion.git"
+Bundle 'christoomey/vim-sort-motion'
 
 
 " goyo.vim
-Bundle "junegunn/goyo.vim.git"
+Bundle 'junegunn/goyo.vim'
 nnoremap <Leader>tg  :Goyo<CR>
 nnoremap <Leader>cg  :Goyo!<CR>
 
 
 " vim help plugin
-Bundle "powerman/vim-plugin-viewdoc.git"
+Bundle 'powerman/vim-plugin-viewdoc'
 
 
-Bundle "SailorCrane/ToggleIsk.git"
+Bundle 'SailorCrane/ToggleIsk'
 
 
 "rename current file
-Bundle "danro/rename.vim.git"
+Bundle 'danro/rename.vim'
 
 
 " gvim fontzoom
-Bundle "thinca/vim-fontzoom.git"
+Bundle 'thinca/vim-fontzoom'
 
 if has('gui_running')
     "nmap  +  <Plug>(fontzoom-larger)
@@ -413,22 +413,22 @@ endif
 
 
 " 25 easy sudo eidt
-Bundle "vim-scripts/sudo.vim.git"
+Bundle 'vim-scripts/sudo.vim'
 
 
 " 26 start page for vim
-Bundle "mhinz/vim-startify.git"
+Bundle 'mhinz/vim-startify'
 
 
 " 27
-"Bundle "wincent/terminus.git"
+"Bundle 'wincent/terminus'
 
 " 28 搜索文件
-Bundle "wincent/ferret.git"
+Bundle 'wincent/ferret'
 
 
 " 29 unite(for vim8, nicer)
-Bundle "Shougo/denite.nvim.git"
+Bundle 'Shougo/denite.nvim'
 " map like ctrlp
 " h denite-key-mappings
 call denite#custom#map('insert', '<C-j>', '<denite:move_to_next_line>', 'noremap')
@@ -437,13 +437,13 @@ call denite#custom#map('insert', '<C-k>', '<denite:move_to_previous_line>', 'nor
 "call denite#custom#map('insert', '<C-p>', '<denite:move_to_previous_line>', 'noremap')
 
 " 30
-"Bundle "vim-scripts/Fortune-vimtips.git"
-"Bundle  "vim-scripts/fortune.vim.git"
+"Bundle 'vim-scripts/Fortune-vimtips'
+"Bundle  'vim-scripts/fortune.vim'
 
 
 " 31 stackoverflow
-"Bundle "james9909/stackanswers.vim.git"
+"Bundle 'james9909/stackanswers.vim'
 
 
 " google search
-"Bundle "szw/vim-g.git"
+"Bundle 'szw/vim-g'
