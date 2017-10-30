@@ -7,6 +7,7 @@
 #
 
 # use (')  to replace (")
+sed -i -r  "s/(Bundle\s+)\"([^\"]*)\"/\1\'\2'/"   $(find .vim/vim-scripts/ -name  "*.vim")
 sed -i -r  "s/(Bundle\s+)\"([^\"]*)\.git\"/\1\'\2'/"   $(find .vim/vim-scripts/ -name  "*.vim")
 
 # delete ".git" suffix

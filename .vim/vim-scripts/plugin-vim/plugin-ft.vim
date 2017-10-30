@@ -26,7 +26,7 @@ let  g:markdown_minlines = 100
 
 
 " xml folding
-"Bundle "vim-scripts/XML-Folding"
+"Bundle 'vim-scripts/XML-Folding'
 
 
 " 速写 html/css/js(javascript) : 官方插件. ZenCoding renamed to Emmet.vim
