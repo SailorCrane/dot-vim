@@ -435,4 +435,4 @@ call denite#custom#map('insert', '<C-k>', '<denite:move_to_previous_line>', 'nor
 
 
 " google search
-Bundle "szw/vim-g.git"
+"Bundle "szw/vim-g.git"
