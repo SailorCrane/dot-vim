@@ -161,6 +161,9 @@
 [submodule ".vim/bundle/vim-textobj-space"]
     path = .vim/bundle/vim-textobj-space
     url = https://github.com/saihoooooooo/vim-textobj-space.git
+[submodule ".vim/bundle/vim-angry"]
+    path = .vim/bundle/vim-angry
+    url = https://github.com/b4winckler/vim-angry.git
 
 [submodule ".vim/bundle/vim-textobj-variable-segment"]
     path = .vim/bundle/vim-textobj-variable-segment

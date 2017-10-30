@@ -267,8 +267,13 @@ Bundle 'kana/vim-textobj-entire'
 
 "36-3 column object
 Bundle 'coderifous/textobj-word-column.vim'
+" iS, aS
 Bundle 'saihoooooooo/vim-textobj-space'
+" iv
 Bundle 'Julian/vim-textobj-variable-segment'
+" ia, aa, iA, aA
+Bundle 'b4winckler/vim-angry'
+
 
 "36-4 indent object
 Bundle 'michaeljsmith/vim-indent-object'
