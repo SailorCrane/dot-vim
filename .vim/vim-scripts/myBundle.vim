@@ -12,6 +12,7 @@ call vundle#rc() " let Vundle manage Vundle,  required!
 
 
 Bundle "gmarik/vundle.git"
+Bundle "junegunn/vim-plug.git"
 
 
 " 将插件按功能分在不同目录

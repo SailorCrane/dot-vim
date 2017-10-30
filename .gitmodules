@@ -12,6 +12,10 @@
     path = .vim/bundle/vundle
     url = https://github.com/gmarik/vundle.git
 
+[submodule ".vim/bundle/vim-plug"]
+    path = .vim/bundle/vim-plug
+    url = https://github.com/junegunn/vim-plug.git
+
 [submodule ".vim/bundle/AutoFold.vim"]
     path = .vim/bundle/AutoFold.vim
     url = https://github.com/vim-scripts/AutoFold.vim.git
