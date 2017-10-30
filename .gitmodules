@@ -14,7 +14,7 @@
 
 [submodule ".vim/bundle/vim-plug"]
     path = .vim/bundle/vim-plug
-    url = https://github.com/junegunn/vim-plug.git
+    url = https://github.com/SailorCrane/vim-plug.git
 
 [submodule ".vim/bundle/AutoFold.vim"]
     path = .vim/bundle/AutoFold.vim
