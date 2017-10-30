@@ -653,12 +653,13 @@ nnoremap  <Leader><Leader>P  "+P
 " {{{
 
 " 有必要吗?
-nnoremap  yj  y1j
-nnoremap  yk  y1k
+"nnoremap  yj  y1j
+"nnoremap  yk  y1k
 
-nnoremap  yp  yyp
+"nnoremap  yp  yyp
 " 光标位于旧行
-nnoremap  yP  yyP
+"nnoremap  yP  yyP
+"nnoremap  yP  yyP
 
 " unimmpaired ]e, [e 交换前后行
 "nnoremap  dp  ddp
