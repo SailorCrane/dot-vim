@@ -229,9 +229,6 @@
     path = .vim/bundle/python.vim
     url = https://github.com/SailorCrane/python.vim.git
 
-[submodule ".vim/bundle/vim-repeat"]
-    path = .vim/bundle/vim-repeat
-    url = https://github.com/tpope/vim-repeat.git
 [submodule ".vim/bundle/vim-qf"]
     path = .vim/bundle/vim-qf
     url = https://github.com/romainl/vim-qf.git
@@ -272,6 +269,18 @@
     path = .vim/bundle/tlib_vim
     url = https://github.com/tomtom/tlib_vim.git
 
+[submodule ".vim/bundle/vim-projectionist"]
+    path = .vim/bundle/vim-projectionist
+    url = https://github.com/tpope/vim-projectionist.git
+[submodule ".vim/bundle/vim-endwise"]
+    path = .vim/bundle/vim-endwise
+    url = https://github.com/tpope/vim-endwise.git
+[submodule ".vim/bundle/vim-markdown"]
+    path = .vim/bundle/vim-markdown
+    url = https://github.com/tpope/vim-markdown.git
+[submodule ".vim/bundle/vim-repeat"]
+    path = .vim/bundle/vim-repeat
+    url = https://github.com/tpope/vim-repeat.git
 [submodule ".vim/bundle/vim-abolish"]
     path = .vim/bundle/vim-abolish
     url = https://github.com/tpope/vim-abolish.git
@@ -293,6 +302,9 @@
 [submodule ".vim/bundle/vim-eunuch"]
     path = .vim/bundle/vim-eunuch
     url = https://github.com/tpope/vim-eunuch.git
+[submodule ".vim/bundle/vim-scriptease"]
+    path = .vim/bundle/vim-scriptease
+    url = https://github.com/tpope/vim-scriptease.git
 
 [submodule ".vim/bundle/vim-airline"]
     path = .vim/bundle/vim-airline
@@ -339,16 +351,9 @@
     path = .vim/bundle/vim-monokai
     url = https://github.com/SailorCrane/vim-monokai.git
 
-
-[submodule ".vim/bundle/vim-markdown"]
-    path = .vim/bundle/vim-markdown
-    url = https://github.com/tpope/vim-markdown.git
-
-
 [submodule ".vim/bundle/vim-railscasts-theme"]
     path = .vim/bundle/vim-railscasts-theme
     url = https://github.com/jpo/vim-railscasts-theme.git
-
 
 [submodule ".vim/bundle/awesome-vim-colorschemes"]
     path = .vim/bundle/awesome-vim-colorschemes
@@ -379,10 +384,6 @@
     path = .vim/bundle/visual-split.vim
     url = https://github.com/wellle/visual-split.vim.git
 
-[submodule ".vim/bundle/vim-projectionist"]
-    path = .vim/bundle/vim-projectionist
-    url = https://github.com/tpope/vim-projectionist.git
-
 [submodule ".vim/bundle/vim-signature"]
     path = .vim/bundle/vim-signature
     url = https://github.com/kshenoy/vim-signature.git
@@ -402,10 +403,6 @@
 [submodule ".vim/bundle/vim-plugin-viewdoc"]
     path = .vim/bundle/vim-plugin-viewdoc
     url = https://github.com/powerman/vim-plugin-viewdoc.git
-
-[submodule ".vim/bundle/vim-endwise"]
-    path = .vim/bundle/vim-endwise
-    url = https://github.com/tpope/vim-endwise.git
 
 [submodule ".vim/bundle/ToggleIsk"]
     path = .vim/bundle/ToggleIsk
