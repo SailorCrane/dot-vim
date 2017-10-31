@@ -353,6 +353,9 @@ Bundle 'tommcdo/vim-exchange'
 " vim grep operator(support combined with other motion)
 Bundle 'inside/vim-grep-operator'
 
+" substitute operator
+Bundle 'milsen/vim-operator-substitute'
+
 
 "61 emmet-vim
 "快速写html/css
