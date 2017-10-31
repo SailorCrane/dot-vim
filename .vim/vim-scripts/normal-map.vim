@@ -29,7 +29,8 @@ xnoremap  @:  @:
 "nmap <CR>  <Plug>Sneak_;
 "xmap <CR>  <Plug>Sneak_;
 
-nnoremap  q;  q:
+nnoremap  q;       q:
+nnoremap  q<CR>    q
 " }}}
 
 
