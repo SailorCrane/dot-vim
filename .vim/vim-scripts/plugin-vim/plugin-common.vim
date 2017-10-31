@@ -262,6 +262,7 @@ let g:targets_pairs = '()b {}B [] <>'
 "36-2 text-object-entire: file object
 Bundle 'kana/vim-textobj-user'
 Bundle 'kana/vim-textobj-entire'
+Bundle 'kana/vim-textobj-line'
 " 和column object冲突
 "Bundle 'glts/vim-textobj-comment'
 
@@ -339,8 +340,10 @@ Bundle 'vim-scripts/VisIncr'
 "55 ReplaceWithRegister: aswsome
 " 'gr' operator(replace text with register)
 Bundle 'vim-scripts/ReplaceWithRegister'
-" 一款类似插件
+" 几款类似插件
+" Bundle https://github.com/romgrk/replace.vim
 " Bundle https://github.com/vim-scripts/regreplop.vim
+" Bundle https://github.com/kana/vim-operator-replace   "kana的应该质量可以吧?
 
 
 "56  vim-exchange :learned from vimcasts
