@@ -209,9 +209,9 @@ nnoremap  <leader>Cy  :YRClear<CR>
 
 Bundle 'kana/vim-operator-user'
 
-"Bundle 'haya14busa/vim-operator-flashy'
-"map y <Plug>(operator-flashy)
-"let g:operator#flashy#flash_time = 200
+" Bundle 'haya14busa/vim-operator-flashy'
+" map y <Plug>(operator-flashy)
+" let g:operator#flashy#flash_time = 200
 
 
 "32 color view
@@ -336,7 +336,8 @@ nnoremap <Leader>oC :Calendar<CR>
 Bundle 'vim-scripts/VisIncr'
 
 
-"55 ReplaceWithRegister
+"55 ReplaceWithRegister: aswsome
+" 'gr' operator(replace text with register)
 Bundle 'vim-scripts/ReplaceWithRegister'
 
 
