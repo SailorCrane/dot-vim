@@ -246,6 +246,14 @@ set grepprg=grep\ -E\ -n\ $*\ /dev/null  " add -E to default setting
 set foldignore=
 
 
+" 30
+set nrformats=
+
+
+" 31 tabpage name
+set guitablabel=%N/\ %t\ %M
+
+
 "100  vim colorscheme, gvim colorscheme in ~/.gvimrc
 "colorscheme  slate
 "colorscheme  marklar   "from Colour-Sampler-Pack
@@ -253,10 +261,6 @@ set foldignore=
 colorscheme  monokai
 
 hi SpecialKey gui=bold term=NONE  guibg=bg guifg=green
-
-
-" tabpage name
-set guitablabel=%N/\ %t\ %M
 
 
 "101 这是一个对于系统export环境变量的测试, 在$tmpPath中放入了var.vim
