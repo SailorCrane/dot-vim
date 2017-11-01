@@ -158,6 +158,10 @@
     path = .vim/bundle/vim-textobj-comment
     url = https://github.com/glts/vim-textobj-comment.git
 
+[submodule ".vim/bundle/vim-textobj-line"]
+    path = .vim/bundle/vim-textobj-line
+    url = https://github.com/kana/vim-textobj-line.git
+
 [submodule ".vim/bundle/vim-textobj-space"]
     path = .vim/bundle/vim-textobj-space
     url = https://github.com/saihoooooooo/vim-textobj-space.git
@@ -282,6 +286,13 @@
 [submodule ".vim/bundle/vim-exchange"]
     path = .vim/bundle/vim-exchange
     url = https://github.com/tommcdo/vim-exchange.git
+[submodule ".vim/bundle/vim-grep-operator"]
+    path = .vim/bundle/vim-grep-operator
+    url = https://github.com/inside/vim-grep-operator.git
+[submodule ".vim/bundle/vim-operator-substitute"]
+    path = .vim/bundle/vim-operator-substitute
+    url =  https://github.com/milsen/vim-operator-substitute.git
+
 [submodule ".vim/bundle/tlib_vim"]
     path = .vim/bundle/tlib_vim
     url = https://github.com/tomtom/tlib_vim.git
@@ -455,7 +466,7 @@
 
 [submodule ".vim/bundle/denite.nvim"]
     path = .vim/bundle/denite.nvim
-    url = https://github.com/Shougo/denite.nvim
+    url = https://github.com/Shougo/denite.nvim.git
 
 [submodule ".vim/bundle/vim-janah"]
     path = .vim/bundle/vim-janah
