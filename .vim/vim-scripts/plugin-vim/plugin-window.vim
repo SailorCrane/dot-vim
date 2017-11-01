@@ -137,6 +137,19 @@ nnoremap  <Leader>sm  :<C-u>CtrlPMixed<CR>
 " }}}
 
 
+" 11 unite(for vim8, nicer)
+Bundle 'Shougo/denite.nvim'
+" map like ctrlp
+" h denite-key-mappings
+call denite#custom#map('insert', '<C-j>', '<denite:move_to_next_line>', 'noremap')
+call denite#custom#map('insert', '<C-k>', '<denite:move_to_previous_line>', 'noremap')
+"nnoremap  <Leader>sd  :Denite file_rec<CR>
+" 文件递归搜索比ctrlp好用
+nnoremap  <Leader>sd  :Denite file_rec<CR>
+"call denite#custom#map('insert', '<C-n>', '<denite:move_to_next_line>', 'noremap')
+"call denite#custom#map('insert', '<C-p>', '<denite:move_to_previous_line>', 'noremap')
+
+
 "11 tabman: tab + window管理, 类似于BufExplorer
 Bundle 'kien/tabman.vim'
 " 因为m 已经被MRU占用了

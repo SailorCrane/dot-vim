@@ -444,16 +444,6 @@ Bundle 'mhinz/vim-startify'
 " 28 搜索文件
 Bundle 'wincent/ferret'
 
-
-" 29 unite(for vim8, nicer)
-Bundle 'Shougo/denite.nvim'
-" map like ctrlp
-" h denite-key-mappings
-call denite#custom#map('insert', '<C-j>', '<denite:move_to_next_line>', 'noremap')
-call denite#custom#map('insert', '<C-k>', '<denite:move_to_previous_line>', 'noremap')
-"call denite#custom#map('insert', '<C-n>', '<denite:move_to_next_line>', 'noremap')
-"call denite#custom#map('insert', '<C-p>', '<denite:move_to_previous_line>', 'noremap')
-
 " 30
 "Bundle 'vim-scripts/Fortune-vimtips'
 "Bundle  'vim-scripts/fortune.vim'
