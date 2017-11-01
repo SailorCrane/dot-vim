@@ -195,11 +195,24 @@ Bundle 'vim-scripts/L9'
 Bundle 'Chiel92/vim-autoformat'
 
 
-"31 Yankring,因为很多快捷键冲突,所以先将这个插件注释
-Bundle 'vim-scripts/YankRing.vim'
-nnoremap  <leader>oy  :YRShow<CR>
-" 因为是clear, 不是关闭窗口, 所以用Cy
-nnoremap  <leader>Cy  :YRClear<CR>
+"31 YankRing
+" 因为YankRing使得@[a-z]宏无法使用, 所有选择YankStack插件代替
+" Bundle 'vim-scripts/YankRing.vim'
+" yankring vs yankstack
+" yankstack 映射的是: nmap y,d operator
+" yankring  映射的是: omap iw, aw等modtion
+" nnoremap  <leader>oy  :YRShow<CR>
+" " 因为是clear, 不是关闭窗口, 所以用Cy
+" nnoremap  <leader>Cy  :YRClear<CR>
+
+Bundle 'maxbrunsfeld/vim-yankstack'
+" yankring vs yankstack
+" yankstack 映射的是: nmap y,d operator(而yankflashy映射的也是operator, 和yankstack冲突)
+" yankring  映射的是: omap iw, aw等modtion
+"call yankstack#setup()
+"let g:yankstack_yank_keys = ['y', 'd']
+map  <C-p> <Plug>yankstack_substitute_older_paste
+map  <C-n> <Plug>yankstack_substitute_newer_paste
 
 " yank highlight
 "Bundle 'machakann/vim-highlightedyank.git'

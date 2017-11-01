@@ -63,6 +63,9 @@
 [submodule ".vim/bundle/YankRing.vim"]
     path = .vim/bundle/YankRing.vim
     url = https://github.com/vim-scripts/YankRing.vim.git
+[submodule ".vim/bundle/vim-yankstack"]
+    path = .vim/bundle/vim-yankstack
+    url = https://github.com/maxbrunsfeld/vim-yankstack.git
 [submodule ".vim/bundle/vim-operator-flashy"]
     path = .vim/bundle/vim-operator-flashy
     url = https://github.com/haya14busa/vim-operator-flashy.git
