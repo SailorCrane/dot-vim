@@ -22,7 +22,7 @@ Bundle 'SailorCrane/vim-monokai'
 
 "4: altercation/vim-colors-solarized
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'lifepillar/vim-solarized8'
+"Bundle 'lifepillar/vim-solarized8'
 
 "5: color sampler
 Bundle  'vim-scripts/Colour-Sampler-Pack'
