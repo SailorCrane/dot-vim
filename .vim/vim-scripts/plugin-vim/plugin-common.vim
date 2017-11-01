@@ -1,16 +1,5 @@
-" vim: set foldmethod=marker  foldlevel=2: vim modeline( set )
+" vim: set foldmethod=marker  foldlevel=0: vim modeline( set )
 "
-
-"1: Conque-Shell
-Bundle  'oplatek/Conque-Shell'
-" {{{
-"nnoremap   <C-n>  :ConqueTermVSplit bash<CR>
-"nnoremap   <C-b>  :ConqueTermVSplit bash<CR>
-noremap  <leader>ba  :ConqueTermVSplit bash<CR>
-noremap  <leader>oc  :ConqueTermVSplit bash<CR>
-let g:ConqueTerm_StartMessages = 0
-" }}}
-
 
 "10: wakatime/vim-wakatime
 "Bundle 'wakatime/vim-wakatime'
@@ -20,6 +9,7 @@ let g:ConqueTerm_StartMessages = 0
 Bundle  'jiangmiao/auto-pairs'
 let g:AutoPairShortcutToggle = '<C-p>'
 let g:AutoPairsMapCh = 0    " 不要将<c-h> 映射为<Backspace>删除键
+
 
 " 19-2 easy incsearch
 Bundle 'haya14busa/incsearch.vim'
@@ -205,10 +195,6 @@ vmap V <Plug>(expand_region_shrink)
 Bundle 'wellle/visual-split.vim'
 
 
-"38 gundo stand for gnu undo
-Bundle 'vim-scripts/gundo'
-
-
 "40 ShowTrailingWhiteSpace
 Bundle 'vim-scripts/ShowTrailingWhitespace'
 
@@ -241,11 +227,6 @@ Bundle 'nelstrom/vim-qargs'
 
 "50 VOoM
 Bundle 'vim-voom/VOoM'
-
-
-"51 calendar
-Bundle 'itchyny/calendar.vim'
-nnoremap <Leader>oC :Calendar<CR>
 
 
 "52 visincr 提供增长数列功能
@@ -294,12 +275,6 @@ let g:tmuxcomplete#trigger = 'completefunc'     " c-x c-u
 "Bundle 'vimwiki/vimwiki'
 
 
-" goyo.vim
-Bundle 'junegunn/goyo.vim'
-nnoremap <Leader>tg  :Goyo<CR>
-nnoremap <Leader>cg  :Goyo!<CR>
-
-
 " vim help plugin
 Bundle 'powerman/vim-plugin-viewdoc'
 
@@ -325,15 +300,8 @@ endif
 Bundle 'vim-scripts/sudo.vim'
 
 
-" 26 start page for vim
-Bundle 'mhinz/vim-startify'
-
-
 " 27
 "Bundle 'wincent/terminus'
-
-" 28 搜索文件
-Bundle 'wincent/ferret'
 
 " 30
 "Bundle 'vim-scripts/Fortune-vimtips'

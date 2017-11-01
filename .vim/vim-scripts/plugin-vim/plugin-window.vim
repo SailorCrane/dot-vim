@@ -97,6 +97,10 @@ nnoremap  <Leader>tu :UndotreeToggle<cr>
 " }}}
 
 
+"6-2 gundo stand for gnu undo
+Bundle 'vim-scripts/gundo'
+
+
 "8: wintab
 "Bundle 'zefei/vim-wintabs'
 
@@ -137,8 +141,9 @@ nnoremap  <Leader>sm  :<C-u>CtrlPMixed<CR>
 " }}}
 
 
-" 11 unite(for vim8, nicer)
+"11 unite(for vim8, nicer)
 Bundle 'Shougo/denite.nvim'
+"{{{
 " map like ctrlp
 " h denite-key-mappings
 call denite#custom#map('insert', '<C-j>', '<denite:move_to_next_line>', 'noremap')
@@ -148,10 +153,41 @@ call denite#custom#map('insert', '<C-k>', '<denite:move_to_previous_line>', 'nor
 nnoremap  <Leader>sd  :Denite file_rec<CR>
 "call denite#custom#map('insert', '<C-n>', '<denite:move_to_next_line>', 'noremap')
 "call denite#custom#map('insert', '<C-p>', '<denite:move_to_previous_line>', 'noremap')
+"}}}
 
 
-"11 tabman: tab + window管理, 类似于BufExplorer
+"12 tabman: tab + window管理, 类似于BufExplorer
 Bundle 'kien/tabman.vim'
 " 因为m 已经被MRU占用了
 let g:tabman_toggle = '<leader>tM'
 let g:tabman_focus  = '<leader>oM'
+
+
+"13 Conque-Shell
+Bundle  'oplatek/Conque-Shell'
+" {{{
+"nnoremap   <C-n>  :ConqueTermVSplit bash<CR>
+"nnoremap   <C-b>  :ConqueTermVSplit bash<CR>
+noremap  <leader>ba  :ConqueTermVSplit bash<CR>
+noremap  <leader>oc  :ConqueTermVSplit bash<CR>
+let g:ConqueTerm_StartMessages = 0
+" }}}
+
+
+"14 calendar
+Bundle 'itchyny/calendar.vim'
+nnoremap <Leader>oC :Calendar<CR>
+
+
+"15 goyo.vim
+Bundle 'junegunn/goyo.vim'
+nnoremap <Leader>tg  :Goyo<CR>
+nnoremap <Leader>cg  :Goyo!<CR>
+
+
+"16 start page for vim
+Bundle 'mhinz/vim-startify'
+
+
+"17 搜索文件
+Bundle 'wincent/ferret'
