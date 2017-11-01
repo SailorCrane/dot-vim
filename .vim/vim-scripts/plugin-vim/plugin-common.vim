@@ -209,9 +209,9 @@ nnoremap  <leader>Cy  :YRClear<CR>
 
 Bundle 'kana/vim-operator-user'
 
-Bundle 'haya14busa/vim-operator-flashy'
-map y <Plug>(operator-flashy)
-let g:operator#flashy#flash_time = 200
+"Bundle 'haya14busa/vim-operator-flashy'
+"nmap y <Plug>(operator-flashy)
+"let g:operator#flashy#flash_time = 200
 
 
 "32 color view
@@ -351,7 +351,16 @@ Bundle 'tommcdo/vim-exchange'
 
 
 " vim grep operator(support combined with other motion)
-Bundle 'inside/vim-grep-operator'
+" 已经有了EasyGrep, 不再需要这个插件了. 而且不太好使(几乎没作用, " 有作用的话很好用)
+"Bundle 'inside/vim-grep-operator'
+"nmap <leader>g <Plug>GrepOperatorOnCurrentDirectory
+"vmap <leader>g <Plug>GrepOperatorOnCurrentDirectory
+"nmap <leader><leader>g <Plug>GrepOperatorWithFilenamePrompt
+"vmap <leader><leader>g <Plug>GrepOperatorWithFilenamePrompt
+"let &grepprg='git grep -n -R $*'
+"set grepprg=git\ grep\ -n\ -R\ $*
+"let g:grep_operator = 'Ack'
+
 
 " substitute operator
 Bundle 'milsen/vim-operator-substitute'
