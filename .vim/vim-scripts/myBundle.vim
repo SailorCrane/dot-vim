@@ -17,6 +17,8 @@ Bundle 'SailorCrane/vim-plug'
 
 " 将插件按功能分在不同目录
 source   $Plugin_Script/plugin-common.vim
+source   $Plugin_Script/plugin-operator.vim
+source   $Plugin_Script/plugin-motion.vim
 source   $Plugin_Script/plugin-window.vim      " 和窗口相关的: undoTree, nerdtree, bufferexplorer, tagbar, winmanager
 source   $Plugin_Script/plugin-view.vim        " 和外观显示相关的: 主题等 airline, rainbow
 source   $Plugin_Script/plugin-scheme.vim
