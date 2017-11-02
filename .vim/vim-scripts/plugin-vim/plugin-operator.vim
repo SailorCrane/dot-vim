@@ -2,7 +2,7 @@
 " 1
 Bundle 'kana/vim-operator-user'
 
-" 2 repeat ,和surround同一个作者,主要用于 重复执行surround的操作
+" 2 repeat,和surround同一个作者,主要用于 重复执行surround的操作
 Bundle 'tpope/vim-repeat'
 
 
