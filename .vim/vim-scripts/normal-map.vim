@@ -59,6 +59,11 @@ nnoremap  <Leader>i   :set ignorecase!  ignorecase?<CR>
 " }}}
 
 
+"2-3
+" add line number
+" :%s/^/\=line(".") . ". "/g
+
+
 "3  quick edit
 " quick edit script v:vimrc, n:normal, i:insert, p:plugin-bundle, a:abbrev
 " {{{
