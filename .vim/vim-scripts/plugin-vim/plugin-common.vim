@@ -163,11 +163,6 @@ Bundle 'godlygeek/tabular'
 "36-2 Align vim-script 294, it's old
 "Bundle 'vim-scripts/Align'
 
-"36-3 junegunn/vim-easy-align
-Bundle 'junegunn/vim-easy-align'
-vmap ga <Plug>(EasyAlign)
-nmap ga <Plug>(EasyAlign)
-
 " example
 " gaip<cr><cr>*<c-x>\[a.*b\]
 " :EasyAlign */\[a.*b\]/ {'a': 'c'}

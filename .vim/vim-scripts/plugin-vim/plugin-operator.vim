@@ -28,7 +28,7 @@ Bundle 'vim-scripts/ReplaceWithRegister'
 Bundle 'tommcdo/vim-exchange'
 
 
-" 6
+" 6 grep
 " Bundle 'inside/vim-grep-operator'
 " vim grep operator(support combined with other motion)
 " 已经有了EasyGrep, 不再需要这个插件了. 而且不太好使(几乎没作用, " 有作用的话很好用)
@@ -53,3 +53,10 @@ Bundle 'christoomey/vim-sort-motion'
 "Bundle 'haya14busa/vim-operator-flashy'
 "nmap y <Plug>(operator-flashy)
 "let g:operator#flashy#flash_time = 200
+
+
+" 10 easy align operator
+Bundle 'junegunn/vim-easy-align'
+nmap ga <Plug>(EasyAlign)
+vmap ga <Plug>(EasyAlign)
+
