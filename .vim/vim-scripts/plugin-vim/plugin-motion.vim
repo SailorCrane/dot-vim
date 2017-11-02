@@ -2,6 +2,9 @@
 " 1  motion user
 Bundle 'kana/vim-textobj-user'
 
+" 1-2 好像也是用来定义motion的
+"Bundle 'vim-scripts/CountJump'
+
 
 " 2  easy-motion
 Bundle 'easymotion/vim-easymotion'
