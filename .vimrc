@@ -247,7 +247,7 @@ set foldignore=
 
 
 " 30
-set nrformats=
+set nrformats=alpha
 
 
 " 31 tabpage name
