@@ -50,9 +50,10 @@ Bundle 'christoomey/vim-sort-motion'
 
 
 " 9 yank flashy
-"Bundle 'haya14busa/vim-operator-flashy'
-"nmap y <Plug>(operator-flashy)
-"let g:operator#flashy#flash_time = 200
+Bundle 'haya14busa/vim-operator-flashy'
+nmap y <Plug>(operator-flashy)
+let g:operator#flashy#flash_time = 200
+nnoremap  yy  yy
 
 
 " 10 easy align operator
