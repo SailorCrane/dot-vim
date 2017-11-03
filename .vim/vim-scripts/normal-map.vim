@@ -669,8 +669,12 @@ nnoremap  <Leader><Leader>P  "+P
 "nnoremap  yj  y1j
 "nnoremap  yk  y1k
 
-nnoremap  yp  yyp
-nnoremap  yP  yyP
+"nnoremap  yp  yyp
+"nnoremap  yP  yyP
+" t is Synonym of :copy, copy don't effect register
+" copy不会影响寄存器'"'
+nnoremap  yp  :t.   <CR>
+nnoremap  yP  :t .-1<CR>
 
 " unimmpaired ]e, [e 交换前后行
 "nnoremap  dp  ddp
