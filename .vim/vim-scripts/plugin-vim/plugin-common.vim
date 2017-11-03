@@ -253,8 +253,8 @@ Bundle 'thaerkh/vim-workspace'
 " 72-2 vim-session插件比vim-workspace好用很多
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-session'
-:let g:session_autosave = 'no'
-:let g:session_autoload = 'no'
+let g:session_autoload = 'no'
+let g:session_autosave = 'yes'
 nnoremap <Leader>rv  :RestartVim<CR>
 
 
