@@ -15,8 +15,8 @@
 nnoremap  ;  :
 xnoremap  ;  :
 
-nnoremap  :  ;
-xnoremap  :  ;
+"nnoremap  :  ;
+"xnoremap  :  ;
 
 " repeat last Ex-command
 nnoremap  @:  @:
@@ -669,10 +669,8 @@ nnoremap  <Leader><Leader>P  "+P
 "nnoremap  yj  y1j
 "nnoremap  yk  y1k
 
-"nnoremap  yp  yyp
-" 光标位于旧行
-"nnoremap  yP  yyP
-"nnoremap  yP  yyP
+nnoremap  yp  yyp
+nnoremap  yP  yyP
 
 " unimmpaired ]e, [e 交换前后行
 "nnoremap  dp  ddp
