@@ -759,6 +759,8 @@ nnoremap  <Leader>cv  :set  cursorcolumn!  cursorcolumn?<CR>
 " {{{
 "nnoremap  <Leader>wn  :%s/<C-r><C-w>//gn<CR>
 "nnoremap  <Leader>wc  :%s/<C-r><C-w>//gn<CR>
+" 重构代码: 变量名时, 非常有用, 查看变量名个数, 抚慰一下紧张的心灵
+nnoremap  <Leader>cw  :%s/<C-r><C-w>//gn<CR>
 " }}}
 
 
