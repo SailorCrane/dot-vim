@@ -165,6 +165,10 @@
     path = .vim/bundle/vim-textobj-line
     url = https://github.com/kana/vim-textobj-line.git
 
+[submodule ".vim/bundle/vim-textobj-quote"]
+    path = .vim/bundle/vim-textobj-quote
+    url = https://github.com/reedes/vim-textobj-quote.git
+
 [submodule ".vim/bundle/vim-textobj-space"]
     path = .vim/bundle/vim-textobj-space
     url = https://github.com/saihoooooooo/vim-textobj-space.git

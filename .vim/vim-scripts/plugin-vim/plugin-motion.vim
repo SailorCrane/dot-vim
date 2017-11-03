@@ -72,11 +72,12 @@ Bundle 'kana/vim-textobj-line'
 " 和column object冲突
 "Bundle 'glts/vim-textobj-comment'
 
-" 5 column object
+" `` 印刷quote
+Bundle 'reedes/vim-textobj-quote'
 Bundle 'coderifous/textobj-word-column.vim'
 " iS, aS
 Bundle 'saihoooooooo/vim-textobj-space'
-" iv
+" iv, av
 Bundle 'Julian/vim-textobj-variable-segment'
 " ia, aa, iA, aA
 Bundle 'b4winckler/vim-angry'

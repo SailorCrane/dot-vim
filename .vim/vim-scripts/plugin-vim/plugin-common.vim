@@ -121,7 +121,7 @@ Bundle 'Chiel92/vim-autoformat'
 
 "31 YankRing
  "因为YankRing使得@[a-z]宏无法使用, 所有选择YankStack插件代替
- Bundle 'vim-scripts/YankRing.vim'
+ Bundle 'SailorCrane/YankRing.vim'
  "yankring vs yankstack
  "yankstack 映射的是: nmap y,d operator
  "yankring  映射的是: omap iw, aw等modtion
