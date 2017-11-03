@@ -81,6 +81,12 @@ Bundle  'tpope/vim-unimpaired'
 ":S/{good, bad}/
 Bundle 'tpope/vim-abolish'
 
+" Examples:
+" :Subvert/facilit{y,ies}/building{,s}/g    替换
+" :Subvert/facilit{y,ies}/building{,s}/gn   计数
+" :Subvert/facilit{y,ies}/building{,s}/gc   确认(confire)
+" :Subvert/facilit{y,ies}/building{,s}/ge   no-error
+
 
 " projectionist
 Bundle 'tpope/vim-projectionist'
