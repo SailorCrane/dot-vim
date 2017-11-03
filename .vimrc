@@ -258,6 +258,7 @@ set guitablabel=%N/\ %t\ %M
 "colorscheme  slate
 "colorscheme  marklar   "from Colour-Sampler-Pack
 "colorscheme  molokai
+"colorscheme  zenburn
 colorscheme  monokai
 
 hi SpecialKey gui=bold term=NONE  guibg=bg guifg=green
