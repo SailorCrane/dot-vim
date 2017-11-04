@@ -1,13 +1,13 @@
 
 " 1  motion user
-Bundle 'kana/vim-textobj-user'
+call dein#add('kana/vim-textobj-user')
 
 " 1-2 好像也是用来定义motion的
-"Bundle 'vim-scripts/CountJump'
+"call dein#add('vim-scripts/CountJump')
 
 
 " 2  easy-motion
-Bundle 'easymotion/vim-easymotion'
+call dein#add('easymotion/vim-easymotion')
 " {{{
 let g:EasyMotion_smartcase = 1
 "let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
@@ -62,26 +62,26 @@ nmap  <Leader><Leader>w <Plug>(easymotion-overwin-w)
 
 " 3 object/target plugins
 " extend vim target
-Bundle 'wellle/targets.vim'
+call dein#add('wellle/targets.vim')
 let g:targets_pairs = '()b {}B [] <>'
 
 
 " 4 text-object-entire: file object
-Bundle 'kana/vim-textobj-entire'
-Bundle 'kana/vim-textobj-line'
+call dein#add('kana/vim-textobj-entire')
+call dein#add('kana/vim-textobj-line')
 " 和column object冲突
-"Bundle 'glts/vim-textobj-comment'
+"call dein#add('glts/vim-textobj-comment')
 
 " `` 印刷quote
-Bundle 'reedes/vim-textobj-quote'
-Bundle 'coderifous/textobj-word-column.vim'
+call dein#add('reedes/vim-textobj-quote')
+call dein#add('coderifous/textobj-word-column.vim')
 " iS, aS
-Bundle 'saihoooooooo/vim-textobj-space'
+call dein#add('saihoooooooo/vim-textobj-space')
 " iv, av
-Bundle 'Julian/vim-textobj-variable-segment'
+call dein#add('Julian/vim-textobj-variable-segment')
 " ia, aa, iA, aA
-Bundle 'b4winckler/vim-angry'
+call dein#add('b4winckler/vim-angry')
 
 
 " 6 indent object
-Bundle 'michaeljsmith/vim-indent-object'
+call dein#add('michaeljsmith/vim-indent-object')

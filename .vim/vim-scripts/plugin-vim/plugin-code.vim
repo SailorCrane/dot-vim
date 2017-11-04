@@ -1,7 +1,7 @@
 " vim: set foldmethod=marker  foldlevel=0: vim modeline( set )
 
 "3: nerdcommenter in scrooloose
-Bundle 'scrooloose/nerdcommenter'
+call dein#add('scrooloose/nerdcommenter')
 " {{{
 
 " <C-_> stand for <C-/>, 可以插入模式下使用: <C-v><C-/> 查看
@@ -11,11 +11,11 @@ Bundle 'scrooloose/nerdcommenter'
 " }}}
 
 "3-2
-Bundle 'tpope/vim-commentary'
+call dein#add('tpope/vim-commentary')
 
 
 "4: syntastic in scrooloose
-Bundle 'scrooloose/syntastic'
+call dein#add('scrooloose/syntastic')
 " {{{
 " loc for location: lnext, lpre
 let g:syntastic_always_populate_loc_list = 1
@@ -56,7 +56,7 @@ let g:syntastic_cpp_check_header = 1
 
 
 "4-2: ale: syntax check(need vim8)
-"Bundle 'w0rp/ale'
+"call dein#add('w0rp/ale')
 "{{{
 ""let g:ale_sign_error = '✗'
 ""let g:ale_sign_warning = '⚠'
@@ -81,7 +81,7 @@ let g:syntastic_cpp_check_header = 1
 "}}}
 
 "6: YouCompleteMe
-"Bundle 'Valloric/YouCompleteMe'
+"call dein#add('Valloric/YouCompleteMe')
 " {{{
 " 自动补全配置
 "set completeopt=longest,menu    "让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
@@ -134,39 +134,39 @@ let g:ycm_collect_identifiers_from_comments_and_strings = 0
 
 
 "8: echofunc
-Bundle 'mbbill/echofunc'
+call dein#add('mbbill/echofunc')
 
 
 "12:  c-support用来支持c或者cpp的快捷键
 " {{{
 " c-support 就是 vim-scripts官网的c.vim, 二者是一个东西
 " 修改了<c-j>
-Bundle 'SailorCrane/c-support'
+call dein#add('SailorCrane/c-support')
 
 "12-1: 放在SailorCrane自己用户下
 " c-support 就是 vim-scripts官网的c.vim, 二者是一个东西
-"Bundle 'SailorCrane/c.vim'
+"call dein#add('SailorCrane/c.vim')
 " }}}
 
 "12-2: a.vim :switch between header and source file
-Bundle 'vim-scripts/a.vim'
+call dein#add('vim-scripts/a.vim')
 "cnoreabbrev  a  A
 " i stand for  include
 nnoremap <C-t>  :A<CR>:call ShowBufName()<CR>
 
 
 "14:  quick fix/locatioon window about
-Bundle 'romainl/vim-qf'
+call dein#add('romainl/vim-qf')
 
 
 " 63
-Bundle 'thinca/vim-quickrun'
+call dein#add('thinca/vim-quickrun')
 
 
 " 69 ultisnips +  vim-snippets
 "{{{
 "    ultisnips 是一个snippet引擎(类似于snipMate), vim-snippets是代码片段定义.
-Bundle 'SirVer/ultisnips'
+call dein#add('SirVer/ultisnips')
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
@@ -175,25 +175,25 @@ let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 "let g:UltiSnipsExpandTrigger="<space>"
 "let g:UltiSnipsJumpForwardTrigger="<space>"
 "let g:UltiSnipsJumpBackwardTrigger="<S-space>"
-Bundle 'SailorCrane/vim-snippets'
+call dein#add('SailorCrane/vim-snippets')
 "}}}
 
 "28 SnipMate
-"Bundle 'garbas/vim-snipmate'
+"call dein#add('garbas/vim-snipmate')
 " the tow plugins below is necessary for snipmate
-"Bundle 'MarcWeber/vim-addon-mw-utils'
+"call dein#add('MarcWeber/vim-addon-mw-utils')
 " snippets is  optional for snipmate
-"Bundle  'honza/vim-snippets'
+"call dein#add('honza/vim-snippets')
 
 
 " argwrap: awesome
-Bundle 'FooSoft/vim-argwrap'
+call dein#add('FooSoft/vim-argwrap')
 nnoremap  <Leader>aw  :ArgWrap<CR>
 inoremap  <Leader>aw  <ESC>:ArgWrap<CR>
 
 
 "62 indent-guide
-Bundle 'nathanaelkane/vim-indent-guides'
+call dein#add('nathanaelkane/vim-indent-guides')
 "{{{
 "if &expandtab   " 如果是tab, 就不要enable了, 因为会显示很宽
     "let g:indent_guides_enable_on_vim_startup = 1
@@ -213,7 +213,7 @@ nnoremap  <Leader>oi  :IndentGuidesEnable<CR>
 
 
 " cctree: 生成函数调用Tree
-Bundle 'hari-rangarajan/CCTree'
+call dein#add('hari-rangarajan/CCTree')
 
 let g:CCTreeKeyTraceForwardTree = '<C-\>>'
 let g:CCTreeKeyToggleWindow = '<C-\>w'
@@ -222,4 +222,4 @@ let g:CCTreeKeyToggleWindow = '<C-\>w'
 " endwise from tpope
 " 对于sh的支持一般: 输出if then 才会输出fi, 输入do回车输出done
 " 可以由ultisnips.git代替
-Bundle 'tpope/vim-endwise'
+call dein#add('tpope/vim-endwise')

@@ -3,7 +3,7 @@
 
 "0: WinManager: 形同鸡肋
 "{{{
-"Bundle  'vim-scripts/winmanager'
+"call dein#add('vim-scripts/winmanager')
 "let g:winManagerWindowLayout = "TagList|FileExplorer"
 "let g:winManagerWindowLayout = "TagList"
 
@@ -19,7 +19,7 @@
 
 "2: NERDTree in scrooloose
 " {{{
-Bundle 'scrooloose/nerdtree'
+call dein#add('scrooloose/nerdtree')
 let NERDChristmasTree=0
 let NERDTreeWinSize=35
 let NERDTreeChDirMode=2
@@ -40,7 +40,7 @@ nnoremap <leader>tn :NERDTreeToggle<cr>
 
 "3: code file tag about
 " {{{
-Bundle 'vim-scripts/Tagbar'
+call dein#add('vim-scripts/Tagbar')
 "5-2 Tagbar in vim-scripts's repo
 " <leader>tt 被vim-scripts/Align使用了
 " 所以这里使用ti: tag invert, tt :tag toggle
@@ -55,12 +55,12 @@ let g:tagbar_left = 0
 
 
 "5: taglist in vim-scripts in github
-"Bundle 'taglist.vim'
+"call dein#add('taglist.vim')
 " }}}
 
 
 "4-1 bufexplorer
-Bundle  'jlanzarotta/bufexplorer'
+call dein#add('jlanzarotta/bufexplorer')
 "{{{
 let g:bufExplorerSplitVertSize=30
 nnoremap <leader>ob :BufExplorerVerticalSplit<CR>
@@ -71,7 +71,7 @@ nnoremap <leader>tb :ToggleBufExplorer<cr>
 "4-2:  minibufexplorer
 "{{{
 " 因为在 打开quickfix窗口时, 老是崩溃, 所以禁止掉,以后使用bufexplorer
-"Bundle 'fholgado/minibufexpl.vim'
+"call dein#add('fholgado/minibufexpl.vim')
 "let g:miniBufExplMapCTabSwitchBufs = 1
 "let g:miniBufExplForceSyntaxEnable = 1
 "let g:miniBufExplModSelTarget      = 1      "不在不可编辑窗口中打开选中的文件buffer
@@ -81,7 +81,7 @@ nnoremap <leader>tb :ToggleBufExplorer<cr>
 
 
 "5 mru files
-Bundle 'vim-scripts/mru.vim'
+call dein#add('vim-scripts/mru.vim')
 nnoremap  <Leader>om   :MRU<CR>
 nnoremap  <Leader>ov   :MRU vim<CR>
 nnoremap  <Leader>op   :MRU py<CR>
@@ -91,22 +91,22 @@ nnoremap  <Leader>os   :MRU sh<CR>
 
 "6: undotree
 " {{{
-Bundle 'mbbill/undotree'
+call dein#add('mbbill/undotree')
 nnoremap  <Leader>ou :UndotreeShow<cr>
 nnoremap  <Leader>tu :UndotreeToggle<cr>
 " }}}
 
 
 "6-2 gundo stand for gnu undo
-Bundle 'vim-scripts/gundo'
+call dein#add('vim-scripts/gundo')
 
 
 "8: wintab
-"Bundle 'zefei/vim-wintabs'
+"call dein#add('zefei/vim-wintabs')
 
 
 "9: minimap like sublime, provide a preview of all file
-"Bundle 'severin-lemaignan/vim-minimap'
+"call dein#add('severin-lemaignan/vim-minimap')
 "let g:minimap_show='<Leader>oP'
 "let g:minimap_toggle='<Leader>tp'
 "let g:minimap_update='<Leader>ou'
@@ -115,8 +115,8 @@ Bundle 'vim-scripts/gundo'
 
 "10 ctrlp
 let g:ctrlp_working_path_mode = 0
-Bundle 'kien/ctrlp.vim'
-Bundle 'vim-scripts/FuzzyFinder'
+call dein#add('kien/ctrlp.vim')
+call dein#add('vim-scripts/FuzzyFinder')
 " {{{
 " in dir, search more file
 let g:ctrlp_max_files=350
@@ -142,29 +142,29 @@ nnoremap  <Leader>sm  :<C-u>CtrlPMixed<CR>
 
 
 "11 unite(for vim8, nicer)
-Bundle 'Shougo/denite.nvim'
+call dein#add('Shougo/denite.nvim')
 "{{{
 " map like ctrlp
-" h denite-key-mappings
-call denite#custom#map('insert', '<C-j>', '<denite:move_to_next_line>', 'noremap')
-call denite#custom#map('insert', '<C-k>', '<denite:move_to_previous_line>', 'noremap')
+" h deinte-key-mappings
+call deinte#custom#map('insert', '<C-j>', '<denite:move_to_next_line>', 'noremap')
+call deinte#custom#map('insert', '<C-k>', '<denite:move_to_previous_line>', 'noremap')
 "nnoremap  <Leader>sd  :Denite file_rec<CR>
 " 文件递归搜索比ctrlp好用
 nnoremap  <Leader>sd  :Denite file_rec<CR>
-"call denite#custom#map('insert', '<C-n>', '<denite:move_to_next_line>', 'noremap')
-"call denite#custom#map('insert', '<C-p>', '<denite:move_to_previous_line>', 'noremap')
+"call deinte#custom#map('insert', '<C-n>', '<denite:move_to_next_line>', 'noremap')
+"call deinte#custom#map('insert', '<C-p>', '<denite:move_to_previous_line>', 'noremap')
 "}}}
 
 
 "12 tabman: tab + window管理, 类似于BufExplorer
-Bundle 'kien/tabman.vim'
+call dein#add('kien/tabman.vim')
 " 因为m 已经被MRU占用了
 let g:tabman_toggle = '<leader>tM'
 let g:tabman_focus  = '<leader>oM'
 
 
 "13 Conque-Shell
-Bundle  'oplatek/Conque-Shell'
+call dein#add('oplatek/Conque-Shell')
 " {{{
 "nnoremap   <C-n>  :ConqueTermVSplit bash<CR>
 "nnoremap   <C-b>  :ConqueTermVSplit bash<CR>
@@ -175,19 +175,19 @@ let g:ConqueTerm_StartMessages = 0
 
 
 "14 calendar
-Bundle 'itchyny/calendar.vim'
+call dein#add('itchyny/calendar.vim')
 nnoremap <Leader>oC :Calendar<CR>
 
 
 "15 goyo.vim
-Bundle 'junegunn/goyo.vim'
+call dein#add('junegunn/goyo.vim')
 nnoremap <Leader>tg  :Goyo<CR>
 nnoremap <Leader>cg  :Goyo!<CR>
 
 
 "16 start page for vim
-Bundle 'mhinz/vim-startify'
+call dein#add('mhinz/vim-startify')
 
 
 "17 搜索文件
-Bundle 'wincent/ferret'
+"call dein#add('wincent/ferret')

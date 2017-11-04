@@ -2,17 +2,17 @@
 
 
 "54 python 相关
-Bundle  'vim-scripts/pyflakes'
-Bundle  'vim-scripts/pydoc.vim'
-Bundle  'vim-scripts/indentpython.vim'
-Bundle  'SailorCrane/python.vim'
-Bundle  'hdima/python-syntax'
+call dein#add('vim-scripts/pyflakes')
+call dein#add('vim-scripts/pydoc.vim')
+call dein#add('vim-scripts/indentpython.vim')
+call dein#add('SailorCrane/python.vim')
+call dein#add('hdima/python-syntax')
 
 
 " python 的一款补全插件
-Bundle  'davidhalter/jedi-vim'
+call dein#add('davidhalter/jedi-vim')
 
-Bundle 'python-rope/ropevim'
+call dein#add('python-rope/ropevim')
 
 " 暂不启用
-"Bundle 'python-mode/python-mode'
+"call dein#add('python-mode/python-mode')

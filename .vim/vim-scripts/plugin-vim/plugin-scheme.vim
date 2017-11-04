@@ -7,51 +7,51 @@ set background=dark
 
 
 "1: more colorscheme(大多数colorschemes在这里都有了)
-Bundle 'rafi/awesome-vim-colorschemes'
+call dein#add('rafi/awesome-vim-colorschemes')
 
 
 "2: colors/molokai.vim
-Bundle  'SailorCrane/molokai'
+call dein#add('SailorCrane/molokai')
 let g:molokai_original = 1
 
 
 "3: monokai
-"Bundle 'sickill/vim-monokai'
-Bundle 'SailorCrane/vim-monokai'
+"call dein#add('sickill/vim-monokai')
+call dein#add('SailorCrane/vim-monokai')
 
 
 "4: altercation/vim-colors-solarized
-Bundle 'altercation/vim-colors-solarized'
-"Bundle 'lifepillar/vim-solarized8'
+call dein#add('altercation/vim-colors-solarized')
+"call dein#add('lifepillar/vim-solarized8')
 
 "5: color sampler
-Bundle  'vim-scripts/Colour-Sampler-Pack'
+call dein#add('vim-scripts/Colour-Sampler-Pack')
 
 
 "6: railscast
-Bundle 'jpo/vim-railscasts-theme'
+call dein#add('jpo/vim-railscasts-theme')
 
 
 "7: seoul256 colorschemes (awesome-vim-colorschemes中已有)
-"Bundle 'junegunn/seoul256.vim'
+"call dein#add('junegunn/seoul256.vim')
 
 
 "8: jellybeans
-Bundle 'nanotech/jellybeans.vim'
+call dein#add('nanotech/jellybeans.vim')
 
 
 "9: base16
-Bundle 'chriskempson/base16-vim'
+call dein#add('chriskempson/base16-vim')
 
 
 "10:
-Bundle 'mhinz/vim-janah'
+call dein#add('mhinz/vim-janah')
 
 
 "===================thematic=======================
 " organize  theme
 "1: thematic
-Bundle 'reedes/vim-thematic'
+call dein#add('reedes/vim-thematic')
 "{{{
 let g:thematic#themes = {
 \ 'molokai'  : {   'typeface': 'Menlo',
