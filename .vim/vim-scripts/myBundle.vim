@@ -9,12 +9,12 @@ filetype off     " required
 set  rtp+=$Crane_Vim_Bundle/vundle/
 set  rtp+=$Crane_Vim_Bundle/vim-plug/
 
-call vundle#rc() " let Vundle manage Vundle,  required!
-"call plug#begin( $Crane_Vim_Bundle )
+"call vundle#rc() " let Vundle manage Vundle,  required!
+call plug#begin( $Crane_Vim_Bundle )
 
-Bundle 'gmarik/vundle'
-Bundle 'SailorCrane/vim-plug'
-Bundle 'Shougo/dein.vim'
+Plug  'gmarik/vundle'
+Plug  'SailorCrane/vim-plug'
+Plug  'Shougo/dein.vim'
 
 
 " 将插件按功能分在不同目录
@@ -28,7 +28,7 @@ source   $Plugin_Script/plugin-code.vim        " 和coding 相关的
 source   $Plugin_Script/plugin-python.vim
 source   $Plugin_Script/plugin-ft.vim          " 和文件类型相关关:markdown, vim-tmux
 
-"call plug#end()
+call plug#end()
 
 " 必须讲filetype on放在最后
 " 因为filetype on时vim会执行ftplugin.vim 一次, 并且只执行一次(标志位控制)
