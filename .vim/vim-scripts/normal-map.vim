@@ -571,8 +571,10 @@ imap      <Leader>a=  <ESC><Leader>a=
 "}}}
 
 " 15-11 "在当前行的下一行/前一行插入数字列: o<ESC>0到新行的首列
+"{{{
 nnoremap  ,,n   o<ESC>0i 1<CR>2<CR>3<CR>4<CR>5<CR>6<CR>7<CR>8<CR>9<CR><Backspace>10<ESC>9k
 nnoremap  ,,N   <ESC>0i 1<CR>2<CR>3<CR>4<CR>5<CR>6<CR>7<CR>8<CR>9<CR><Backspace>10<CR><ESC>10k
+"}}}
 
 " 16 match something
 "{{{
@@ -658,8 +660,10 @@ nnoremap  >#  ]#
 " }}}
 
 " 23-2 跳到main函数: C/C++
+"{{{
 " 通过正则匹配 int  main( .*)
 nnoremap  gm  /\v(int)?\s+main\s*\(.*<CR>
+"}}}
 
 " 43 get full path of file
 "{{{
