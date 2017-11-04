@@ -185,3 +185,12 @@ endfunction
 "inoremap ,[           <C-o>:call InsertBlock(foldlevel('.')-1)<CR>
 "inoremap ,-           <C-o>:call CloseBlock(foldlevel('.'))<CR>
 "inoremap ,+           <C-o>:call InsertBlock(foldlevel('.')+1)<CR><CR><C-o>:call CloseBlock(foldlevel('.'))<CR>
+
+" 9 only Man page(for bash mav)
+fun! ManWinOnly(man_want)
+    echom a:man_want
+    let $man_want=a:man_want
+    Man $man_want
+    only
+endf
+
