@@ -29,6 +29,14 @@ nnoremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
 " }}}
 
+" 1-3 这样'可以定位到具体column
+" {{{
+nnoremap  '  `
+nnoremap  `  '
+nnoremap <C-6> <C-6>`"
+nnoremap <C-g> 2<C-g>
+" }}}
+
 " 2-1 Toggle  something
 "{{{
 nnoremap  <Leader>tN   :set nu!  rnu!    nu? rnu? <CR>
@@ -137,7 +145,6 @@ nnoremap  <Leader>eI  :vsplit  $Vim_Scripts/good-idea-script.vim<CR>
 "noremap  <Leader>er   :vsplit <C-R>=expand("%:r")."."<CR>
 " }}}
 
-
 " 5-2 <Leader>sv source .vimrc or .gvimrc
 " {{{
 " :let &filetype=&filetype equals to  :set filetype=<tab>目的是为了设置filetype, 触发autocmd
@@ -165,7 +172,6 @@ nnoremap  <Leader>w  :update<CR>
 nnoremap  <C-w>s       :Ack  <C-r><C-w> % <CR>
 " }}}
 
-
 " 7-1 buffer 操作
 " {{{
 nnoremap <C-^>     <C-^>:call ShowBufName()<CR>
@@ -183,7 +189,6 @@ nnoremap <Leader>8      :b  8<CR>
 nnoremap <Leader>9      :b  9<CR>
 nnoremap <Leader>0      :b 10<CR>
 " }}}
-
 
 " 7-2 tabpage 操作
 " {{{
@@ -217,7 +222,6 @@ nnoremap <A-0>     10gt<CR>
 nnoremap \q     11gt<CR>
 nnoremap \w     11gt<CR>
 " }}}
-
 
 " 7-4 window 操作:用Ctrl切换窗口
 " {{{
@@ -270,11 +274,12 @@ nnoremap <C-w>b   <C-w>=<C-w>b:call MaxCurrentWindow()<CR>:let g:tagbar_left = 0
 " winwidth(0) 和 winheight(0) 函数显示窗口宽度和高度
 " }}}
 
-" 8 jump list. <c-o>: <tab> go ahead, <s-tab> go behind
+" 8 jump-list. <c-o>: <tab> go ahead, <s-tab> go behind
+"{{{
 " <tab>   ------> <C-i>
 " <S-tab> ------> <C-o>
 nnoremap <s-tab>  <C-o>
-
+"}}}
 
 " 9 quick line switch:快速交换两行, 已删除
 " {{{
@@ -331,13 +336,11 @@ nnoremap <Leader>si   i<CR><ESC><up>g_
 
 " 13 delete all trailing White Space:  根据ShowTrailingWhiteSpace插件
 nnoremap  <Leader>xw  :%s/\s\+$//g<CR>:let @/=''<CR>
-"nnoremap <Leader>xw :%s/\s\+$//ge<CR>:let @/=''<CR>
 
 " 14 ctags + cscope
 " !ctags -R .
 " !cscope  -Rbq
 nnoremap  <Leader>ct  :!ctags -R --fields=+lS .<CR>:!cscope  -Rbq<CR><CR>
-
 
 " 15-1 行中添加内容
 " {{{
@@ -397,8 +400,90 @@ nnoremap  <Leader>ic        i:<ESC>l
 nnoremap  <Leader>ac        a:<ESC>h
 " }}}
 
+" 15-3 yp 复制并粘贴
+" {{{
 
-" 16 如果启用了ftplugin/man.vim插件(runtime  ftplugin/man.vim)
+"nnoremap  yp  yyp
+"nnoremap  yP  yyP
+
+" :t :copy, copy don't effect register
+nnoremap  yp  :t.   <CR>
+nnoremap  yP  :t .-1<CR>
+" }}}
+
+" 15-4 delete and yank
+"{{{
+
+" delete hole
+" dh的功能, 可以使用X来完成:h dh, :h X, 删除光标左边的字符
+" 使用示例: dhd == "_dd,  dhiw == "_diw,
+" 使用基本和d相同,只不过不影响匿名寄存器
+" 这里不使用map,而是使用nnoremap, 也可以工作
+nnoremap  dh  "_d
+
+" forward删除到括号, c stand for closing
+nnoremap  dc  dt)
+
+" backward删除到括号
+nnoremap  dC  dT(
+
+"
+nnoremap  d]  dt]
+nnoremap  d[  dT[
+
+nnoremap  d"  dt"
+nnoremap  d'  dt'
+
+
+" 复制
+" forward复制到括号
+nnoremap  yc  yt)
+" backward复制到括号
+nnoremap  yC  yT(
+
+nnoremap  Y  y$
+"}}}
+
+" 15-5 粘贴系统寄存器, inoremap 中也有类似的映射, 见 insert-map.vim
+" {{{
+nnoremap  <Leader><Leader>p  "+p
+nnoremap  <Leader><Leader>P  "+P
+" }}}
+
+" 15-6 quick insert date at current line: ld 插在行尾, id insert到行首
+" {{{
+
+" ld 表示 line date
+" :. read !date -u<CR>, 在当前行的之下(下一行)插入当前时间日期, 并且插入后, 光标自动跳到下一行
+" k移动到上一行, J join 两行, 完成插入
+" trick: 这里的两个read单词, 是根据Tabularize对齐的,
+" :Tabularize可以根据单词对齐, 而不仅仅是字符. 非常强大
+" 这里不适用date -u, 而使用date, 因为-u 是格林威治绝对时间, 不是本地时间
+"nnoremap  <Leader>ld  :.   read !date -u<CR>kJ
+nnoremap  <Leader>ld  :.   read !date <CR>kJ
+
+"nnoremap  <Leader>id  :.-1 read !date -u<CR>J
+nnoremap  <Leader>id  :.-1 read !date -u<CR>J
+" }}}  2017年 02月 13日 星期一 21:04:17 CST
+
+" 15-7 quick :substitute, copy, move
+" {{{
+"nnoremap  <Leader>ss  :%s<Space>///g<left><left><left>  "有空格是个bug,
+nnoremap  <Leader>ss  :%s///g<left><left><left>
+nnoremap  <Leader>sC  :call Sub_chinese_punc()<CR>
+
+"这个主要是针对 c-support 的 \pind, 因为默认生成的是 FILE_INC 宏
+nnoremap  <Leader>sh  :%s/INC/H_/g<CR>
+
+" move/copy
+nnoremap  <Leader>gm  :g// copy $<Left><Left><Left><Left><Left><Left><Left><Left>
+xnoremap  <Leader>gm  :g// copy $<Left><Left><Left><Left><Left><Left><Left><Left>
+" }}}
+
+" 17 输出当前缓冲区文件的绝对路径
+nnoremap  <Leader>lp  :echo  expand('%:p')<CR>
+
+" 18 如果启用了ftplugin/man.vim插件(runtime  ftplugin/man.vim)
 " {{{
 if  exists(':Man')
     "if maparg('K') == ''    " has no map
@@ -410,7 +495,7 @@ if  exists(':Man')
 endif
 " }}}
 
-" 17 quick fix 快速切换: 有用, 但没想到好的快捷键
+" 19 quick fix 快速跳转: 有用, 但没想到好的快捷键
 " {{{
 " unimpaired [q ]q to 就可以在quickfix之间切换
 "nnoremap cn  :cnext<CR>
@@ -419,29 +504,8 @@ endif
 "nnoremap coo :cclose<CR>
 " }}}
 
-" 18 输出当前缓冲区文件的绝对路径
-nnoremap  <Leader>lp  :echo  expand('%:p')<CR>
-
-" 19 inoremap 中也有类似的映射, 见 insert-map.vim
-" {{{
-nnoremap  <Leader><Leader>p  "+p
-nnoremap  <Leader><Leader>P  "+P
-" }}}
-
-" 20 yp 复制并粘贴
-" {{{
-
-"nnoremap  yp  yyp
-"nnoremap  yP  yyP
-
-" :t :copy, copy don't effect register
-nnoremap  yp  :t.   <CR>
-nnoremap  yP  :t .-1<CR>
-" }}}
-
-" 28 cscope setting
-" Cscope的帮助手册中推荐了一些快捷键的用法,
-" 下面是其中一组,也是我用的, 将下面的内容添加到~/.vimrc中
+" 21 cscope的帮助手册中推荐了一些快捷键的用法,
+"{{{
 
 "注意标志s, g, c ,t 和后面的 <C-R> 之间是有空格的, 因为分别是不同的参数, 这个很好理解.
 "nmap <C-_>s :cs find s <C-R>=expand("<cword>")<CR><CR>
@@ -466,43 +530,12 @@ nmap <Leader>sg :cs find g <C-R>=expand('<cword>')<CR><CR>
 nmap <Leader>sc :cs find c <C-R>=expand('<cword>')<CR><CR>
 "nmap <Leader>si :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 
+"}}}
 
-" 31 black hole delete
-" h stand for hole, 之所以不使用db, 是因为b是一个motion, 移动到上一个单词
-" 相比之下,dh功能就弱的多,仅仅是删除左边字符,并且可以使用X代替
-" 事实表明, 这里不使用map,,而是使用nnoremap, 也可以工作的很好
-" 那么dh的功能, 可以使用X来完成:h dh, :h X, 删除光标左边的字符
-" 使用示例: dhd == "_dd,  dhiw == "_diw,
-" 使用基本和d相同,只不过不影响匿名寄存器
-nnoremap  dh  "_d
-
-" forward删除到括号, c stand for closing
-nnoremap  dc  dt)
-
-" backward删除到括号
-nnoremap  dC  dT(
-
-"
-nnoremap  d]  dt]
-nnoremap  d[  dT[
-
-nnoremap  d"  dt"
-nnoremap  d'  dt'
-
-
-" 31-2 yank/copy
-
-" forward复制到括号
-nnoremap  yc  yt)
-" backward复制到括号
-nnoremap  yC  yT(
-
-nnoremap  Y  y$
-
-" 34 统计模式/出现次数: word count/number
+" 22 统计模式/出现次数: word count/number
 nnoremap  <Leader>cw  :%s/<C-r><C-w>//gn<CR>
 
-" 35 跳转到/*, 或者跳转到 *, 跳转到"#" 注释
+" 23 跳转到/*, 或者跳转到 *, 跳转到"#" 注释
 " {{{
 nnoremap  </  [/
 nnoremap  >/  ]/
@@ -514,44 +547,9 @@ nnoremap  <#  [#
 nnoremap  >#  ]#
 " }}}
 
-
-" 36 quick :substitute, copy, move
+" 38 快速缩进{  } 中的代码块, 使用[, ]
 " {{{
-"nnoremap  <Leader>ss  :%s<Space>///g<left><left><left>  "有空格是个bug,
-nnoremap  <Leader>ss  :%s///g<left><left><left>
-nnoremap  <Leader>sC  :call Sub_chinese_punc()<CR>
-
-"这个主要是针对 c-support 的 \pind, 因为默认生成的是 FILE_INC 宏
-nnoremap  <Leader>sh  :%s/INC/H_/g<CR>
-
-" move/copy
-nnoremap  <Leader>gm  :g// copy $<Left><Left><Left><Left><Left><Left><Left><Left>
-xnoremap  <Leader>gm  :g// copy $<Left><Left><Left><Left><Left><Left><Left><Left>
-" }}}
-
-
-" 37 quick insert date at current line: ld 插在行尾, id insert到行首
-" ld 表示 line date
-" :. read !date -u<CR>, 在当前行的之下(下一行)插入当前时间日期, 并且插入后, 光标自动跳到下一行
-" k移动到上一行, J join 两行, 完成插入
-" trick: 这里的两个read单词, 是根据Tabularize对齐的,
-" :Tabularize可以根据单词对齐, 而不仅仅是字符. 非常强大
-" 这里不适用date -u, 而使用date, 因为-u 是格林威治绝对时间, 不是本地时间
-"nnoremap  <Leader>ld  :.   read !date -u<CR>kJ
-" {{{
-nnoremap  <Leader>ld  :.   read !date <CR>kJ
-
-"nnoremap  <Leader>id  :.-1 read !date -u<CR>J
-nnoremap  <Leader>id  :.-1 read !date -u<CR>J
-" }}}  2017年 02月 13日 星期一 21:04:17 CST
-
-
-" 38 快速缩进{  } 中的代码块, 尤其是使用ySS 添加{}, 后, 需要向左缩进时
-" 使用条件: 光标处理{} 中间
-" 很好: 并且这个动作可重复: 因为使用了文本对象
-
 " 缩进{} 内部
-" {{{
 nnoremap  <i[   <i{
 nnoremap  >i[   >i{
 
@@ -568,15 +566,14 @@ nnoremap  <a]   <a{
 nnoremap  >a]   >a{
 " }}}
 
-
-" 39 menu and toolbar Toggle
+" 39 toggle menu and toolbar
+" {{{
 "regexp matches      =~      =~#     =~?
 " h  =~#
 " 使用正则检测guioptions中是否有'T' toolbar标志, 如果没有, 就显示. 有就隐藏
 " 注意: 第一个正则检测是'T' 是字符串, 有单引号标志,
 " 后面的 set guioptions-=T, 则没有单引号: 这个是在命令行手动敲入,
 " 才检测出来的.刚开始写错了, 一直不能工作
-" {{{
 nnoremap  <silent>  <C-F5>  :if  &guioptions =~#  'T' <Bar>
                                  \set guioptions-=T<Bar>
                                  \set guioptions-=m<Bar>
@@ -586,19 +583,8 @@ nnoremap  <silent>  <C-F5>  :if  &guioptions =~#  'T' <Bar>
                             \endif<CR>
 " }}}
 
-
-"41 这样'可以定位到具体column
-" {{{
-nnoremap  '  `
-nnoremap  `  '
-nnoremap <C-6> <C-6>`"
-nnoremap <C-g> 2<C-g>
-" }}}
-
-
-"43 get full path of file
+" 43 get full path of file
 "nnoremap  <Leader>cf  :let @+=expand("%:p")<CR>
-
 " 将文件绝对路径获取到终端剪贴板,可以在终端<shift + insert> 粘贴
 " 注意@* 才是终端剪贴板
 " gdb 支持源文件绝对路径下断点:  b /a/b/c.cpp : 120
