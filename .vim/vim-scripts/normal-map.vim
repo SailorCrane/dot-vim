@@ -316,6 +316,8 @@ nnoremap <C-w>q   <C-w>=<C-w>t:call MaxCurrentWindow()<CR>:let g:tagbar_left = 1
 nnoremap <C-w>z   <C-w>=<C-w>b<C-w>h:call MaxCurrentWindow()<CR>:let g:tagbar_left = 1<CR>
 nnoremap <C-w>t   <C-w>=<C-w>t<C-w>l:call MaxCurrentWindow()<CR>:let g:tagbar_left = 0<CR>
 nnoremap <C-w>b   <C-w>=<C-w>b:call MaxCurrentWindow()<CR>:let g:tagbar_left = 0<CR>
+
+" 默认<C-w>T会将当前buffer移动到新tab
 " }}}
 
 " 7-6 显示窗口大小和坐标: 关于窗口设置的说明
