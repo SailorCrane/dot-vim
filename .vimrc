@@ -1,7 +1,7 @@
 " vim: set foldmethod=marker  foldlevel=0: vim modeline( set )
 
-" ====================================================================
-
+" =================== vim script path variable =====================
+"{{{
 " 路径最后不要跟'/'
 " 字符串尽量使用单引号, 这样可以使用双引号注释
 let  $Crane_Vim_Home   = '~'
@@ -16,8 +16,8 @@ let  $TEMPLATE_CPP     = $Crane_Dot_Vim  . '/templates/cpp'
 let  $TEMPLATE_PYTHON  = $Crane_Dot_Vim  . '/templates/python'
 
 "let  $SESSION          = $Crane_Dot_Vim  . '/session'
-
-" ====================================================================
+"}}}
+" =================== vim script path variable =====================
 
 set fileencodings=ucs-bom,utf-8,iso-8859,gbk,cp936,gb2312,big5,gb18030,latin1
 set fileformats=unix,dos,mac
@@ -35,11 +35,11 @@ set tabstop=4 shiftwidth=4 softtabstop=4 " tab == 4<Space>
 set smartindent                          " smart indent
 set cindent                              " cindent  disabled smartindent
 
-
 set showcmd                              " 没有完成的normal命令都在右下角提示
 set ruler                                " 显示当先位置
 set cursorline                           " autocmd窗口相关有设置(光标行线)
 set cursorcolumn                         " 光标列线
+
 set laststatus=2                         " always show StatusLine
 set cmdheight=2                          " ex-cmd height is 2 line
 
@@ -78,12 +78,10 @@ if has('cscope')                         " 'has()' :test vim enable feature
     set cscopetag                        " 优先使用cscopetag文件, (针对 ctrl-] 动作)
 endif
 
-
 set list
 set listchars=tab:\|\                    " show tab in python/Makefile file
 "set listchars=tab:▸-,eol:¬,trail:-      "
 "set listchars=tab:\¦\                   " break vertical var
-
 
 set wrapscan                             " 使用/, ?, n, N 搜索时, 如果搜索到底部, 环绕到第一行重新开始搜索
 
@@ -116,7 +114,7 @@ source  $Crane_Dot_Vim/vim-scripts/tmp-test.vim
 
 "}}}
 
-colorscheme  monokai                " must after source plugin file
+colorscheme  monokai                     " must after source plugin file
 "{{{
 "colorscheme  slate
 "colorscheme  marklar   "from Colour-Sampler-Pack
