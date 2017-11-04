@@ -7,12 +7,14 @@ filetype off     " required
 " $Crane_Dot_Vim 在 本项目自带的vimrc中配置
 " 路径变量不要以 "/" 结尾
 set  rtp+=$Crane_Vim_Bundle/vundle/
+set  rtp+=$Crane_Vim_Bundle/dein.vim/
 
 call vundle#rc() " let Vundle manage Vundle,  required!
 
 
 Bundle 'gmarik/vundle'
 Bundle 'SailorCrane/vim-plug'
+Bundle 'Shougo/dein.vim'
 
 
 " 将插件按功能分在不同目录
@@ -39,3 +41,4 @@ source   $Plugin_Script/plugin-ft.vim          " 和文件类型相关关:markdo
 " 所以将Bundle命令放在filetype on命令之前
 filetype plugin indent on
 filetype on
+syntax enable

@@ -12,6 +12,10 @@
     path = .vim/bundle/vundle
     url = https://github.com/gmarik/vundle.git
 
+[submodule ".vim/bundle/dein.vim"]
+    path = .vim/bundle/dein.vim
+    url = https://github.com/Shougo/dein.vim.git
+
 [submodule ".vim/bundle/vim-plug"]
     path = .vim/bundle/vim-plug
     url = https://github.com/SailorCrane/vim-plug.git
