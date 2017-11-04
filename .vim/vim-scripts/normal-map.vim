@@ -1,16 +1,7 @@
 " vim: set fdm=marker  fdl=0: vim modeline( set )
-"  foldlevel=2, 这样vim打开文件时, 不会自动折叠, 不至于使不会折叠的人止步不前
-"  zM 折叠所有， zR 展开所有 (通过 foldlevel设置)
+" zM: fold all, zR: expand all
 
-"0 说明
-" 一般映射, 如果有对于选项的toggle!, 就会有? show
-" 例如 set  list!  list?
-" 每个项目内如果隔开, 使用一行. 项目和项目之前分隔使用两行
-
-
-"1-1 Quick into command line
-" 将';'映射到':',因为';'更容易敲击,但是':'功能用的更多
-" 因为<CR>默认功能,可以使用j代替,所以将<CR>映射到';',即'f'后,查看下一个.
+" 1 ; ------> :
 " {{{
 nnoremap  ;  :
 xnoremap  ;  :
@@ -18,12 +9,7 @@ xnoremap  ;  :
 "nnoremap  :  ;
 "xnoremap  :  ;
 
-" repeat last Ex-command
-nnoremap  @:  @:
-xnoremap  @:  @:
-
 " '&' repeat last substitute, same as ':s'
-
 
 " 回车功能由<Plug>Sneak_; 替代
 "nmap <CR>  <Plug>Sneak_;
@@ -33,13 +19,8 @@ nnoremap  q;       q:
 nnoremap  q<CR>    q
 " }}}
 
-
 "2 Toggle  something
-"  Toggle  number line/relative number line/Toggle  highlight / sensitive case
-"nnoremap  <Leader>o   :set nu!  rnu!    nu? rnu? <CR>
-" toggle line number: ln stand for line number
 nnoremap  <Leader>tl   :set nu!  rnu!    nu? rnu? <CR>
-" 在 paste模式 enable下, 粘贴才不会缩进
 nnoremap  <Leader>tp   :set paste! paste?<CR>
 
 
@@ -146,7 +127,7 @@ nnoremap  <Leader>eI  :vsplit  $Vim_Scripts/good-idea-script.vim<CR>
 " <Leader>sv source .vimrc or .gvimrc
 " {{{
 " :let &filetype=&filetype equals to  :set filetype=<tab>目的是为了设置filetype, 触发autocmd
-if has("gui_running")
+if has('gui_running')
     nnoremap <silent>  <Leader>sv  :source $MYVIMRC<CR>:source $MYGVIMRC<CR>:let &filetype=&filetype<CR>
 else
     nnoremap <silent>  <Leader>sv  :source $MYVIMRC<CR>:let &filetype=&filetype<CR>
@@ -620,8 +601,8 @@ nnoremap  <Leader>ly     yyI//<ESC>
 " 注意这里的":" 是必不可少的,exists 也可以判断自定义命令.
 " :Man 命令, 是通过"runtime ftplugin/man.vim"命令激活的
 " {{{
-if  exists(":Man")
-    "if maparg('K') == ""    " has no map
+if  exists(':Man')
+    "if maparg('K') == ''    " has no map
         "nmap  <unique> K  <Leader>K
     "endif
     "注意,因为<Leader>K,也是一个man.vim的映射,而不是vim内部的基本功能,所以不能使用noremap映射,而要使用nmap
@@ -642,7 +623,7 @@ nnoremap <Leader>co  :cclose<CR>
 
 
 "24 输出当前缓冲区文件的绝对路径
-nnoremap  <Leader>lp  :echo  expand("%:p")<CR>
+nnoremap  <Leader>lp  :echo  expand('%:p')<CR>
 
 
 "25  将<up> 和 <down> 映射为屏幕行上下, 这个是在vim reference中学到的建议
@@ -703,10 +684,10 @@ nmap <Leader>sa :cs add .<CR>
 
 " 下面映射的两个<CR>, 一个为执行expand("<cword>"), 另一个执行cs命令
 " 查看函数定义所在, 等同于 <C-]>, global: 定义所在
-nmap <Leader>sg :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <Leader>sg :cs find g <C-R>=expand('<cword>')<CR><CR>
 
 " 查看谁调用了函数: :cnext, 或者cn 跳向下一个, cp 跳向前一个.
-nmap <Leader>sc :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <Leader>sc :cs find c <C-R>=expand('<cword>')<CR><CR>
 "nmap <Leader>si :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 
 
