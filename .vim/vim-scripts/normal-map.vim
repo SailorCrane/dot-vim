@@ -37,6 +37,13 @@ nnoremap <C-6> <C-6>`"
 nnoremap <C-g> 2<C-g>
 " }}}
 
+" 1-4 set fileencoding=utf-8 fileformat=unix
+"{{{
+"    change encoding, and write to disk.
+"    eu stand for: encoding unix(utf-8 + unix-line)
+nnoremap <Leader>eu  :set fileencoding=utf-8 fileformat=unix<CR>:w<CR>
+"}}}
+
 " 2-1 Toggle  something
 "{{{
 nnoremap  <Leader>tN   :set nu!  rnu!    nu? rnu? <CR>
@@ -49,6 +56,53 @@ nnoremap <Space> za
 
 " 用paste map更好些, 支持所有模式
 nnoremap <Leader>tp   :set paste! paste?<CR>
+"}}}
+
+" 2-2 toggle menu and toolbar
+" {{{
+"regexp matches      =~      =~#     =~?
+" h  =~#
+" 使用正则检测guioptions中是否有'T' toolbar标志, 如果没有, 就显示. 有就隐藏
+" 注意: 第一个正则检测是'T' 是字符串, 有单引号标志,
+" 后面的 set guioptions-=T, 则没有单引号: 这个是在命令行手动敲入,
+" 才检测出来的.刚开始写错了, 一直不能工作
+nnoremap  <silent>  <C-F5>  :if  &guioptions =~#  'T' <Bar>
+                                 \set guioptions-=T<Bar>
+                                 \set guioptions-=m<Bar>
+                            \else <Bar>
+                                 \set guioptions+=T <Bar>
+                                 \set guioptions+=m <Bar>
+                            \endif<CR>
+" }}}
+
+" 2-3 :tabkey和:retab 命令(在tab和space之间切换)
+"{{{
+" 切换是否显示空白标志:
+" 结合 set listchars=tab:▸\ ,eol:¬ 使用
+" 在makefile中, 查看是否前置空白是不是tab, 很有用
+
+" tab to space(4 space), need set expandtab
+" tab to space(4 space), need set noexpandtab
+" 使用 "|" 去分割命令, 而不是多次执行":"命令
+nnoremap  <Leader>rt  :set expandtab   tabstop=4 <bar> %retab <CR>
+nnoremap  <Leader>rT  :set noexpandtab tabstop=4 <bar> %retab!<CR>
+
+" visual模式下的retab, 注意1. 执行两次命令之间需要gv再次选中选取选区
+"                      注意2. 执行第一次命令时, 要使用<C-u> 去掉":'<,'>"
+"
+xnoremap  <Leader>rt  :<C-u>set expandtab   tabstop=4<CR>gv: retab <CR>
+xnoremap  <Leader>rT  :<C-u>set noexpandtab tabstop=4<CR>gv: retab!<CR>
+" '<,'> 不支持  :set expandtab
+"xnoremap  <Leader>rt  :set expandtab   tabstop=4 <bar> retab <CR>
+"xnoremap  <Leader>rT  :set noexpandtab tabstop=4 <bar> retab!<CR>
+"}}}
+
+" 2-4 xxd(在文本和hex之间切换)
+"{{{
+nnoremap  <Leader>xd  :%!xxd    <CR>
+nnoremap  <Leader>xD  :%!xxd -r <CR>
+xnoremap  <Leader>xd  : !xxd    <CR>
+xnoremap  <Leader>xD  : !xxd -r <CR>
 "}}}
 
 " 3 使用n和N搜索前, 先激活hlsearch选项
@@ -337,11 +391,6 @@ nnoremap <Leader>si   i<CR><ESC><up>g_
 " 13 delete all trailing White Space:  根据ShowTrailingWhiteSpace插件
 nnoremap  <Leader>xw  :%s/\s\+$//g<CR>:let @/=''<CR>
 
-" 14 ctags + cscope
-" !ctags -R .
-" !cscope  -Rbq
-nnoremap  <Leader>ct  :!ctags -R --fields=+lS .<CR>:!cscope  -Rbq<CR><CR>
-
 " 15-1 行中添加内容
 " {{{
 nnoremap  <Leader>i;    ][a;<ESC>:write<CR><C-o>
@@ -472,6 +521,9 @@ nnoremap  <Leader>id  :.-1 read !date -u<CR>J
 nnoremap  <Leader>ss  :%s///g<left><left><left>
 nnoremap  <Leader>sC  :call Sub_chinese_punc()<CR>
 
+" sub with "\r" (unix line)
+nnoremap  <Leader>mm    :%s/<C-v><C-M>/\r/g<CR>
+
 "这个主要是针对 c-support 的 \pind, 因为默认生成的是 FILE_INC 宏
 nnoremap  <Leader>sh  :%s/INC/H_/g<CR>
 
@@ -479,6 +531,57 @@ nnoremap  <Leader>sh  :%s/INC/H_/g<CR>
 nnoremap  <Leader>gm  :g// copy $<Left><Left><Left><Left><Left><Left><Left><Left>
 xnoremap  <Leader>gm  :g// copy $<Left><Left><Left><Left><Left><Left><Left><Left>
 " }}}
+
+" 15-8 快速缩进{  } 中的代码块, 使用[, ]
+" {{{
+" 缩进{} 内部
+nnoremap  <i[   <i{
+nnoremap  >i[   >i{
+
+" 和上述功能相同
+nnoremap  <i]   <i{
+nnoremap  >i]   >i{
+
+" 连带{}一起缩进
+nnoremap  <a[   <a{
+nnoremap  >a[   >a{
+
+" 和上述功能相同
+nnoremap  <a]   <a{
+nnoremap  >a]   >a{
+" }}}
+
+" 15-9 reverse join two line: 在第一行上执行
+nnoremap  <Leader>rj  ddpkJ
+
+" 15-10 append  '------>', '============'
+"{{{
+" a append, r arrrow
+" 支持前面加次数:
+" 这个应该是vim内置对于映射次数的支持。vim内置对于映射次数的支持.  5,ar  插入箭头5次.
+"nnoremap  <Leader>ar  a------><ESC>
+" 插入后, 直接进入插入模式, 不再返回normal mode
+nnoremap  <Leader>ar  a------>
+nnoremap  <Leader>ra  a<------
+inoremap  <Leader>ar  ------>
+inoremap  <Leader>ra  <------
+
+nnoremap  <Leader>a=       40a=<ESC>20hi<Space><Space><Left>
+imap      <Leader>a=  <ESC><Leader>a=
+"}}}
+
+" 15-11 "在当前行的下一行/前一行插入数字列: o<ESC>0到新行的首列
+nnoremap  ,,n   o<ESC>0i 1<CR>2<CR>3<CR>4<CR>5<CR>6<CR>7<CR>8<CR>9<CR><Backspace>10<ESC>9k
+nnoremap  ,,N   <ESC>0i 1<CR>2<CR>3<CR>4<CR>5<CR>6<CR>7<CR>8<CR>9<CR><Backspace>10<CR><ESC>10k
+
+" 16 match something
+"{{{
+" show no space: upper case "S"
+nnoremap <Leader>S     /\S\+<CR>
+
+"  search error + trace(ignore case)
+noremap  <Leader>er   :e!<Cr>/\v(error\|trace)\c<CR>
+"}}}
 
 " 17 输出当前缓冲区文件的绝对路径
 nnoremap  <Leader>lp  :echo  expand('%:p')<CR>
@@ -504,8 +607,15 @@ endif
 "nnoremap coo :cclose<CR>
 " }}}
 
-" 21 cscope的帮助手册中推荐了一些快捷键的用法,
+" 21-1 generate tags: ctags + cscope
 "{{{
+" !ctags -R .
+" !cscope  -Rbq
+nnoremap  <Leader>ct  :!ctags -R --fields=+lS .<CR>:!cscope  -Rbq<CR><CR>
+"}}}
+
+" 21-2 cscope的帮助手册中推荐了一些快捷键的用法,
+" {{{
 
 "注意标志s, g, c ,t 和后面的 <C-R> 之间是有空格的, 因为分别是不同的参数, 这个很好理解.
 "nmap <C-_>s :cs find s <C-R>=expand("<cword>")<CR><CR>
@@ -530,12 +640,12 @@ nmap <Leader>sg :cs find g <C-R>=expand('<cword>')<CR><CR>
 nmap <Leader>sc :cs find c <C-R>=expand('<cword>')<CR><CR>
 "nmap <Leader>si :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 
-"}}}
+" }}}
 
 " 22 统计模式/出现次数: word count/number
 nnoremap  <Leader>cw  :%s/<C-r><C-w>//gn<CR>
 
-" 23 跳转到/*, 或者跳转到 *, 跳转到"#" 注释
+" 23-1 跳转到/*, 或者跳转到 *, 跳转到"#" 注释
 " {{{
 nnoremap  </  [/
 nnoremap  >/  ]/
@@ -547,43 +657,12 @@ nnoremap  <#  [#
 nnoremap  >#  ]#
 " }}}
 
-" 38 快速缩进{  } 中的代码块, 使用[, ]
-" {{{
-" 缩进{} 内部
-nnoremap  <i[   <i{
-nnoremap  >i[   >i{
-
-" 和上述功能相同
-nnoremap  <i]   <i{
-nnoremap  >i]   >i{
-
-" 连带{}一起缩进
-nnoremap  <a[   <a{
-nnoremap  >a[   >a{
-
-" 和上述功能相同
-nnoremap  <a]   <a{
-nnoremap  >a]   >a{
-" }}}
-
-" 39 toggle menu and toolbar
-" {{{
-"regexp matches      =~      =~#     =~?
-" h  =~#
-" 使用正则检测guioptions中是否有'T' toolbar标志, 如果没有, 就显示. 有就隐藏
-" 注意: 第一个正则检测是'T' 是字符串, 有单引号标志,
-" 后面的 set guioptions-=T, 则没有单引号: 这个是在命令行手动敲入,
-" 才检测出来的.刚开始写错了, 一直不能工作
-nnoremap  <silent>  <C-F5>  :if  &guioptions =~#  'T' <Bar>
-                                 \set guioptions-=T<Bar>
-                                 \set guioptions-=m<Bar>
-                            \else <Bar>
-                                 \set guioptions+=T <Bar>
-                                 \set guioptions+=m <Bar>
-                            \endif<CR>
-" }}}
+" 23-2 跳到main函数: C/C++
+" 通过正则匹配 int  main( .*)
+nnoremap  gm  /\v(int)?\s+main\s*\(.*<CR>
 
 " 43 get full path of file
+"{{{
 "nnoremap  <Leader>cf  :let @+=expand("%:p")<CR>
 " 将文件绝对路径获取到终端剪贴板,可以在终端<shift + insert> 粘贴
 " 注意@* 才是终端剪贴板
@@ -591,8 +670,10 @@ nnoremap  <silent>  <C-F5>  :if  &guioptions =~#  'T' <Bar>
 " 如果以后<Leader>cf被占用了, 那么使用<Leader>gf
 " cf stand for "copy file name"
 nnoremap  <Leader>cf  :let @*=expand("%:p")<CR>
+"}}}
 
-"44 使当前编辑文件/脚本具有可执行权限
+" 44 chmod +x, open.
+"{{{
 "nnoremap  <Leader>ex  :call ChmodExec()<CR>
 " 第二个<CR>用于从shell返回, 最后:w 保存文件状态
 nnoremap  <Leader>ex  :!chmod +x %<CR><CR>:w<CR>
@@ -604,96 +685,13 @@ nnoremap  <Leader>ex  :!chmod +x %<CR><CR>:w<CR>
 " 如果是普通文件: 使用gnome-open 打开
 " 如果是.md文件, 使用markdown插件的 :InstantMarkdownPreview命令打开
 nnoremap  <Leader>of  :call OpenFile()<CR>
-
-
-"45 将下一行和当前行合并为一行, 下一行在前.
-" rj stand for: reverse  Join
-nnoremap  <Leader>rj  ddpkJ
-
-
-"45 跳到main函数: C/C++
-" 通过正则匹配 int  main( .*)
-nnoremap  gm  /\v(int)?\s+main\s*\(.*<CR>
-
-
-" 46 append  ------> : ar stand for arrow
-" 支持前面加次数:
-" 这个应该是vim内置对于映射次数的支持。vim内置对于映射次数的支持.  5,ar  插入箭头5次.
-"nnoremap  <Leader>ar  a------><ESC>
-" 插入后, 直接进入插入模式, 不再返回normal mode
-nnoremap  <Leader>ar  a------>
-nnoremap  <Leader>ra  a<------
-inoremap  <Leader>ar  ------>
-inoremap  <Leader>ra  <------
-
-nnoremap  <Leader>a=       40a=<ESC>20hi<Space><Space><Left>
-imap      <Leader>a=  <ESC><Leader>a=
-
-
-" 47 set fileencoding=utf-8
-"    set fileformat=unix
-"    change encoding, and write to disk.
-"    eu stand for: encoding unix(utf-8 + unix-line)
-nnoremap <Leader>eu  :set fileencoding=utf-8  fileformat=unix<CR>:w<CR>
-
-
-" 48 match ^M(dos line)
-" sub with "\r" (unix line)
-"nnoremap ,mm    :%s/<C-v><C-M>/\r/ge<CR>
-" /ge e: no match, but disable error msg
-nnoremap <Leader>mm    :%s/<C-v><C-M>/\r/g<CR>
-" show no space: upper case "S"
-nnoremap <Leader>S     /\S\+<CR>
-
-
-" 49 "在当前行的下一行/前一行插入数字列: o<ESC>0到新行的首列
-nnoremap  ,,n   o<ESC>0i 1<CR>2<CR>3<CR>4<CR>5<CR>6<CR>7<CR>8<CR>9<CR><Backspace>10<ESC>9k
-nnoremap  ,,N   <ESC>0i 1<CR>2<CR>3<CR>4<CR>5<CR>6<CR>7<CR>8<CR>9<CR><Backspace>10<CR><ESC>10k
-
-
-
-" 53 :tabkey和:retab 命令(在tab和space之间切换)
-"{{{
-" 切换是否显示空白标志:
-" 结合 set listchars=tab:▸\ ,eol:¬ 使用
-" 在makefile中, 查看是否前置空白是不是tab, 很有用
-
-" tab to space(4 space), need set expandtab
-" tab to space(4 space), need set noexpandtab
-" 使用 "|" 去分割命令, 而不是多次执行":"命令
-nnoremap  <Leader>rt  :set expandtab   tabstop=4 <bar> %retab <CR>
-nnoremap  <Leader>rT  :set noexpandtab tabstop=4 <bar> %retab!<CR>
-
-" visual模式下的retab, 注意1. 执行两次命令之间需要gv再次选中选取选区
-"                      注意2. 执行第一次命令时, 要使用<C-u> 去掉":'<,'>"
-"
-xnoremap  <Leader>rt  :<C-u>set expandtab   tabstop=4<CR>gv: retab <CR>
-xnoremap  <Leader>rT  :<C-u>set noexpandtab tabstop=4<CR>gv: retab!<CR>
-" '<,'> 不支持  :set expandtab
-"xnoremap  <Leader>rt  :set expandtab   tabstop=4 <bar> retab <CR>
-"xnoremap  <Leader>rT  :set noexpandtab tabstop=4 <bar> retab!<CR>
 "}}}
 
-" 54 xxd(在文本和hex之间切换)
-nnoremap  <Leader>xd  :%!xxd    <CR>
-nnoremap  <Leader>xD  :%!xxd -r <CR>
-xnoremap  <Leader>xd  : !xxd    <CR>
-xnoremap  <Leader>xD  : !xxd -r <CR>
-
-" 55 search error + trace(ignore case)
-noremap  <Leader>er   :e!<Cr>/\v(error\|trace)\c<CR>
-
-
-"99 关于normal 模式中惯用的n 和 p的总结:
+" 99 关于normal 模式中惯用的n 和 p的总结:
+"{{{
 " 其中CtrlP插件的<C-p> 被 <Leader>sp代替
 " QuickFix 使用:cn, cp 直接下一个,或者前一个
 " Multiple Cursor 的 C-n 被 g<C-n>所取代
 " <C-p> 和 <C-n>被映射到了 YankRing中:让n永远和p快乐的在一起窝
 " <Leader>n <Leader>p 还是buffer next 和 buffer previous, 自己已经用习惯了
-
-
-"100
-" map <C-a> to visual all content, then select to "+, then go to previous position
-" 因为有了 text-obj entire 和 xnoremap  <C-j> "+y,
-" 还是继续让<C-a>去对行内数字做加法吧
-"nnoremap  <C-a>  <ESC>ggVG"+y<C-o>
+"}}}
