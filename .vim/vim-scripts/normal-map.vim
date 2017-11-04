@@ -1,7 +1,7 @@
 " vim: set fdm=marker  fdl=0: vim modeline( set )
 " zM: fold all, zR: expand all
 
-" 1 ; ------> :
+" 1-1 ; ------> :
 " {{{
 nnoremap  ;  :
 xnoremap  ;  :
@@ -19,12 +19,31 @@ nnoremap  q;       q:
 nnoremap  q<CR>    q
 " }}}
 
-"2 Toggle  something
-nnoremap  <Leader>tl   :set nu!  rnu!    nu? rnu? <CR>
-nnoremap  <Leader>tp   :set paste! paste?<CR>
+" 1-2 j, k 连行
+" {{{
 
+nnoremap  <up>   gk
+nnoremap  <down> gj
+nnoremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
+nnoremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
-"2-2 使用n 和 N搜索前, 先激活hlsearch选项
+" }}}
+
+" 2-1 Toggle  something
+"{{{
+nnoremap  <Leader>tN   :set nu!  rnu!    nu? rnu? <CR>
+nnoremap  <Leader>th   :set cursorline!    cursorline?<CR>
+nnoremap  <Leader>tc   :set cursorcolumn!  cursorcolumn?<CR>
+nnoremap  <Leader>tl   :set list!  list?<CR>
+
+" toggle fold(closed <------> opend)
+nnoremap <Space> za
+
+" 用paste map更好些, 支持所有模式
+nnoremap <Leader>tp   :set paste! paste?<CR>
+"}}}
+
+" 3 使用n和N搜索前, 先激活hlsearch选项
 " {{{
 " 智能的'n' 和'N'不习惯
 "nnoremap <expr> n  'Nn'[v:searchforward]
@@ -33,26 +52,22 @@ nnoremap  <Leader>tp   :set paste! paste?<CR>
 nnoremap  n           :set hlsearch<CR>n
 nnoremap  N           :set hlsearch<CR>N
 nnoremap  <Leader>/   :set hlsearch!  hlsearch?<CR>
-"nnoremap  <Leader>/   :nohlsearch<CR>
-" :nohlsearch 暂时性取消高亮,点击n就会再次高亮
-
 nnoremap  <Leader>i   :set ignorecase!  ignorecase?<CR>
 " }}}
 
-
-"2-3
+" 4 add line number: not enabled
+"{{{
 " add line number
 " :%s/^/\=line(".") . ". "/g
+"}}}
 
-
-"3  quick edit
-" quick edit script v:vimrc, n:normal, i:insert, p:plugin-bundle, a:abbrev
+" 5-1  quick edit: v:vimrc, n:normal, i:insert, p:plugin-bundle, a:abbrev
 " {{{
 nnoremap  <Leader>eb  :vsplit ~/.bashrc<CR>
 nnoremap  <Leader>ez  :vsplit ~/.zshrc<CR>
 "nnoremap  <Leader>eP  :vsplit ~/.profile<CR>    # 太容易编辑了, "让出快捷键给plugin-python.vim
 
-" jquery edit
+" jquery network edit
 nnoremap  <Leader>ej  :vsplit https://code.jquery.com/jquery-3.2.1.js<CR>
 
 nnoremap  <Leader>eA  :vsplit ~/.subdir/myAlias.sh<CR>
@@ -123,77 +138,37 @@ nnoremap  <Leader>eI  :vsplit  $Vim_Scripts/good-idea-script.vim<CR>
 " }}}
 
 
-"4 source '.vimrc'/'.gvimrc'
-" <Leader>sv source .vimrc or .gvimrc
+" 5-2 <Leader>sv source .vimrc or .gvimrc
 " {{{
 " :let &filetype=&filetype equals to  :set filetype=<tab>目的是为了设置filetype, 触发autocmd
 if has('gui_running')
-    nnoremap <silent>  <Leader>sv  :source $MYVIMRC<CR>:source $MYGVIMRC<CR>:let &filetype=&filetype<CR>
+    nnoremap <silent>  <Leader>sv :source $MYVIMRC<CR>:source $MYGVIMRC<CR>:let &filetype=&filetype<CR>
 else
-    nnoremap <silent>  <Leader>sv  :source $MYVIMRC<CR>:let &filetype=&filetype<CR>
+    nnoremap <silent>  <Leader>sv :source $MYVIMRC<CR>:let &filetype=&filetype<CR>
 endif
 " }}}
 
 
-"5 quick  operation
-" Quit the current window : the buffers underlying the window will be quited
+" 6 quick quit and write
 " {{{
 nnoremap  <Leader>q  :q<CR>
 
-" 本来一直想映射为<Leader>qa, 但是这样和<Leader>q有相同前缀,
-" 会影响<Leader>q速度. 现在映射未<Leader>aq, 太棒了.
-" 因为有很多<Leader>a 前缀的映射, 所以不会影响
 nnoremap  <Leader>aq :qa<CR>
 nnoremap  <C-c>      :qa<CR>
 
-" 因为<Leader>e 前缀的edit很多, 所以这里添加 <Leader>ee,
-" 这是我的命名风格, 如果有相同前缀, 那么就重复字母
 nnoremap  <Leader>ee :e!<CR>
 
-" 这里<Leader>ww 和上述<Leader>情况相似
-"nnoremap  <Leader>ww :update<CR>
 nnoremap  <Leader>w  :update<CR>
 
-" save as : gvim可用, console下<C-s>会导致终端不可回显
-"nnoremap  <C-s>      :browse confirm  saveas<CR>
-" <C-r><C-w> to get  cursor word
-" <C-s> stand for "search"
-" exclude tags(ctags) and .svn/*
-nnoremap  <C-s>       :Ack  <C-r><C-w> <CR>
+" warning: terminal not support <C-s>, you need <C-q> to quit <C-s>
+"nnoremap  <C-s>        :Ack  <C-r><C-w> % <CR>
+nnoremap  <C-w>s       :Ack  <C-r><C-w> % <CR>
 " }}}
 
 
-"6  word  operation: 鸡肋, 已删除
-"{{{
-" 不如yiw, diw, diW更有思考连贯性, 虽然似乎少了一个按键还是注释掉吧
-
-" 快速删除一个词：word 或者Word
-" 因为<Leader>d被用来作为down翻页,所以这里将其disable,毕竟diw也就多了一个字母而已
-" 但是删除一个Word：长词,是一个非常好的特性
-"nnoremap  <Leader>d  diw
-"nnoremap  <Leader>D  diW
-
-"nnoremap  <Leader>c  ciw
-"nnoremap  <Leader>C  ciW
-"}}}
-
-
-"7 buffer:next/previous/delete
-" buf and tabpage
+" 7-1 buffer 操作
 " {{{
-"nnoremap <Leader>n :bn<CR>
-"nnoremap <Leader>p :bp<CR>
-"unimpaired : [b, ]b
-
-" 切换"#"buf时 + 显示绝对文件名
 nnoremap <C-^>     <C-^>:call ShowBufName()<CR>
-
-" 因为如果不先关掉 TabBar窗口就 delete buffer,
-" 当tagbar检测到自身是唯一打开窗口时, 会退出gvim, 悲哀啊!
-" 因为现在有了<Leader>dl, 用来清空当前行, 所以删除<Leader>d, 添加<Leader>dd
-" 这样也更安全一些: 不会因为误按<Leader>d导致清除当前缓存
-"nnoremap <Leader>d  :TagbarClose<CR>:bd<CR>:syntax on<CR>
-"nnoremap <Leader>dd :TagbarClose<CR>:bd<CR>:syntax on<CR>
 
 " 文件很多时, 不太有用. 并且只有在知道buff num情况下, 才有用
 " 所以结合air-line使用会更好
@@ -210,13 +185,14 @@ nnoremap <Leader>0      :b 10<CR>
 " }}}
 
 
-"7-2: tabpage 下面是vim 相关tabpage映射
+" 7-2 tabpage 操作
 " {{{
+" tabpage jump
 nnoremap L  gt
 nnoremap H  gT
 
+" tabpage operation
 "nnoremap tn      :tabnew<CR>:NERDTreeFocus<CR>
-" 一般使用tn, 都是为了打开新文件, 所以不使用Focus
 "nnoremap tn      :tabnew<CR>:NERDTree<CR>
 nnoremap tn      :tabnew   <CR>
 nnoremap tc      :tabclose <CR>
@@ -234,19 +210,16 @@ nnoremap <A-7>      7gt<CR>
 nnoremap <A-8>      8gt<CR>
 nnoremap <A-9>      9gt<CR>
 nnoremap <A-0>     10gt<CR>
+
+"nnoremap <A-q>     11gt<CR>
+"nnoremap <A-w>     11gt<CR>
+" 12 tabpage is enough
+nnoremap \q     11gt<CR>
+nnoremap \w     11gt<CR>
 " }}}
 
 
-"7-3: postion: <c-o>: <tab> go ahead, <s-tab> go behind
-" tab is <C-i>, go ahead
-" s-tab go behind
-" <tab>           <c-i>
-nnoremap <s-tab>  <c-o>
-
-"8 Window  motion and manager: 快速窗口移动和管理
-
-" 上下左右切换窗口: 并显示文件名
-" 用<C-> 切换窗口, 比<Leader>快多了
+" 7-4 window 操作:用Ctrl切换窗口
 " {{{
 
 " tmux 插件中已经有相应的映射了, 并且做的更好可以跳转到tmux pane
@@ -257,166 +230,81 @@ nnoremap <s-tab>  <c-o>
     "nnoremap <C-k>  <C-w>k
 "endif
 
-" 用<Leader>切换窗口: 几乎是鸡肋了. 因为现在设置为了<C-h>, <C-L>, <C-j>, <C-k>跳转窗口
-" 虽然现在还在用.但也仅仅是因为习惯的问题
-"nnoremap  <Leader>h  <C-w>h
-" 因为有了很多以<Leader>l开头的映射,
-"用来对行前行后,行尾等操作.
-"<Leader>l的速度就慢了下来,所以添加<Leader>ll
-"nnoremap  <Leader>l  <C-w>l
-" 因为<Leader>l前缀太多:对于行结尾的操作, 所以这里添加<Leader>ll
-" 其实还不如vim自带的<C-w>l 方便, 但为了和其它映射一致, 还是添加上吧
-
 " 上下左右切换窗口, 并将切换到的窗口最大化: 最大化函数会显示文件名
-" 很少用
 nnoremap  <C-w>h     <C-w>h:call MaxCurrentWindow()<Cr>
 nnoremap  <C-w>l     <C-w>l:call MaxCurrentWindow()<Cr>
 nnoremap  <C-w>j     <C-w>j:call MaxCurrentWindow()<Cr>
 nnoremap  <C-w>k     <C-w>k:call MaxCurrentWindow()<Cr>
 " }}}
 
-" 8-2 最大化窗口等相关设置
+" 7-5 最大化窗口等...
 " {{{
-" 这里为什么需要对"|"转义, 我也不知道, 但是不进行转义,执行映射后
-" 使用:nmap <C-w>a 命令查看映射, 只能看到<C-w>_<C-w>
-" 并且在命令行执行映射: nnoremap <C-w>a  <C-w>|<C-w>_命令: 会出现 E488
-" 但是交换<C-w>_ 和 <C-w>| 不会报错: 虽然"|"没有映射成功
-" 估计"|" 在vim脚本中是个特殊字符, 后面需要跟东西才可以
-
-" 补充:关于"|", 是用来在vim Ex模式分割命令的, 参见:h :bar, :h :\bar
-
-" a 表示 all screen: 即最大化屏幕
-"nnoremap  <C-w>a  <C-w>_<C-w>\|
-" 最大化窗口时, 还会显示当前buffer文件名, 可以当做<Leader>lp使用了, 哈哈
-" 那么配置的<Leader>lp 在多窗口, 并且不想组大化窗口时显示当前窗口文件名,  还是很有用的
+" all and equal
 nnoremap  <C-w>a  :call MaxCurrentWindow()<CR>
-
-" e stand for equal
-nnoremap <C-w>e  <C-w>=
+nnoremap  <C-w>e  <C-w>=
 
 " 因为水平最大化用的多, 所以和_切换
 nnoremap  <C-w>-  <C-w>_
-nnoremap  <C-w>_  <C-w>-
 
-" 因为垂直最大化用的多, 所以和\直接实现, 不切换, 因为<C-w>\原义并无意义
-" 因为| 在"Ex"模式中用来分割命令, :h :bar, 而nnoremap 刚好是Ex命令其中之一
 nnoremap  <C-w>\  <C-w>\|
 
-" x 表示减, 和normal模式下<C-x> 对于数字减1对应起来
-nnoremap <C-w>x  <C-w>-
+" 高度减
+nnoremap  <C-w>_  <C-w>-
+nnoremap  <C-w>x  <C-w>-
 
-" f stand for fixed
-nnoremap <C-w>f  :set  wfh   wfw<CR>
-nnoremap <C-w>F  :set  nowfh nowfw<CR>
+" fixed size
+nnoremap <C-w>f  :set wfh! wfh? wfw! wfw?<CR>
 
-" 移动到四个角, 并最大化窗口: 目前习惯是开启四个窗口:
-" 下面的映射在四个窗口基础上工作:刚好 q,t,z,b 键盘布局位于四个角上: 太棒了
-" 因为最大化当前窗口用的很多, 所以后期可能做成函数, 或者命令,
-" 如果vim有现成的命令, 直接使用: 但是很遗憾, 并没有
-" 并且跳转过去时, 可以输出缓冲区文件名
-" q  t
-" z  b
-"
-
-" 注意: 当存在TagBar窗口, 或者其它类似窗口时, 可能角落窗口就不是自己以为的窗口
-" 映射自然也不能正常工作
-
-" 左上角: 所有窗口先<C-w>=, 然后再设置跳转, 这样可以保证光标到指定窗口
-"nnoremap <C-w>q  <C-w>t<C-w>\|<C-w>_
-nnoremap <C-w>q  <C-w>=<C-w>t:call MaxCurrentWindow()<CR>:let g:tagbar_left = 1<CR>
-
-" 左下角
-"nnoremap <C-w>z  <C-w>t<C-w>j:call MaxCurrentWindow()<CR>
+" q t z b 四个角落:有时候因为布局原因不灵
+nnoremap <C-w>q   <C-w>=<C-w>t:call MaxCurrentWindow()<CR>:let g:tagbar_left = 1<CR>
 nnoremap <C-w>z   <C-w>=<C-w>b<C-w>h:call MaxCurrentWindow()<CR>:let g:tagbar_left = 1<CR>
-
-" 右上角
-"nnoremap <C-w>t  <C-w>b<C-w>k:call MaxCurrentWindow()<CR>
-" 不知为何, 窗口上面这种切换方式, 在左上角最大化时, 无法切换到右上角
-" 和切分方式和顺序有关吗? 如果后续还不行, 可能要先<C-w>=使窗口都显示出来,然后再切换了
 nnoremap <C-w>t   <C-w>=<C-w>t<C-w>l:call MaxCurrentWindow()<CR>:let g:tagbar_left = 0<CR>
-
-" 右下角
 nnoremap <C-w>b   <C-w>=<C-w>b:call MaxCurrentWindow()<CR>:let g:tagbar_left = 0<CR>
 " }}}
 
-" 8-3 显示窗口大小和坐标: 关于窗口设置的说明
+" 7-6 显示窗口大小和坐标: 关于窗口设置的说明
 " {{{
-"     winsize 设置窗口 width 和 height. 可以用来在gvimrc中设置1000, 1000.
+" winsize 设置窗口 width 和 height. 可以用来在gvimrc中设置1000, 1000.
 " 因为如果winsize很大, 窗口也会相应变大. 这样gvim 启动时, 可以自动最大化
 " winpos 左上角打印X 和 Y坐标
 " winwidth(0) 和 winheight(0) 函数显示窗口宽度和高度
 " }}}
 
+" 8 jump list. <c-o>: <tab> go ahead, <s-tab> go behind
+" <tab>   ------> <C-i>
+" <S-tab> ------> <C-o>
+nnoremap <s-tab>  <C-o>
 
-"9 quick line switch:快速交换两行, 已删除
-" 将当前行'-'下移 或者'_'上移, 支持连续移动
-" 交换当前行和前后行
-" unimpaired: 中 [e  和]e 已经可以exchanged了
+
+" 9 quick line switch:快速交换两行, 已删除
 " {{{
-"nnoremap  -  ddp
-"nnoremap  _  kddpk
-
+" unimpaired: 中 [e  和]e 已经可以exchanged了
 "nnoremap  <Leader>j  ddp
 "nnoremap  <Leader>k  kddpk
 " }}}
 
-
-"10 quick  up case :也很鸡肋, 已删除
-" 仅仅是按键少了, 但是思考方式和vim完全不同了. 后期估计会注释掉
-" g motion and operation on word
-" w:word, b:back, c:current character, e:end of word
-" 因为将当前字母更改为大写用的更多,所以将gc功能作为修改当前字母为大写
-" 并且讲gC设置为修改当前字母为大写.
-" This is the test Sentence
-" {{{
-"nnoremap  gw  wgul
-"nnoremap  gW  wgUl
-
-"nnoremap  gb  bgul
-"nnoremap  gB  BgUl
-
-"nnoremap  ge  egul
-"nnoremap  gE  egUl
-" }}}
-
-
-"10-2 因为gt经常使用, 所以单独列出来: 这样如果回头注释上面, 这里可以防止被注释
-" gt: g toggle: 因为'~'会向右移动一位,
-" 所以这里使用visual模式,使其作用于光标下的文字而不再移动
-" 这个toggle用的非常多
+" 10 case toggle. 因为'~'会向右移动一位, 所以用v~
 nnoremap  gt  v~
 
-
-"11 快速在文件内部跳转:第一行,最后一行,当前行最左,最右
+" 11-1 当前行最左,最右. 屏幕最上最下
 " {{{
+
 " 这样上下左右, 都和g有关了, 非常棒
 " gh本来是进入select模式, 比较鸡肋, 不需要
 nnoremap gh  ^
 nnoremap gl  $
 
-"nnoremap  H  ^
-"nnoremap  L  $
+nnoremap gk  H
+nnoremap gj  L
+nnoremap gm  M
+
+"nnoremap   <h    H
+"nnoremap   <l    L
+"nnoremap   <m    M
+
 " }}}
 
-
-"12-1 屏幕顶部,中央,下端:H, L, M
-" {{{
-nnoremap   <h    H
-nnoremap   <l    L
-nnoremap   <m    M
-
-"nnoremap   't H
-"nnoremap   'b L
-"noremap   'm M
-" }}}
-
-
-"12-2 很常用
-" <Leader>f,b to  page down up
-" u:up , d:down
-" 这里的up指翻页时,可以看到上方更多的字,同理down可以看到下方更多的字
-"nnoremap  <Leader>b   5<C-y>
-" 因为还是<Leader>f比较好键入
+" 11-2 滚动少许行
 " {{{
 "nnoremap  <Leader>u   5<C-y>
 "nnoremap  <Leader>f   5<C-e>
@@ -435,131 +323,62 @@ nnoremap  <Leader><C-d>   <C-d>
 nnoremap  <Leader><C-u>   <C-u>
 " }}}
 
-
-"14 To segment a line ----> two line
-" seg line, then go to end of origin line
-" g_ go to end of no space character
-" i:insert a:append
+" 12 segment: line ----> two line
 " {{{
 nnoremap <Leader>si   i<CR><ESC><up>g_
 "nnoremap <Leader>sa   a<CR><ESC><up>g_
 " }}}
 
-
-"16  map Q to gq: format line
-" Q本意是切换到Ex模式, 注意不是vim的Ex命令行, 而是vi的遗留产物,
-" 没用还会混淆视听
-" 所以这里说Q 映射到gq, 不如说是为了 禁止 Q切换到Ex模式
-" 也许 nnoremap Q <nop> 会更好些
-nnoremap  Q  gq
-"nnoremap  Q  <nop>
-
-
-"17 delete all  trailing White Space, w stand for white
-"nnoremap <Leader>xw :%s/\s\+$//ge<CR>:let @/=''<CR>
-" 还是给出错误提示吧,这样就可以知道自己到底是否替换了空行
-" 这里要结合ShowTrailingWhiteSpace 插件使用, 因为只有插件可以显示末尾空格时, 才会有用
-" 当然也可以不使用ShowTrailingWhiteSpace插件, 通过设置listchar, 然后 set list!显示末尾空白
-
-" x whitespace: 因为vim 的 x也表示删除
+" 13 delete all trailing White Space:  根据ShowTrailingWhiteSpace插件
 nnoremap  <Leader>xw  :%s/\s\+$//g<CR>:let @/=''<CR>
+"nnoremap <Leader>xw :%s/\s\+$//ge<CR>:let @/=''<CR>
 
-
-"18  !ctags -R . , 后期加上对于cscope支持
-"!ctags -R .
-"!cscope  -Rbq
-"nnoremap  <Leader>ct  :!ctags -R --fields=+lS .<CR>:!cscope  -Rbq<CR><CR>
+" 14 ctags + cscope
+" !ctags -R .
+" !cscope  -Rbq
 nnoremap  <Leader>ct  :!ctags -R --fields=+lS .<CR>:!cscope  -Rbq<CR><CR>
 
 
-"21 关于行的操作
-" 这是一个比较多的映射组,因为在行尾和行上下行添加的东西可能会比较多,每种都需要一个映射
-
-" 在类的结尾"}"后面添加分号.
+" 15-1 行中添加内容
 " {{{
 nnoremap  <Leader>i;    ][a;<ESC>:write<CR><C-o>
+nnoremap  <Leader>i{    o{<CR><CR>}<up>
 
-"nnoremap  <Leader>a;    a;<ESC>:write<CR>
-"在行末尾添加分号, 覆盖了上面 <Leader>a;功能
-"nnoremap  <Leader>l;    $a;<ESC>:write<CR>
+" <Leader>if  :使用A, 构造可重复操作. A之后一直处于插入模式中.
+nnoremap  <Leader>if    A<BS><CR>{<CR><CR>}<up>
+
+nnoremap  <Leader>l{    A {  }<left><left>
 nnoremap  <Leader>l;    A;<ESC>:write<CR>
 nnoremap  <Leader>l:    A:<ESC>:write<CR>
 nnoremap  <Leader>l,    A,<ESC>:write<CR>
 nnoremap  <Leader>l.    A.<ESC>:write<CR>
 nnoremap  <Leader>l!    A!<ESC>:write<CR>
 
-" 在末尾添加 "空格 + 反斜杠", 用于c/c++, 或者makefile,还有bash命令中,将多行连成一行
+" add '<Space>' + '\': Makefile
 nnoremap  <Leader>l\    A<Space>\<ESC>
-
-" 删除当前行最后一个字符,因为使用了A一下子进入插入模式,然后才删除的字符,所以这是一个可repeat的修改,very nice
 nnoremap  <Leader>lx    A<BS><ESC>:write<CR>
 
-" 清空当前行: 并返回normal模式
-nnoremap  <Leader>dl    S<ESC>
+" clear current line
+nnoremap  dl    S<ESC>
 
-" 删除类似于  MyClass::Method()  中的 "MyClass::"
-" "d;" stand for "d:"
-nnoremap  <Leader>d;    vf:;d
-" }}}
-
-" 删除空行: 包括仅有空格的行
+" 删除文件空行(只有tab, 空格, 回车)
 "'<,'>g/^\s*$/ d
 
-" 在当前行下方, 加入空行 lo, lO 光标停留在当前行, go, gO光标定位到新的空行
-" 如果当前行是空行, 直接"yp", 就可以复制一行空行, 更快.
-" 当前行不是空行时, 再使用这个映射:<Leader>lo, 或者<Leader>lO
-" 按<空格><回车> 就可以生成一行空白行
+" }}}
+
+" 15-2 添加空格'[w', ']w'
 " {{{
-"nnoremap  <Space><CR>   o<ESC>k
 
-" unimpaired "[<Space>"  "]<Space>" 在行前后添加空格, 不需要自己再实现
-"nnoremap         go     o<ESC>k
-"nnoremap         gO     O<ESC>j
-"
-"nnoremap  <Leader>go    o<ESC>
-"nnoremap  <Leader>gO    O<ESC>
-
-" d 和 u 代表up 和 down, 分别对应o 和O: 但是几乎没有用过
-" 有些鸡肋
-"nnoremap  <Leader>ld    o<ESC>k
-"nnoremap  <Leader>lu    O<ESC>j
-
-"nnoremap  <Leader>l{    $a{  }<left><left><ESC>:write<CR>
-nnoremap  <Leader>i{    o{<CR><CR>}<up>
-
-" <Leader>if  :使用A, 构造可重复操作. A之后一直处于插入模式中.
-nnoremap  <Leader>if    A<BS><CR>{<CR><CR>}<up>
-nnoremap  <Leader>l{    $a {  }<left><left>
-"nnoremap  <Leader>d{    <down>f{d%
-
-"21-2 在当前字符前, 后添加 <Space>, "&", ":"
 "nnoremap  <Leader>i<Space>   i<Space><ESC>l
 "nnoremap  <Leader>a<Space>   a<Space><ESC>h
 "w means whitespace
-"nnoremap  [w   :exec "normal i<Space><ESC>l"
-"nnoremap  [w   :exec "normal =(v:count1)i<Space><ESC>
 nnoremap  [w   i<Space><ESC>l
 nnoremap  ]w   a<Space><ESC>h
-nnoremap  [W    i<Space><Right><Space><ESC>h
+nnoremap  [W   i<Space><Right><Space><ESC>h
 
 xnoremap  [w   I<Space><ESC>
 xnoremap  ]w   A<Space><ESC>
-xnoremap  [W    I<Space><ESC>gvlolA<Space><ESC>
-" [W 实现略复杂: 先在左边插入空格, 再在右边插入
-" 支持多列block-visual
-"xnoremap  <Leader>i<Space>   I<Space><ESC>
-"xnoremap  <Leader>a<Space>   A<Space><ESC>
-"nnoremap  <Leader><Space>    i<Space><Right><Space><ESC>h
-
-" 在字符左右都添加空格.
-
-" 在前一个单词(或者当前单词: 如果处于单词中间)开头, 插入一个空格
-nnoremap  <Leader>b<Space>  bi<Space><ESC>h
-nnoremap  <Leader>B<Space>  Bi<Space><ESC>h
-
-" 在下一个单词的开头处: 插入一个空格
-"nnoremap  <Leader>w<Space>  wi<Space><ESC>h
-"nnoremap  <Leader>W<Space>  Wi<Space><ESC>h
+xnoremap  [W   I<Space><ESC>gvlolA<Space><ESC>
 
 " 主要用于C/Cpp 添加去地址符号, 获得指针
 nnoremap  <Leader>i&        i&<ESC>l
@@ -579,27 +398,7 @@ nnoremap  <Leader>ac        a:<ESC>h
 " }}}
 
 
-" 21-3 在当前行前后加/*, 在多行添加 /* 就不用了, nerdCommenter已经实现了
-" lc 表示 line comment, 因为'c' 比 '*' 更好按
-" 没有用过, 但是很好用: 自己真聪明
-" {{{
-nnoremap  <Leader>l*     I/*<Space><ESC>A<Space>*/<ESC>
-nnoremap  <Leader>lC     I/*<Space><ESC>A<Space>*/<ESC>
-" 复制并使用/* */注释
-nnoremap  <Leader>lY     yyI/*<Space><ESC>A<Space>*/<ESC>
-
-" 插入 // 注释 C/Cpp, 因为 如果语句中含有 /* */
-" 那么NerdCommenter  ,ci 注释,会替换掉/* */, 这样下次,cu 或者,ci 去掉注释后,
-" 代码不能正常工作, 所以这时候使用自己的 <Leader>lc
-nnoremap  <Leader>lc     I//<Space><ESC>
-" 复制并使用//注释
-nnoremap  <Leader>ly     yyI//<ESC>
-" }}}
-
-
-"22 如果启用了ftplugin/man.vim插件(runtime  ftplugin/man.vim)
-" 注意这里的":" 是必不可少的,exists 也可以判断自定义命令.
-" :Man 命令, 是通过"runtime ftplugin/man.vim"命令激活的
+" 16 如果启用了ftplugin/man.vim插件(runtime  ftplugin/man.vim)
 " {{{
 if  exists(':Man')
     "if maparg('K') == ''    " has no map
@@ -611,57 +410,34 @@ if  exists(':Man')
 endif
 " }}}
 
-
-"23 quick fix 快速切换
+" 17 quick fix 快速切换: 有用, 但没想到好的快捷键
 " {{{
 " unimpaired [q ]q to 就可以在quickfix之间切换
 "nnoremap cn  :cnext<CR>
 "nnoremap cp  :cprevious<CR>
-nnoremap <Leader>co  :cclose<CR>
+"nnoremap <Leader>co  :cclose<CR>
 "nnoremap coo :cclose<CR>
 " }}}
 
-
-"24 输出当前缓冲区文件的绝对路径
+" 18 输出当前缓冲区文件的绝对路径
 nnoremap  <Leader>lp  :echo  expand('%:p')<CR>
 
-
-"25  将<up> 和 <down> 映射为屏幕行上下, 这个是在vim reference中学到的建议
-" {{{
-nnoremap  <up>   gk
-nnoremap  <down> gj
-" }}}
-
-
-"26 本想用ctrl + P(大写P) 映射, 无奈映射在<C->这种同时按下的模式中,不区分大小写
-" 但在连续按下的情况下,还是区分大小写的,这点要注意
-" inoremap 中也有类似的映射, 见 insert-map.vim
+" 19 inoremap 中也有类似的映射, 见 insert-map.vim
 " {{{
 nnoremap  <Leader><Leader>p  "+p
 nnoremap  <Leader><Leader>P  "+P
 " }}}
 
-
-"27 yp 复制并粘贴
-" 光标位于粘贴新行
+" 20 yp 复制并粘贴
 " {{{
-
-" 有必要吗?
-"nnoremap  yj  y1j
-"nnoremap  yk  y1k
 
 "nnoremap  yp  yyp
 "nnoremap  yP  yyP
-" t is Synonym of :copy, copy don't effect register
-" copy不会影响寄存器'"'
+
+" :t :copy, copy don't effect register
 nnoremap  yp  :t.   <CR>
 nnoremap  yP  :t .-1<CR>
-
-" unimmpaired ]e, [e 交换前后行
-"nnoremap  dp  ddp
-"nnoremap  dP  ddP
 " }}}
-
 
 " 28 cscope setting
 " Cscope的帮助手册中推荐了一些快捷键的用法,
@@ -721,29 +497,10 @@ nnoremap  yc  yt)
 " backward复制到括号
 nnoremap  yC  yT(
 
-
-" 31-3
-" 默认Y功能是yy, 感觉比较鸡肋, :help  Y 文档中也建议改为y $, 更有用些
-" 自此以后Y=y$, D=d$, C=c$, 只有S=cc, 所以S也有些鸡肋
 nnoremap  Y  y$
 
-
-" 32 关于cursor line 和 cursor column 显示与隐藏
-" {{{
-nnoremap  <Leader>ch  :set  cursorline!    cursorline?<CR>
-nnoremap  <Leader>cv  :set  cursorcolumn!  cursorcolumn?<CR>
-" }}}
-
-
 " 34 统计模式/出现次数: word count/number
-" 因为wc不是很好按, 所以用<Leader>wn
-" {{{
-"nnoremap  <Leader>wn  :%s/<C-r><C-w>//gn<CR>
-"nnoremap  <Leader>wc  :%s/<C-r><C-w>//gn<CR>
-" 重构代码: 变量名时, 非常有用, 查看变量名个数, 抚慰一下紧张的心灵
 nnoremap  <Leader>cw  :%s/<C-r><C-w>//gn<CR>
-" }}}
-
 
 " 35 跳转到/*, 或者跳转到 *, 跳转到"#" 注释
 " {{{
@@ -908,21 +665,12 @@ nnoremap  ,,n   o<ESC>0i 1<CR>2<CR>3<CR>4<CR>5<CR>6<CR>7<CR>8<CR>9<CR><Backspace
 nnoremap  ,,N   <ESC>0i 1<CR>2<CR>3<CR>4<CR>5<CR>6<CR>7<CR>8<CR>9<CR><Backspace>10<CR><ESC>10k
 
 
-" 51 toggle fold(closed <------> opend)
-nnoremap <Space> za
-
-
-" 52
-noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
-noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
-
 
 " 53 :tabkey和:retab 命令(在tab和space之间切换)
 "{{{
 " 切换是否显示空白标志:
 " 结合 set listchars=tab:▸\ ,eol:¬ 使用
 " 在makefile中, 查看是否前置空白是不是tab, 很有用
-nnoremap  <Leader>ls   :set  list!  list?<CR>
 
 " tab to space(4 space), need set expandtab
 " tab to space(4 space), need set noexpandtab
@@ -940,13 +688,11 @@ xnoremap  <Leader>rT  :<C-u>set noexpandtab tabstop=4<CR>gv: retab!<CR>
 "xnoremap  <Leader>rT  :set noexpandtab tabstop=4 <bar> retab!<CR>
 "}}}
 
-
 " 54 xxd(在文本和hex之间切换)
 nnoremap  <Leader>xd  :%!xxd    <CR>
 nnoremap  <Leader>xD  :%!xxd -r <CR>
 xnoremap  <Leader>xd  : !xxd    <CR>
 xnoremap  <Leader>xD  : !xxd -r <CR>
-
 
 " 55 search error + trace(ignore case)
 noremap  <Leader>er   :e!<Cr>/\v(error\|trace)\c<CR>
