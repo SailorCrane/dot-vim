@@ -146,8 +146,8 @@ Plug  'Shougo/denite.nvim'
 "{{{
 " map like ctrlp
 " h denite-key-mappings
-call denite#custom#map('insert', '<C-j>', '<denite:move_to_next_line>', 'noremap')
-call denite#custom#map('insert', '<C-k>', '<denite:move_to_previous_line>', 'noremap')
+"call denite#custom#map('insert', '<C-j>', '<denite:move_to_next_line>', 'noremap')
+"call denite#custom#map('insert', '<C-k>', '<denite:move_to_previous_line>', 'noremap')
 "nnoremap  <Leader>sd  :Denite file_rec<CR>
 " 文件递归搜索比ctrlp好用
 nnoremap  <Leader>sd  :Denite file_rec<CR>

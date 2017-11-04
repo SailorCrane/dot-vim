@@ -1,13 +1,22 @@
-" vim: set foldmethod=marker  foldlevel=2: vim modeline( set )
+" vim: set foldmethod=marker  foldlevel=0: vim modeline( set )
 
+" 0 first: filetype off
+"{{{
 filetype off     " required
+"}}}
 
+" 1 plugin manager runtimepath
+"{{{
 " 注意 '+=' 两边不能有空格(set不可以带空格, let可以)
 " 所有vim内置的set命令, 等号两边都不能有空格
 " $Crane_Dot_Vim 在 本项目自带的vimrc中配置
 " 路径变量不要以 "/" 结尾
 set  rtp+=$Crane_Vim_Bundle/vundle/
 set  rtp+=$Crane_Vim_Bundle/vim-plug/
+"}}}
+
+" 2 plugin-manager {begin, end}
+"{{{
 
 "call vundle#rc() " let Vundle manage Vundle,  required!
 call plug#begin( $Crane_Vim_Bundle )
@@ -30,6 +39,20 @@ source   $Plugin_Script/plugin-ft.vim          " 和文件类型相关关:markdo
 
 call plug#end()
 
+"}}}
+
+" 3 after plugin set runtimepath setting
+"{{{
+
+" denite
+call denite#custom#map('insert', '<C-j>', '<denite:move_to_next_line>', 'noremap')
+call denite#custom#map('insert', '<C-k>', '<denite:move_to_previous_line>', 'noremap')
+
+"}}}
+
+" 4 filetype on, syntax on(after manager end)
+"{{{
+
 " 必须讲filetype on放在最后
 " 因为filetype on时vim会执行ftplugin.vim 一次, 并且只执行一次(标志位控制)
 " locate  ftplugin.vim 可以查看
@@ -43,3 +66,5 @@ call plug#end()
 filetype plugin indent on
 filetype on
 syntax enable
+
+"}}}
