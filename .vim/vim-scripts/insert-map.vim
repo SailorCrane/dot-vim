@@ -1,4 +1,5 @@
 
+"=================== imap =====================
 " 1  insert -----> normal
 " map jk to esc
 " if you really want to input "jk", please input <C-v>jk
@@ -133,3 +134,23 @@ inoremap  <Leader>t.  <Esc>:call Toggole_isk_dot()<CR>a
 " CTRL-U in insert mode deletes a lot. Use CTRL-G u to first break undo, so
 " that you can undo CTRL-U without undoing what you typed before it.
 inoremap  <C-U>  <C-G>u<C-U>
+
+
+" 11 关于C/Cpp 头文件包含的映射
+" 因为c-support的 \pg, \pl 就可以实现
+" p:preprocess, g:global,  l:local
+" Use map, not abbrev, because I want chd map more quick, not need <Space> to
+" active it!
+" and, I also can use <C-v> to disable this
+" But, I can't disable abbreviation by <C-v>
+inoremap chd< #include <><ESC>i
+inoremap chd> #include ""<ESC>i
+
+"=================== iabbrev =====================
+"1  My abbreviation at insert mode
+iabbrev q@  @qq.com
+iabbrev @@  215379@qq.com
+
+"2  my self  abbr
+iabbrev jft just for test
+

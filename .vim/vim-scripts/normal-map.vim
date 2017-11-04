@@ -169,8 +169,6 @@ nnoremap  <Leader>ei  :vsplit  $Vim_Scripts/insert-map.vim<CR>
 nnoremap  <Leader>ec  :vsplit  $Vim_Scripts/command-map.vim<CR>
 nnoremap  <Leader>eo  :vsplit  $Vim_Scripts/opending-map.vim<CR>
 
-nnoremap  <Leader>ea  :vsplit  $Vim_Scripts/abbrev-map.vim<CR>
-
 nnoremap  <Leader>et  :vsplit  $Crane_Dot_Vim/test/HarryPotter-Stone.txt<CR>
 
 " <Leader>eb b stand for bundle

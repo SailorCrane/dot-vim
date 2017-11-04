@@ -107,7 +107,6 @@ source  $Crane_Dot_Vim/vim-scripts/insert-map.vim
 source  $Crane_Dot_Vim/vim-scripts/opending-map.vim
 source  $Crane_Dot_Vim/vim-scripts/command-map.vim
 source  $Crane_Dot_Vim/vim-scripts/visual-map.vim
-source  $Crane_Dot_Vim/vim-scripts/abbrev-map.vim
 
 source  $Crane_Dot_Vim/vim-scripts/autocmd.vim
 source  $Crane_Dot_Vim/vim-scripts/tmp-test.vim
