@@ -5,3 +5,5 @@
 
 # vim-session插件保存session的目录
 .vim/sessions/
+.vim/bundle/.cache/
+.vim/bundle/repos
