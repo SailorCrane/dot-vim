@@ -13,3 +13,8 @@ sed -i -r  "s/(Bundle\s+)\"([^\"]*)\.git\"/\1\'\2'/"   $(find .vim/vim-scripts/ 
 # delete ".git" suffix
 #sed -i -r  "s/(Bundle\s+)'([^']*)\.git'/\1\'\2'/"   $(find .vim/bundle/ -name  "*.vim")
 
+# use dein to replace Bundle
+sed -i -r  "s/Bundle\s+'([^']*)'/call deni#add('\1')/" $(find .vim/vim-scripts/ -name  "*.vim")\n
+
+# use Plug to replace Bundle
+sed -i -r  "s/Bundle(\s+'[^']*')/Plug \1/" $(find .vim/vim-scripts/ -name  "*.vim")
