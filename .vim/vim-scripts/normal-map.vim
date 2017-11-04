@@ -665,7 +665,7 @@ nnoremap  >#  ]#
 nnoremap  gm  /\v(int)?\s+main\s*\(.*<CR>
 "}}}
 
-" 43 get full path of file
+" 24 get full path of file
 "{{{
 "nnoremap  <Leader>cf  :let @+=expand("%:p")<CR>
 " 将文件绝对路径获取到终端剪贴板,可以在终端<shift + insert> 粘贴
@@ -676,7 +676,7 @@ nnoremap  gm  /\v(int)?\s+main\s*\(.*<CR>
 nnoremap  <Leader>cf  :let @*=expand("%:p")<CR>
 "}}}
 
-" 44 chmod +x, open.
+" 25 chmod +x, open.
 "{{{
 "nnoremap  <Leader>ex  :call ChmodExec()<CR>
 " 第二个<CR>用于从shell返回, 最后:w 保存文件状态
@@ -691,6 +691,13 @@ nnoremap  <Leader>ex  :!chmod +x %<CR><CR>:w<CR>
 nnoremap  <Leader>of  :call OpenFile()<CR>
 "}}}
 
+" 26 sudo write
+"{{{
+" w !command,  write current buf to stdin of command(note: is buf, not file)
+" > /dev/null drop stdout
+nnoremap  <Leader>sw  :<C-u>w  !sudo tee % >/dev/null<CR>
+"}}}
+
 " 99 关于normal 模式中惯用的n 和 p的总结:
 "{{{
 " 其中CtrlP插件的<C-p> 被 <Leader>sp代替
@@ -699,3 +706,4 @@ nnoremap  <Leader>of  :call OpenFile()<CR>
 " <C-p> 和 <C-n>被映射到了 YankRing中:让n永远和p快乐的在一起窝
 " <Leader>n <Leader>p 还是buffer next 和 buffer previous, 自己已经用习惯了
 "}}}
+
