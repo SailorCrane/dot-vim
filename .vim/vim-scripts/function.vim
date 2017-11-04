@@ -8,7 +8,7 @@
     "normal!  iCC = g++CFLAGS = -gmain : main.cpp$(CC) $(CFLAGS) \-o $@  \ $< \ -std=c++11 \-Wallrun:./main
 "endfun
 
-" 1-1
+" 1-1 编辑Makefile
 fun! EditMakefile()
 "{{{
     " 为什么使用$类型变量的解释:
@@ -41,7 +41,7 @@ fun! EditMakefile()
 endfun
 
 
-" 编辑CMakeLists.txt
+" 1-2 编辑CMakeLists.txt
 fun! EditCMakeLists()
     let $CMake = './CMakeLists.txt'
     edit $CMake
@@ -108,13 +108,15 @@ fun! Sub_chinese_punc()
     :%s/，/,/g
     :%s/．/./ge
     :%s/？/?/ge
+    :%s/　/ /ge
+    :%s/＂/" /ge
+    :%s/＇/' /ge
     ":s/＞/>/g
     ":s/＞/>/g
 endf
 
 
-"8
-
+" 8 插入fold {start, end} block
 fun! InsertBlock(foldlevel, ...)
 "{{{
     let line=getline('.')
