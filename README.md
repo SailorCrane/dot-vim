@@ -1,28 +1,29 @@
 0: 说明
+
 this is a vim backup dir.
 .vim/ 目录下有 ./vim/vim-scripts/目录, vim-scripts中有一些自己写的脚本模块.
 比如normal， insert， abbrev映射， 还有bundle插件管理脚本.
 vimrc通过souce这些脚本产生作用.
 
 
-1: 配置方式1: 执行下列操作即可.(配置方式1: 影响vim命令)
+1-1: 配置方式1: 执行下列操作即可.(配置方式1: 影响vim命令)
     ./enable-vim-work.sh
 
 
-2: 配置方式2: 不影响别人的vim使用, 即使是同一个用户.(非常经典, 借助vim -u命令): 一般用于在服务器执行.
-    2-1: 将项目clone到特定目录.
-         但是如果可以copy的话, 就copy, 这样插件就不用再连接github下载了(需要很长时间).
+1-2: 配置方式2: 不影响别人的vim使用, 即使是同一个用户.(非常经典, 借助vim -u命令): 一般用于在服务器执行.
+    1: 将项目clone到特定目录.
+       但是如果可以copy的话, 就copy, 这样插件就不用再连接github下载了(需要很长时间).
 
-         mkdir ~/CraneVim/ && cd  ~/CraneVim/ &&  git clone https://git.oschina.net/CraneAgain/vimrcBackup
-    2-2: 在~/.bashrc 中定义 alias
-         alias  vimc="vim  -u  ~/CraneVim/vimrc"
-    2-3: 修改 ~/CraneVim/vimrc 中第一个路径变量的值:为vimrc的地址, 后面不要跟"/"
-         let  $Crane_Vim_Home = '~/CraneVim/'
-         source ~/.bashrc
+       mkdir ~/CraneVim/ && cd  ~/CraneVim/ &&  git clone https://git.oschina.net/CraneAgain/vimrcBackup
+    2: 在~/.bashrc 中定义 alias
+       alias  vimc="vim  -u  ~/CraneVim/vimrc"
+    3: 修改 ~/CraneVim/vimrc 中第一个路径变量的值:为vimrc的地址, 后面不要跟"/"
+       let  $Crane_Vim_Home = '~/CraneVim/'
+       source ~/.bashrc
 
-         这时候自己定义的一些指令, 基本已经可以用了.
-         可以使用vimc启动了.
-    2-4: 这时候myBundle.vim 不能使用.: <Leader>ep 修改 ~/myBundle.vim
+       这时候自己定义的一些指令, 基本已经可以用了.
+       可以使用vimc启动了.
+    4: 这时候myBundle.vim 不能使用.: <Leader>ep 修改 ~/myBundle.vim
 
          " 先定义 Crane_Vim_Bundle 变量, 相对于CRANE_DOT_VIM 路径变量定义.
          let  $Crane_Vim_Bundle= $CRANE_DOT_VIM . '/bundle'
@@ -33,7 +34,7 @@ vimrc通过souce这些脚本产生作用.
          set  rtp+=$Crane_Vim_Bundle/easymotion/
          ...
 
-    2-5: 使用vimc测试, 然后将~/myBundle.vim中rtp中不能使用的插件注释即可.
+    5: 使用vimc测试, 然后将~/myBundle.vim中rtp中不能使用的插件注释即可.
          然后vimc 就完全可以使用了.
 
 3: 如何在git日志编辑中, 使用自己的vimc, 需要将vimc做成脚本, 放置在/usr/bin/vimc的位置.
