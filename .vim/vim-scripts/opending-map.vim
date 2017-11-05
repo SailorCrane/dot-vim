@@ -4,8 +4,13 @@
 
 " p stand for parenthese(括号)
 " b means block
-onoremap  (  i(
-onoremap  )  a(
+onoremap  (    i(
+onoremap  )    a(
+
+onoremap  iq   i`
+onoremap  aq   a`
+vnoremap  iq   i`
+vnoremap  aq   a`
 
 " next, Next (,
 onoremap n( :<c-u>normal! f(vi(<CR>
@@ -17,6 +22,12 @@ onoremap N) :<c-u>normal! F(va(<CR>
 " quick delete/changed
 onoremap '  t'
 onoremap "  t"
+onoremap c  t)
+onoremap b  t}
+
+" fix cc for omap c
+nnoremap cc cc
+
 
 
 "onoremap  p  i(
