@@ -14,5 +14,8 @@ Plug   'davidhalter/jedi-vim'
 
 Plug  'python-rope/ropevim'
 
+" % matchit
+Plug  'voithos/vim-python-matchit'
+
 " 暂不启用
 "Plug  'python-mode/python-mode'

@@ -206,9 +206,14 @@
 [submodule ".vim/bundle/vim-workspace"]
     path = .vim/bundle/vim-workspace
     url = https://github.com/thaerkh/vim-workspace.git
+
 [submodule ".vim/bundle/indentpython.vim"]
     path = .vim/bundle/indentpython.vim
     url = https://github.com/vim-scripts/indentpython.vim.git
+[submodule ".vim/bundle/vim-python-matchit"]
+    path = .vim/bundle/vim-python-matchit
+    url = https://github.com/voithos/vim-python-matchit.git
+
 [submodule ".vim/bundle/auto-pairs"]
     path = .vim/bundle/auto-pairs
     url = https://github.com/jiangmiao/auto-pairs.git
