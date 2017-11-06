@@ -4,6 +4,7 @@
 " 添加tmux filetype, 这样编辑~/.tmux.conf时, 可以有彩色.
 " 识别出文件类型后也可以快速添加注释了.
 Plug  'tmux-plugins/vim-tmux'
+Plug  'benmills/vimux'
 
 
 " 和文件类型有关的插件: 比如颜色显示等等

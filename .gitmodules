@@ -294,6 +294,10 @@
     path = .vim/bundle/tmux-complete.vim
     url = https://github.com/wellle/tmux-complete.vim.git
 
+[submodule ".vim/bundle/vimux"]
+    path = .vim/bundle/vimux
+    url = https://github.com/benmills/vimux.git
+
 
 [submodule ".vim/bundle/molokai"]
     path = .vim/bundle/molokai
