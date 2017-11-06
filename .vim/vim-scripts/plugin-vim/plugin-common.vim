@@ -6,9 +6,13 @@
 
 
 "16: jiangmiao/auto-pairs.git
-Plug   'jiangmiao/auto-pairs'
+Plug  'jiangmiao/auto-pairs'
+" auto-pairs对于<CR>也有映射, delimitMate没有
 let g:AutoPairShortcutToggle = '<C-p>'
 let g:AutoPairsMapCh = 0    " 不要将<c-h> 映射为<Backspace>删除键
+
+"16-2 delimitmate 不好用
+"Plug 'Raimondi/delimitMate'
 
 
 " 19-2 easy incsearch
