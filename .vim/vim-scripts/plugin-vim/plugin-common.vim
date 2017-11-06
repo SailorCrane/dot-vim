@@ -97,6 +97,8 @@ Plug  'tpope/vim-tbone'
 " unix command wrap in vim
 Plug  'tpope/vim-eunuch'
 
+Plug  'tpope/vim-dispatch'
+
 Plug  'tpope/vim-scriptease'
 
 

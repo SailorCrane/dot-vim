@@ -345,6 +345,10 @@
     path = .vim/bundle/vim-scriptease
     url = https://github.com/tpope/vim-scriptease.git
 
+[submodule ".vim/bundle/vim-dispatch"]
+    path = .vim/bundle/vim-dispatch
+    url = https://github.com/tpope/vim-dispatch.git
+
 [submodule ".vim/bundle/vim-airline"]
     path = .vim/bundle/vim-airline
     url = https://github.com/vim-airline/vim-airline.git
