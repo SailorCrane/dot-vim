@@ -695,7 +695,8 @@ nnoremap  <Leader>of  :call OpenFile()<CR>
 "{{{
 " w !command,  write current buf to stdin of command(note: is buf, not file)
 " > /dev/null drop stdout
-nnoremap  <Leader>sw  :<C-u>w  !sudo tee % >/dev/null<CR>
+nnoremap     <Leader>sw  :<C-u>w  !sudo tee % >/dev/null<CR>
+cnoreabbrev  sudow       w  !sudo tee % >/dev/null<CR>
 "}}}
 
 " 99 关于normal 模式中惯用的n 和 p的总结:
