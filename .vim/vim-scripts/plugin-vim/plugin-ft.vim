@@ -13,14 +13,14 @@ Plug  'benmills/vimux'
 "sudo apt-get install xdg-utils
 "sudo apt-get install curl
 "sudo apt-get install nodejs-legacy        # (for Debian-based systems)
-Plug  'suan/vim-instant-markdown'
+Plug  'suan/vim-instant-markdown' , {'for' : 'markdown'}
 let g:instant_markdown_autostart = 0        " 只有在markdown文档中, 并且设置了这里的非自动preview
                                             " 才会有InstantMarkdownPreview
                                             " 命令可以使用
 
 
 " markdown syntax color
-Plug  'tpope/vim-markdown'
+Plug  'tpope/vim-markdown' , {'for' : 'markdown'}
 autocmd  BufNewFile,BufReadPost  *.md set filetype=markdown
 let  g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
 let  g:markdown_minlines = 100
@@ -31,4 +31,4 @@ let  g:markdown_minlines = 100
 
 
 " 速写 html/css/js(javascript) : 官方插件. ZenCoding renamed to Emmet.vim
-Plug  'vim-scripts/Emmet.vim'
+Plug  'vim-scripts/Emmet.vim'   , {'for' : ['js', 'html', 'css']}

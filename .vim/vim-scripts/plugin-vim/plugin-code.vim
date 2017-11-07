@@ -15,7 +15,7 @@ Plug  'tpope/vim-commentary'
 
 
 "4: syntastic in scrooloose
-Plug  'scrooloose/syntastic'
+Plug  'scrooloose/syntastic'  , {'for' : [ 'c', 'cpp', 'python', 'sh']}
 " {{{
 " loc for location: lnext, lpre
 let g:syntastic_always_populate_loc_list = 1
@@ -134,14 +134,14 @@ let g:ycm_collect_identifiers_from_comments_and_strings = 0
 
 
 "8: echofunc
-Plug  'mbbill/echofunc'
+"Plug  'mbbill/echofunc'
 
 
 "12:  c-support用来支持c或者cpp的快捷键
+Plug  'SailorCrane/c-support' , {'for' : [ 'c', 'cpp' ]}
 " {{{
 " c-support 就是 vim-scripts官网的c.vim, 二者是一个东西
 " 修改了<c-j>
-Plug  'SailorCrane/c-support'
 
 "12-1: 放在SailorCrane自己用户下
 " c-support 就是 vim-scripts官网的c.vim, 二者是一个东西
@@ -149,7 +149,7 @@ Plug  'SailorCrane/c-support'
 " }}}
 
 "12-2: a.vim :switch between header and source file
-Plug  'vim-scripts/a.vim'
+Plug  'vim-scripts/a.vim'    , {'for' : [ 'c', 'cpp' ]}
 "cnoreabbrev  a  A
 " i stand for  include
 nnoremap <C-t>  :A<CR>:call ShowBufName()<CR>
@@ -213,8 +213,7 @@ nnoremap  <Leader>oi  :IndentGuidesEnable<CR>
 
 
 " cctree: 生成函数调用Tree
-Plug  'hari-rangarajan/CCTree'
-
+Plug  'hari-rangarajan/CCTree' , {'for' : [ 'c', 'cpp' ]}
 let g:CCTreeKeyTraceForwardTree = '<C-\>>'
 let g:CCTreeKeyToggleWindow = '<C-\>w'
 
