@@ -18,8 +18,8 @@
 
 
 "2: NERDTree in scrooloose
-" {{{
 Plug  'scrooloose/nerdtree'
+" {{{
 let NERDChristmasTree=0
 let NERDTreeWinSize=35
 let NERDTreeChDirMode=2
@@ -39,8 +39,8 @@ nnoremap <leader>tn :NERDTreeToggle<cr>
 
 
 "3: code file tag about
-" {{{
 Plug  'vim-scripts/Tagbar'
+" {{{
 "5-2 Tagbar in vim-scripts's repo
 " <leader>tt 被vim-scripts/Align使用了
 " 所以这里使用ti: tag invert, tt :tag toggle
@@ -68,10 +68,10 @@ nnoremap <leader>tb :ToggleBufExplorer<cr>
 "}}}
 
 
-"4-2:  minibufexplorer
+"4-2:  minibufexplorer: 鸡肋
+"Plug  'fholgado/minibufexpl.vim'
 "{{{
 " 因为在 打开quickfix窗口时, 老是崩溃, 所以禁止掉,以后使用bufexplorer
-"Plug  'fholgado/minibufexpl.vim'
 "let g:miniBufExplMapCTabSwitchBufs = 1
 "let g:miniBufExplForceSyntaxEnable = 1
 "let g:miniBufExplModSelTarget      = 1      "不在不可编辑窗口中打开选中的文件buffer
@@ -82,16 +82,17 @@ nnoremap <leader>tb :ToggleBufExplorer<cr>
 
 "5 mru files
 Plug  'vim-scripts/mru.vim'
+"{{{
 nnoremap  <Leader>om   :MRU<CR>
 nnoremap  <Leader>ov   :MRU vim<CR>
 nnoremap  <Leader>op   :MRU py<CR>
-nnoremap  <Leader>os   :MRU sh<CR>
+"nnoremap  <Leader>os   :MRU sh<CR>
 " 因为是根据文件匹配, 所以用py, 不用python
+"}}}
 
-
-"6: undotree
-" {{{
+"6-1: undotree
 Plug  'mbbill/undotree'
+" {{{
 nnoremap  <Leader>ou :UndotreeShow<cr>
 nnoremap  <Leader>tu :UndotreeToggle<cr>
 " }}}
@@ -104,19 +105,18 @@ Plug  'vim-scripts/gundo'
 "8: wintab
 "Plug  'zefei/vim-wintabs'
 
-
 "9: minimap like sublime, provide a preview of all file
 "Plug  'severin-lemaignan/vim-minimap'
+"{{{
 "let g:minimap_show='<Leader>oP'
 "let g:minimap_toggle='<Leader>tp'
 "let g:minimap_update='<Leader>ou'
 "let g:minimap_close='<Leader>gc'
-
+"}}}
 
 "10 ctrlp
 let g:ctrlp_working_path_mode = 0
 Plug  'kien/ctrlp.vim'
-Plug  'vim-scripts/FuzzyFinder'
 " {{{
 " in dir, search more file
 let g:ctrlp_max_files=350
@@ -132,16 +132,19 @@ let g:ctrlp_max_files=350
 " alread for :CtrlP command
 nnoremap  <Leader>sp  :<C-u>CtrlP<CR>
 
-" CtrlP 中没有什么插件可以比得上Fuzzy Find 的 FunFile, 可以搜索所有路径.
-nnoremap  <Leader>sf  :<C-u>FufFile<CR>
-
 "nnoremap  <Leader>sb  :<C-u>FufBuffer<CR>
 nnoremap  <Leader>sb  :<C-u>CtrlPBuffer<CR>
 nnoremap  <Leader>sm  :<C-u>CtrlPMixed<CR>
 " }}}
 
+"10-2 FuzzyFinder: 路径搜索功能被denite替代(因为denite支持模糊搜索)
+Plug  'vim-scripts/FuzzyFinder'
+"{{{
+" CtrlP 中没有什么插件可以比得上Fuzzy Find 的 FufFile, 可以搜索所有路径.
+nnoremap  <Leader>sf  :<C-u>FufFile<CR>
+"}}}
 
-"11 unite(for vim8, nicer)
+"10-3 unite(for vim8, nicer)
 Plug  'Shougo/denite.nvim'
 "{{{
 " map like ctrlp
@@ -155,13 +158,17 @@ nnoremap  <Leader>sd  :Denite file_rec<CR>
 "call denite#custom#map('insert', '<C-p>', '<denite:move_to_previous_line>', 'noremap')
 "}}}
 
+"10-4 搜索文件
+Plug  'wincent/ferret'
+
 
 "12 tabman: tab + window管理, 类似于BufExplorer
 Plug  'kien/tabman.vim'
+"{{{
 " 因为m 已经被MRU占用了
 let g:tabman_toggle = '<leader>tM'
 let g:tabman_focus  = '<leader>oM'
-
+"}}}
 
 "13 Conque-Shell
 Plug   'oplatek/Conque-Shell'
@@ -189,5 +196,16 @@ nnoremap <Leader>cg  :Goyo!<CR>
 Plug  'mhinz/vim-startify'
 
 
-"17 搜索文件
-Plug  'wincent/ferret'
+"18 scratch
+Plug 'mtth/scratch.vim'
+"{{{
+let g:scratch_no_mappings = 1
+nnoremap <Leader>os :Scratch<CR><C-w>T
+xmap     <Leader>os <plug>(scratch-selection-reuse)<C-w>T
+
+    " nmap gs <plug>(scratch-insert-reuse)
+    " nmap gS <plug>(scratch-insert-clear)
+    " xmap gs <plug>(scratch-selection-reuse)
+    " xmap gS <plug>(scratch-selection-clear)
+    " nnoremap gZzZz gs
+"}}}

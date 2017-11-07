@@ -307,20 +307,6 @@ endif
 Plug  'vim-scripts/sudo.vim'
 
 
-" 26 scratch
-Plug 'mtth/scratch.vim'
-
-let g:scratch_no_mappings = 1
-     nnoremap <Leader>cr :Scratch<CR><C-w>T
-     xmap     <Leader>cr <plug>(scratch-selection-reuse)<C-w>T
-
-    "nmap gs <plug>(scratch-insert-reuse)
-    " nmap gS <plug>(scratch-insert-clear)
-    " xmap gs <plug>(scratch-selection-reuse)
-    " xmap gS <plug>(scratch-selection-clear)
-    " nnoremap gZzZz gs
-
-
 " 27
 "Plug  'wincent/terminus'
 
