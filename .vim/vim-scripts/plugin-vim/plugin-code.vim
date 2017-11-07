@@ -1,7 +1,30 @@
 " vim: set foldmethod=marker  foldlevel=0: vim modeline( set )
 
+let g:all_languages = [
+    \ 'c',
+    \ 'cpp',
+    \ 'sh',
+    \ 'zsh',
+    \ 'python',
+    \ 'vim',
+    \
+    \ 'scheme',
+    \
+    \ 'javascript',
+    \ 'html',
+    \ 'css',
+    \
+    \ 'ruby',
+    \
+    \ 'gitconfig',
+    \ 'conf',
+    \
+    \ 'gdb',
+    \ ]
+
+
 "3: nerdcommenter in scrooloose
-Plug  'scrooloose/nerdcommenter'
+Plug  'scrooloose/nerdcommenter', { 'for' : g:all_languages }
 " {{{
 
 " <C-_> stand for <C-/>, 可以插入模式下使用: <C-v><C-/> 查看
@@ -11,7 +34,7 @@ Plug  'scrooloose/nerdcommenter'
 " }}}
 
 "3-2
-Plug  'tpope/vim-commentary'
+Plug  'tpope/vim-commentary',     { 'for' : g:all_languages }
 
 
 "4: syntastic in scrooloose
@@ -56,7 +79,7 @@ let g:syntastic_cpp_check_header = 1
 
 
 "4-2: ale: syntax check(need vim8)
-"Plug  'w0rp/ale'
+"Plug  'w0rp/ale' ,  { 'for' : g:all_languages }
 "{{{
 ""let g:ale_sign_error = '✗'
 ""let g:ale_sign_warning = '⚠'
@@ -81,7 +104,7 @@ let g:syntastic_cpp_check_header = 1
 "}}}
 
 "6: YouCompleteMe
-"Plug  'Valloric/YouCompleteMe'
+"Plug  'Valloric/YouCompleteMe' ,  { 'for' : g:all_languages }
 " {{{
 " 自动补全配置
 "set completeopt=longest,menu    "让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
@@ -221,4 +244,4 @@ let g:CCTreeKeyToggleWindow = '<C-\>w'
 " endwise from tpope
 " 对于sh的支持一般: 输出if then 才会输出fi, 输入do回车输出done
 " 可以由ultisnips.git代替
-Plug  'tpope/vim-endwise'
+Plug  'tpope/vim-endwise' ,  { 'for' : g:all_languages }
