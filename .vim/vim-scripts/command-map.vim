@@ -12,17 +12,30 @@ fun! Set_verbose()
     echo 'vbs is ' + &verbose
 endfun
 
-cabbrev  vbs  :call Set_verbose()
+cnoreabbrev  vbs  :call Set_verbose()
+
+" 1-2
+cnoreabbrev  msg  message
 
 
 "2 Bundle abb
-cabbrev  BI   BundleInstall
-cabbrev  bi   BundleInstall
-cabbrev  BL   BundleList
-" bl 和 blast冲突了
-"cabbrev  bl   BundleList
-cabbrev  BC   BundleClear
-cabbrev  bc   BundleClear
+if  exists(':PlugInstall')
+    cabbrev  BI   PlugInstall
+    cabbrev  bi   PlugInstall
+    cabbrev  BL   PlugStatus
+    " bl 和 blast冲突了
+    "cabbrev  bl   BundleList
+    cabbrev  BC   PlugClean
+    cabbrev  bc   PlugClean
+else    " Bundle
+    cabbrev  BI   BundleInstall
+    cabbrev  bi   BundleInstall
+    cabbrev  BL   BundleList
+    " bl 和 blast冲突了
+    "cabbrev  bl   BundleList
+    cabbrev  BC   BundleClear
+    cabbrev  bc   BundleClear
+endif
 
 
 "3 quit anyway
@@ -161,7 +174,7 @@ cnoreabbrev ree   redir  END
 cnoreabbrev ere   e  /tmp/re.txt
 
 
-" ===================== cmap ===================
+" ===================== cmap =============================
 
 " 1 <C-a> to line begin(like shell command line)
 cnoremap <C-a>  <C-b>
