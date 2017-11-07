@@ -119,4 +119,7 @@ augroup CraneGroup
     " 现在有了 CmdWinEnter事件, 不需要如下映射
     "nnoremap <Leader><CR>    <CR>
 
+    "16 scratch: 没有起作用...
+    au  FileType  scratch  setlocal rnu nu
+
 augroup END "end of CraneGroup
