@@ -12,6 +12,8 @@ filetype off     " required
 " $Crane_Dot_Vim 在 本项目自带的vimrc中配置
 " 路径变量不要以 "/" 结尾
 set  rtp+=$Crane_Vim_Bundle/vundle/
+
+let g:plug_shallow = 0  " no shadow clone
 set  rtp+=$Crane_Vim_Bundle/vim-plug/
 "}}}
 
