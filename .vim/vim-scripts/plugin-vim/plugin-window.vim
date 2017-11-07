@@ -18,7 +18,14 @@
 
 
 "2: NERDTree in scrooloose
-Plug  'scrooloose/nerdtree'
+let g:nerdtree_all_commands = [
+            \'NERDTree',
+            \'NERDTreeToggle',
+            \'NERDTreeFind',
+            \'NERDTreeFocus',
+            \'NERDTreeFromBookmark',
+            \]
+Plug  'scrooloose/nerdtree', { 'on' : g:nerdtree_all_commands }
 " {{{
 let NERDChristmasTree=0
 let NERDTreeWinSize=35
@@ -122,7 +129,6 @@ Plug  'kien/ctrlp.vim'
 let g:ctrlp_max_files=350
 "let g:ctrlp_max_depth=40
 " sp stand for "search ctrlP"
-" sf stand for "search FuzzyFinder"
 " CtrlP 插件 似乎是只要设置别的映射,映射到了CtrlP命令,那么<C-p>的映射就会自动取消.CtrlP的这个功能还是很棒的
 " 这样<C-p> 就可以用在Yankring中了
 " s stand for "search"
@@ -138,9 +144,10 @@ nnoremap  <Leader>sm  :<C-u>CtrlPMixed<CR>
 " }}}
 
 "10-2 FuzzyFinder: 路径搜索功能被denite替代(因为denite支持模糊搜索)
-Plug  'vim-scripts/FuzzyFinder'
+Plug  'vim-scripts/FuzzyFinder' , { 'on' : ['FufFile'] }
 "{{{
 " CtrlP 中没有什么插件可以比得上Fuzzy Find 的 FufFile, 可以搜索所有路径.
+" sf stand for "search FuzzyFinder"
 nnoremap  <Leader>sf  :<C-u>FufFile<CR>
 "}}}
 
