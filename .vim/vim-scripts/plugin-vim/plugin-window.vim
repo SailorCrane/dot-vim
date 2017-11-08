@@ -46,7 +46,7 @@ nnoremap <leader>tn :NERDTreeToggle<cr>
 
 
 "3: code file tag about
-Plug  'vim-scripts/Tagbar'
+Plug  'vim-scripts/Tagbar' , { 'on' : ['TagbarOpen', 'TagbarToggle'] }
 " {{{
 "5-2 Tagbar in vim-scripts's repo
 " <leader>tt 被vim-scripts/Align使用了
@@ -67,7 +67,7 @@ let g:tagbar_left = 0
 
 
 "4-1 bufexplorer
-Plug   'jlanzarotta/bufexplorer'
+Plug   'jlanzarotta/bufexplorer' , { 'on' : ['BufExplorerVerticalSplit', 'ToggleBufExplorer'] }
 "{{{
 let g:bufExplorerSplitVertSize=30
 nnoremap <leader>ob :BufExplorerVerticalSplit<CR>
@@ -88,7 +88,7 @@ nnoremap <leader>tb :ToggleBufExplorer<cr>
 
 
 "5 mru files
-Plug  'vim-scripts/mru.vim'
+Plug  'vim-scripts/mru.vim' , { 'on' : ['MRU'] }
 "{{{
 nnoremap  <Leader>om   :MRU<CR>
 nnoremap  <Leader>ov   :MRU vim<CR>
@@ -98,15 +98,14 @@ nnoremap  <Leader>op   :MRU py<CR>
 "}}}
 
 "6-1: undotree
-Plug  'mbbill/undotree'
+Plug  'mbbill/undotree' ,   { 'on' : ['UndotreeShow', 'UndotreeToggle'] }
 " {{{
 nnoremap  <Leader>ou :UndotreeShow<cr>
 nnoremap  <Leader>tu :UndotreeToggle<cr>
 " }}}
 
-
 "6-2 gundo stand for gnu undo
-Plug  'vim-scripts/gundo'
+"Plug  'vim-scripts/gundo'
 
 
 "8: wintab
@@ -178,7 +177,7 @@ let g:tabman_focus  = '<leader>oM'
 "}}}
 
 "13 Conque-Shell
-Plug   'oplatek/Conque-Shell'
+Plug   'oplatek/Conque-Shell', { 'on' : ['ConqueTermVSplit', 'ConqueTermVSplit'] }
 " {{{
 "nnoremap   <C-n>  :ConqueTermVSplit bash<CR>
 "nnoremap   <C-b>  :ConqueTermVSplit bash<CR>
@@ -189,12 +188,12 @@ let g:ConqueTerm_StartMessages = 0
 
 
 "14 calendar
-Plug  'itchyny/calendar.vim'
+Plug  'itchyny/calendar.vim', { 'on' : ['Calendar'] }
 nnoremap <Leader>oC :Calendar<CR>
 
 
 "15 goyo.vim
-Plug  'junegunn/goyo.vim'
+Plug  'junegunn/goyo.vim' , { 'on' : ['Goyo'] }
 nnoremap <Leader>tg  :Goyo<CR>
 nnoremap <Leader>cg  :Goyo!<CR>
 
@@ -204,7 +203,8 @@ Plug  'mhinz/vim-startify'
 
 
 "18 scratch
-Plug 'mtth/scratch.vim'
+" Plug 'on' support map
+Plug 'mtth/scratch.vim' , { 'on' : ['Scratch', '<plug>(scratch-selection-reuse)'] }
 "{{{
 let g:scratch_no_mappings = 1
 nnoremap <Leader>os :Scratch<CR><C-w>T
