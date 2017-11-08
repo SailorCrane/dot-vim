@@ -29,9 +29,9 @@
 [submodule ".vim/bundle/Colour-Sampler-Pack"]
     path = .vim/bundle/Colour-Sampler-Pack
     url = https://github.com/vim-scripts/Colour-Sampler-Pack.git
-[submodule ".vim/bundle/EasyGrep"]
-    path = .vim/bundle/EasyGrep
-    url = https://github.com/vim-scripts/EasyGrep.git
+[submodule ".vim/bundle/vim-easygrep"]
+    path = .vim/bundle/vim-easygrep
+    url = https://github.com/dkprice/vim-easygrep
 [submodule ".vim/bundle/Emmet.vim"]
     path = .vim/bundle/Emmet.vim
     url = https://github.com/vim-scripts/Emmet.vim.git

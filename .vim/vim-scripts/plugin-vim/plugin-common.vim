@@ -112,8 +112,7 @@ Plug  'tpope/vim-scriptease'
 
 
 "27 EasyGrep
-Plug  'vim-scripts/EasyGrep'
-
+Plug  'dkprice/vim-easygrep'
 
 " tlib: vim util fun
 " snipmate also need
