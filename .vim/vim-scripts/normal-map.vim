@@ -221,7 +221,7 @@ nnoremap  <Leader>w  :update<CR>
 
 " warning: terminal not support <C-s>, you need <C-q> to quit <C-s>
 "nnoremap  <C-s>        :Ack  <C-r><C-w> % <CR>
-nnoremap  <C-w>s       :Ack  <C-r><C-w> % <CR>
+"nnoremap  <C-w>s       :Ack  <C-r><C-w> % <CR>
 " }}}
 
 " 7-1 buffer 操作
