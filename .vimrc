@@ -39,6 +39,8 @@ set showcmd                              " 没有完成的normal命令都在右�
 set ruler                                " 显示当先位置
 set cursorline                           " autocmd窗口相关有设置(光标行线)
 set cursorcolumn                         " 光标列线
+set winminheight=0
+set winminwidth=0
 
 set laststatus=2                         " always show StatusLine
 set cmdheight=2                          " ex-cmd height is 2 line
