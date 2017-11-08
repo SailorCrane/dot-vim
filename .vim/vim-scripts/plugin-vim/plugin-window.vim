@@ -208,7 +208,7 @@ Plug  'mhinz/vim-startify'
 
 "18 scratch
 " Plug 'on' support map
-Plug 'mtth/scratch.vim' , { 'on' : ['Scratch', '<plug>(scratch-selection-reuse)'] }
+Plug 'SailorCrane/scratch.vim' , { 'on' : ['Scratch', '<plug>(scratch-selection-reuse)'] }
 "{{{
 let g:scratch_no_mappings = 1
 nnoremap <Leader>os :Scratch<CR><C-w>T

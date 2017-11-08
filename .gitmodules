@@ -502,7 +502,7 @@
 
 [submodule ".vim/bundle/scratch.vim"]
     path = .vim/bundle/scratch.vim
-    url = https://github.com/mtth/scratch.vim.git
+    url = https://github.com/SailorCrane/scratch.vim.git
 
 
 # paste
