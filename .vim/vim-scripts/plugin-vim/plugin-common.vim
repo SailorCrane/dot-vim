@@ -306,6 +306,11 @@ endif
 Plug  'vim-scripts/sudo.vim'
 
 
+" 26
+Plug  'myusuf3/numbers.vim'
+"let g:numbers_exclude = ['unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m']
+let g:numbers_exclude = []
+
 " 27
 "Plug  'wincent/terminus'
 

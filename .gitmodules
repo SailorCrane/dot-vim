@@ -3,7 +3,7 @@
 # =================== book =====================
 [submodule ".vim/book/vim-galore-zh_cn"]
     path = .vim/book/vim-galore-zh_cn
-    url = https://github.com/wsdjeg/vim-galore-zh_cn
+    url = https://github.com/wsdjeg/vim-galore-zh_cn.git
 
 
 # =================== plugin =====================
@@ -31,7 +31,7 @@
     url = https://github.com/vim-scripts/Colour-Sampler-Pack.git
 [submodule ".vim/bundle/vim-easygrep"]
     path = .vim/bundle/vim-easygrep
-    url = https://github.com/dkprice/vim-easygrep
+    url = https://github.com/dkprice/vim-easygrep.git
 [submodule ".vim/bundle/Emmet.vim"]
     path = .vim/bundle/Emmet.vim
     url = https://github.com/vim-scripts/Emmet.vim.git
@@ -503,6 +503,10 @@
 [submodule ".vim/bundle/scratch.vim"]
     path = .vim/bundle/scratch.vim
     url = https://github.com/SailorCrane/scratch.vim.git
+
+[submodule ".vim/bundle/numbers.vim"]
+    path = .vim/bundle/numbers.vim
+    url = https://github.com/myusuf3/numbers.vim.git
 
 
 # paste
