@@ -194,7 +194,7 @@ vmap V <Plug>(expand_region_shrink)
 "36-5  lastpat
 " vi/ 选择模式选中下一次匹配
 " 鸡肋, 因为vim的gn, gN 已经可以在选择模式中, 选中下一次匹配了
-"Plug   'kana/vim-textobj-lastpat'
+Plug   'kana/vim-textobj-lastpat'
 
 
 " 37 split window by visual-text
