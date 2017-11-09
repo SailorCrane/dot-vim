@@ -1,0 +1,38 @@
+" vim: set ft=vim foldmethod=marker  foldlevel=0: vim modeline( set )
+
+" s-交换两个单词/内容(或者多个单词).txt
+
+" :Author: crane
+" :Email: crane@crane-pc
+" :Date: 2017-11-09 22:15
+
+"  =================== 示例1 =====================
+" method 1:
+%S/{man,dog}/{dog,man}/g
+%S/{man,dog,piggy}/{piggy,dog,man}/g
+"
+
+" method 2: 使用字典相互映射(map to eatch other)
+let d = {'new' : 'old', 'old' : 'new' }
+
+"submatch(1) just like \1, reuse pre match
+" '\=' 是'expression sub', 类似于\r, \n, \x
+/\v(<old>|<new>)
+s//\=d[submatch(1)]/g
+
+" method 3: 笨方法(编程swap)
+s/a/tmp/g
+s/b/a/g
+s/tmp/b/g
+
+"  =================== 示例2 =====================
+" 字符串算术替换, 将数字减1
+
+" 1 输出113
+echo '123' - 10
+
+" 2 匹配数字
+/\v(<\d+>)
+
+" 3 匹配数字减1
+s//\=submatch(1)-1/g

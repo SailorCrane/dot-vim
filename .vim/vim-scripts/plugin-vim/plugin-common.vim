@@ -84,13 +84,23 @@ Plug   'tpope/vim-unimpaired'
 "使用:S 命令, 交换词
 ":S/{good, bad}/
 Plug  'tpope/vim-abolish'
-
-" Examples:
+"{{{
+" Examples1:
 " :Subvert/facilit{y,ies}/building{,s}/g    替换
 " :Subvert/facilit{y,ies}/building{,s}/gn   计数
 " :Subvert/facilit{y,ies}/building{,s}/gc   确认(confire)
 " :Subvert/facilit{y,ies}/building{,s}/ge   no-error
 
+" Examples2: swap two word
+" method 1:
+" :%S/{man,dog}/{dog,man}/g
+"
+" method 2:
+" let d = {'new' : 'old', 'old' : 'new' }
+" submatch(1) just like \1, reuse pre match
+" '\=' 是'expression sub', 类似于\r, \n, \x
+" :s/\v(old|new)/\=d[submatch(1)]/g
+"}}}
 
 " projectionist
 Plug  'tpope/vim-projectionist'
