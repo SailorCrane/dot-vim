@@ -30,12 +30,13 @@ inoremap <C-l> <Right>
 "inoremap  <C-w>  <Esc>:w<CR>a
 " NOTE:  <C-w>的习惯还是不能改: 无论是在插入模式, Ex模式, 还是bash中
 " <C-s>在终端下, 依旧是停止回显, 只能在gvim中使用, 所以后面添加了<C-b>
-"inoremap  <C-s>  <Esc>:w<CR>a
+inoremap  <silent> <C-s>  <Esc>:w<CR>a
 
-" i_ctrl-y 和 i_ctrl-e 一样,也是没有什么卵用的按键, 所以映射为复制一行
+"  和 i_ctrl-e 一样,也是没有什么卵用的按键, 所以映射为复制一行
 " 并且光标移动到复制后的行.这是因为使用中,发现一般复制后,更多会移动到
-" 复制后的行, 去操作
-inoremap  <C-y>  <Esc>yypA
+" 复制行
+" i_ctrl-y 用来在jedi-vim快补全时补全, 所以不用在这里
+inoremap  <C-c>  <Esc>yypA
 
 " <C-o> 在插入模式下,还有别的妙用: 本职功能: 进入insert-normal子模式
 "inoremap  <C-o>  <Esc>o
