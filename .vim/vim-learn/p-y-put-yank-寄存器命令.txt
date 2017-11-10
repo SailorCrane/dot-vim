@@ -13,7 +13,7 @@ put a
 
 =================== yank =====================
 yank: 拷贝某行内容到寄存器中(默认当前行)
-注意 yank a 和 yank A的区别
+注意 yank a 和 yank A的区别(a:set,  A:append)
 yank a
 yank A
 
@@ -22,3 +22,8 @@ yank A
 register a, 打印寄存器a的值.等同于
 echo  @a
 <c-r>a
+
+
+=================== use example =====================
+" yank TODO to register
+:g/TODO/ yank A
