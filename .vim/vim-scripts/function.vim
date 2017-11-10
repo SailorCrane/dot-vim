@@ -69,7 +69,6 @@ endfun
 fun! ShowBufName()
     echo expand("%:p")
 endfun
-
 " 定义一个自定义命令
 command!  ShowBufName  call ShowBufName()
 
@@ -94,25 +93,32 @@ fun! MaxCurrentWindow()
 "}}}
 endfun
 
-
 " 6: full screen gvim
 fun! Full_screen_gvim()
+"{{{
     "if has('gui_running')
     set lines=999 columns=999
     "endif
+"}}}
 endf
-
 
 " 7 substitude 中文符号
 fun! Sub_chinese_punc()
+"{{{
     :%s/，/,/g
     :%s/．/./ge
     :%s/？/?/ge
     :%s/　/ /ge
+
     :%s/＂/" /ge
     :%s/＇/' /ge
-    ":s/＞/>/g
-    ":s/＞/>/g
+
+    :%s/（/(/ge
+    :%s/）/)/ge
+
+    :%s/＞/>/ge
+    :%s/＜/</ge
+"}}}
 endf
 
 
@@ -174,7 +180,7 @@ fun! CloseBlock(foldlevel)
                 \              get(cmsl, 1, ''))
 "}}}
 endfunction
-
+"{{{
 "nnoremap ,{          o<C-o>:call InsertBlock(foldlevel('.'))<CR><Esc>
 "nnoremap ,}          o<C-o>:call InsertBlock(foldlevel('.')+1)<CR><Esc>
 "nnoremap ,[          o<C-o>:call InsertBlock(foldlevel('.')-1)<CR><Esc>
@@ -185,12 +191,15 @@ endfunction
 "inoremap ,[           <C-o>:call InsertBlock(foldlevel('.')-1)<CR>
 "inoremap ,-           <C-o>:call CloseBlock(foldlevel('.'))<CR>
 "inoremap ,+           <C-o>:call InsertBlock(foldlevel('.')+1)<CR><CR><C-o>:call CloseBlock(foldlevel('.'))<CR>
+"}}}
 
 " 9 only Man page(for bash mav)
 fun! ManWinOnly(man_want)
+"{{{
     echom a:man_want
     let $man_want=a:man_want
     Man $man_want
     only
+"}}}
 endf
 
