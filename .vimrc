@@ -90,7 +90,16 @@ set wrapscan                             " 使用/, ?, n, N 搜索时, 如果搜
 set shell=$SHELL                         " set :shell to run zsh
 
 set colorcolumn=81
-set grepprg=grep\ -E\ -n\ $*\ /dev/null  " add -E to default setting
+
+" 不太有用, 因为Ack插件工作的非常友好流畅
+if executable('ack')
+    set grepprg=ack\ --nogroup\ --column\ $* " ack support column
+    set grepformat=%f:%l:%c:%m               " file, line, column, match-text
+    "set grepprg=ack\ --nogroup\ $*
+    "set grepformat=%f:%l:%m               " file, line, column, match-text
+else
+    set grepprg=grep\ -E\ -n\ $*\ /dev/null  " add -E to default setting
+endif
 
 set foldignore=                          " default is ignore '#'
 set nrformats=alpha                      " number format(C-a, C-x)

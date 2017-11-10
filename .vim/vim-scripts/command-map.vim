@@ -3,6 +3,7 @@
 " =================== cabbrev =====================
 
 "1 Toggle verbose
+"{{{
 fun! Set_verbose()
     if( 0 == &verbose )
         set verbose=1
@@ -13,29 +14,26 @@ fun! Set_verbose()
 endfun
 
 cnoreabbrev  vbs  :call Set_verbose()
+"}}}
 
 " 1-2
 cnoreabbrev  msg  message
 
 
 "2 Bundle abb
+"{{{
 if  exists(':PlugInstall')
-    cabbrev  BI   PlugInstall
     cabbrev  bi   PlugInstall
-    cabbrev  BL   PlugStatus
-    " bl 和 blast冲突了
-    "cabbrev  bl   BundleList
-    cabbrev  BC   PlugClean
     cabbrev  bc   PlugClean
-else    " Bundle
-    cabbrev  BI   BundleInstall
-    cabbrev  bi   BundleInstall
-    cabbrev  BL   BundleList
     " bl 和 blast冲突了
-    "cabbrev  bl   BundleList
-    cabbrev  BC   BundleClear
+    cabbrev  Bl   BundleList
+else    " Bundle
+    cabbrev  bi   BundleInstall
+    " bl 和 blast冲突了
+    cabbrev  BL   BundleList
     cabbrev  bc   BundleClear
 endif
+"}}}
 
 
 "3 quit anyway
@@ -47,6 +45,7 @@ cabbrev  ll   ls!
 
 
 "5 man in vim
+"{{{
 " 除非必要情况, 否则command mode下,尽量使用abbrev
 " 而不是使用cmap
 " abbrev, 可以有单词检测的功能
@@ -60,7 +59,7 @@ endif
 
 "6 show absolute path of current file
 cabb  lp  :echo  expand("%:p")
-
+"}}}
 
 
 "8 cabbv mk to make
@@ -90,47 +89,46 @@ cabbrev  mkj  make -j
 "}}}
 
 "9 cdt to cd test: 不信这么多父级目录,还不够你返回的.
-" r stand for root
+"{{{
 cnoreabbrev cdv    cd ~/.vim
 cnoreabbrev cdt    cd test
 cnoreabbrev cdb    cd build
 cnoreabbrev cds    cd source
+
 " cd root
 cnoreabbrev cdr    cd /
+
 " cd home
 cnoreabbrev cdh    cd ~
 cnoreabbrev cd-    cd -
 cnoreabbrev cdd    cd ~/Downloads
 cnoreabbrev cdS    cd ~/Share
 
-cnoreabbrev cdp    cd ../
-cnoreabbrev cd2p   cd ../../
-cnoreabbrev cd3p   cd ../../../
-cnoreabbrev cd4p   cd ../../../../
 
 " 直接去掉p,更快
+cnoreabbrev cdp    cd ../
 cnoreabbrev cd1   cd ../
 cnoreabbrev cd2   cd ../../
 cnoreabbrev cd3   cd ../../../
 cnoreabbrev cd4   cd ../../../../
-
-"command!  Cdmyt    cd ~/test!
+"}}}
 
 
 "13 清屏: 清除bash屏幕, 这样make时不会混淆视听
+"{{{
 "有时候自己要运行当前目录下的./clear 清空一下文件,
 "clear缩写影响自己,所以disable, 就用clr好了
 "cnoreabbrev  clear !clear
 cnoreabbrev  clr   !clear
 cnoreabbrev  cle   !clear
-
+"}}}
 
 "14 映射 :co 为 :cclose, 因为:co 也可以用:t 表示(用to记忆)
 "cnoreabbrev  co   cclose
 
 
 "15 quick :%s
-cnoreabbrev  ss  :%s///g<left><left><left>
+"cnoreabbrev  ss  :%s///g<left><left><left>
 
 
 "16 colorscheme  molokai
@@ -138,6 +136,7 @@ cnoreabbrev  csm  colorscheme  molokai
 
 
 "17  set fdm=manual
+"{{{
 cnoreabbrev  manu    set  foldmethod=manual
 cnoreabbrev  manual  set  foldmethod=manual
 
@@ -145,9 +144,10 @@ cnoreabbrev  manual  set  foldmethod=manual
 "是因为如果fdm作为abbr, 那么set fdm=indent之类的时, fdm也会扩展
 cnoreabbrev  fd         set  fdm?
 "cnoreabbrev  foldmethod  set  fdm?
+"}}}
 
-
-"18 grep search
+"18 grep/ack search
+"{{{
 "   search recursive
 "   search world
 "   search now  : "%" stand for current file
@@ -161,6 +161,8 @@ cnoreabbrev  fd         set  fdm?
 
 " ack auto recursive and auto exclude ".git", ".svn", about tabs?
 " --python same as --type=python
+
+cnoreabbrev ack Ack
 cnoreabbrev sr  Ack  ""                <C-b><Right><Right><Right><Right><Right><Right>
 cnoreabbrev sw  Ack  "<C-r><C-w>"      <CR>
 cnoreabbrev sn  Ack  ""    %           <C-b><Right><Right><Right><Right><Right><Right>
@@ -172,9 +174,11 @@ cnoreabbrev sc  Ack  ""    --cpp       <C-b><Right><Right><Right><Right><Right><
 cnoreabbrev red   redir  > /tmp/re.txt
 cnoreabbrev ree   redir  END
 cnoreabbrev ere   e  /tmp/re.txt
+"}}}
 
 
 " ===================== cmap =============================
+
 
 " 1 <C-a> to line begin(like shell command line)
 cnoremap <C-a>  <C-b>
@@ -209,6 +213,8 @@ cnoremap  jk <C-c>
 " 所以这里依然使用<C-p> 和 <C-n>
 " 有需求时, 再使用<Up> 和 <Down>
 "}}}
+
+"{{{
 "cnoremap  <C-k>  <C-p>
 "cnoremap  <C-j>  <C-n>
 cnoremap  <C-k>  <Up>
@@ -216,21 +222,24 @@ cnoremap  <C-j>  <Down>
 
 cnoremap  <C-y>  <C-p>
 cnoremap  <C-t>  <C-n>
+"}}}
 
 " 4-2 command line move(left/right, fore/back)
+"{{{
 cnoremap  <C-h>   <left>
 cnoremap  <C-l>   <right>
 
 cnoremap  <C-b>   <S-Left>
 cnoremap  <C-f>   <S-Right>
+"}}}
 
 
 " 5 :快速键入当前光标下单词, 第二次可以不用键入ctrl
-" <C-r>a 和 <C-r>W 是同一个功能:都是在Ex模式中插入当前光标的WORD
+" <C-r>a 和 <C-r>W 是同一个功能:都是在Ex模式中插入当前光标的WORD{{{
 cnoremap  <C-r>w  <C-r><C-w>
 cnoremap  <C-r>a  <C-r><C-a>
 cnoremap  <C-r>W  <C-r><C-a>
 cnoremap  <C-r>f  <C-r><C-f>
 cnoremap  <C-r>p  <C-r><C-p>
-
+"}}}
 
