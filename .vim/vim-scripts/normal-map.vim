@@ -41,7 +41,8 @@ nnoremap <C-g> 2<C-g>
 "{{{
 "    change encoding, and write to disk.
 "    eu stand for: encoding unix(utf-8 + unix-line)
-nnoremap <Leader>eu  :set fileencoding=utf-8 fileformat=unix<CR>:w<CR>
+"nnoremap <Leader>eu  :set fileencoding=utf-8 fileformat=unix<CR>:w<CR>
+nnoremap <Leader>u  :set fileencoding=utf-8 fileformat=unix<CR>:w<CR>
 "}}}
 
 " 2-1 Toggle  something
@@ -170,6 +171,7 @@ nnoremap  <Leader>ec  :vsplit  $Vim_Scripts/command-map.vim<CR>
 nnoremap  <Leader>eo  :vsplit  $Vim_Scripts/opending-map.vim<CR>
 
 nnoremap  <Leader>et  :vsplit  $Crane_Dot_Vim/test/HarryPotter-Stone.txt<CR>
+nnoremap  <Leader>eU  :vsplit  $Crane_Dot_Vim/vimtutal.txt<CR>
 
 " <Leader>eb b stand for bundle
 nnoremap  <Leader>eb  :vsplit  $Vim_Scripts/myBundle.vim<CR>
