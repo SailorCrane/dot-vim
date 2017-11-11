@@ -508,6 +508,10 @@
     path = .vim/bundle/numbers.vim
     url = https://github.com/myusuf3/numbers.vim.git
 
+[submodule ".vim/bundle/vim-swap-string"]
+    path = .vim/bundle/vim-swap-string
+    url = https://github.com/SailorCrane/vim-swap-string.git
+
 
 # paste
 # https://github.com/ConradIrwin/vim-bracketed-paste
