@@ -18,6 +18,7 @@ let g:all_languages = [
     \
     \ 'gitconfig',
     \ 'conf',
+    \ 'tmux',
     \
     \ 'gdb',
     \ ]
