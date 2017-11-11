@@ -91,11 +91,16 @@ augroup CraneGroup
     au   FileType  conque_term  :au WinEnter <buffer> startinsert
 
 
-
     "10: nerdtree  注意:映射一定要加上<buffer>,不然会影响全局映射
     au   FileType  nerdtree  nnoremap  <buffer>  <Leader>q  :bd<CR>
     au   FileType  nerdtree  setlocal  nu  rnu
+
+    au   FileType  nerdtree  nnoremap  <buffer> b   :Bookmark<CR>
+    au   FileType  nerdtree  nnoremap  <buffer> db  :ClearBookmarks<CR>
+    au   FileType  nerdtree  nnoremap  <silent> <buffer> dd  :call nerdtree#ui_glue#invokeKeyMap("D")<CR>y<CR>
+    au   FileType  nerdtree  nnoremap  <silent> <buffer> gb  gg/Bookmarks<CR>j
     "au   FileType  nerdtree  setlocal   nocursorline
+
 
     "11  中文空格:不要出现在编程语言中
     au   FileType  c,cpp,sh,python,vim  match  ErrorMsg  /"　"/
