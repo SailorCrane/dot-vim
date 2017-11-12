@@ -21,6 +21,8 @@ let g:all_languages = [
     \ 'tmux',
     \
     \ 'gdb',
+    \ 'make',
+    \ 'cmake'
     \ ]
 
 
