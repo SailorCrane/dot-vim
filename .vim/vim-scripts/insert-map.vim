@@ -137,6 +137,25 @@ inoremap  <Leader>t.  <Esc>:call Toggole_isk_dot()<CR>a
 inoremap  <C-U>  <C-G>u<C-U>
 
 
+" 11 complete map and general insert map(awesome)
+" pumvisible : pop up menu visible
+"inoremap  <expr>  <Tab>   pumvisible()? "\<C-n>":"\<Tab>"
+inoremap  <expr>  <C-e>   pumvisible()? "\<C-e>":"\<ESC>A"
+inoremap  <expr>  <C-y>   pumvisible()? "\<C-y>":"\<ESC>yypA"
+
+" <up>, <down>
+inoremap  <expr>  <Tab>   pumvisible()? "\<Down>":"\<Tab>"
+inoremap  <expr>  <C-j>   pumvisible()? "\<Down>":"\<C-j>"
+inoremap  <expr>  <C-k>   pumvisible()? "\<Up>":"\<C-k>"
+
+" 为的是能所输入继续补全(缩小补全范围)
+inoremap  <expr>  <C-n>   pumvisible()? "\<C-n>":"\<c-n>\<c-p>\<Down>"
+inoremap  <expr>  <C-p>   pumvisible()? "\<C-p>":"\<c-p>\<c-n>\<Up>"
+
+"inoremap  <expr>  <C-n>   pumvisible()? "\<Down>":"\<C-n>"
+"inoremap  <expr>  <C-p>   pumvisible()? "\<Up>":"\<C-p>"
+
+
 " 11 关于C/Cpp 头文件包含的映射
 " 因为c-support的 \pg, \pl 就可以实现
 " p:preprocess, g:global,  l:local
@@ -144,6 +163,7 @@ inoremap  <C-U>  <C-G>u<C-U>
 " active it!
 " and, I also can use <C-v> to disable this
 " But, I can't disable abbreviation by <C-v>
+" chd stand for c header
 inoremap chd< #include <><ESC>i
 inoremap chd> #include ""<ESC>i
 
