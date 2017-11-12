@@ -1,12 +1,14 @@
 " vim: set fdm=marker fdl=0: vim modeline( set )
 
-" 1: ================= edit Makefile / CMakeList.txt=======================
+" 1-0: edit Makefile/CMakeList.txt
+"{{{
 " 因为已经使用了模板文件, 所以这个MakeInput函数已经没用了.
 "fun! MakeInput()
     " 这里的输入回车之后, 会自动输入一个tab, 因为makefile新行, 会自动添加tab, 所以不必再手动输入
     " 这里后期可能修改为单个函数: 追加一行文本等等, 添加回车等等
     "normal!  iCC = g++CFLAGS = -gmain : main.cpp$(CC) $(CFLAGS) \-o $@  \ $< \ -std=c++11 \-Wallrun:./main
 "endfun
+"}}}
 
 " 1-1 编辑Makefile
 fun! EditMakefile()
@@ -202,4 +204,3 @@ fun! ManWinOnly(man_want)
     only
 "}}}
 endf
-
