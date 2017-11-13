@@ -110,7 +110,7 @@ inoremap  <Leader><Leader>#     <C-r>#
 " It's awesome
 " CTRL-U in insert mode deletes a lot. Use CTRL-G u to first break undo, so
 " that you can undo CTRL-U without undoing what you typed before it.
-inoremap  <C-U>  <C-G>u<C-U>
+"inoremap  <C-U>  <C-G>u<C-U>
 "}}}
 
 " 11 complete map and general insert map(awesome)
@@ -126,10 +126,18 @@ inoremap  <expr>  <Tab>   pumvisible()? "\<Down>":"\<Tab>"
 inoremap  <expr>  <C-j>   pumvisible()? "\<Down>":"\<C-j>"
 inoremap  <expr>  <C-k>   pumvisible()? "\<Up>":"\<C-k>"
 
-" 为的是能让输入继续, 但不退出补全(缩小补全范围)
-inoremap  <expr>  <C-n>   pumvisible()? "\<C-n>":"\<c-n>\<c-p>\<Down>"
-inoremap  <expr>  <C-p>   pumvisible()? "\<C-p>":"\<c-p>\<c-n>\<Up>"
+inoremap  <expr>  <C-d>   pumvisible()? "\<Pagedown>":"\<C-d>"
+inoremap  <expr>  <C-u>   pumvisible()? "\<PageUp>":"\<C-G>u\<C-U>"
 
+
+" 为的是能让输入继续, 但不退出补全(缩小补全范围)
+inoremap  <expr>  <C-n>   pumvisible()? "\<C-n>":"\<c-n>\<c-p>"
+inoremap  <expr>  <C-p>   pumvisible()? "\<C-p>":"\<c-p>\<c-n>"
+
+" keyword complete(from set dictionary)
+inoremap  <C-x><C-k>   <C-x><C-k><C-p>
+
+" j, k映射到up, down.
 "inoremap  <expr>  <C-n>   pumvisible()? "\<Down>":"\<C-n>"
 "inoremap  <expr>  <C-p>   pumvisible()? "\<Up>":"\<C-p>"
 "}}}
