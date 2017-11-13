@@ -17,7 +17,6 @@ let  $TEMPLATE_PYTHON  = $Crane_Dot_Vim  . '/templates/python'
 
 "let  $SESSION          = $Crane_Dot_Vim  . '/session'
 "}}}
-" =================== vim script path variable =====================
 
 set fileencodings=ucs-bom,utf-8,iso-8859,gbk,cp936,gb2312,big5,gb18030,latin1
 set fileformats=unix,dos,mac
@@ -95,8 +94,8 @@ set colorcolumn=81
 if executable('ack')
     set grepprg=ack\ --nogroup\ --column\ $* " ack support column
     set grepformat=%f:%l:%c:%m               " file, line, column, match-text
-    "set grepprg=ack\ --nogroup\ $*
-    "set grepformat=%f:%l:%m               " file, line, column, match-text
+    "set grepprg=ack\ --nogroup\ $*          " ack no column
+    "set grepformat=%f:%l:%m                 " file, line, column, match-text
 else
     set grepprg=grep\ -E\ -n\ $*\ /dev/null  " add -E to default setting
 endif
