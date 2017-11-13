@@ -130,12 +130,32 @@ inoremap  <expr>  <C-d>   pumvisible()? "\<Pagedown>":"\<C-d>"
 inoremap  <expr>  <C-u>   pumvisible()? "\<PageUp>":"\<C-G>u\<C-U>"
 
 
+" ===================  =====================
 " 为的是能让输入继续, 但不退出补全(缩小补全范围)
 inoremap  <expr>  <C-n>   pumvisible()? "\<C-n>":"\<c-n>\<c-p>"
 inoremap  <expr>  <C-p>   pumvisible()? "\<C-p>":"\<c-p>\<c-n>"
 
-" keyword complete(from set dictionary)
+" dictionary complete(from set dictionary)
 inoremap  <C-x><C-k>   <C-x><C-k><C-p>
+
+" current buffer complete
+inoremap  <C-x><C-n>   <C-x><C-n><C-p>
+inoremap  <C-x><C-p>   <C-x><C-p><C-n>
+
+" user define complete (completefunc, like tmux complete)
+inoremap  <C-x><C-u>   <C-x><C-u><C-p>
+
+" omni complete (like jedi)
+inoremap  <C-x><C-o>   <C-x><C-o><C-p>
+
+" line complete: yes(c-l like c-p, so there use c-n as next)
+inoremap  <C-x><C-l>   <C-x><C-l><C-n>
+
+" tab complete
+inoremap  <C-x><C-]>   <C-x><C-]><C-p>
+
+
+" ===================  =====================
 
 " j, k映射到up, down.
 "inoremap  <expr>  <C-n>   pumvisible()? "\<Down>":"\<C-n>"
