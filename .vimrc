@@ -11,6 +11,7 @@ let  $Vim_Scripts      = $Crane_Dot_Vim  . '/vim-scripts'
 let  $Plugin_Script    = $Vim_Scripts    . '/plugin-vim'
 
 let  $Crane_Vim_Bundle = $Crane_Dot_Vim  . '/bundle'
+let  $Crane_Vim_Dict   = $Crane_Dot_Vim  . '/dict'
 
 let  $TEMPLATE_CPP     = $Crane_Dot_Vim  . '/templates/cpp'
 let  $TEMPLATE_PYTHON  = $Crane_Dot_Vim  . '/templates/python'
@@ -104,6 +105,10 @@ set foldignore=                          " default is ignore '#'
 set nrformats=alpha                      " number format(C-a, C-x)
 set guitablabel=%N/\ %t\ %M              " gui tabpage name
 
+"if !exists("g:loaded_crane_vimrc")
+set dictionary+=$Crane_Vim_Dict/words    " set 可以保证不重复添加(不需要if), set赋值"="不能有空格.(不支持字符串"."连接)
+"endif
+
 " source scripts
 "{{{
 " 将source移动到最后
@@ -134,3 +139,4 @@ colorscheme  monokai                     " must after source plugin file
 hi SpecialKey gui=bold term=NONE  guibg=bg guifg=green
 "}}}
 
+let g:loaded_crane_vimrc = 1
