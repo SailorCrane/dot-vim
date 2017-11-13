@@ -274,7 +274,7 @@ nnoremap <A-0>     10gt<CR>
 "nnoremap <A-w>     11gt<CR>
 " 12 tabpage is enough
 nnoremap \q     11gt<CR>
-nnoremap \w     11gt<CR>
+nnoremap \w     12gt<CR>
 " }}}
 
 " 7-4 window 操作:用Ctrl切换窗口
@@ -684,6 +684,7 @@ nnoremap  <Leader>cf  :let @*=expand("%:p")<CR>
 "nnoremap  <Leader>ex  :call ChmodExec()<CR>
 " 第二个<CR>用于从shell返回, 最后:w 保存文件状态
 nnoremap  <Leader>ex  :!chmod +x %<CR><CR>:w<CR>
+nnoremap  <Leader>eX  :!chmod -x %<CR><CR>:w<CR>
 
 " eo stand for "execute open"
 " 使用gnome-open 选择合适的程序, 打开当前文件.

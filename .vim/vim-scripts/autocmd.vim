@@ -99,6 +99,7 @@ augroup CraneGroup
     au   FileType  nerdtree  nnoremap  <buffer> db  :ClearBookmarks<CR>
     au   FileType  nerdtree  nnoremap  <silent> <buffer> dd  :call nerdtree#ui_glue#invokeKeyMap("D")<CR>y<CR>
     au   FileType  nerdtree  nnoremap  <silent> <buffer> gb  gg/Bookmarks<CR>j
+    au   FileType  nerdtree  nm        <silent> <buffer> <Space>   o
     "au   FileType  nerdtree  setlocal   nocursorline
 
 
