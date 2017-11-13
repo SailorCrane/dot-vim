@@ -27,7 +27,7 @@ let g:all_languages = [
 
 
 "3: nerdcommenter in scrooloose
-Plug  'scrooloose/nerdcommenter', { 'for' : g:all_languages }
+Plug  'scrooloose/nerdcommenter', { 'for' : g:all_languages, 'on' : ['<Plug>NERDCommenterInvert',] }
 " {{{
 
 " <C-_> stand for <C-/>, 可以插入模式下使用: <C-v><C-/> 查看
@@ -37,7 +37,7 @@ Plug  'scrooloose/nerdcommenter', { 'for' : g:all_languages }
 " }}}
 
 "3-2
-Plug  'tpope/vim-commentary',     { 'for' : g:all_languages }
+Plug  'tpope/vim-commentary',     { 'for' : g:all_languages, 'on' : ['<Plug>CommentaryLine', '<Plug>Commentary',]}
 
 
 "4: syntastic in scrooloose
