@@ -300,6 +300,8 @@ Plug  'powerman/vim-plugin-viewdoc'
 
 
 Plug  'SailorCrane/ToggleIsk'
+"inoremap  <Leader>t-  <Esc><Plug>(Toggle_isk_hypen)a
+"inoremap  <Leader>t.  <Esc>call Toggole_isk_dot()<CR>a
 
 
 "rename current file

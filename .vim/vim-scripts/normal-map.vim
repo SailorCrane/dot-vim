@@ -346,6 +346,7 @@ nnoremap <s-tab>  <C-o>
 
 " 10 case toggle. 因为'~'会向右移动一位, 所以用v~
 nnoremap  gt  v~
+xnoremap  gt   ~
 
 " 11-1 当前行最左,最右. 屏幕最上最下
 " {{{
