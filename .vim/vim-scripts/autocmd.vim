@@ -128,4 +128,9 @@ augroup CraneGroup
     "16 scratch: 没有起作用...
     au  FileType  scratch  setlocal rnu nu
 
+    "17 fixed commentstring
+    au  FileType  gitconfig  setlocal cms=#\ %s
+    au  FileType  cmake      setlocal commentstring=#\ %s
+    au  FileType  text       setlocal cms=#\ %s
+
 augroup END "end of CraneGroup
