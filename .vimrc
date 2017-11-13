@@ -106,8 +106,12 @@ set nrformats=alpha                      " number format(C-a, C-x)
 set guitablabel=%N/\ %t\ %M              " gui tabpage name
 
 "if !exists("g:loaded_crane_vimrc")
-set dictionary+=$Crane_Vim_Dict/words    " set 可以保证不重复添加(不需要if), set赋值"="不能有空格.(不支持字符串"."连接)
 "endif
+set dictionary+=$Crane_Vim_Dict/words    " set 可以保证不重复添加(不需要if), set赋值"="不能有空格.(不支持字符串"."连接)
+
+set completeopt+=longest
+"set completeopt+=noselect
+
 
 " source scripts
 "{{{
