@@ -679,7 +679,7 @@ nnoremap  gm  /\v(int)?\s+main\s*\(.*<CR>
 nnoremap  <Leader>cf  :let @*=expand("%:p")<CR>
 "}}}
 
-" 25 chmod +x, open.
+" 25 chmod +x, -x. open.
 "{{{
 "nnoremap  <Leader>ex  :call ChmodExec()<CR>
 " 第二个<CR>用于从shell返回, 最后:w 保存文件状态
@@ -701,6 +701,15 @@ nnoremap  <Leader>of  :call OpenFile()<CR>
 " > /dev/null drop stdout
 nnoremap     <Leader>sw  :<C-u>w  !sudo tee % >/dev/null<CR>
 cnoreabbrev  sudow       w  !sudo tee % >/dev/null<CR>
+"}}}
+
+" 27 go to large block comment(#, python, sh, make, cmake, gitconfig)
+"{{{
+"let $Sharp_Comment = '\s*#.*'
+nnoremap  <Leader>##   /\v(\s*#.*\n){3,}<CR>
+nnoremap  <Leader>""   /\v(\s*".*\n){3,}<CR>
+"nnoremap  <Leader>##   /\v(\s*#.*\n)(\s*#.*\n)(\s*#.*\n)+<CR>
+"nnoremap  <Leader>##   /\v(\s*#.*\n){2}(\s*#.*\n)+<CR>
 "}}}
 
 " 99 关于normal 模式中惯用的n 和 p的总结:
