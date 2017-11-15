@@ -12,6 +12,7 @@ let  $Plugin_Script    = $Vim_Scripts    . '/plugin-vim'
 
 let  $Crane_Vim_Bundle = $Crane_Dot_Vim  . '/bundle'
 let  $Crane_Vim_Dict   = $Crane_Dot_Vim  . '/dict'
+let  $Crane_Vim_The    = $Crane_Dot_Vim  . '/thesaurus'
 
 let  $TEMPLATE_CPP     = $Crane_Dot_Vim  . '/templates/cpp'
 let  $TEMPLATE_PYTHON  = $Crane_Dot_Vim  . '/templates/python'
@@ -107,7 +108,10 @@ set guitablabel=%N/\ %t\ %M              " gui tabpage name
 
 "if !exists("g:loaded_crane_vimrc")
 "endif
-set dictionary+=$Crane_Vim_Dict/words    " set 可以保证不重复添加(不需要if), set赋值"="不能有空格.(不支持字符串"."连接)
+set dictionary+=$Crane_Vim_Dict/words      " set 可以保证不重复添加(不需要if), set赋值"="不能有空格.(不支持字符串"."连接)
+
+" 同义词字典
+set thesaurus+=$Crane_Vim_The/mthesaur.txt " set 可以保证不重复添加(不需要if), set赋值"="不能有空格.(不支持字符串"."连接)
 
 set completeopt+=longest
 "set completeopt+=noselect
