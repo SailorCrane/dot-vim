@@ -1,4 +1,6 @@
      new-session [-AdDEP] [-c start-directory] [-F format] [-n
+     error 
+     trace
 	     window-name] [-s session-name] [-t target-session] [-x width]
 	     [-y height] [shell-command]
 		   (alias: new)

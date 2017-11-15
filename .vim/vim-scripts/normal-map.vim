@@ -196,7 +196,7 @@ nnoremap  <Leader>eI  :vsplit  $Vim_Scripts/good-idea-script.vim<CR>
 " Prompt to open file with same name, different extension
 " from  https://github.com/nelstrom/dotfiles/blob/master/vimrc
 " <CR>用来完成 <C-r>=
-"noremap  <Leader>er   :vsplit <C-R>=expand("%:r")."."<CR>
+"nnoremap  <Leader>er   :vsplit <C-R>=expand("%:r")."."<CR>
 " }}}
 
 " 5-2 <Leader>sv source .vimrc or .gvimrc
@@ -584,8 +584,9 @@ nnoremap  ,,N   <ESC>0i 1<CR>2<CR>3<CR>4<CR>5<CR>6<CR>7<CR>8<CR>9<CR><Backspace>
 " show no space: upper case "S"
 nnoremap <Leader>S     /\S\+<CR>
 
-"  search error + trace(ignore case)
-noremap  <Leader>er   :e!<Cr>/\v(error\|trace)\c<CR>
+"  search error + trace(ignore case), (|)括号也非必须
+nnoremap  <Leader>er   :e!<Cr>/\v(error\|trace)\c<CR>
+"nnoremap  <Leader>er   :e!<Cr>/\verror\|trace\c<CR>
 "}}}
 
 " 17 输出当前缓冲区文件的绝对路径
@@ -597,7 +598,7 @@ if  exists(':Man')
     "if maparg('K') == ''    " has no map
         "nmap  <unique> K  <Leader>K
     "endif
-    "注意,因为<Leader>K,也是一个man.vim的映射,而不是vim内部的基本功能,所以不能使用noremap映射,而要使用nmap
+    "注意,因为<Leader>K,也是一个man.vim的映射,而不是vim内部的基本功能,所以不能使用nnoremap映射,而要使用nmap
     "只有当最终映射目标为vim直接输入后的功能时:比如vim自带功能,或者命令行输入...才能使用nnoremap
     "nmap <Leader>K 可以查看到 映射的最终函数
 endif
