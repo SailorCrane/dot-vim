@@ -512,6 +512,13 @@
     path = .vim/bundle/vim-swap-string
     url = https://github.com/SailorCrane/vim-swap-string.git
 
+[submodule ".vim/bundle/vim-mucomplete"]
+    path = .vim/bundle/vim-mucomplete
+    url = https://github.com/lifepillar/vim-mucomplete.git
+
+[submodule ".vim/bundle/SQLComplete.vim"]
+    path = .vim/bundle/SQLComplete.vim
+    url = https://github.com/vim-scripts/SQLComplete.vim.git
 
 # paste
 # https://github.com/ConradIrwin/vim-bracketed-paste

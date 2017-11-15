@@ -331,6 +331,13 @@ let g:numbers_exclude = []
 " 27
 Plug 'SailorCrane/vim-swap-string'
 
+
+" 28 mu complete
+"Plug 'lifepillar/vim-mucomplete'
+
+" sql complete
+Plug 'vim-scripts/SQLComplete.vim'
+
 " 27
 "Plug  'wincent/terminus'
 
