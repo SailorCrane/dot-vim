@@ -123,8 +123,10 @@ inoremap  <Leader><Leader>#     <C-r>#
 inoremap  <expr>  <C-e>   pumvisible()? "\<C-e>":"\<ESC>A"
 inoremap  <expr>  <C-y>   pumvisible()? "\<C-y>":"\<ESC>yypA"
 
-" <up>, <down>
+inoremap  <expr>  <Cr>    pumvisible()? "\<C-y>":"\<Cr>"
 inoremap  <expr>  <Esc>   pumvisible()? "\<C-e>":"\<Esc>"
+
+" <up>, <down>
 inoremap  <expr>  <Tab>   pumvisible()? "\<Down>":"\<Tab>"
 inoremap  <expr>  <C-j>   pumvisible()? "\<Down>":"\<C-j>"
 inoremap  <expr>  <C-k>   pumvisible()? "\<Up>":"\<C-k>"
