@@ -713,6 +713,28 @@ nnoremap  <Leader>""   /\v(\s*".*\n){3,}<CR>
 "nnoremap  <Leader>##   /\v(\s*#.*\n){2}(\s*#.*\n)+<CR>
 "}}}
 
+" 28 syntax/highlight
+"{{{
+" syntax list group/ syntax match define group
+" highlight define color for group
+
+" =================== here =====================
+" match, iskeyword
+" highlight link, ctermcg=
+
+"syntax list SpecialKey
+"Verbose syntax
+"highlight SpecialKey
+" =================== here =====================
+
+"" Output the current syntax group
+"nnoremap <f10> :echo "hi<" .
+"synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+"\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+"\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") .
+"">"<cr>
+"}}}
+
 " 99 关于normal 模式中惯用的n 和 p的总结:
 "{{{
 " 其中CtrlP插件的<C-p> 被 <Leader>sp代替
