@@ -23,6 +23,9 @@ inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-l> <Right>
 
+inoremap <C-f> <Esc>lWi
+inoremap <C-b> <Esc>Bi
+
 
 " 3 ctrl- : quick  edit
 "{{{
@@ -82,7 +85,7 @@ inoremap  jw    <Esc>:w<CR>a
 " <C-w>的习惯还是不能改: 无论是在插入模式, Ex模式, 还是bash中
 " ctrl-w都是删除一个单词, 修改它是个不明智的选择, 所以还是用<C-b>去保存文件吧
 " 不得已之举
-inoremap <C-b> <Esc>:w<CR>a
+"inoremap <C-b> <Esc>:w<CR>a
 "inoremap jb    <C-w>
 "}}}
 
