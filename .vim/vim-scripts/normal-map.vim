@@ -473,27 +473,28 @@ nnoremap  yP  :t .-1<CR>
 " 这里不使用map,而是使用nnoremap, 也可以工作
 nnoremap  dh  "_d
 
+" use omap replace for this operation postion
 " forward删除到括号, c stand for closing
-nnoremap  dc  dt)
+"nnoremap  dc  dt)
 
 " backward删除到括号
-nnoremap  dC  dT(
+"nnoremap  dC  dT(
 
 "
-nnoremap  d]  dt]
-nnoremap  d[  dT[
+"nnoremap  d]  dt]
+"nnoremap  d[  dT[
 
-nnoremap  d"  dt"
-nnoremap  d'  dt'
+"nnoremap  d"  dt"
+"nnoremap  d'  dt'
 
 
 " 复制
 " forward复制到括号
-nnoremap  yc  yt)
+"nnoremap  yc  yt)
 " backward复制到括号
-nnoremap  yC  yT(
+"nnoremap  yC  yT(
 
-nnoremap  Y  y$
+"nnoremap  Y  y$
 "}}}
 
 " 15-5 粘贴系统寄存器, inoremap 中也有类似的映射, 见 insert-map.vim

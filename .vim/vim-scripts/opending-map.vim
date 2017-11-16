@@ -7,6 +7,9 @@
 onoremap  (    i(
 onoremap  )    a(
 
+onoremap  [    i[
+onoremap  ]    a]
+
 onoremap  iq   i`
 onoremap  aq   a`
 vnoremap  iq   i`
