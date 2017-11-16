@@ -520,5 +520,9 @@
     path = .vim/bundle/SQLComplete.vim
     url = https://github.com/vim-scripts/SQLComplete.vim.git
 
+[submodule ".vim/bundle/AutoComplPop"]
+    path = .vim/bundle/AutoComplPop
+	url = https://github.com/vim-scripts/AutoComplPop.git
+
 # paste
 # https://github.com/ConradIrwin/vim-bracketed-paste
