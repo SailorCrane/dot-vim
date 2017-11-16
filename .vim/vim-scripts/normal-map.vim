@@ -571,6 +571,11 @@ inoremap  <Leader>ra  <------
 
 nnoremap  <Leader>a=       40a=<ESC>20hi<Space><Space><Left>
 imap      <Leader>a=  <ESC><Leader>a=
+
+" head 1, 2, 3
+nnoremap  <Leader>h1       yyPVr=
+nnoremap  <Leader>h2       yyPVr-
+nnoremap  <Leader>h3       yyP:s/\v(.*)/---\1---/<Cr>
 "}}}
 
 " 15-11 "在当前行的下一行/前一行插入数字列: o<ESC>0到新行的首列
