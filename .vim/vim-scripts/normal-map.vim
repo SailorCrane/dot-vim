@@ -215,7 +215,9 @@ endif
 nnoremap  <Leader>q  :q<CR>
 
 nnoremap  <Leader>aq :qa<CR>
-nnoremap  <C-c>      :qa<CR>
+
+" <C-c> 在stop一些任务时, 很有用
+"nnoremap  <C-c>      :qa<CR>
 
 nnoremap  <Leader>ee :e!<CR>
 

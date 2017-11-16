@@ -122,7 +122,9 @@ Plug  'tpope/vim-scriptease'
 
 
 "27 EasyGrep
-Plug  'dkprice/vim-easygrep'
+Plug  'dkprice/vim-easygrep', { 'on' : ['<Plug>EgMapGrepCurrentWord_v', '<Plug>EgMapGrepCurrentWord_V'] }
+nmap <Leader>vv  <Plug>EgMapGrepCurrentWord_v
+nmap <Leader>vV  <Plug>EgMapGrepCurrentWord_V
 
 " tlib: vim util fun
 " snipmate also need
