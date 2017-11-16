@@ -301,6 +301,7 @@ Plug  'powerman/vim-plugin-viewdoc'
 
 
 Plug  'SailorCrane/ToggleIsk'
+Plug  'SailorCrane/vim-potion'
 "inoremap  <Leader>t-  <Esc><Plug>(Toggle_isk_hypen)a
 "inoremap  <Leader>t.  <Esc>call Toggole_isk_dot()<CR>a
 
