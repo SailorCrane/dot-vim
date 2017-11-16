@@ -727,10 +727,18 @@ nnoremap  <Leader>""   /\v(\s*".*\n){3,}<CR>
 " =================== here =====================
 " match, iskeyword
 " highlight link, ctermcg=
+" syntax region myCom  start=/\/a/ end=/a\//
+" /a
+" The new session is attached to the current terminal unless -d
+" is given.	window-name and shell-command are the name of and
+" shell command to execute in the initial window.  If -d is
+" used, -x and -y specify the size of the initial window (80 by
+" 24 if not given). a/
 
 "syntax list SpecialKey
 "Verbose syntax
 "highlight SpecialKey
+" highlight myCom ctermfg=red
 " =================== here =====================
 
 "" Output the current syntax group
