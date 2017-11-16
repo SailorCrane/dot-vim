@@ -337,7 +337,7 @@ Plug 'SailorCrane/vim-swap-string'
 "Plug 'lifepillar/vim-mucomplete'
 
 " sql complete
-"Plug 'vim-scripts/AutoComplPop'
+Plug 'SailorCrane/AutoComplPop'
 Plug 'vim-scripts/SQLComplete.vim'
 
 " 27

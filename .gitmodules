@@ -522,7 +522,7 @@
 
 [submodule ".vim/bundle/AutoComplPop"]
     path = .vim/bundle/AutoComplPop
-	url = https://github.com/vim-scripts/AutoComplPop.git
+    url = https://github.com/SailorCrane/AutoComplPop.git
 
 # paste
 # https://github.com/ConradIrwin/vim-bracketed-paste
