@@ -134,6 +134,14 @@ inoremap  <expr>  <C-k>   pumvisible()? "\<Up>":"\<C-k>"
 inoremap  <expr>  <C-d>   pumvisible()? "\<Pagedown>":"\<C-d>"
 inoremap  <expr>  <C-u>   pumvisible()? "\<PageUp>":"\<C-G>u\<C-U>"
 
+"=================== quick complete =====================
+"inoremap ^] ^X^]
+inoremap <C-]> <C-x><C-]>
+inoremap <C-l> <C-x><C-l>
+inoremap <C-v> <C-x><C-v>
+"inoremap ^L ^X^L
+"inoremap ^F ^X^F
+"inoremap ^D ^X^D
 
 " ===================  =====================
 " 为的是能让输入继续, 但不退出补全(缩小补全范围)
