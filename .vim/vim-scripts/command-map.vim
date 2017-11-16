@@ -1,5 +1,4 @@
 
-
 " =================== cabbrev =====================
 
 "1 Toggle verbose
@@ -25,6 +24,7 @@ cnoreabbrev  msg  message
 if  exists(':PlugInstall')
     cabbrev  bi   PlugInstall
     cabbrev  bc   PlugClean
+    cabbrev  bu   PlugUpdate
     " bl 和 blast冲突了
     cabbrev  Bl   BundleList
 else    " Bundle
@@ -32,6 +32,7 @@ else    " Bundle
     " bl 和 blast冲突了
     cabbrev  BL   BundleList
     cabbrev  bc   BundleClear
+    cabbrev  bu   BundleUpdate
 endif
 "}}}
 
@@ -178,7 +179,6 @@ cnoreabbrev ere   e  /tmp/re.txt
 
 
 " ===================== cmap =============================
-
 
 " 1 <C-a> to line begin(like shell command line)
 cnoremap <C-a>  <C-b>
