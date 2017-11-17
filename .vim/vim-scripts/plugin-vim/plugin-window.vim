@@ -53,6 +53,7 @@ Plug 'tpope/vim-vinegar'
 
 "3: code file tag about
 Plug  'vim-scripts/Tagbar' , { 'on' : ['TagbarOpen', 'TagbarToggle'] }
+Plug  'majutsushi/tagbar' , { 'on' : ['TagbarOpen', 'TagbarToggle'] }
 " {{{
 "5-2 Tagbar in vim-scripts's repo
 " <leader>tt 被vim-scripts/Align使用了
@@ -102,6 +103,9 @@ nnoremap  <Leader>op   :MRU py<CR>
 "nnoremap  <Leader>os   :MRU sh<CR>
 " 因为是根据文件匹配, 所以用py, 不用python
 "}}}
+
+"5-2 buffergator
+Plug 'jeetsukumaran/vim-buffergator'
 
 "6-1: undotree
 Plug  'mbbill/undotree' ,   { 'on' : ['UndotreeShow', 'UndotreeToggle'] }
@@ -213,7 +217,6 @@ Plug  'mhinz/vim-startify'
 
 
 "18 scratch
-" Plug 'on' support map
 Plug 'SailorCrane/scratch.vim' , { 'on' : ['Scratch', '<plug>(scratch-selection-reuse)'] }
 "{{{
 let g:scratch_no_mappings = 1
@@ -226,3 +229,6 @@ xmap     <Leader>os <plug>(scratch-selection-reuse)<C-w>T
     " xmap gS <plug>(scratch-selection-clear)
     " nnoremap gZzZz gs
 "}}}
+
+"19 nrrwrgn
+Plug 'chrisbra/NrrwRgn'
