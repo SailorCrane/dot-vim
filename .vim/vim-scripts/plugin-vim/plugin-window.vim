@@ -44,6 +44,12 @@ nnoremap <leader>on :NERDTreeFind<cr>
 nnoremap <leader>tn :NERDTreeToggle<cr>
 " }}}
 
+" 2-2 dirvish
+Plug 'justinmk/vim-dirvish'
+
+" 2-3 vinegar
+Plug 'tpope/vim-vinegar'
+
 
 "3: code file tag about
 Plug  'vim-scripts/Tagbar' , { 'on' : ['TagbarOpen', 'TagbarToggle'] }
