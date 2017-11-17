@@ -1,7 +1,10 @@
 
 
+"set bg=dark
+
 "colorscheme  monokai
 "colorscheme  solarized
+"colorscheme  softblue
 "colorscheme  apprentice
 "colorscheme  onedark
 
