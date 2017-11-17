@@ -23,3 +23,12 @@ if [ ! -e "${local_python_tab}" ]; then
 else
     echo "exist file ${local_python_tab} "  1>&2
 fi
+
+# 4: global localities config
+global_git_config=${dotVimDir}/vim-scripts/global-git.vim
+global_local_config=${dotVimDir}/vim-scripts/global-local.vim
+if [ ! -e "${global_local_config}" ]; then
+    cp ${global_git_config} ${global_local_config}
+else
+    echo "exist file ${global_local_config} "  1>&2
+fi

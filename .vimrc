@@ -122,29 +122,29 @@ set completeopt+=longest
 " 将source移动到最后
 " source ~/.vim/vim-scripts/myBundle.vim
 " 注意这里如果要编辑, 只能使用<Leader>e 前缀编辑, 无法通过gf跳转.
-source  $Crane_Dot_Vim/vim-scripts/myBundle.vim
-source  $Crane_Dot_Vim/vim-scripts/function.vim
+source  $Vim_Scripts/myBundle.vim
+source  $Vim_Scripts/function.vim
 
-source  $Crane_Dot_Vim/vim-scripts/normal-map.vim
-source  $Crane_Dot_Vim/vim-scripts/insert-map.vim
-source  $Crane_Dot_Vim/vim-scripts/opending-map.vim
-source  $Crane_Dot_Vim/vim-scripts/command-map.vim
-source  $Crane_Dot_Vim/vim-scripts/visual-map.vim
+source  $Vim_Scripts/normal-map.vim
+source  $Vim_Scripts/insert-map.vim
+source  $Vim_Scripts/opending-map.vim
+source  $Vim_Scripts/command-map.vim
+source  $Vim_Scripts/visual-map.vim
 
-source  $Crane_Dot_Vim/vim-scripts/autocmd.vim
-source  $Crane_Dot_Vim/vim-scripts/tmp-test.vim
+source  $Vim_Scripts/autocmd.vim
+source  $Vim_Scripts/tmp-test.vim
 
 "}}}
 
 colorscheme  monokai                     " must after source plugin file
 "{{{
-"colorscheme  slate
-"colorscheme  marklar   "from Colour-Sampler-Pack
-"colorscheme  molokai
-"colorscheme  zenburn
 "highlight SpecialKey guifg=#4a4a59
 "hi ColorColumn ctermbg=lightgrey guibg=Red
 hi SpecialKey gui=bold term=NONE  guibg=bg guifg=green
 "}}}
 
 let g:loaded_crane_vimrc = 1
+
+
+" end source(local config): 比如在服务器上独特的配置．家里独特配置等等
+source  $Vim_Scripts/global-local.vim
