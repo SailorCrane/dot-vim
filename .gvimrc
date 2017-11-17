@@ -2,7 +2,7 @@
 " GUI setting
 
 " 1
-colorscheme monokai
+"colorscheme monokai
 
 
 " 2
