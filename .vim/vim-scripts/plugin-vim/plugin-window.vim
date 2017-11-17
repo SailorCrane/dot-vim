@@ -73,12 +73,18 @@ let g:tagbar_left = 0
 
 
 "4-1 bufexplorer
-Plug   'jlanzarotta/bufexplorer' , { 'on' : ['BufExplorerVerticalSplit', 'ToggleBufExplorer'] }
-"{{{
-let g:bufExplorerSplitVertSize=30
-nnoremap <leader>ob :BufExplorerVerticalSplit<CR>
-nnoremap <leader>tb :ToggleBufExplorer<cr>
-"}}}
+"Plug   'jlanzarotta/bufexplorer' , { 'on' : ['BufExplorerVerticalSplit', 'ToggleBufExplorer'] }
+""{{{
+"let g:bufExplorerSplitVertSize=30
+"nnoremap <leader>ob :BufExplorerVerticalSplit<CR>
+"nnoremap <leader>tb :ToggleBufExplorer<cr>
+""}}}
+
+"4-2 buffergator
+Plug 'jeetsukumaran/vim-buffergator'
+nnoremap <leader>ob  :BuffergatorOpen<CR>
+nnoremap <leader>tb  :BuffergatorToggle<CR>
+"nnoremap <leader>cb  :BuffergatorClose<CR>
 
 
 "4-2:  minibufexplorer: 鸡肋
@@ -102,9 +108,6 @@ nnoremap  <Leader>op   :MRU py<CR>
 "nnoremap  <Leader>os   :MRU sh<CR>
 " 因为是根据文件匹配, 所以用py, 不用python
 "}}}
-
-"5-2 buffergator
-Plug 'jeetsukumaran/vim-buffergator'
 
 "6-1: undotree
 Plug  'mbbill/undotree' ,   { 'on' : ['UndotreeShow', 'UndotreeToggle'] }
