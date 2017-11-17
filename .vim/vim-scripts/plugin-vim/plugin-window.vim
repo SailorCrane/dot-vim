@@ -52,7 +52,6 @@ Plug 'tpope/vim-vinegar'
 
 
 "3: code file tag about
-Plug  'vim-scripts/Tagbar' , { 'on' : ['TagbarOpen', 'TagbarToggle'] }
 Plug  'majutsushi/tagbar' , { 'on' : ['TagbarOpen', 'TagbarToggle'] }
 " {{{
 "5-2 Tagbar in vim-scripts's repo
@@ -95,7 +94,7 @@ nnoremap <leader>tb :ToggleBufExplorer<cr>
 
 
 "5 mru files
-Plug  'vim-scripts/mru.vim' , { 'on' : ['MRU'] }
+Plug  'yegappan/mru' , { 'on' : ['MRU'] }
 "{{{
 nnoremap  <Leader>om   :MRU<CR>
 nnoremap  <Leader>ov   :MRU vim<CR>
