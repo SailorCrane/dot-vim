@@ -20,9 +20,9 @@
     path = .vim/bundle/vim-plug
     url = https://github.com/SailorCrane/vim-plug.git
 
-[submodule ".vim/bundle/AutoFold.vim"]
-    path = .vim/bundle/AutoFold.vim
-    url = https://github.com/vim-scripts/AutoFold.vim.git
+# [submodule ".vim/bundle/AutoFold.vim"]
+#     path = .vim/bundle/AutoFold.vim
+#     url = https://github.com/vim-scripts/AutoFold.vim.git
 [submodule ".vim/bundle/CmdlineComplete"]
     path = .vim/bundle/CmdlineComplete
     url = https://github.com/vim-scripts/CmdlineComplete.git
@@ -67,9 +67,9 @@
 [submodule ".vim/bundle/YankRing.vim"]
     path = .vim/bundle/YankRing.vim
     url = https://github.com/SailorCrane/YankRing.vim.git
-[submodule ".vim/bundle/vim-yankstack"]
-    path = .vim/bundle/vim-yankstack
-    url = https://github.com/maxbrunsfeld/vim-yankstack.git
+# [submodule ".vim/bundle/vim-yankstack"]
+#     path = .vim/bundle/vim-yankstack
+#     url = https://github.com/maxbrunsfeld/vim-yankstack.git
 [submodule ".vim/bundle/vim-operator-flashy"]
     path = .vim/bundle/vim-operator-flashy
     url = https://github.com/haya14busa/vim-operator-flashy.git
@@ -89,9 +89,9 @@
 [submodule ".vim/bundle/vim-template"]
     path = .vim/bundle/vim-template
     url = https://github.com/aperezdc/vim-template.git
-[submodule ".vim/bundle/c.vim"]
-    path = .vim/bundle/c.vim
-    url = https://github.com/SailorCrane/c.vim.git
+# [submodule ".vim/bundle/c.vim"]
+#     path = .vim/bundle/c.vim
+#     url = https://github.com/SailorCrane/c.vim.git
 [submodule ".vim/bundle/jedi-vim"]
     path = .vim/bundle/jedi-vim
     url = https://github.com/davidhalter/jedi-vim.git
@@ -100,9 +100,9 @@
     ;path = .vim/bundle/minibufexpl.vim
     ;url = https://github.com/fholgado/minibufexpl.vim.git
 
-[submodule ".vim/bundle/bufexplorer"]
-    path = .vim/bundle/bufexplorer
-    url = https://github.com/jlanzarotta/bufexplorer.git
+# [submodule ".vim/bundle/bufexplorer"]
+#     path = .vim/bundle/bufexplorer
+#     url = https://github.com/jlanzarotta/bufexplorer.git
 
 [submodule ".vim/bundle/vim-buffergator"]
     path = .vim/bundle/vim-buffergator
@@ -111,9 +111,9 @@
 [submodule ".vim/bundle/tabular"]
     path = .vim/bundle/tabular
     url = https://github.com/godlygeek/tabular.git
-[submodule ".vim/bundle/gundo"]
-    path = .vim/bundle/gundo
-    url = https://github.com/vim-scripts/gundo.git
+# [submodule ".vim/bundle/gundo"]
+#     path = .vim/bundle/gundo
+#     url = https://github.com/vim-scripts/gundo.git
 [submodule ".vim/bundle/python-syntax"]
     path = .vim/bundle/python-syntax
     url = https://github.com/hdima/python-syntax.git
@@ -453,9 +453,9 @@
     path = .vim/bundle/CCTree
     url = https://github.com/hari-rangarajan/CCTree.git
 
-[submodule ".vim/bundle/XML-Folding"]
-    path = .vim/bundle/XML-Folding
-    url = https://github.com/vim-scripts/XML-Folding.git
+# [submodule ".vim/bundle/XML-Folding"]
+#     path = .vim/bundle/XML-Folding
+#     url = https://github.com/vim-scripts/XML-Folding.git
 
 [submodule ".vim/bundle/vim-plugin-viewdoc"]
     path = .vim/bundle/vim-plugin-viewdoc
