@@ -530,5 +530,9 @@
     path = .vim/bundle/AutoComplPop
     url = https://github.com/SailorCrane/AutoComplPop.git
 
+[submodule ".vim/bundle/NrrwRgn"]
+    path = .vim/bundle/NrrwRgn
+    url = https://github.com/chrisbra/NrrwRgn.git
+
 # paste
 # https://github.com/ConradIrwin/vim-bracketed-paste
