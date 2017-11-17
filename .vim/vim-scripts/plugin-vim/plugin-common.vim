@@ -226,7 +226,7 @@ Plug  'vim-scripts/ShowTrailingWhitespace'
 Plug   'mbbill/fencview'
 
 "43 ack.vim
-Plug  'vim-scripts/ack.vim'
+Plug  'mileszs/ack.vim'
 
 
 "44 mkdir, very simple
