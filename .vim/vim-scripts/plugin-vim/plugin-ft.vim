@@ -35,3 +35,7 @@ let  g:markdown_minlines = 100
 
 " 速写 html/css/js(javascript) : 官方插件. ZenCoding renamed to Emmet.vim
 Plug  'vim-scripts/Emmet.vim'   , {'for' : ['js', 'html', 'css']}
+
+
+" nginx config
+Plug 'chr4/nginx.vim'

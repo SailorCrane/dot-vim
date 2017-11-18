@@ -537,5 +537,9 @@
     path = .vim/bundle/NrrwRgn
     url = https://github.com/chrisbra/NrrwRgn.git
 
+[submodule ".vim/bundle/nginx.vim"]
+    path = .vim/bundle/nginx.vim
+    url = https://github.com/chr4/nginx.vim.git
+
 # paste
 # https://github.com/ConradIrwin/vim-bracketed-paste
