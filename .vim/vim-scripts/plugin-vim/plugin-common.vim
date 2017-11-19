@@ -2,7 +2,7 @@
 "
 
 "10: wakatime/vim-wakatime
-"Plug  'wakatime/vim-wakatime'
+Plug  'wakatime/vim-wakatime'
 
 
 "16: jiangmiao/auto-pairs.git
