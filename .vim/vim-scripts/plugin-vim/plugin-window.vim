@@ -45,10 +45,10 @@ nnoremap <leader>tn :NERDTreeToggle<cr>
 " }}}
 
 " 2-2 dirvish
-Plug 'justinmk/vim-dirvish'
+"Plug 'justinmk/vim-dirvish'
 
 " 2-3 vinegar
-Plug 'tpope/vim-vinegar'
+"Plug 'tpope/vim-vinegar'
 
 
 "3: code file tag about
