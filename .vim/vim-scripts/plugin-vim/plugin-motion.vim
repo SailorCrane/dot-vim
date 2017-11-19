@@ -13,12 +13,10 @@ let g:EasyMotion_smartcase = 1
 "let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
 
 " 这里需要使用imap, 而不是inoremap. 因为后面有连续映射.
-imap  <Leader><Leader>  <ESC><Plug>(easymotion-prefix)
+"imap  <Leader><Leader>  <ESC><Plug>(easymotion-prefix)
+imap  <Leader><Leader>f  <ESC><Plug>(easymotion-overwin-f)
 
-" move to anything(global)
-"map  <Leader><Leader>f <Plug>(easymotion-bd-f)
-"nmap <Leader><Leader>f <Plug>(easymotion-overwin-f)
-
+" move to any char
 map  <Leader>f <Plug>(easymotion-bd-f)
 nmap <leader>f <plug>(easymotion-overwin-f)
 
