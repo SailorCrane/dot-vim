@@ -82,6 +82,7 @@ let g:tagbar_left = 0
 
 "4-2 buffergator
 Plug 'jeetsukumaran/vim-buffergator'
+let g:buffergator_suppress_keymaps = 1
 nnoremap <leader>ob  :BuffergatorOpen<CR>
 nnoremap <leader>tb  :BuffergatorToggle<CR>
 "nnoremap <leader>cb  :BuffergatorClose<CR>
