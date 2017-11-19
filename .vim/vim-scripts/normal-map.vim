@@ -126,7 +126,7 @@ nnoremap  <Leader>i   :set ignorecase!  ignorecase?<CR>
 
 " 5-1  quick edit: v:vimrc, n:normal, i:insert, p:plugin-bundle, a:abbrev
 " {{{
-nnoremap  <Leader>eb  :vsplit ~/.bashrc<CR>
+nnoremap  <Leader>eB  :vsplit ~/.bashrc<CR>
 nnoremap  <Leader>ez  :vsplit ~/.zshrc<CR>
 "nnoremap  <Leader>eP  :vsplit ~/.profile<CR>    # 太容易编辑了, "让出快捷键给plugin-python.vim
 
@@ -173,7 +173,6 @@ nnoremap  <Leader>eo  :vsplit  $Vim_Scripts/opending-map.vim<CR>
 nnoremap  <Leader>et  :vsplit  $Crane_Dot_Vim/test/HarryPotter-Stone.txt<CR>
 nnoremap  <Leader>eU  :vsplit  $Crane_Dot_Vim/vimtutal.txt<CR>
 
-" <Leader>eb b stand for bundle
 nnoremap  <Leader>eb  :vsplit  $Vim_Scripts/myBundle.vim<CR>
 nnoremap  <Leader>ep  :vsplit  $Vim_Scripts/python.vim<CR>
 "nnoremap  <Leader>ef  :vsplit  $Vim_Scripts/autocmd.vim<CR>
