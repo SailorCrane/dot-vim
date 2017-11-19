@@ -17,7 +17,9 @@ let g:all_languages = [
     \ 'ruby',
     \
     \ 'gitconfig',
+    \ 'json',
     \ 'conf',
+    \ 'nginx',
     \ 'tmux',
     \
     \ 'gdb',
