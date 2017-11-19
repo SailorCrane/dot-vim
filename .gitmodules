@@ -1,9 +1,9 @@
 # g!/\v(^\s*$|submodule|path|https.*git$)/ co $
 
 # =================== book =====================
-[submodule ".vim/book/vim-galore-zh_cn"]
-    path = .vim/book/vim-galore-zh_cn
-    url = https://github.com/wsdjeg/vim-galore-zh_cn.git
+# [submodule ".vim/book/vim-galore-zh_cn"]
+#     path = .vim/book/vim-galore-zh_cn
+#     url = https://github.com/wsdjeg/vim-galore-zh_cn.git
 
 
 # =================== plugin =====================
