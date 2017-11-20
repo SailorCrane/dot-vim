@@ -23,7 +23,8 @@ set  rtp+=$Crane_Vim_Bundle/vim-plug/
 "call vundle#rc() " let Vundle manage Vundle,  required!
 call plug#begin( $Crane_Vim_Bundle )
 
-Plug  'gmarik/vundle'
+"Plug  'gmarik/vundle'
+Plug 'VundleVim/Vundle.vim'
 Plug  'SailorCrane/vim-plug'
 Plug  'Shougo/dein.vim'
 
