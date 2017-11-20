@@ -750,6 +750,22 @@ nnoremap  <Leader>""   /\v(\s*".*\n){3,}<CR>
 "">"<cr>
 "}}}
 
+" 29 switch to last-active tab
+"{{{
+if !exists('g:Lasttab')
+    let g:Lasttab = 1
+    let g:Lasttab_backup = 1
+endif
+
+augroup LastTab
+    au!
+    autocmd! TabLeave  * let g:Lasttab_backup = g:Lasttab | let g:Lasttab = tabpagenr()
+    autocmd! TabClosed * let g:Lasttab = g:Lasttab_backup
+augroup END
+noremap  <silent>  <Leader>` :exe "tabn " . g:Lasttab<cr>
+"}}}
+
+
 " 99 关于normal 模式中惯用的n 和 p的总结:
 "{{{
 " 其中CtrlP插件的<C-p> 被 <Leader>sp代替
