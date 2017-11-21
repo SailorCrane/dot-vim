@@ -108,7 +108,7 @@ set guitablabel=%N/\ %t\ %M              " gui tabpage name
 
 "if !exists("g:loaded_crane_vimrc")
 "endif
-set dictionary+=$Crane_Vim_Dict/words      " set 可以保证不重复添加(不需要if), set赋值"="不能有空格.(不支持字符串"."连接)
+set dictionary+=$Crane_Vim_Dict/words,$Crane_Vim_Dict/words_ch.txt      " set 可以保证不重复添加(不需要if), set赋值"="不能有空格.(不支持字符串"."连接)
 
 " 同义词字典
 set thesaurus+=$Crane_Vim_The/mthesaur.txt " set 可以保证不重复添加(不需要if), set赋值"="不能有空格.(不支持字符串"."连接)
