@@ -1,3 +1,4 @@
+" vim: set fdm=marker  fdl=0: vim modeline( set )
 
 " =================== cabbrev =====================
 
@@ -133,7 +134,7 @@ cnoreabbrev  cle   !clear
 
 
 "16 colorscheme  molokai
-cnoreabbrev  csm  colorscheme  molokai
+"cnoreabbrev  csm  colorscheme  molokai
 
 
 "17  set fdm=manual
@@ -177,6 +178,8 @@ cnoreabbrev ree   redir  END
 cnoreabbrev ere   e  /tmp/re.txt
 "}}}
 
+"19 terminal filetype
+cnoreabbrev  terminal  Terminal
 
 " ===================== cmap =============================
 

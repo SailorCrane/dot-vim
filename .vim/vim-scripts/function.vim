@@ -204,3 +204,14 @@ fun! ManWinOnly(man_want)
     only
 "}}}
 endf
+
+
+" 10 Terminal
+"{{{
+fun! Terminal()
+    terminal
+    set ft=terminal
+endf
+
+command! Terminal  call Terminal()
+"}}}

@@ -127,7 +127,7 @@ inoremap  <expr>  <C-y>   pumvisible()? "\<C-y>":"\<ESC>yypA"
 inoremap  <expr>  <Esc>   pumvisible()? "\<C-e>":"\<Esc>"
 
 " <up>, <down>
-inoremap  <expr>  <Tab>   pumvisible()? "\<Down>":"\<Tab>"
+"inoremap  <expr>  <Tab>   pumvisible()? "\<Down>":"\<Tab>"
 inoremap  <expr>  <C-j>   pumvisible()? "\<Down>":"\<C-j>"
 inoremap  <expr>  <C-k>   pumvisible()? "\<Up>":"\<C-k>"
 

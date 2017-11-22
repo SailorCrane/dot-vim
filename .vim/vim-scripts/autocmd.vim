@@ -133,4 +133,16 @@ augroup CraneGroup
     au  FileType  cmake      setlocal commentstring=#\ %s
     au  FileType  text       setlocal cms=#\ %s
 
+
+    au  FileType  terminal  nnoremap  <buffer> <Leader>q  :q!<CR>
+    au  FileType  terminal  nnoremap  <buffer> a          a
+    au  FileType  terminal  nnoremap  <buffer> i          i
+    au  FileType  terminal  nnoremap  <buffer> o          i<CR>
+    au  FileType  terminal  nnoremap  <buffer> O          i<CR>
+    au  FileType  terminal  nnoremap  <buffer> <C-d>      :q!<CR>
+
+    " au  FileType  terminal  inoremap  <buffer> jk     <C-\><C-n>
+    " au  FileType  terminal  inoremap  <buffer> <C-d>  <C-\><C-n>
+    " au  FileType  terminal  inoremap  <buffer> <C-c>  <C-\><C-n>:q!<CR>
+
 augroup END "end of CraneGroup
