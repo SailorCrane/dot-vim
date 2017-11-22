@@ -181,6 +181,9 @@ cnoreabbrev ere   e  /tmp/re.txt
 "19 terminal filetype
 cnoreabbrev  terminal  Terminal
 
+"20
+cnoreabbrev  bw     :bufdo  w
+
 " ===================== cmap =============================
 
 " 1 <C-a> to line begin(like shell command line)
