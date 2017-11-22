@@ -211,6 +211,8 @@ endf
 fun! Terminal()
     terminal
     set ft=terminal
+    "exe 'normal L'
+    normal L
 endf
 
 command! Terminal  call Terminal()

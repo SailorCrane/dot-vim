@@ -134,12 +134,14 @@ augroup CraneGroup
     au  FileType  text       setlocal cms=#\ %s
 
 
-    au  FileType  terminal  nnoremap  <buffer> <Leader>q  :q!<CR>
+    au  FileType  terminal  nnoremap  <buffer> <Leader>q   :q!<CR>
+    au  FileType  terminal  nnoremap  <buffer> <Leader>aq  :q!<CR>:qa<CR>
     au  FileType  terminal  nnoremap  <buffer> a          a
     au  FileType  terminal  nnoremap  <buffer> i          i
     au  FileType  terminal  nnoremap  <buffer> o          i<CR>
     au  FileType  terminal  nnoremap  <buffer> O          i<CR>
     au  FileType  terminal  nnoremap  <buffer> <C-d>      :q!<CR>
+    au  FileType  terminal  :au WinEnter <buffer> normal  a
 
     " au  FileType  terminal  inoremap  <buffer> jk     <C-\><C-n>
     " au  FileType  terminal  inoremap  <buffer> <C-d>  <C-\><C-n>

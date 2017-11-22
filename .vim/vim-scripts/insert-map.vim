@@ -137,7 +137,7 @@ inoremap  <expr>  <C-u>   pumvisible()? "\<PageUp>":"\<C-G>u\<C-U>"
 "=================== quick complete =====================
 "inoremap ^] ^X^]
 inoremap <C-]> <C-x><C-]>
-inoremap <C-v> <C-x><C-v>
+"inoremap <C-v> <C-x><C-v>
 "inoremap <C-l> <C-x><C-l>
 "inoremap ^L ^X^L
 "inoremap ^F ^X^F
