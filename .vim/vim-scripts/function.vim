@@ -18,25 +18,31 @@ fun! EditMakefile()
     " 普通变量, 不可以和vim命令一起使用
     " let a = "./makefile"; edit a 就不行
     " 但是可以: let  $a = "./makefile", edit $a
+    let $Splitright = &splitright
+    set splitright
+
     let $Umake = './Makefile'
     let $umake = './makefile'
 
     " 如果存在Makefile, 编辑Makefile
     if( filereadable($Umake) )
-        edit  $Umake
+        "edit  $Umake
+        vsplit  $umake
         return
     endif
 
     " 如果存在makefile, 编辑makefile
     " edit 新文件, 会自动template插件, 会自动拉入Makefile模板
     if( filereadable($umake) )
-        edit  $umake
+        "edit  $umake
+        vsplit  $umake
         return
     endif
 
     " 如果都不存在, 默认编辑Makefile
-    edit $Umake
+    vsplit $Umake
 
+    let &splitright = $Splitright
     " 生成Makefile之后, 会自动添加一行新内容
     "call MakeInput()
 "}}}
@@ -45,8 +51,14 @@ endfun
 
 " 1-2 编辑CMakeLists.txt
 fun! EditCMakeLists()
+    let $Splitright = &splitright
+    set splitright
+
     let $CMake = './CMakeLists.txt'
-    edit $CMake
+    "edit $CMake
+    vsplit $CMake
+
+    let &splitright = $Splitright
 endfun
 
 
