@@ -110,6 +110,11 @@ augroup CraneGroup
     "12 vim
     au   FileType  vim     nnoremap <buffer>  <F5>  :so %<CR>
     au   FileType  vim     setlocal  foldmethod=marker foldlevel=0
+    "au   FileType  vim     syn match vimSegment '=\{3,}.*=\{3,}'
+    "au   FileType  vim     syn match vimSegment '====' contained
+    "au   FileType  vim     hi link vimSegment Keyword
+    "au   FileType  vim     syn match ngxVariable '\$\(\w\+\|{\w\+}\)'
+
 
     "13 python
     au   FileType  python  source  $Vim_Scripts/python.vim

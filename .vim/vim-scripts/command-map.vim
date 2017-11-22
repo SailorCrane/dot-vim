@@ -245,4 +245,3 @@ cnoremap  <C-r>W  <C-r><C-a>
 cnoremap  <C-r>f  <C-r><C-f>
 cnoremap  <C-r>p  <C-r><C-p>
 "}}}
-
