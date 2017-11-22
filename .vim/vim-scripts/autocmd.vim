@@ -80,6 +80,7 @@ augroup CraneGroup
 
     "9: conque_term  注意:映射一定要加上<buffer>,不然会影响全局映射
     au   FileType  conque_term  nnoremap  <buffer>  <Leader>q  :bd<CR>
+    au   FileType  conque_term  inoremap  <buffer>  <C-h>      <Esc><C-w><C-h>
 
     " conque_term 已经映射了<c-h>
     "au   FileType  conque_term  inoremap  <buffer> <unique>  <C-h>      <ESC><C-w><c-h>
