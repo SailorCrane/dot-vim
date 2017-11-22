@@ -26,5 +26,6 @@ add_executable(${TARGET}  ${TARGET}.cpp)
 
 #add_library(${TARGET}  SHARED ${TARGET}.cpp)
 
-#set_target_properties (target PROPERTIES COMPILE_FLAGS "-fPIC")    # need -fPIC!!!
+#set_target_properties (${TARGET} PROPERTIES COMPILE_FLAGS "-fPIC")    # need -fPIC!!!
+#set_target_properties (${TARGET} PROPERTIES COMPILE_FLAGS "-fPIC -otheropt")    # need -fPIC, all option in on ""
 #set_directory_properties(PROPERTIES ADDITIONAL_MAKE_CLEAN_FILES ${CMAKE_SOURCE_DIR}/${PROJECT_NAME})
