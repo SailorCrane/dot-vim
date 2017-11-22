@@ -206,12 +206,14 @@ fun! ManWinOnly(man_want)
 endf
 
 
-" 10 Terminal
+" 10 Terminal + right(exec special key)
 "{{{
 fun! Terminal()
     terminal
     set ft=terminal
     "exe 'normal L'
+    "exe 'normal \<C-w>L'
+    "call feedkeys("\<C-W>\<C-W>")
     normal L
 endf
 
