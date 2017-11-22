@@ -57,7 +57,7 @@ Plug  'majutsushi/tagbar' , { 'on' : ['TagbarOpen', 'TagbarToggle'] }
 "5-2 Tagbar in vim-scripts's repo
 " <leader>tt 被vim-scripts/Align使用了
 " 所以这里使用ti: tag invert, tt :tag toggle
-nnoremap  <leader>ot  :TagbarOpen<cr>
+"nnoremap  <leader>ot  :TagbarOpen<cr>
 nnoremap  <leader>tt  :TagbarToggle<cr>
 " <Leader>ct comflict with create tags
 "nnoremap  <leader>ct  :TagbarOpen<cr>
