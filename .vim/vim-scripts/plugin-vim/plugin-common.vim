@@ -325,6 +325,8 @@ endif
 " 25 easy sudo edit
 " 有机会: 修改SudoWrite函数和命令: 添加默认参数为当前文件
 Plug  'vim-scripts/sudo.vim'
+cnoreabbrev SW  SudoWrite %
+cnoreabbrev SR  SudoRead %
 
 
 " 26
