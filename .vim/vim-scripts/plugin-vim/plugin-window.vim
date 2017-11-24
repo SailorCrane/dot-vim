@@ -194,11 +194,11 @@ Plug   'oplatek/Conque-Shell', { 'on' : ['ConqueTermVSplit', 'ConqueTermVSplit']
 " {{{
 "nnoremap   <C-n>  :ConqueTermVSplit bash<CR>
 "nnoremap   <C-b>  :ConqueTermVSplit bash<CR>
-"noremap  <leader>ba  :ConqueTermVSplit bash<CR>
+"nnoremap  <leader>ba  :ConqueTermVSplit bash<CR>
 if executable('zsh')
-    noremap  <leader>oc  :ConqueTermVSplit zsh<CR>
+    nnoremap  <leader>oc  :ConqueTermVSplit zsh<CR>
 else
-    noremap  <leader>oc  :ConqueTermVSplit bash<CR>
+    nnoremap  <leader>oc  :ConqueTermVSplit bash<CR>
 endif
 let g:ConqueTerm_StartMessages = 0
 " }}}

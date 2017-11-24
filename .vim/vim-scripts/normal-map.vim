@@ -762,7 +762,7 @@ augroup LastTab
     autocmd! TabLeave  * let g:Lasttab_backup = g:Lasttab | let g:Lasttab = tabpagenr()
     autocmd! TabClosed * let g:Lasttab = g:Lasttab_backup
 augroup END
-noremap  <silent>  <Leader>` :exe "tabn " . g:Lasttab<cr>
+nnoremap  <silent>  <Leader>` :exe "tabn " . g:Lasttab<cr>
 "}}}
 
 
