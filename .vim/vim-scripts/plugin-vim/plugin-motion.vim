@@ -17,15 +17,15 @@ let g:EasyMotion_smartcase = 1
 imap  <Leader><Leader>f  <ESC><Plug>(easymotion-overwin-f)
 
 " move to any char
-map  <Leader>f <Plug>(easymotion-bd-f)
+xmap <Leader>f <Plug>(easymotion-bd-f)
 nmap <leader>f <plug>(easymotion-overwin-f)
 
 " Move to line
-map  <Leader><Leader>l <Plug>(easymotion-bd-jk)
+xmap <Leader><Leader>l <Plug>(easymotion-bd-jk)
 nmap <Leader><Leader>l <Plug>(easymotion-overwin-line)
 
 " Move to word
-map  <Leader><Leader>w <Plug>(easymotion-bd-w)
+xmap  <Leader><Leader>w <Plug>(easymotion-bd-w)
 nmap  <Leader><Leader>w <Plug>(easymotion-overwin-w)
 
 "map <Leader><leader>h <Plug>(easymotion-linebackward)
