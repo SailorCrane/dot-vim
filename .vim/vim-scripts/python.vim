@@ -62,8 +62,9 @@ nnoremap <buffer>  <C-w>a   <C-w>_<CR>
 "}}}
 
 " 5: template
-inoreabbrev <buffer> rstu <ESC>:read $TEMPLATE_PYTHON/Stu.py<CR>
-inoreabbrev <buffer> rcom <ESC>:read $TEMPLATE_PYTHON/common.py<CR>
+inoreabbrev <buffer> rstu  <ESC>:read $TEMPLATE_PYTHON/Stu.py<CR>
+inoreabbrev <buffer> rcom  <ESC>:read $TEMPLATE_PYTHON/common.py<CR>
+inoreabbrev <buffer> rtest <ESC>:read $TEMPLATE_PYTHON/test_case.py<CR>
 
 " 6: <Leader>ci <leader>cs
 vnoremap    <buffer> ,cs   do"""<CR>"""<ESC>kp
