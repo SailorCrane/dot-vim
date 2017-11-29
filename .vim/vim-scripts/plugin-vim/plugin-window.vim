@@ -160,7 +160,7 @@ Plug  'vim-scripts/FuzzyFinder' , { 'on' : ['FufFile'] }
 "{{{
 " CtrlP 中没有什么插件可以比得上Fuzzy Find 的 FufFile, 可以搜索所有路径.
 " sf stand for "search FuzzyFinder"
-nnoremap  <Leader>sf  :<C-u>FufFile<CR>
+"nnoremap  <Leader>sf  :<C-u>FufFile<CR>
 "}}}
 
 "10-3 unite(for vim8, nicer)
@@ -173,6 +173,7 @@ Plug  'Shougo/denite.nvim'
 "nnoremap  <Leader>sd  :Denite file_rec<CR>
 " 文件递归搜索比ctrlp好用
 nnoremap  <Leader>sd  :Denite file_rec<CR>
+nnoremap  <Leader>sf  :Denite file_rec<CR>
 "call denite#custom#map('insert', '<C-n>', '<denite:move_to_next_line>', 'noremap')
 "call denite#custom#map('insert', '<C-p>', '<denite:move_to_previous_line>', 'noremap')
 "}}}
