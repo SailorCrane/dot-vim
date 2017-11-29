@@ -19,9 +19,9 @@ xnoremap  q  <Esc>
 " 2  arrrow : with ctrl
 " <arrrow> set: left, right, up, down
 inoremap <C-h> <Left>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
 inoremap <C-l> <Right>
+" inoremap <C-j> <Down>
+" inoremap <C-k> <Up>
 
 inoremap <C-f> <Esc>lWi
 inoremap <C-b> <Esc>Bi
@@ -128,8 +128,11 @@ inoremap  <expr>  <Esc>   pumvisible()? "\<C-e>":"\<Esc>"
 
 " <up>, <down>
 "inoremap  <expr>  <Tab>   pumvisible()? "\<Down>":"\<Tab>"
-inoremap  <expr>  <C-j>   pumvisible()? "\<Down>":"\<C-j>"
-inoremap  <expr>  <C-k>   pumvisible()? "\<Up>":"\<C-k>"
+" inoremap  <expr>  <C-j>   pumvisible()? "\<Down>":"\<C-j>"
+" inoremap  <expr>  <C-k>   pumvisible()? "\<Up>":"\<C-k>"
+" <C-k> 在普通插入模式, 和popmenu下, 都映射到<Up>
+inoremap  <C-k>   <Up>
+inoremap  <C-j>   <Down>
 
 inoremap  <expr>  <C-d>   pumvisible()? "\<Pagedown>":"\<C-d>"
 inoremap  <expr>  <C-u>   pumvisible()? "\<PageUp>":"\<C-G>u\<C-U>"
