@@ -11,6 +11,10 @@ Plug   'hdima/python-syntax',          { 'for' : 'python'}
 
 " python 的一款补全插件
 Plug   'davidhalter/jedi-vim',         { 'for' : 'python'}
+let g:jedi#smart_auto_mappings = 0
+" if g:jedi#smart_auto_mappings == 1
+"     inoremap <silent> <buffer> <space> <C-R>=jedi#smart_auto_mappings()<CR>
+" end
 
 Plug  'python-rope/ropevim',           { 'for' : 'python'}
 
