@@ -1,5 +1,7 @@
 
 class  A():
+    msg = 'class A'
+
     def __init__(self):
         self.name = "Crane"
         self.age  = 22
@@ -10,9 +12,8 @@ class  A():
         print()
 
 class B():
+    msg = 'class B'
+
     def __init__(self):
         self.name = "Fan"
         self.age  = 10
-
-def fun():
-    pass
