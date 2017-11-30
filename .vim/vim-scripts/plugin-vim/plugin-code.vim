@@ -24,7 +24,8 @@ let g:all_languages = [
     \
     \ 'gdb',
     \ 'make',
-    \ 'cmake'
+    \ 'cmake',
+    \ 'ld_version',
     \ ]
 
 
