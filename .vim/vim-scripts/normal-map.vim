@@ -752,17 +752,20 @@ nnoremap  <Leader>""   /\v(\s*".*\n){3,}<CR>
 
 " 29 switch to last-active tab
 "{{{
-if !exists('g:Lasttab')
-    let g:Lasttab = 1
-    let g:Lasttab_backup = 1
-endif
+if v:version > 707
+    if !exists('g:Lasttab')
+        let g:Lasttab = 1
+        let g:Lasttab_backup = 1
+    endif
 
-augroup LastTab
-    au!
-    autocmd! TabLeave  * let g:Lasttab_backup = g:Lasttab | let g:Lasttab = tabpagenr()
-    autocmd! TabClosed * let g:Lasttab = g:Lasttab_backup
-augroup END
-nnoremap  <silent>  <Leader>` :exe "tabn " . g:Lasttab<cr>
+    augroup LastTab
+        au!
+        autocmd! TabLeave  * let g:Lasttab_backup = g:Lasttab | let g:Lasttab = tabpagenr()
+        autocmd! TabClosed * let g:Lasttab = g:Lasttab_backup
+    augroup END
+
+    nnoremap  <silent>  <Leader>` :exe "tabn " . g:Lasttab<cr>
+endif
 "}}}
 
 
