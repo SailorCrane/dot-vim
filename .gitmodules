@@ -465,6 +465,10 @@
     path = .vim/bundle/ToggleIsk
     url = https://github.com/SailorCrane/ToggleIsk.git
 
+[submodule ".vim/bundle/ld-version-vim"]
+    path = .vim/bundle/ld-version-vim
+    url = https://github.com/SailorCrane/ld-version-vim.git
+
 [submodule ".vim/bundle/vim-potion"]
     path = .vim/bundle/vim-potion
     url = https://github.com/SailorCrane/vim-potion.git

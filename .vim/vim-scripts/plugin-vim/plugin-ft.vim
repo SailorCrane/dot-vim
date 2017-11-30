@@ -39,3 +39,7 @@ Plug  'vim-scripts/Emmet.vim'   , {'for' : ['js', 'html', 'css']}
 
 " nginx config
 Plug 'chr4/nginx.vim'
+
+
+"ld version scripts
+Plug  'SailorCrane/ld-version-vim'
