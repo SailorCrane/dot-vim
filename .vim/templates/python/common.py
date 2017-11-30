@@ -16,11 +16,3 @@ class B():
 
 def fun():
     pass
-
-
-def main():
-    print("start main\n")
-
-if __name__ == "__main__":
-    main()
-
