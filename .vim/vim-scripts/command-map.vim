@@ -27,13 +27,15 @@ if  exists(':PlugInstall')
     cabbrev  bc   PlugClean
     cabbrev  bu   PlugUpdate
     " bl 和 blast冲突了
-    cabbrev  Bl   BundleList
-else    " Bundle
+    cabbrev  Bl   PlugStatus
+
+else
+    " Bundle
     cabbrev  bi   BundleInstall
-    " bl 和 blast冲突了
-    cabbrev  BL   BundleList
     cabbrev  bc   BundleClear
     cabbrev  bu   BundleUpdate
+    " bl 和 blast冲突了
+    cabbrev  Bl   BundleList
 endif
 "}}}
 
