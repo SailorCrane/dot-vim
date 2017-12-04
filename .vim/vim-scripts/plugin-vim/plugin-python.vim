@@ -11,10 +11,20 @@ Plug   'hdima/python-syntax',          { 'for' : 'python'}
 
 " python 的一款补全插件
 Plug   'davidhalter/jedi-vim',         { 'for' : 'python'}
+"{{{
 let g:jedi#smart_auto_mappings = 0
 " if g:jedi#smart_auto_mappings == 1
 "     inoremap <silent> <buffer> <space> <C-R>=jedi#smart_auto_mappings()<CR>
 " end
+
+" let g:jedi#goto_assignments_command = 0
+" echo 'in python-plugin vim'
+"nnoremap <buffer> <Ledaer>ga  :call jedi#goto_assignments()<CR>
+" if len(g:jedi#goto_assignments_command)
+"     execute 'nnoremap <buffer> '.g:jedi#goto_assignments_command.' :call jedi#goto_assignments()<CR>'
+" endif
+"}}}
+
 
 Plug  'python-rope/ropevim',           { 'for' : 'python'}
 

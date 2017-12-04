@@ -43,73 +43,91 @@ Plug  'scrooloose/nerdcommenter', { 'for' : g:all_languages, 'on' : ['<Plug>NERD
 Plug  'tpope/vim-commentary',     { 'for' : g:all_languages, 'on' : ['<Plug>CommentaryLine', '<Plug>Commentary',]}
 
 
-"4: syntastic in scrooloose
-Plug  'scrooloose/syntastic'  , {'for' : [ 'c', 'cpp', 'python', 'sh']}
-" {{{
-" loc for location: lnext, lpre
-let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"4-1: syntastic/ale
+if v:version < 800
+    Plug  'scrooloose/syntastic'  , {'for' : [ 'c', 'cpp', 'python', 'sh']}
+    " {{{
+    let g:syntax_checker = "syntastic"
 
-let g:syntastic_python_checkers = ['pylint']
-"let g:syntastic_python_checkers = ['flake8']
-"let g:syntastic_python_pylint_args = "--no-docstring-rgx='.*'"
-"let g:syntastic_python_pylint_args = "--no-docstring-rgx='.*'  --ignore-imports='yes'  --indent-string='\t' -E "
-"let g:syntastic_python_pylint_args = " --indent-string='\t' --disable=E0401"
-"let g:syntastic_python_pylint_args = "-E"
+    " loc for location: lnext, lpre
+    let g:syntastic_always_populate_loc_list = 1
+    "let g:syntastic_auto_loc_list = 1
+    let g:syntastic_check_on_open = 1
+    let g:syntastic_check_on_wq = 0
 
-" 为了使syntastic 和 YCM一起工作, 将他们的 error 和 warning
-" symbol设置为不同标志
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
-let g:syntastic_enable_highlighting = 1
-let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+    let g:syntastic_python_checkers = ['pylint']
+    "let g:syntastic_python_checkers = ['flake8']
+    "let g:syntastic_python_pylint_args = "--no-docstring-rgx='.*'"
+    "let g:syntastic_python_pylint_args = "--no-docstring-rgx='.*'  --ignore-imports='yes'  --indent-string='\t' -E "
+    "let g:syntastic_python_pylint_args = " --indent-string='\t' --disable=E0401"
+    "let g:syntastic_python_pylint_args = "-E"
 
-"let g:syntastic_error_symbol='>>'
-"let g:syntastic_warning_symbol='>'
-let g:syntastic_check_on_open=1
-" check_header 可以检测头文件语法错误
-let g:syntastic_c_check_header=1
-let g:syntastic_cpp_check_header = 1
+    " 为了使syntastic 和 YCM一起工作, 将他们的 error 和 warning
+    " symbol设置为不同标志
+    let g:syntastic_error_symbol='✗'
+    let g:syntastic_warning_symbol='⚠'
+    let g:syntastic_enable_highlighting = 1
+    let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 
-"set the options of g++ to suport c++11. :
+    " =================== c/c++ =====================
+    "let g:syntastic_error_symbol='>>'
+    "let g:syntastic_warning_symbol='>'
+    let g:syntastic_check_on_open=1
+    " check_header 可以检测头文件语法错误
+    let g:syntastic_c_check_header=1
+    let g:syntastic_cpp_check_header = 1
 
-"let g:syntastic_cpp_compiler = 'clang++'
-"let g:syntastic_cpp_compiler = 'gcc'
-"let g:syntastic_cpp_compiler_options='-std=c++11 -stdlib=libc++' "这里加了之后, 语法检测就用不了了, 悲哀.
+    "set the options of g++ to suport c++11. :
 
-" 使语法检测, 支持c++11语法, 比如 auto iter = nodes.begin()
-"let g:syntastic_cpp_compiler = 'g++'  "change the compiler to g++ to support c++11.
-" }}}
+    "let g:syntastic_cpp_compiler = 'clang++'
+    "let g:syntastic_cpp_compiler = 'gcc'
+    "let g:syntastic_cpp_compiler_options='-std=c++11 -stdlib=libc++' "这里加了之后, 语法检测就用不了了, 悲哀.
+
+    " 使语法检测, 支持c++11语法, 比如 auto iter = nodes.begin()
+    "let g:syntastic_cpp_compiler = 'g++'  "change the compiler to g++ to support c++11.
+    " }}}
+
+else " v:version >= 800(vim8.0+)
+    Plug  'w0rp/ale' ,  { 'for' : g:all_languages }
+    "{{{
+    let g:syntax_checker = "ale"
+
+    " python use linter(pylint), not flake8(configed at ~/.pylintrc)
+    let g:ale_linters = {
+    \   'python': ['pylint'],
+    \}
+
+    let g:ale_sign_column_always = 1
+    let g:ale_set_highlights = 0
+    "自定义error和warning图标
+    "let g:ale_sign_error = '✗'
+    "let g:ale_sign_warning = '⚠'
+    let g:ale_sign_error = '✗'
+    let g:ale_sign_warning = '⚡'
+
+    "在vim自带的状态栏中整合ale
+    let g:ale_statusline_format = ['✗ %d', '⚡ %d', '✔ OK']
+
+    "显示Linter名称,出错或警告等相关信息
+    let g:ale_echo_msg_error_str = 'E'
+    let g:ale_echo_msg_warning_str = 'W'
+    let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+
+    "normal模式下，sp前往上一个错误或警告，sn前往下一个错误或警告
+    nmap sp <Plug>(ale_previous_wrap)
+    nmap sn <Plug>(ale_next_wrap)
+
+    "<Leader>s触发/关闭语法检查
+    nmap <Leader>ts :ALEToggle<CR>
+
+    "<Leader>d查看错误或警告的详细信息
+    nmap <Leader>dd :ALEDetail<CR>
+    "}}}
+
+endif
 
 
-"4-2: ale: syntax check(need vim8)
-"Plug  'w0rp/ale' ,  { 'for' : g:all_languages }
-"{{{
-""let g:ale_sign_error = '✗'
-""let g:ale_sign_warning = '⚠'
-"let g:ale_sign_column_always = 1
-"let g:ale_set_highlights = 0
-""自定义error和warning图标
-"let g:ale_sign_error = '✗'
-"let g:ale_sign_warning = '⚡'
-""在vim自带的状态栏中整合ale
-"let g:ale_statusline_format = ['✗ %d', '⚡ %d', '✔ OK']
-""显示Linter名称,出错或警告等相关信息
-"let g:ale_echo_msg_error_str = 'E'
-"let g:ale_echo_msg_warning_str = 'W'
-"let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-""普通模式下，sp前往上一个错误或警告，sn前往下一个错误或警告
-"nmap sp <Plug>(ale_previous_wrap)
-"nmap sn <Plug>(ale_next_wrap)
-""<Leader>s触发/关闭语法检查
-"nmap <Leader>s :ALEToggle<CR>
-""<Leader>d查看错误或警告的详细信息
-"nmap <Leader>d :ALEDetail<CR>
-"}}}
-
-"6: YouCompleteMe
+"5: YouCompleteMe
 "Plug  'Valloric/YouCompleteMe' ,  { 'for' : g:all_languages }
 " {{{
 " 自动补全配置
