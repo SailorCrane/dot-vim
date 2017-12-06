@@ -276,6 +276,7 @@ nnoremap <A-0>     10gt<CR>
 " 12 tabpage is enough
 nnoremap \q     11gt<CR>
 nnoremap \w     12gt<CR>
+nnoremap \e     13gt<CR>
 " }}}
 
 " 7-4 window 操作:用Ctrl切换窗口
