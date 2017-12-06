@@ -26,6 +26,7 @@ let g:all_languages = [
     \ 'make',
     \ 'cmake',
     \ 'ld_version',
+    \ 'dockerfile',
     \ ]
 
 

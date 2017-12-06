@@ -153,4 +153,6 @@ augroup CraneGroup
     " au  FileType  terminal  inoremap  <buffer> <C-d>  <C-\><C-n>
     " au  FileType  terminal  inoremap  <buffer> <C-c>  <C-\><C-n>:q!<CR>
 
+    autocmd BufNewFile Dockerfile  silent 0 read  $TEMPLATE/dockerfile/dockerfile-template
+
 augroup END "end of CraneGroup

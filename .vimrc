@@ -14,6 +14,7 @@ let  $Crane_Vim_Bundle = $Crane_Dot_Vim  . '/bundle'
 let  $Crane_Vim_Dict   = $Crane_Dot_Vim  . '/dict'
 let  $Crane_Vim_The    = $Crane_Dot_Vim  . '/thesaurus'
 
+let  $TEMPLATE         = $Crane_Dot_Vim  . '/templates'
 let  $TEMPLATE_CPP     = $Crane_Dot_Vim  . '/templates/cpp'
 let  $TEMPLATE_PYTHON  = $Crane_Dot_Vim  . '/templates/python'
 
