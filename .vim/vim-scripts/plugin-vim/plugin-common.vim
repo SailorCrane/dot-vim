@@ -115,7 +115,6 @@ Plug  'tpope/vim-dispatch'
 
 Plug  'tpope/vim-scriptease'
 
-Plug  'tpope/vim-sleuth'
 
 
 "26 matchit 注释这个插件, 因为vim已经自带了

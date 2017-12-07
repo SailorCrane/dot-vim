@@ -1,5 +1,7 @@
 " vim: set foldmethod=marker  foldlevel=0: vim modeline( set )
 
+" let g:all_languages = []
+"{{{
 let g:all_languages = [
     \ 'c',
     \ 'cpp',
@@ -28,7 +30,15 @@ let g:all_languages = [
     \ 'ld_version',
     \ 'dockerfile',
     \ ]
+"}}}
 
+" let g:all_lan_except_py = []
+"{{{
+let  g:all_lan_except_py=copy(g:all_languages)
+let  s:py_idx=index(g:all_lan_except_py, 'python')
+call remove(g:all_lan_except_py, s:py_idx)
+"echo s:py_idx
+"}}}
 
 "3: nerdcommenter in scrooloose
 Plug  'scrooloose/nerdcommenter', { 'for' : g:all_languages, 'on' : ['<Plug>NERDCommenterInvert',] }
@@ -270,3 +280,7 @@ let g:CCTreeKeyToggleWindow = '<C-\>w'
 " 对于sh的支持一般: 输出if then 才会输出fi, 输入do回车输出done
 " 可以由ultisnips.git代替
 Plug  'tpope/vim-endwise' ,  { 'for' : g:all_languages }
+
+
+" 不让sleuth影响到python的缩进
+Plug  'tpope/vim-sleuth',  { 'for' : g:all_lan_except_py }
