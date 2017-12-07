@@ -16,8 +16,8 @@ xnoremap  q  <Esc>
 "inoremap  kj <Esc>
 "}}}
 
-" 2  arrrow : with ctrl
-" <arrrow> set: left, right, up, down
+" 2  arrow : jump left/right forward/backward
+"{{{
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 " inoremap <C-j> <Down>
@@ -25,7 +25,7 @@ inoremap <C-l> <Right>
 
 inoremap <C-f> <Esc>lWi
 inoremap <C-b> <Esc>Bi
-
+"}}}
 
 " 3 ctrl- : quick  edit
 "{{{
@@ -177,6 +177,10 @@ inoremap  <C-x><C-]>   <C-x><C-]><C-p>
 "inoremap  <expr>  <C-n>   pumvisible()? "\<Down>":"\<C-n>"
 "inoremap  <expr>  <C-p>   pumvisible()? "\<Up>":"\<C-p>"
 "}}}
+
+" 12 Upper/Lower backward word
+inoremap <C-x>u  <Esc>guiwea
+inoremap <C-x>U  <Esc>gUiwea
 
 "=================== iabbrev =====================
 "1  My abbreviation at insert mode
