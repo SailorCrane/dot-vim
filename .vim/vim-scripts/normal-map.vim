@@ -271,12 +271,25 @@ nnoremap <A-8>      8gt<CR>
 nnoremap <A-9>      9gt<CR>
 nnoremap <A-0>     10gt<CR>
 
+nnoremap \1     11gt<CR>
+nnoremap \2     12gt<CR>
+nnoremap \3     13gt<CR>
+nnoremap \4     14gt<CR>
+nnoremap \5     15gt<CR>
+nnoremap \6     16gt<CR>
+nnoremap \7     17gt<CR>
+nnoremap \8     18gt<CR>
+nnoremap \9     19gt<CR>
+nnoremap \0     20gt<CR>
+
 "nnoremap <A-q>     11gt<CR>
 "nnoremap <A-w>     11gt<CR>
 " 12 tabpage is enough
 nnoremap \q     11gt<CR>
 nnoremap \w     12gt<CR>
 nnoremap \e     13gt<CR>
+nnoremap \r     14gt<CR>
+nnoremap \t     15gt<CR>
 " }}}
 
 " 7-4 window 操作:用Ctrl切换窗口
