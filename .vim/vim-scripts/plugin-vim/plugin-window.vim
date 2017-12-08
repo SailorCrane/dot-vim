@@ -111,6 +111,7 @@ nnoremap  <Leader>op   :MRU py<CR>
 "}}}
 
 "6-1: undotree
+" 类似插件 gundo, mundo, histwin
 Plug  'mbbill/undotree' ,   { 'on' : ['UndotreeShow', 'UndotreeToggle'] }
 " {{{
 nnoremap  <Leader>ou :UndotreeShow<cr>
