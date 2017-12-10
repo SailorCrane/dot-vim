@@ -70,7 +70,7 @@ set sidescroll=5
                                          " set background=light
 set background=dark
 
-set mouse=a
+set mouse=a                              " mouse support
 
 set history=300
 set backspace=indent,eol,start           " vim 默认在最后添加空行,禁止这种行为
@@ -93,6 +93,8 @@ set shell=$SHELL                         " set :shell to run zsh
 
 set colorcolumn=81
 
+" grep, ack setting
+"{{{
 " 不太有用, 因为Ack插件工作的非常友好流畅
 if executable('ack')
     set grepprg=ack\ --nogroup\ --column\ $* " ack support column
@@ -102,21 +104,23 @@ if executable('ack')
 else
     set grepprg=grep\ -E\ -n\ $*\ /dev/null  " add -E to default setting
 endif
+"}}}
 
 set foldignore=                          " default is ignore '#'
-set nrformats=alpha                      " number format(C-a, C-x)
+set nrformats=alpha                      " number format(C-a plus, C-x minus)
 set guitablabel=%N/\ %t\ %M              " gui tabpage name
 
-"if !exists("g:loaded_crane_vimrc")
-"endif
-set dictionary+=$Crane_Vim_Dict/words,$Crane_Vim_Dict/words_ch.txt      " set 可以保证不重复添加(不需要if), set赋值"="不能有空格.(不支持字符串"."连接)
+" dictionary path and setting
+"{{{
+" set 可以保证不重复添加(不需要if), set赋值"="不能有空格.(不支持字符串"."连接)
+set dictionary+=$Crane_Vim_Dict/words,$Crane_Vim_Dict/words_ch.txt
 
 " 同义词字典
 set thesaurus+=$Crane_Vim_The/mthesaur.txt " set 可以保证不重复添加(不需要if), set赋值"="不能有空格.(不支持字符串"."连接)
 
 set completeopt+=longest
 "set completeopt+=noselect
-
+"}}}
 
 " source scripts
 "{{{
@@ -148,5 +152,5 @@ hi SpecialKey gui=bold term=NONE  guibg=bg guifg=green
 let g:loaded_crane_vimrc = 1
 
 
-" end source(local config): 比如在服务器上独特的配置．家里独特配置等等
+" end source(local config): 比如在服务器上独特的配置.家里独特配置等等
 source  $Vim_Scripts/global-local.vim
