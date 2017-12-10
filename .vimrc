@@ -78,6 +78,9 @@ set backspace=indent,eol,start           " vim 默认在最后添加空行,禁�
 set wildmenu  wildmode=full              " zsh style
 "set wildmode=longest,list               " bash sytle
 
+"set undodir                             " where to save undofile, default is '.'
+"set undofile                            " enable undofile, undo saved at '.filename.un~'(wundo, rundo)
+
 if has('cscope')                         " 'has()' :test vim enable feature
     set cscopetag                        " 优先使用cscopetag文件, (针对 ctrl-] 动作)
 endif
