@@ -779,7 +779,8 @@ if v:version > 707
         autocmd! TabClosed * let g:Lasttab = g:Lasttab_backup
     augroup END
 
-    nnoremap  <silent>  <Leader>` :exe "tabn " . g:Lasttab<cr>
+    "nnoremap  <silent>  <Leader>` :exe "tabn " . g:Lasttab<cr>
+    nnoremap  <silent>  \` :exe "tabn " . g:Lasttab<cr>
 endif
 "}}}
 
