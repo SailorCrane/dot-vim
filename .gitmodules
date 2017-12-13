@@ -548,6 +548,10 @@
     path = .vim/bundle/nginx.vim
     url = https://github.com/chr4/nginx.vim.git
 
+[submodule ".vim/bundle/refactor"]
+    path = .vim/bundle/refactor
+    url = https://github.com/SailorCrane/refactor.git
+
 # [submodule ".vim/bundle/vim-refactor"]
 #     path = .vim/bundle/vim-refactor
 #     url = https://github.com/LucHermitte/vim-refactor

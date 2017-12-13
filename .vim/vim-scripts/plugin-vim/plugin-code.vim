@@ -297,3 +297,6 @@ Plug  'tpope/vim-sleuth',  { 'for' : g:all_lan_except_py }
 "Plug 'tomtom/stakeholders_vim'
 "Plug 'LucHermitte/alternate-lite'
 ""Plug 'LucHermitte/lh-cpp'
+
+Plug 'SailorCrane/refactor'
+
