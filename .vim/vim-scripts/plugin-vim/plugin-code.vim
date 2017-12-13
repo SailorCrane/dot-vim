@@ -284,3 +284,16 @@ Plug  'tpope/vim-endwise' ,  { 'for' : g:all_languages }
 
 " 不让sleuth影响到python的缩进
 Plug  'tpope/vim-sleuth',  { 'for' : g:all_lan_except_py }
+
+
+" c/cpp refactor tools
+"Plug 'LucHermitte/vim-refactor'
+"Plug 'LucHermitte/lh-vim-lib'
+"Plug 'LucHermitte/lh-brackets'
+"Plug 'LucHermitte/lh-dev'
+"Plug 'LucHermitte/lh-tags'
+"Plug 'LucHermitte/mu-template'
+"Plug 'LucHermitte/searchInRuntime'
+"Plug 'tomtom/stakeholders_vim'
+"Plug 'LucHermitte/alternate-lite'
+""Plug 'LucHermitte/lh-cpp'
