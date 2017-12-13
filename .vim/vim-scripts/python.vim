@@ -71,3 +71,10 @@ vnoremap    <buffer> ,cs   do"""<CR>"""<ESC>kp
 
 " 7: disable preview for python complete(jedi)
 setlocal  completeopt-=preview
+
+" 8: jedi setting(deprecated, all jedi config can be setting by let g:jedi# = )
+" nnoremap <buffer> <Leader>gg :call jedi#goto_assignments()<CR>
+" nnoremap <buffer> <Leader>gd :call jedi#goto()<CR>
+" \ 'goto_command': "'<leader>d'",
+" \ 'goto_assignments_command': "'<leader>g'",
+" \ 'goto_definitions_command': "''",
