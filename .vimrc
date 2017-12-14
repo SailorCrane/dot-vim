@@ -5,6 +5,9 @@
 " 路径最后不要跟'/'
 " 字符串尽量使用单引号, 这样可以使用双引号注释
 let  $Crane_Vim_Home   = '~'
+let  $Crane_Sh_Dir     = $Crane_Vim_Home . '/.common-shell-utils/'
+let  $Crane_Dot_Vim    = $Crane_Vim_Home . '/.vim'
+
 let  $Crane_Dot_Vim    = $Crane_Vim_Home . '/.vim'
 
 let  $Vim_Scripts      = $Crane_Dot_Vim  . '/vim-scripts'
@@ -134,6 +137,7 @@ source  $Vim_Scripts/myBundle.vim
 source  $Vim_Scripts/function.vim
 
 source  $Vim_Scripts/normal-map.vim
+source  $Vim_Scripts/edit-map.vim
 source  $Vim_Scripts/insert-map.vim
 source  $Vim_Scripts/opending-map.vim
 source  $Vim_Scripts/command-map.vim
