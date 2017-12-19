@@ -470,7 +470,7 @@ nnoremap  <Leader>id  :.-1 read !date -u<CR>J
 nnoremap  <Leader>ss  :%s///g<left><left><left>
 nnoremap  <Leader>sC  :call Sub_chinese_punc()<CR>
 
-" sub with "\r" (unix line)
+" sub '' with "\r" (unix line)
 nnoremap  <Leader>mm    :%s/<C-v><C-M>/\r/g<CR>
 
 "这个主要是针对 c-support 的 \pind, 因为默认生成的是 FILE_INC 宏

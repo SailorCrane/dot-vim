@@ -1,13 +1,16 @@
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import unittest
-from  import
+from import
 
 
 class MyTestCase(unittest.TestCase, ):
     def setUp(self):
-        print("start test")
+        print("start test '%s'" % self.__class__.__name__)
 
     def tearDown(self):
-        print("end test\n")
+        print("end test '%s' \n" % self.__class__.__name__)
 
     def test_1(self):
         self.assertEqual(a, b)
