@@ -171,8 +171,9 @@ cnoreabbrev sr  Ack
 cnoreabbrev sw  Ack <C-r><C-w>
 cnoreabbrev sn  Ack <C-r><C-w>    %      <C-b><S-right><S-right><Right>
 
-cnoreabbrev sp  Ack <C-r><C-w>   --py    <C-b><S-right><S-right><Right>
-cnoreabbrev sc  Ack <C-r><C-w>   --cpp   <C-b><S-right><S-right><Right>
+cnoreabbrev sv  Ack <C-r><C-w> --vim <C-b><S-right><S-right><Right><Backspace>
+cnoreabbrev sp  Ack <C-r><C-w> --py <C-b><S-right><S-right><Right><Backspace>
+cnoreabbrev sc  Ack <C-r><C-w> --cpp <C-b><S-right><S-right><Right>
 
 cnoreabbrev red   redir  > /tmp/re.txt
 cnoreabbrev ree   redir  END
