@@ -88,10 +88,14 @@ Plug  'michaeljsmith/vim-indent-object'
 
 
 " 7  lastpat(awesome)
-Plug   'kana/vim-textobj-lastpat'
+Plug   'SailorCrane/vim-textobj-lastpat'
 "{{{
-" vi/ 选择模式选中下一次匹配
-" 鸡肋, 因为vim的gn, gN 已经可以在选择模式中,选中下一次匹配了
-" 和gn, gN不同: gn选中上次visual文字
+" i/ 和 gn 区别(一个是选中search, 一个是选中visual)
 " 而lastpat是当前搜索内容, di/可以删除搜索内容.(非常有用, 尤其是搜索非常复杂时)
+
+" 修改源码实现 lastpat插件(SailorCrane), 因为 'i/'和'a/' 还要用在路径选取中
+" omap  an  <Plug>(textobj-lastpat-n)
+" omap  in  <Plug>(textobj-lastpat-n)
+" a?  <Plug>(textobj-lastpat-N)
+" i?  <Plug>(textobj-lastpat-N)
 "}}}
