@@ -164,16 +164,15 @@ cnoreabbrev  fd         set  fdm?
 
 
 " ack auto recursive and auto exclude ".git", ".svn", about tabs?
-" --python same as --type=python
+" --python/--py/--type=python
 
 cnoreabbrev ack Ack
-cnoreabbrev sr  Ack  ""                <C-b><Right><Right><Right><Right><Right><Right>
-cnoreabbrev sw  Ack  "<C-r><C-w>"      <CR>
-cnoreabbrev sn  Ack  ""    %           <C-b><Right><Right><Right><Right><Right><Right>
+cnoreabbrev sr  Ack
+cnoreabbrev sw  Ack <C-r><C-w>
+cnoreabbrev sn  Ack <C-r><C-w>    %      <C-b><S-right><S-right><Right>
 
-cnoreabbrev sp  Ack  ""    --python    <C-b><Right><Right><Right><Right><Right><Right>
-cnoreabbrev sc  Ack  ""    --cpp       <C-b><Right><Right><Right><Right><Right><Right>
-
+cnoreabbrev sp  Ack <C-r><C-w>   --py    <C-b><S-right><S-right><Right>
+cnoreabbrev sc  Ack <C-r><C-w>   --cpp   <C-b><S-right><S-right><Right>
 
 cnoreabbrev red   redir  > /tmp/re.txt
 cnoreabbrev ree   redir  END
