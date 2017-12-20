@@ -1,4 +1,6 @@
 
+" motion/pending map
+
 " 1  motion user
 Plug  'kana/vim-textobj-user'
 
@@ -83,3 +85,13 @@ Plug  'b4winckler/vim-angry'
 
 " 6 indent object
 Plug  'michaeljsmith/vim-indent-object'
+
+
+" 7  lastpat(awesome)
+Plug   'kana/vim-textobj-lastpat'
+"{{{
+" vi/ 选择模式选中下一次匹配
+" 鸡肋, 因为vim的gn, gN 已经可以在选择模式中,选中下一次匹配了
+" 和gn, gN不同: gn选中上次visual文字
+" 而lastpat是当前搜索内容, di/可以删除搜索内容.(非常有用, 尤其是搜索非常复杂时)
+"}}}
