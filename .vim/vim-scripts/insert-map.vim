@@ -184,9 +184,11 @@ inoremap <C-x>U  <Esc>gUiwea
 
 "=================== iabbrev =====================
 "1  My abbreviation at insert mode
-iabbrev q@  @qq.com
-iabbrev @@  215379@qq.com
+inoreabbrev q@  @qq.com
+inoreabbrev @@  215379@qq.com
 
 "2  my self  abbr
-iabbrev jft just for test
+inoreabbrev jft just for test
 
+"3 TODO, OPTIMIZE
+inoreabbrev OPT OPTIMIZE
