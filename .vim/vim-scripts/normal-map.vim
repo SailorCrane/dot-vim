@@ -713,6 +713,11 @@ if v:version > 707
 endif
 "}}}
 
+" 30 svn
+"{{{
+" 更新当前文件
+nnoremap <Leader>vu  :!svn update %<CR>
+"}}}
 
 " 99 关于normal 模式中惯用的n 和 p的总结:
 "{{{
