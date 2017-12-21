@@ -23,8 +23,9 @@ Plug  'tpope/vim-surround'
 " python private __name__
 let g:surround_80 = "__\r__"
 
+" 每次进入时, 设置b:surround_102.  Set_Fold_Surround
 " vim fold "{{{  }}}"
-let g:surround_102 = "\" {{{\r\" }}}"
+"let g:surround_102 = '\" {{{\r\" }}}'
 "}}}
 
 

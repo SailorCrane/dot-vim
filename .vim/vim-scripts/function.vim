@@ -232,3 +232,28 @@ endf
 
 command! Terminal  call Terminal()
 "}}}
+
+
+" 11 custom filetype fold
+fun! Set_Fold_Surround()
+"{{{
+
+py3 <<EOF
+import  vim
+
+def set_fold_surround():
+    cms = vim.eval("&cms")
+    cms = cms.replace("%s", "")
+
+    # 这里因为{{{, }}}太多, 不能用format()方法
+    vim_cmd = "let b:surround_102 = \'{cms} {{{\r{cms} }}}\'"
+    vim_cmd = vim_cmd.replace("{cms}", cms)
+
+    print(vim_cmd)
+    vim.command(vim_cmd)
+
+set_fold_surround()
+EOF
+
+"}}}
+endfun

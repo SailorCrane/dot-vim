@@ -5,16 +5,19 @@ augroup CraneGroup
 
     "0 cursor(from vim galore)
     " 很喜欢cursorline)这个功能,我只想让这个效果出现在当前窗口,而且在插入模式中关闭这个效果:
-    autocmd InsertLeave * setlocal cursorline
-    autocmd InsertEnter * setlocal nocursorline
-    "autocmd WinEnter * setlocal cursorline
-    "autocmd WinLeave * setlocal nocursorline
+    au InsertLeave * setlocal cursorline
+    au InsertEnter * setlocal nocursorline
+    "au WinEnter * setlocal cursorline
+    "au WinLeave * setlocal nocursorline
 
-    "0-1 进入窗口时显示buff file name
-    "autocmd WinEnter * file
-    "autocmd TabEnter * file
-    "autocmd WinEnter * call  ShowBufName()
-    "autocmd WinEnter * exec "normal  <C-g>"
+    "0-1
+    au   BufNewFile,BufRead   *  call Set_Fold_Surround()
+
+    "0-2 进入窗口时显示buff file name
+    "au WinEnter * file
+    "au TabEnter * file
+    "au WinEnter * call  ShowBufName()
+    "au WinEnter * exec "normal  <C-g>"
     "h ctrl-g
     "file命令即normal下的<C-g>, 类似于自己写的ShowBufName()函数
 
@@ -153,7 +156,7 @@ augroup CraneGroup
     " au  FileType  terminal  inoremap  <buffer> <C-d>  <C-\><C-n>
     " au  FileType  terminal  inoremap  <buffer> <C-c>  <C-\><C-n>:q!<CR>
 
-    autocmd BufNewFile Dockerfile  silent 0 read  $TEMPLATE/dockerfile/dockerfile-template
+    au BufNewFile Dockerfile  silent 0 read  $TEMPLATE/dockerfile/dockerfile-template
 
     " (FIXME|NOTE|TODO|OPTIMIZE|XXX) highlight
     au Syntax * syn match MyTodo /\v<(FIXME|NOTE|TODO|OPTIMIZE|XXX)/ containedin=.*Comment,vimCommentTitle
