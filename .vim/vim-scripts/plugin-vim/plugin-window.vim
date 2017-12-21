@@ -180,7 +180,8 @@ nnoremap  <Leader>sf  :Denite file_rec<CR>
 "}}}
 
 "10-4 搜索文件
-Plug  'wincent/ferret'
+"Plug  'wincent/ferret'
+" 影响Ack 命令(ferret内部有自己的Ack)
 
 
 "12 tabman: tab + window管理, 类似于BufExplorer
