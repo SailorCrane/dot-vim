@@ -30,15 +30,19 @@ Plug  'scrooloose/nerdtree', { 'on' : g:nerdtree_all_commands }
 let NERDChristmasTree=0
 let NERDTreeWinSize=35
 let NERDTreeChDirMode=2
-let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
+let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$', '__pycache__']
 let NERDTreeShowBookmarks=1
 let NERDTreeWinPos="left"
-" Automatically open a NERDTree if no files where specified
+" " 设置默认显示隐藏文件(如果不设置, 默认不显示隐藏文件, 需要按I(ignore)显示)
+" let g:NERDTreeShowHidden=1
+
+" " Automatically open a NERDTree if no files where specified
 " autocmd vimenter * if !argc() | NERDTree | endif
+
 " " Close vim if the only window left open is a NERDTree
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&
 " b:NERDTreeType == "primary") | q | endif
-" " Open a NERDTree
+
 "nnoremap <leader>on :NERDTreeToggle<cr>
 nnoremap <leader>on :NERDTreeFind<cr>
 nnoremap <leader>tn :NERDTreeToggle<cr>
