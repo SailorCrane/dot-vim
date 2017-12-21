@@ -8,11 +8,24 @@ Plug  'tpope/vim-repeat'
 
 " 3 vim-surround
 Plug  'tpope/vim-surround'
+"{{{
 " ysiW": 给W添加"
 " yss" : 给一行添加"
 " cs"'
 " ds"
 " ysiw"
+
+" custome
+" echo char2nr("-") ------> 45
+" echo char2nr("P") ------> 80, private
+" echo char2nr("f") ------> 102, fold
+
+" python private __name__
+let g:surround_80 = "__\r__"
+
+" vim fold "{{{  }}}"
+let g:surround_102 = "\" {{{\r\" }}}"
+"}}}
 
 
 " 4 ReplaceWithRegister: gr
