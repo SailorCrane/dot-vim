@@ -63,6 +63,8 @@ let g:mapleader = ','
 runtime   ftplugin/man.vim               " 放在 source command-map.vim之前, 因为其中用了'Man'命令
 runtime   macros/matchit.vim             " 激活vim自带的matchit.vim, 这样就不用这个matchit.vim插件了
 
+set cpoptions-=a                         " :read path/file, don't and path/file to buffer list
+
 set autoread
 set autowrite                            " 跳转buffer时, 自动:write(bnext, bfirst...)
 set autowriteall                         " 除了buffer外, 退出时也自动写入文件(:q, :qall, :edit...)
@@ -70,8 +72,7 @@ set autowriteall                         " 除了buffer外, 退出时也自动�
 set scrolloff=3
 set sidescroll=5
 
-                                         " set background=light
-set background=dark
+set background=dark                      " set background=light
 
 set mouse=a                              " mouse support
 
