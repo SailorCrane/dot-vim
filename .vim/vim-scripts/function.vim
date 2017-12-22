@@ -249,7 +249,7 @@ def set_fold_surround():
     vim_cmd = "let b:surround_102 = \'{cms} {{{\r{cms} }}}\'"
     vim_cmd = vim_cmd.replace("{cms}", cms)
 
-    print(vim_cmd)
+    # print(vim_cmd)
     vim.command(vim_cmd)
 
 set_fold_surround()
