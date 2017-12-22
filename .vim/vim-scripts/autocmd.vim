@@ -167,4 +167,5 @@ augroup CraneGroup
 
 augroup END "end of CraneGroup
 
+" highlight (FIXME|NOTE|TODO|OPTIMIZE|XXX)
 hi def link MyTodo Todo
