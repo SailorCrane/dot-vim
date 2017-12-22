@@ -126,6 +126,10 @@ augroup CraneGroup
     au   FileType  c,cpp   source  $Vim_Scripts/c.vim
     au   FileType  cpp     source  $Vim_Scripts/cpp.vim
 
+    "15 sh
+    " 执行当前文件
+    au   FileType  sh      nnoremap <buffer>  <F5>  :!./%<CR>
+
 
     "15 command-line(history) Event: 完美
     " 恢复<CR>原功能, 在这里是执行命令功能, 注意使用<buffer>映射
