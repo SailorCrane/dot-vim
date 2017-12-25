@@ -123,7 +123,9 @@ fun! Sub_chinese_punc()
     :%s/．/./ge
     :%s/？/?/ge
     :%s/　/ /ge
-    :%s/；/; /ge
+    :%s/；/;/ge
+    :%s/＃/#/ge
+    :%s/、/,/ge
 
     :%s/＂/" /ge
     :%s/＇/' /ge
