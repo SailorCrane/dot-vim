@@ -14,5 +14,6 @@ inoreabbrev <buffer> scr  std::cerr <<
 inoreabbrev <buffer> sel  std::endl
 
 " rstu stand for read Stu.hpp
-inoreabbrev <buffer> rstu <ESC>:read $TEMPLATE_CPP/Stu.hpp<CR>
-inoreabbrev <buffer> rcom <ESC>:read $TEMPLATE_CPP/common.cpp<CR>
+inoreabbrev <buffer> rstu  <ESC>:read  $TEMPLATE_CPP/Stu.hpp<CR>
+inoreabbrev <buffer> rcom  <ESC>:read  $TEMPLATE_CPP/common.cpp<CR>
+inoreabbrev <buffer> rtest <ESC>:read  $TEMPLATE_CPP/test_case.cpp<CR>
