@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-from import
+from
 
 
 class MyTestCase(unittest.TestCase, ):
@@ -12,11 +12,19 @@ class MyTestCase(unittest.TestCase, ):
     def tearDown(self):
         print("end test '%s' \n" % self.__class__.__name__)
 
+    def test_all(self):
+        self.assertEqual(a, b)
+        self.assertTrue()
+        self.assertFalse()
+
+    def test_raises(self):
+        self.assertRaises(ValueError, lambda :)
+
+        with self.assertRaises(ValueError):
+            pass
+
     def test_1(self):
         self.assertEqual(a, b)
-
-    def test_2(self):
-        pass
 
 
 if __name__ == "__main__":
