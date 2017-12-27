@@ -120,11 +120,17 @@ endf
 fun! Sub_chinese_punc()
 "{{{
     ":%s/，/,/g
-    :%s/，/,/ge
-    :%s/．/./ge
-    :%s/？/?/ge
+
     :%s/　/ /ge
+    :%s/，/,/ge
+
+    :%s/．/./ge
+    :%s/。/./ge
+
+    :%s/？/?/ge
     :%s/；/;/ge
+    :%s/：/:/ge
+
     :%s/＃/#/ge
     :%s/、/,/ge
 
