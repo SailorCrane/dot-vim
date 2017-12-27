@@ -41,6 +41,8 @@ augroup CraneGroup
     "3: Makefile
     " 设置所有的"make-"打头的文件名的文件类型都为make,注意vim使用"make"表示makefile文件类型,而不是"makefile"
     au   BufNewFile,BufRead   make-*  setlocal filetype=make
+    au   FileType  make    nnoremap <buffer>  <F5>          :!make -f %<CR>
+    au   FileType  make    nnoremap <buffer>  <Leader><F5>  :!make -B -f %<CR>
 
 
     "4-1: tagbar
