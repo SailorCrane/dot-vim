@@ -192,3 +192,4 @@ inoreabbrev jft just for test
 
 "3 TODO, OPTIMIZE
 inoreabbrev OPT OPTIMIZE
+inoreabbrev TO  TODO
