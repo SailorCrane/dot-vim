@@ -26,8 +26,15 @@ def generate_24_stamp():
 
     return list(range(base, end, hour_seconds))
 
+def generate_nextday_24_stamp():
+    h24 = generate_24_stamp()
+    day_seconds = 60 * 60 * 24
+
+    return [t + day_seconds for t in h24]
+
 
 if __name__ == "__main__":
     # print(today_day_0_hour())
     print( generate_24_stamp() )
     print( len(generate_24_stamp()) )
+    print( generate_nextday_24_stamp() )
