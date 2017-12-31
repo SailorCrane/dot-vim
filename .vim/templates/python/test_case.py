@@ -27,5 +27,19 @@ class MyTestCase(unittest.TestCase, ):
         self.assertEqual(a, b)
 
 
+def suite():
+    all_suite = unittest.TestSuite()
+
+    suite_xml = unittest.TestLoader().loadTestsFromTestCase(XmlTest)
+    suite_dom = unittest.TestLoader().loadTestsFromTestCase(DomTest)
+
+    # all_suite.addTest(suite_dom)
+    # all_suite.addTest(suite_xml)
+    all_suite.addTests([suite_dom, suite_xml])
+
+    return all_suite
+
+
 if __name__ == "__main__":
     unittest.main()
+    # unittest.TextTestRunner(verbosity=2).run(suite())
