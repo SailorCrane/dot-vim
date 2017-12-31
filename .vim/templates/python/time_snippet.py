@@ -1,6 +1,23 @@
 
 import time
 
+# =================== float, time_struct, str =====================
+# float --> struct tuple:   time.localtime( float )
+# struct time tuple --> float : time.mktime(struct_time)
+
+# struct time tuple --> str: time.strftime(format, struct_time)
+# str --> struct_time : time.strptime(str, format)
+
+
+# ===================  datetime  <------> other =====================
+# float --> datetime: datetime.datetime.fromtimestamp( float )
+
+# datetime --> str: datetime.strftime(format, datetime)
+# str --> datetime: datetime.strptime(str, format)
+
+# datetime --> struct time tuple: datetime.timetuple()
+# struct time tuple --> datetime: datetime(*time_tuple[0:6])
+
 
 def today_day_0_hour():
     # method 1, ptime : parse time
