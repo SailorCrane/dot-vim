@@ -15,3 +15,5 @@ inoreabbrev <buffer> imn  int main(int argc, char **argv)<CR>{<CR>}<up><CR>
 "inoremap chd> #include ""<ESC>i
 inoremap [h   #include <><ESC>i
 inoremap ]h   #include ""<ESC>i
+
+inoreabbrev <buffer> rth   <ESC>:read  $TEMPLATE_CPP/thread.cpp<CR>
