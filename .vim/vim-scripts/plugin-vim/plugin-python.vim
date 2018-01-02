@@ -15,6 +15,10 @@ Plug   'davidhalter/jedi-vim',         { 'for' : 'python'}
 let g:jedi#smart_auto_mappings      = 0
 let g:jedi#goto_assignments_command = "<leader>gg"
 let g:jedi#goto_command             = "<leader>gd"
+
+" 因为<C-\>被作为字符串, 所以这里要转义. 字符串中'\\'表示'\'
+let g:jedi#completions_command      = "<C-\\>"
+
 "nnoremap <buffer> ,gg :call jedi#goto_assignments()<CR>
 
 " if g:jedi#smart_auto_mappings == 1
