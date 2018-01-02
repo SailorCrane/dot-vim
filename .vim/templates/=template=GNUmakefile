@@ -4,12 +4,12 @@
 #
 CC       = gcc
 CXX      = g++
-CPP      = # 预编译器, 默认为 $(CC) -E
+CPP      =                     # 预编译器, 默认为 $(CC) -E
 
-CPPFLAGS = -g  -Wall         # C/C++ 预编译选项. -D
-CFLAGS   = # C编译选项
-CXXFLAGS = -std=c++11        # C++ 选项
-SUBDIR   = $(shell ls -d */) # 所有子目录
+CPPFLAGS = -g  -Wall -pthread  # C/C++ 预编译选项. 含 -pthread, -D
+CFLAGS   =                     # C编译选项
+CXXFLAGS = -std=c++11          # C++ 选项
+SUBDIR   = $(shell ls -d */)   # 所有子目录
 
 .PHONY : all default clean run
 
