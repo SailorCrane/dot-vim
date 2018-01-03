@@ -68,6 +68,7 @@ inoreabbrev <buffer> rtest <ESC>:read $TEMPLATE_PYTHON/test_case.py<CR>
 inoreabbrev <buffer> rtime <ESC>:read $TEMPLATE_PYTHON/time.py<CR>
 inoreabbrev <buffer> rth   <ESC>:read $TEMPLATE_PYTHON/thread.py<CR>
 inoreabbrev <buffer> rdis  <ESC>:read $TEMPLATE_PYTHON/my_dis.py<CR>
+inoreabbrev <buffer> rre   <ESC>:read $TEMPLATE_PYTHON/my_re.py<CR>
 
 " 6: <Leader>ci <leader>cs
 vnoremap    <buffer> ,cs   do"""<CR>"""<ESC>kp
