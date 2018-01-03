@@ -1,8 +1,9 @@
 #! /usr/bin/env python
-# -*- coding: utf-8 -*-
 
-import threading, time, random
+import threading
 
+def do_add():
+    pass
 
 def main():
     t1 = threading.Thread(target = do_add, args = ())
