@@ -4,6 +4,7 @@
 """
 
 """
+# sys.dont_write_bytecode = True    #  generate pyc/__pycache__
 
 
 def main():
