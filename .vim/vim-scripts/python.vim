@@ -70,6 +70,7 @@ inoreabbrev <buffer> rtime <ESC>:read $TEMPLATE_PYTHON/my_time.py<CR>
 inoreabbrev <buffer> rdis  <ESC>:read $TEMPLATE_PYTHON/my_dis.py<CR>
 inoreabbrev <buffer> rre   <ESC>:read $TEMPLATE_PYTHON/my_re.py<CR>
 inoreabbrev <buffer> rmain <ESC>:read $TEMPLATE_PYTHON/my_main.py<CR>
+inoreabbrev <buffer> rqt   <ESC>:read $TEMPLATE_PYTHON/my_qt_skeleton.py<CR>
 
 " 6: <Leader>ci <leader>cs
 vnoremap    <buffer> ,cs   do"""<CR>"""<ESC>kp
