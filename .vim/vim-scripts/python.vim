@@ -65,8 +65,8 @@ nnoremap <buffer>  <C-w>a   <C-w>_<CR>
 "inoreabbrev <buffer> rstu  <ESC>:read $TEMPLATE_PYTHON/Stu.py<CR>
 inoreabbrev <buffer> rcom  <ESC>:read $TEMPLATE_PYTHON/common.py<CR>
 inoreabbrev <buffer> rtest <ESC>:read $TEMPLATE_PYTHON/test_case.py<CR>
-inoreabbrev <buffer> rtime <ESC>:read $TEMPLATE_PYTHON/time.py<CR>
 inoreabbrev <buffer> rth   <ESC>:read $TEMPLATE_PYTHON/thread.py<CR>
+inoreabbrev <buffer> rtime <ESC>:read $TEMPLATE_PYTHON/my_time.py<CR>
 inoreabbrev <buffer> rdis  <ESC>:read $TEMPLATE_PYTHON/my_dis.py<CR>
 inoreabbrev <buffer> rre   <ESC>:read $TEMPLATE_PYTHON/my_re.py<CR>
 
