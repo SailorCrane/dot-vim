@@ -26,6 +26,11 @@ def match_compile():
     # split string with pattern: return string list
     result = cached_pattern.split("pre_abc_sdaf_abc_sdf") ; print(result)
 
+    # sub str
+    origin = "name : crane"
+    pattern = 'cr.*e'
+    result = re.sub(pattern, 'Miao', origin)              ; print(result); print(origin)
+
     # escape string(with "\")
     result = re.escape("*asdf/\]")                        ; print(result)
 
