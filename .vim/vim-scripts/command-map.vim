@@ -168,8 +168,9 @@ cnoreabbrev  fd         set  fdm?
 
 cnoreabbrev ack Ack
 cnoreabbrev sr  Ack
-cnoreabbrev sw Ack <C-r><C-w>
-cnoreabbrev sn Ack <C-r><C-w>    %      <C-b><S-right><S-right><Right>
+cnoreabbrev sw  Ack -w  <C-r><C-w>
+cnoreabbrev sn  Ack <C-r><C-w>    %          <C-b><S-right><S-right><Right>
+cnoreabbrev sd  Ack <C-r><C-w>    %:p:h      <C-b><S-right><S-right><Right>
 
 cnoreabbrev sv Ack <C-r><C-w>  --vim <C-b><S-right><S-right><Right>
 cnoreabbrev sp Ack <C-r><C-w>  --py <C-b><S-right><S-right><Right>
