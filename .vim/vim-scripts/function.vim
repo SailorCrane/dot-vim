@@ -51,6 +51,7 @@ endfun
 
 " 1-2 编辑CMakeLists.txt
 fun! EditCMakeLists()
+    " {{{
     let $Splitright = &splitright
     set splitright
 
@@ -59,6 +60,7 @@ fun! EditCMakeLists()
     vsplit $CMake
 
     let &splitright = $Splitright
+    " }}}
 endfun
 
 
@@ -275,7 +277,9 @@ endfun
 "     autocmd BufReadPre * let f=getfsize(expand("<afile>")) | if f > g:LargeFile || f == -2 | call LargeFile() | endif
 " augroup END
 
-function! LargeFile()
+"以上的配置文件中，当文件大于1MB，不启动语法高亮在内的一切附加功能
+fun! LargeFile()
+"{{{
     " no syntax highlighting etc
     set eventignore+=FileType
     " save memory when other file is viewed
@@ -286,5 +290,23 @@ function! LargeFile()
     setlocal undolevels=-1
     " display message
     autocmd VimEnter *  echo "The file is larger than " . (g:LargeFile / 1024 ) . " MB, so some options are changed (see .vimrc for details)."
-endfunction
-"以上的配置文件中，当文件大于1MB，不启动语法高亮在内的一切附加功能
+"}}}
+endfun
+
+
+" current file path
+fun! Current_file_rel()
+    return expand('%:t')
+endfun
+
+fun! Current_file_abs()
+    return expand('%:p')
+endfun
+
+fun! Current_file_dir()
+    return expand('%:p:h')
+endfun
+
+fun! Current_file_ext()
+    return expand('%:e')
+endfun
