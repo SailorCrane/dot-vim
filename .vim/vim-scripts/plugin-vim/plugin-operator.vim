@@ -17,11 +17,16 @@ Plug  'tpope/vim-surround'
 
 " custome
 " echo char2nr("-") ------> 45
-" echo char2nr("P") ------> 80, private
+" echo char2nr("P") ------> 80,  private
 " echo char2nr("f") ------> 102, fold
+" echo char2nr("c") ------> 99 , comment ''' '''
+" echo char2nr("C") ------> 67 , comment """ """
 
 " python private __name__
+" for python
 let g:surround_80 = "__\r__"
+let g:surround_99 = "'''\r'''"
+let g:surround_67 = "\"\"\"\r\"\"\""
 
 " 每次进入时, 设置b:surround_102.  Set_Fold_Surround
 " vim fold "{{{  }}}"
