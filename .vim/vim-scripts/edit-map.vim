@@ -1,6 +1,6 @@
 " vim: set fdm=marker  fdl=0: vim modeline( set )
 
-" 1 quick edit: v:vimrc, n:normal, i:insert, p:plugin-bundle, a:abbrev
+" 1 vim : v:vimrc, n:normal, i:insert, p:plugin-bundle, a:abbrev
 "{{{
 " local  .vimrc and .gvimrc
 nnoremap  <Leader>elv :vsplit $MYVIMRC<CR>
@@ -50,6 +50,7 @@ nnoremap  <Leader>ez  :vsplit ~/.zshrc<CR>
 " 太容易编辑了, "让出快捷键给plugin-python.vim
 "nnoremap  <Leader>eP  :vsplit ~/.profile<CR>
 
+nnoremap  <Leader>ea  :vsplit   $Crane_Sh_Dir/alias-dir/python-alias.sh<CR>
 nnoremap  <Leader>eA  :vsplit   $Crane_Sh_Dir/myAlias.sh<CR>
 nnoremap  <Leader>eF  :vsplit   $Crane_Sh_Dir/myFunctions.sh<CR>
 nnoremap  <Leader>eN  :vsplit   $Crane_Sh_Dir/net-operation.sh<CR>
