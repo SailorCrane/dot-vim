@@ -74,6 +74,8 @@ inoreabbrev <buffer> rqt   <ESC>:read $TEMPLATE_PYTHON/my_qt_skeleton.py<CR>
 inoreabbrev <buffer> rfu   <ESC>:read $TEMPLATE_PYTHON/my_future.py<CR>
 inoreabbrev <buffer> rso   <ESC>:read $TEMPLATE_PYTHON/my_so.py<CR>
 
+inoreabbrev <buffer> rtk   <ESC>:read $TEMPLATE_PYTHON/my_tk.py<CR>
+
 " socket server + client
 inoreabbrev <buffer> rss   <ESC>:read $TEMPLATE_PYTHON/my_socket_server.py<CR>
 inoreabbrev <buffer> rsc   <ESC>:read $TEMPLATE_PYTHON/my_socket_client.py<CR>
