@@ -69,6 +69,7 @@ set autoread
 set autowrite                            " 跳转buffer时, 自动:write(bnext, bfirst...)
 set autowriteall                         " 除了buffer外, 退出时也自动写入文件(:q, :qall, :edit...)
 set updatetime=1000                      " 自动写入swp文件周期
+"set updatecount=200                      " 超过多少字符后, 自动写入swp文件
 
 set scrolloff=3
 set sidescroll=5
