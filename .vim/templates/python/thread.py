@@ -1,5 +1,3 @@
-#! /usr/bin/env python
-
 import threading
 
 def do_add():

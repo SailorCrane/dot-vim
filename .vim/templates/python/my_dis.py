@@ -1,15 +1,3 @@
-#! /usr/bin/env python
-# -*- coding: utf-8 -*-
-# vim:fenc=utf-8
-#
-# Copyright © 2018 crane <crane@crane-pc>
-#
-# Distributed under terms of the MIT license.
-
-"""
-文件名不要和dis模块相同
-"""
-
 from dis import dis
 # import dis
 

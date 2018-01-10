@@ -1,14 +1,3 @@
-#! /usr/bin/env python
-# -*- coding: utf-8 -*-
-# vim:fenc=utf-8
-#
-# Copyright © 2018 crane <crane@crane-pc>
-#
-# Distributed under terms of the MIT license.
-
-"""
-
-"""
 import sys
 from PyQt5 import QtCore, QtGui, QtWidgets, uic
 # from PyQt4 import QtCore, QtGui, QtWidgets, uic

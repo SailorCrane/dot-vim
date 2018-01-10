@@ -1,5 +1,3 @@
-#! /usr/bin/env python
-
 import sys as _sys
 if _sys.version_info > (3,):
     import tkinter as tk
