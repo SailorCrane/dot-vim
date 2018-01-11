@@ -552,6 +552,11 @@
     path = .vim/bundle/refactor
     url = https://github.com/SailorCrane/refactor.git
 
+[submodule ".vim/bundle/Pydiction"]
+    path = .vim/bundle/Pydiction
+    url = https://github.com/vim-scripts/Pydiction.git
+
+
 # [submodule ".vim/bundle/vim-refactor"]
 #     path = .vim/bundle/vim-refactor
 #     url = https://github.com/LucHermitte/vim-refactor

@@ -41,3 +41,5 @@ Plug  'voithos/vim-python-matchit',    { 'for' : 'python'}
 
 " 暂不启用
 "Plug  'python-mode/python-mode'
+
+Plug 'https://github.com/vim-scripts/Pydiction', {'for' : 'python'}
