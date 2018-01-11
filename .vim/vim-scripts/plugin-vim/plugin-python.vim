@@ -42,4 +42,5 @@ Plug  'voithos/vim-python-matchit',    { 'for' : 'python'}
 " 暂不启用
 "Plug  'python-mode/python-mode'
 
-Plug 'https://github.com/vim-scripts/Pydiction', {'for' : 'python'}
+" 会影响inoremap 补全快捷键
+"Plug 'https://github.com/vim-scripts/Pydiction', {'for' : 'python'}

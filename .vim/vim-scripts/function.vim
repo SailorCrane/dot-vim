@@ -269,6 +269,31 @@ EOF
 "}}}
 endfun
 
+fun! Set_Dict_List()
+"{{{
+    " ~/.vim/dict/python, ~/.vim/dict/vim ...
+    let ft=&ft
+    let base_word_dir=$Crane_Vim_Dict
+    let ft_word_dir=$Crane_Vim_Dict . '/' . ft
+    "echom ft_word_dir
+
+    "" globe ft_word_dir/*.txt
+    ""let all_dics = globpath(ft_word_dir, '*.txt', 0, 1)
+    ""let all_dics = globpath(ft_word_dir, '*.txt')
+    "let all_dics = globpath(ft_word_dir, '*txt')
+    ""echom all_dics
+    "let all_dics_list = split(all_dics, '\n')
+
+    " 如果没有匹配到, 则为空, 不必担心预防问题
+    let all_dics_list = globpath(ft_word_dir, '*.txt', 1, 1)
+
+    " iterate setlocal dict, $var can used in 'set' command
+    for $file in all_dics_list
+        setlocal dictionary+=$file
+    endfor
+"}}}
+endfun
+
 
 " 12 large file
 " file is large from 1MB

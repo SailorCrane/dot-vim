@@ -10,8 +10,11 @@ augroup CraneGroup
     "au WinEnter * setlocal cursorline
     "au WinLeave * setlocal nocursorline
 
-    "0-1
+    "0-1 let b:surround_ of surround plugin
     au   BufNewFile,BufRead   *  call Set_Fold_Surround()
+
+    "0-2 根据文件类型设置dict
+    au   BufNewFile,BufRead   *  call Set_Dict_List()
 
     "0-2 进入窗口时显示buff file name
     "au WinEnter * file
