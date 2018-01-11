@@ -1,2 +1,11 @@
+
+__mul__
+__rmul__
+
+__iadd__
+
+__sub__
+
 inner_wrapper
 inner_fun
+
