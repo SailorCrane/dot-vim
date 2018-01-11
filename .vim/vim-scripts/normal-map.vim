@@ -190,6 +190,9 @@ nnoremap tm      :tabmove<Space>
 nnoremap tf      :tabfirst<CR>
 nnoremap tl      :tablast<CR>
 
+nnoremap t-      :tabmove -1<CR>
+nnoremap t=      :tabmove +1<CR>
+
 nnoremap <A-1>      1gt<CR>
 nnoremap <A-2>      2gt<CR>
 nnoremap <A-3>      3gt<CR>
