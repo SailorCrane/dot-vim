@@ -193,27 +193,28 @@ nnoremap tl      :tablast<CR>
 nnoremap t-      :tabmove -1<CR>
 nnoremap t=      :tabmove +1<CR>
 
-nnoremap <A-1>      1gt<CR>
-nnoremap <A-2>      2gt<CR>
-nnoremap <A-3>      3gt<CR>
-nnoremap <A-4>      4gt<CR>
-nnoremap <A-5>      5gt<CR>
-nnoremap <A-6>      6gt<CR>
-nnoremap <A-7>      7gt<CR>
-nnoremap <A-8>      8gt<CR>
-nnoremap <A-9>      9gt<CR>
-nnoremap <A-0>     10gt<CR>
+" 在终端也可以用\1, \2
+nnoremap \1     1gt<CR>
+nnoremap \2     2gt<CR>
+nnoremap \3     3gt<CR>
+nnoremap \4     4gt<CR>
+nnoremap \5     5gt<CR>
+nnoremap \6     6gt<CR>
+nnoremap \7     7gt<CR>
+nnoremap \8     8gt<CR>
+nnoremap \9     9gt<CR>
+nnoremap \0    10gt<CR>
 
-nnoremap \1     11gt<CR>
-nnoremap \2     12gt<CR>
-nnoremap \3     13gt<CR>
-nnoremap \4     14gt<CR>
-nnoremap \5     15gt<CR>
-nnoremap \6     16gt<CR>
-nnoremap \7     17gt<CR>
-nnoremap \8     18gt<CR>
-nnoremap \9     19gt<CR>
-nnoremap \0     20gt<CR>
+nnoremap <A-1>     11gt<CR>
+nnoremap <A-2>     12gt<CR>
+nnoremap <A-3>     13gt<CR>
+nnoremap <A-4>     14gt<CR>
+nnoremap <A-5>     15gt<CR>
+nnoremap <A-6>     16gt<CR>
+nnoremap <A-7>     17gt<CR>
+nnoremap <A-8>     18gt<CR>
+nnoremap <A-9>     19gt<CR>
+nnoremap <A-0>     20gt<CR>
 
 "nnoremap <A-q>     11gt<CR>
 "nnoremap <A-w>     11gt<CR>
