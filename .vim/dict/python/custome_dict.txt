@@ -9,3 +9,7 @@ __sub__
 inner_wrapper
 inner_fun
 
+# django
+list_display
+search_fields
+list_filter
