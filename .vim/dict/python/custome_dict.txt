@@ -1,15 +1,17 @@
 
+# python
 __mul__
 __rmul__
-
 __iadd__
-
 __sub__
+__slots__
 
-inner_wrapper
-inner_fun
 
 # django
 list_display
 search_fields
 list_filter
+
+# common use
+inner_wrapper
+inner_fun
