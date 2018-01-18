@@ -70,6 +70,7 @@ inoreabbrev <buffer> rcls  <ESC>:read $TEMPLATE_PYTHON/my_class.py<CR>
 inoreabbrev <buffer> rtest <ESC>:read $TEMPLATE_PYTHON/test_case.py<CR>
 inoreabbrev <buffer> rth   <ESC>:read $TEMPLATE_PYTHON/thread.py<CR>
 inoreabbrev <buffer> rtime <ESC>:read $TEMPLATE_PYTHON/my_time.py<CR>
+inoreabbrev <buffer> rdate <ESC>:read $TEMPLATE_PYTHON/my_datetime.py<CR>
 inoreabbrev <buffer> rdis  <ESC>:read $TEMPLATE_PYTHON/my_dis.py<CR>
 inoreabbrev <buffer> rre   <ESC>:read $TEMPLATE_PYTHON/my_re.py<CR>
 inoreabbrev <buffer> rqt   <ESC>:read $TEMPLATE_PYTHON/my_qt_skeleton.py<CR>
