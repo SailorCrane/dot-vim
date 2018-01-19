@@ -725,6 +725,9 @@ endif
 nnoremap <Leader>vu  :!svn update %<CR>
 "}}}
 
+" 31 undo tree clear: for buffer + for project
+" TODO
+
 " 99 关于normal 模式中惯用的n 和 p的总结:
 "{{{
 " 其中CtrlP插件的<C-p> 被 <Leader>sp代替
