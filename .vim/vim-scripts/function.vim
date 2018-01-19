@@ -335,3 +335,21 @@ endfun
 fun! Current_file_ext()
     return expand('%:e')
 endfun
+
+
+" for man page next/last paragraph
+fun! Next_para()
+    " {{{
+    let  pattern_back = @/
+    /^[a-zA-Z]
+    let @/ = pattern_back
+    " }}}
+endfun
+
+fun! Last_para()
+    " {{{
+    let  pattern_back = @/
+    ?^[a-zA-Z]
+    let @/ = pattern_back
+    " }}}
+endfun

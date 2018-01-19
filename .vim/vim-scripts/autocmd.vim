@@ -39,6 +39,10 @@ augroup CraneGroup
     "2-2: man
     " 打开帮助文档时，自动显示行号
     au   FileType  man  setlocal nu rnu
+    au   FileType  man  nnoremap <buffer>  ]m  :call Next_para()<CR>
+    au   FileType  man  nnoremap <buffer>  [m  :call Last_para()<CR>
+    au   FileType  man  nnoremap <buffer>  ]]  :call Next_para()<CR>:call Next_para()<CR>
+    au   FileType  man  nnoremap <buffer>  [[  :call Last_para()<CR>:call Last_para()<CR>
 
 
     "3: Makefile
