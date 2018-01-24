@@ -1,20 +1,28 @@
 
-" ========================= .c/.cpp) =========================
-
+" ========================= (.c/.cpp) =========================
 " Warning:
 " 是触发 Filetype时被 autocmd.vim 中source的
 " 只会触发一次: 所以此脚本中不可再 使用autocmd命令:否则不生效
 
-"1
+" 1 main
 inoreabbrev <buffer> imn  int main(int argc, char **argv)<CR>{<CR>}<up><CR>
 
-" 2 关于C/Cpp 头文件包含的映射
-" 因为c-support的 \pg, \pl 就可以实现
-" p:preprocess, g:global,  l:local
-"inoremap chd< #include <><ESC>i
-"inoremap chd> #include ""<ESC>i
-inoremap [h   #include <><ESC>i
-inoremap ]h   #include ""<ESC>i
+" 2 c/cpp include
+inoremap <buffer> [h   #include <><ESC>i
+inoremap <buffer> ]h   #include ""<ESC>i
+nnoremap <buffer> [h   I#include <><ESC>i
+nnoremap <buffer> ]h   I#include ""<ESC>i
+" nnoremap <buffer> [h   i<c-u>#include <><ESC>i
+" nnoremap <buffer> ]h   i<c-u>#include ""<ESC>i
 
+
+" 3 Template
 inoreabbrev <buffer> rth     <ESC>:read  $TEMPLATE_CPP/thread.cpp<CR>
 inoreabbrev <buffer> rtime   <ESC>:read  $TEMPLATE_CPP/time.cpp<CR>
+
+
+" 4 YouCompleteMe
+" if exist('g:ycm_global_ycm_extra_conf')
+nnoremap <buffer>  <leader>gg  :YcmCompleter  GoToDefinitionElseDeclaration<CR>
+nnoremap <buffer>  <leader>gd  :YcmCompleter  GoToDefinition<CR>
+nnoremap <buffer>  <leader>gl  :YcmCompleter  GoToDeclaration<CR>
