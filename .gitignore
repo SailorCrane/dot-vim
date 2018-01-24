@@ -7,3 +7,4 @@
 .vim/sessions/
 .vim/bundle/.cache/
 .vim/bundle/repos
+.vim/bundle/YouCompleteMe/

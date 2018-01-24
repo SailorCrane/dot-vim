@@ -124,7 +124,7 @@ else " v:version >= 800(vim8.0+)
     let g:ale_echo_msg_warning_str = 'W'
     let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 
-    "normal模式下，sp前往上一个错误或警告，sn前往下一个错误或警告
+    "normal模式下,sp前往上一个错误或警告,sn前往下一个错误或警告
     nmap sp <Plug>(ale_previous_wrap)
     nmap sn <Plug>(ale_next_wrap)
 
@@ -140,6 +140,7 @@ endif
 
 "5: YouCompleteMe
 "Plug  'Valloric/YouCompleteMe' ,  { 'for' : g:all_languages }
+Plug  'Valloric/YouCompleteMe' ,  { 'for' : ['c', 'cpp'] }
 " {{{
 " 自动补全配置
 "set completeopt=longest,menu    "让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
@@ -165,9 +166,14 @@ let g:ycm_key_list_previous_completion = ['<Up>']
 
 let g:ycm_confirm_extra_conf=1  " 打开加载.ycm_extra_conf.py提示
 
+"let g:ycm_goto_buffer_command = [ 'same-buffer', 'horizontal-split', 'vertical-split', 'new- tab', 'new-or-existing-tab' ]
+let g:ycm_goto_buffer_command = 'vertical-split'
+let g:ycm_key_invoke_completion = '<C-\>'
+" default is <c-y>
+"let g:ycm_key_list_stop_completion = '<C-y>'
 
 "let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py"
-let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm"
+let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
 
 let g:ycm_collect_identifiers_from_tags_files=1 " 开启 YCM 基于标签引擎
 "let g:ycm_min_num_of_chars_for_completion=2        " 从第2个键入字符就开始罗列匹配项
@@ -299,4 +305,3 @@ Plug  'tpope/vim-sleuth',  { 'for' : g:all_lan_except_py }
 ""Plug 'LucHermitte/lh-cpp'
 
 Plug 'SailorCrane/refactor'
-
