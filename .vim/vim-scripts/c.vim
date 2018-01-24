@@ -15,13 +15,15 @@ nnoremap <buffer> ]h   I#include ""<ESC>i
 " nnoremap <buffer> [h   i<c-u>#include <><ESC>i
 " nnoremap <buffer> ]h   i<c-u>#include ""<ESC>i
 
-
 " 3 Template
 inoreabbrev <buffer> rth     <ESC>:read  $TEMPLATE_CPP/thread.cpp<CR>
 inoreabbrev <buffer> rtime   <ESC>:read  $TEMPLATE_CPP/time.cpp<CR>
 
+" 4 vim-scripts/a.vim
+"cnoreabbrev  <buffer>  a  A
+nnoremap     <buffer>  <C-t>  :A<CR>:call ShowBufName()<CR>
 
-" 4 YouCompleteMe
+" 5 YouCompleteMe
 " if exist('g:ycm_global_ycm_extra_conf')
 nnoremap <buffer>  <leader>gg  :YcmCompleter  GoToDefinitionElseDeclaration<CR>
 nnoremap <buffer>  <leader>gd  :YcmCompleter  GoToDefinition<CR>

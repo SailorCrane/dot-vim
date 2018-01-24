@@ -139,7 +139,6 @@ endif
 
 
 "5: YouCompleteMe
-"Plug  'Valloric/YouCompleteMe' ,  { 'for' : g:all_languages }
 Plug  'Valloric/YouCompleteMe' ,  { 'for' : ['c', 'cpp'] }
 " {{{
 " 自动补全配置
@@ -154,14 +153,14 @@ Plug  'Valloric/YouCompleteMe' ,  { 'for' : ['c', 'cpp'] }
 "inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
 
 
-"不使用 ycm 的语法提示.
-let  g:ycm_register_as_syntastic_checker = 0
-
+" 不使用ycm的语法提示, 已经有很好的ale了
+let g:ycm_register_as_syntastic_checker = 0
+let g:ycm_show_diagnostics_ui = 0
 
 "youcompleteme  默认tab  s-tab 和自动补全冲突
 "let g:ycm_key_list_select_completion=['<c-n>']
-let g:ycm_key_list_select_completion = ['<Down>']
 "let g:ycm_key_list_previous_completion=['<c-p>']
+let g:ycm_key_list_select_completion = ['<Down>']
 let g:ycm_key_list_previous_completion = ['<Up>']
 
 let g:ycm_confirm_extra_conf=1  " 打开加载.ycm_extra_conf.py提示
@@ -192,8 +191,6 @@ let g:ycm_complete_in_comments = 1
 let g:ycm_complete_in_strings = 1
 "注释和字符串中的文字也会被收入补全
 let g:ycm_collect_identifiers_from_comments_and_strings = 0
-
-"nnoremap <Leader>yd :YcmCompleter GoToDefinitionElseDeclaration<CR> " 跳转到定义处
 " }}}
 
 
@@ -214,10 +211,6 @@ Plug  'SailorCrane/c-support' , {'for' : [ 'c', 'cpp' ]}
 
 "12-2: a.vim :switch between header and source file
 Plug  'vim-scripts/a.vim'    , {'for' : [ 'c', 'cpp' ]}
-"cnoreabbrev  a  A
-" i stand for  include
-nnoremap <C-t>  :A<CR>:call ShowBufName()<CR>
-
 
 "14:  quick fix/locatioon window about
 Plug  'romainl/vim-qf'
