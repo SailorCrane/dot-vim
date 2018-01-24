@@ -6,6 +6,7 @@
 
 " 1 main
 inoreabbrev <buffer> imn  int main(int argc, char **argv)<CR>{<CR>}<up><CR>
+inoreabbrev <buffer> exc  extern "C" <CR>{<CR>}<CR>
 
 " 2 c/cpp include
 inoremap <buffer> [h   #include <><ESC>i
