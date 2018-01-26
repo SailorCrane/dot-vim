@@ -7,13 +7,20 @@ def set_reuse(sock):
     sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
 def set_file_nonblock(file):
+    ''' 可以在创建socket时指定socket.SOCK_NONBLOCK标志'''
     fd = file.fileno()
     flag = fcntl.fcntl(fd, fcntl.F_GETFL)
     # fcntl.fcntl(fd, fcntl.F_SETFD, flag | os.O_NONBLOCK)
     fcntl.fcntl(fd, fcntl.F_SETFL, flag | os.O_NONBLOCK)
 
-def listen(address):
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+def listen(address, is_block = True):
+    '''默认阻塞'''
+    if not is_block:
+        flags = socket.SOCK_STREAM | socket.SOCK_NONBLOCK
+    else:
+        flags = socket.SOCK_STREAM
+    s = socket.socket(socket.AF_INET, flags)
+
     set_reuse(s)
     s.bind(address)
     s.listen(1)
@@ -46,4 +53,5 @@ def read_client(conn):
         #     raise e
 
 
-main()
+if __name__ == "__main__":
+    main()

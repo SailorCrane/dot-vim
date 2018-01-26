@@ -15,3 +15,6 @@ list_filter
 # common use
 inner_wrapper
 inner_fun
+
+# socket
+socket.SOCK_NONBLOCK
