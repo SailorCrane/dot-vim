@@ -154,6 +154,9 @@ Plug  'Valloric/YouCompleteMe' ,  { 'for' : ['c', 'cpp'] }
 
 
 " 不使用ycm的语法提示, 已经有很好的ale了
+"
+" disabled file type, ycm turn off in disables file
+" let g:ycm_filetype_blacklist = { }
 let g:ycm_register_as_syntastic_checker = 0
 let g:ycm_show_diagnostics_ui = 0
 
@@ -179,6 +182,9 @@ let g:ycm_collect_identifiers_from_tags_files=1 " 开启 YCM 基于标签引擎
 let g:ycm_min_num_of_chars_for_completion=1     " 从第1个键入字符就开始罗列匹配项
 let g:ycm_cache_omnifunc=0  " 禁止缓存匹配项,每次都重新生成匹配项
 let g:ycm_seed_identifiers_with_syntax=1    " 语法关键字补全
+
+" 是否使用tag file
+" let g:ycm_collect_identifiers_from_tags_files = 0
 "nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>   "force recomile with syntastic
 
 "nnoremap <Leader>lo :lopen<CR> "open locationlist
