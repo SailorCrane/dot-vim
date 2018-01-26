@@ -173,10 +173,10 @@ augroup CraneGroup
 
     au BufNewFile Dockerfile  silent 0 read  $TEMPLATE/dockerfile/dockerfile-template
 
-    " (FIXME|NOTE|TODO|OPTIMIZE|XXX) highlight
-    au Syntax * syn match MyTodo /\v<(FIXME|NOTE|TODO|OPTIMIZE|XXX)/ containedin=.*Comment,vimCommentTitle
+    " (TODO|NOTE|WARNING|REFACTOR|OPTIMIZE|FIXME|XXX) highlight
+    au Syntax * syn match MyTodo /\v<(TODO|NOTE|WARNING|REFACTOR|OPTIMIZE|FIXME|XXX)/ containedin=.*Comment,vimCommentTitle
 
 augroup END "end of CraneGroup
 
-" highlight (FIXME|NOTE|TODO|OPTIMIZE|XXX)
+" highlight (TODO|NOTE|WARNING|REFACTOR|OPTIMIZE|FIXME|XXX)
 hi def link MyTodo Todo
