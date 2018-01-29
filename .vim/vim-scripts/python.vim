@@ -80,6 +80,7 @@ inoreabbrev <buffer> rso   <ESC>:read $TEMPLATE_PYTHON/my_so.py<CR>
 inoreabbrev <buffer> rtk   <ESC>:read $TEMPLATE_PYTHON/my_tk.py<CR>
 
 " socket server + client
+inoreabbrev <buffer> rse   <ESC>:read $TEMPLATE_PYTHON/my_plain_socket.py<CR>
 inoreabbrev <buffer> rss   <ESC>:read $TEMPLATE_PYTHON/my_socket_server.py<CR>
 inoreabbrev <buffer> rsc   <ESC>:read $TEMPLATE_PYTHON/my_socket_client.py<CR>
 
