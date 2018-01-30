@@ -68,6 +68,7 @@ inoreabbrev <buffer> rma   <ESC>:read $TEMPLATE_PYTHON/my_main.py<CR>
 inoreabbrev <buffer> rcls  <ESC>:read $TEMPLATE_PYTHON/my_class.py<CR>
 
 inoreabbrev <buffer> rtest <ESC>:read $TEMPLATE_PYTHON/test_case.py<CR>
+inoreabbrev <buffer> rpp   <ESC>:read $TEMPLATE_PYTHON/process_pool.py<CR>
 inoreabbrev <buffer> rmp   <ESC>:read $TEMPLATE_PYTHON/mulprocess.py<CR>
 inoreabbrev <buffer> rth   <ESC>:read $TEMPLATE_PYTHON/thread.py<CR>
 inoreabbrev <buffer> rtime <ESC>:read $TEMPLATE_PYTHON/my_time.py<CR>
