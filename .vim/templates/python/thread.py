@@ -3,7 +3,7 @@ import threading
 def do_add():
     print("do_add")
 
-def main():
+def thread_1():
     t1 = threading.Thread(target = do_add, args = ())
     t1.start()
 
