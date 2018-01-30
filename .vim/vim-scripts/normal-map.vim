@@ -661,7 +661,12 @@ nnoremap     <Leader>sw  :<C-u>w  !sudo tee % >/dev/null<CR>
 cnoreabbrev  sudow       w  !sudo tee % >/dev/null<CR>
 "}}}
 
-" 27 go to large block comment(#, python, sh, make, cmake, gitconfig)
+" goto
+" 27-1 go/jump to TODO/FIXME
+nnoremap <Leader>jt   /TODO<CR>
+nnoremap <Leader>jf   /FIXME<CR>
+
+" 27-2 go to large block comment(#, python, sh, make, cmake, gitconfig)
 "{{{
 "let $Sharp_Comment = '\s*#.*'
 nnoremap  <Leader>##   /\v(\s*#.*\n){3,}<CR>
