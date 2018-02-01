@@ -5,6 +5,9 @@ __rmul__
 __iadd__
 __sub__
 __slots__
+__all__
+__enter__
+__exit__
 
 
 # django
