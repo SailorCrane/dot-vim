@@ -1,4 +1,5 @@
 import datetime
+import time
 # from datetime import datetime
 # from datetime import timedelta
 
@@ -26,9 +27,36 @@ def test2():
 
 def test_now_stamp():
     d1 = datetime.datetime.now()
-    d2 = datetime.datetime.fromtimestamp(20123412343)
-    print(d1, d2)
+    # ts = 20123412343
+    ts = 0
+    d2 = datetime.datetime.utcfromtimestamp(ts)    # utc
+    d3 = datetime.datetime.fromtimestamp(ts)       # localtime, ts经过0个tick, 当地已经8点
+    print(d1)
+    print(d2)
+    print(d3)
 
-test1()
-test2()
+# test1()
+# test2()
 test_now_stamp()
+
+# NOTE: utc时间和当地时间(timestamp都相同)
+# datetime.datetime.utcfromtimestamp
+# time.localtime(0)
+# 1: datetime: fromtimestamp vs utcfromtimestamp, now() vs utcnow()
+datetime.datetime.utcfromtimestamp(0)
+datetime.datetime.fromtimestamp(0)
+
+print(datetime.datetime.utcnow())
+print(datetime.datetime.now())
+
+# 2: date: from datetime
+datetime.datetime.now().date()
+datetime.datetime.utcnow().date()
+
+datetime.datetime.utcfromtimestamp(0).date()
+datetime.datetime.fromtimestamp(0).date()
+
+# 3: time: localtime vs gmtime
+print(time.gmtime(0))
+print(time.localtime(0))
+print(time.localtime())
