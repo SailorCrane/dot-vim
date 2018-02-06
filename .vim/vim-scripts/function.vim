@@ -353,3 +353,18 @@ fun! Last_para()
     let @/ = pattern_back
     " }}}
 endfun
+
+" clear undo tree(history)
+fun! ForgetUndo()
+    " ul <------> undolevels
+    let old_undolevels = &undolevels
+    setlocal undolevels=-1
+
+    " must change text enforce ul work
+    exe "normal a \<BS>\<Esc>"
+    let &undolevels = old_undolevels
+    unlet old_undolevels
+
+    update
+endfun
+command! -nargs=0 ClearUndo call ForgetUndo()
