@@ -78,6 +78,7 @@ inoreabbrev <buffer> rre   <ESC>:read $TEMPLATE_PYTHON/my_re.py<CR>
 inoreabbrev <buffer> rqt   <ESC>:read $TEMPLATE_PYTHON/my_qt_skeleton.py<CR>
 inoreabbrev <buffer> rfu   <ESC>:read $TEMPLATE_PYTHON/my_future.py<CR>
 inoreabbrev <buffer> rso   <ESC>:read $TEMPLATE_PYTHON/my_so.py<CR>
+inoreabbrev <buffer> rtb   <ESC>:read $TEMPLATE_PYTHON/my_traceback.py<CR>
 
 inoreabbrev <buffer> rtk   <ESC>:read $TEMPLATE_PYTHON/my_tk.py<CR>
 
