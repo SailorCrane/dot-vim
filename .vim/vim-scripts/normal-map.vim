@@ -662,9 +662,11 @@ cnoreabbrev  sudow       w  !sudo tee % >/dev/null<CR>
 "}}}
 
 " goto
-" 27-1 go/jump to TODO/FIXME
+" 27-1 go/jump to TODO/FIXME/WARNING/NOTE
 nnoremap <Leader>jt   /TODO<CR>
 nnoremap <Leader>jf   /FIXME<CR>
+nnoremap <Leader>jw   /WARNING<CR>
+nnoremap <Leader>jn   /NOTE<CR>
 
 " 27-2 go to large block comment(#, python, sh, make, cmake, gitconfig)
 "{{{
