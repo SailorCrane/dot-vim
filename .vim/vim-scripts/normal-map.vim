@@ -184,8 +184,12 @@ nnoremap H  gT
 "nnoremap tn      :tabnew<CR>:NERDTreeFocus<CR>
 "nnoremap tn      :tabnew<CR>:NERDTree<CR>
 nnoremap tn      :tabnew   <CR>
+nnoremap <silent> tN      :tabnew   <CR>:tabmove -1<CR>
+" need map <silent>, no :silent
+"nnoremap tN      :tabnew   <CR>:silent tabmove -1<CR>
 nnoremap tc      :tabclose <CR>
 nnoremap to      :tabonly  <CR>
+
 nnoremap tm      :tabmove<Space>
 nnoremap tf      :tabfirst<CR>
 nnoremap tl      :tablast<CR>
