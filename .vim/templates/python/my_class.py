@@ -11,6 +11,7 @@ class  A():
         print("age : ", self.age)
         print()
 
+
 class B():
     msg = 'class B'
 
