@@ -48,7 +48,9 @@ setlocal foldlevel=99
 "{{{
 " 正统留给<f5>, python3当然才是正统
 nnoremap <buffer>  <F5>          :!clear && python3  %<CR>
-nnoremap <buffer>  <Leader><F5>  :!clear && python2  %<CR>
+"nnoremap <buffer>  <Leader><F5>  :!clear && python2  %<CR>
+"nnoremap <buffer>  ,<F5>  :!clear && python2  %<CR>
+nnoremap <buffer>  <F6>  :!clear && python2  %<CR>
 
 " c stand for non "clear"
 "nnoremap c<F5>         :!python3  %<CR>
