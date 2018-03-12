@@ -8,6 +8,7 @@ __slots__
 __all__
 __enter__
 __exit__
+__new__
 
 
 # django
