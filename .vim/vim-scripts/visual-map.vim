@@ -60,7 +60,7 @@ xnoremap  <Leader>hr   :Tabularize  /\*\/<CR>
 "endfun
 
 
-"3 visual map dot
+"9 visual map dot
 xnoremap  .   :normal .<CR>
 
 
@@ -75,3 +75,8 @@ xnoremap  <  <gv
 
 "xnoremap  <Leader>in  :let i=1|'<,'>g/^/ s//\=i . " "/ | let i+=2<CR>
 "xnoremap  <Leader>in  :call InsertNum()<CR>
+
+"12: substitute
+"xnoremap <Leader>ss :s///<S-left>
+xnoremap <Leader>ss :s///g<Left><Left>
+
