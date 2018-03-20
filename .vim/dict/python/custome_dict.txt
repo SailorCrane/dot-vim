@@ -9,6 +9,8 @@ __all__
 __enter__
 __exit__
 __new__
+__getattr__
+__setattr__
 
 
 # django
