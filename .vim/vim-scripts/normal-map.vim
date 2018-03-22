@@ -726,7 +726,8 @@ if v:version > 707
     augroup END
 
     "nnoremap  <silent>  <Leader>` :exe "tabn " . g:Lasttab<cr>
-    nnoremap  <silent>  \` :exe "tabn " . g:Lasttab<cr>
+    "nnoremap  <silent>  \` :exe "tabn " . g:Lasttab<cr>
+    nnoremap  <silent>  \<Tab> :exe "tabn " . g:Lasttab<cr>
 endif
 "}}}
 
