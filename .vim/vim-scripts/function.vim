@@ -368,3 +368,4 @@ fun! ForgetUndo()
     update
 endfun
 command! -nargs=0 ClearUndo call ForgetUndo()
+command! -nargs=0 UndoClear call ForgetUndo()
