@@ -228,6 +228,13 @@ nnoremap \w     12gt<CR>
 nnoremap \e     13gt<CR>
 nnoremap \r     14gt<CR>
 nnoremap \t     15gt<CR>
+nnoremap \y     16gt<CR>
+nnoremap \u     17gt<CR>
+nnoremap \i     18gt<CR>
+nnoremap \o     19gt<CR>
+nnoremap \p     20<CR>
+
+nnoremap \a     21<CR>
 " }}}
 
 " 7-4 window 操作:用Ctrl切换窗口
