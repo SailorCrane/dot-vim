@@ -224,6 +224,7 @@ nnoremap <Leader>cg  :Goyo!<CR>
 
 "16 start page for vim
 Plug  'mhinz/vim-startify'
+nnoremap <Leader>js  :tabnew<CR>:Startify<CR>
 
 
 "18 scratch
