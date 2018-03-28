@@ -243,3 +243,6 @@ xmap     <Leader>os <plug>(scratch-selection-reuse)<C-w>T
 
 "19 nrrwrgn
 Plug 'chrisbra/NrrwRgn'
+
+"20 tabline show number
+Plug 'mkitt/tabline.vim'
