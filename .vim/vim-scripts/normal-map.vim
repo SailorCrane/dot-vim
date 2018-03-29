@@ -719,6 +719,7 @@ nnoremap  <Leader>""   /\v(\s*".*\n){3,}<CR>
 "}}}
 
 " 29 switch to last-active tab
+" vim < 707, 不可用
 "{{{
 if v:version > 707
     if !exists('g:Lasttab')
