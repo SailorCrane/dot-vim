@@ -1,6 +1,6 @@
+# =================== qt5  =====================
 import sys
-from PyQt5 import QtCore, QtGui, QtWidgets, uic
-# from PyQt4 import QtCore, QtGui, QtWidgets, uic
+from PyQt5 import QtCore, QtWidgets, uic
 
 qtCreatorFile = "/home/crane/test/qt/rate.ui" # Enter file here.
 
@@ -8,18 +8,16 @@ qtCreatorFile = "/home/crane/test/qt/rate.ui" # Enter file here.
 ui_MainWindow, _ = uic.loadUiType(qtCreatorFile)
 
 
-# class MyWindow(QtGui.QMainWindow, ui_MainWindow):
 class MyWindow(QtWidgets.QMainWindow, ui_MainWindow):
-    def __init__(self):
-        # QtGui.QMainWindow.__init__(self)
-        QtWidgets.QMainWindow.__init__(self)
+    def __init__(self, parent = None):
         ui_MainWindow.__init__(self)
+        QtWidgets.QMainWindow.__init__(self)
+        super(MyWindow, self).__init__()
         self.setupUi(self)
 
 
 def qt_skeleton():
     app = QtWidgets.QApplication(sys.argv)
-    # app = QtGui.QApplication(sys.argv)
     window = MyWindow()
     window.show()
 

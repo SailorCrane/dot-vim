@@ -77,7 +77,8 @@ inoreabbrev <buffer> rtime <ESC>:read $TEMPLATE_PYTHON/my_time.py<CR>
 inoreabbrev <buffer> rdate <ESC>:read $TEMPLATE_PYTHON/my_datetime.py<CR>
 inoreabbrev <buffer> rdis  <ESC>:read $TEMPLATE_PYTHON/my_dis.py<CR>
 inoreabbrev <buffer> rre   <ESC>:read $TEMPLATE_PYTHON/my_re.py<CR>
-inoreabbrev <buffer> rqt   <ESC>:read $TEMPLATE_PYTHON/my_qt_skeleton.py<CR>
+inoreabbrev <buffer> rqt   <ESC>:read $TEMPLATE_PYTHON/my_qt_qt5.py<CR>
+inoreabbrev <buffer> rqt4   <ESC>:read $TEMPLATE_PYTHON/my_qt_qt4.py<CR>
 inoreabbrev <buffer> rfu   <ESC>:read $TEMPLATE_PYTHON/my_future.py<CR>
 inoreabbrev <buffer> rso   <ESC>:read $TEMPLATE_PYTHON/my_so.py<CR>
 inoreabbrev <buffer> rtb   <ESC>:read $TEMPLATE_PYTHON/my_traceback.py<CR>
