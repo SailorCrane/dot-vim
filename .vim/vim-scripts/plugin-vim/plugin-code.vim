@@ -288,7 +288,7 @@ Plug  'tpope/vim-endwise' ,  { 'for' : g:all_languages }
 
 
 " 不让sleuth影响到python的缩进
-Plug  'tpope/vim-sleuth',  { 'for' : g:all_lan_except_py }
+"Plug  'tpope/vim-sleuth',  { 'for' : g:all_lan_except_py }
 
 
 " c/cpp refactor tools
