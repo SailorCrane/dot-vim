@@ -22,6 +22,38 @@ def load_ui_file():
     return BaseClass, ui_Base
 
 
+def create_action(parent, text, slot=None, shortcut=None, icon=None,
+                 tip=None, checkable=False, signal="triggered()"):
+    # example:
+    # action = create_action(self, '&Motion', self.edit, QKeySequence.New, None, 'edit tip')
+    # action = create_action(self, '&Motion', self.edit, 'Ctrl+N', None, 'edit tip')
+    # action = create_action(self, '&Motion', self.edit, 'Ctrl+N', None, 'edit tip', True, SIGNAL('toggled(bool)'))
+    action = QAction(text, parent)
+    if icon is not None:
+        # pass
+        action.setIcon(QIcon(":/{}.png".format(icon)))
+    if shortcut is not None:
+        action.setShortcut(shortcut)
+    if tip is not None:
+        action.setToolTip(tip)
+        action.setStatusTip(tip)
+    if slot is not None:
+        action.connect(action, SIGNAL(signal), slot)
+    # 可以发出toggled三要素: 1, action.setCheckable()  2, connect SIGNAL('toggled(bool)'), 3, slot(can has or has no is_checked)
+    if checkable:
+        action.setCheckable(True)
+    return action
+
+
+def add_actions(menu_bar, actions):
+    # actions ------> menu_bar
+    for action in actions:
+        if action is None:
+            menu_bar.addSeparator()
+        else:
+            menu_bar.addAction(action)
+
+
 class MyWindow( *load_ui_file() ):
     def __init__(self, parent = None):
         super(MyWindow, self).__init__()
