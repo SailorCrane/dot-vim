@@ -7,8 +7,14 @@ if pyqt4:
     from PyQt4 import QtCore
     from PyQt4 import QtGui as QtWidgets
     from PyQt4 import uic
+
+    from PyQt4.QtCore import *
+    from PyQt4.QtGui import *
 else:
     from PyQt5 import QtCore, QtWidgets, uic
+
+    from PyQt5.QtCore import *
+    from PyQt5.QtWidgets import *
 
 
 def load_ui_file():
@@ -24,10 +30,12 @@ def load_ui_file():
 
 def create_action(parent, text, slot=None, shortcut=None, icon=None,
                  tip=None, checkable=False, signal="triggered()"):
+    # note: signal传入 "toggled(bool)", 而不会SIGNAL('toggled(bool)'),当前函数内部会做处理.(triggled()不要忘记括号)
+
     # example:
     # action = create_action(self, '&Motion', self.edit, QKeySequence.New, None, 'edit tip')
     # action = create_action(self, '&Motion', self.edit, 'Ctrl+N', None, 'edit tip')
-    # action = create_action(self, '&Motion', self.edit, 'Ctrl+N', None, 'edit tip', True, SIGNAL('toggled(bool)'))
+    # action = create_action(self, '&Motion', self.edit, 'Ctrl+N', None, 'edit tip', True, 'toggled(bool)')
     action = QAction(text, parent)
     if icon is not None:
         # pass
@@ -47,6 +55,7 @@ def create_action(parent, text, slot=None, shortcut=None, icon=None,
 
 def add_actions(menu_bar, actions):
     # actions ------> menu_bar
+    # actions ------> act_group
     for action in actions:
         if action is None:
             menu_bar.addSeparator()
