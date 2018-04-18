@@ -68,6 +68,7 @@ nnoremap <buffer>  <C-w>a   <C-w>_<CR>
 inoreabbrev <buffer> rhe   <ESC>:read $TEMPLATE_PYTHON/my_head.py<CR>
 inoreabbrev <buffer> rma   <ESC>:read $TEMPLATE_PYTHON/my_main.py<CR>
 inoreabbrev <buffer> rcls  <ESC>:read $TEMPLATE_PYTHON/my_class.py<CR>
+inoreabbrev <buffer> rpr  <ESC>:read $TEMPLATE_PYTHON/my_property.py<CR>
 
 inoreabbrev <buffer> rtest <ESC>:read $TEMPLATE_PYTHON/test_case.py<CR>
 inoreabbrev <buffer> rpp   <ESC>:read $TEMPLATE_PYTHON/process_pool.py<CR>
@@ -91,6 +92,7 @@ inoreabbrev <buffer> rss   <ESC>:read $TEMPLATE_PYTHON/my_socket_server.py<CR>
 inoreabbrev <buffer> rsc   <ESC>:read $TEMPLATE_PYTHON/my_socket_client.py<CR>
 
 inoreabbrev <buffer> rve   <ESC>:read $TEMPLATE_PYTHON/version.py<CR>
+
 
 " 6: <Leader>ci <leader>cs
 vnoremap    <buffer> ,cs   do"""<CR>"""<ESC>kp
