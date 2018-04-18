@@ -1,10 +1,10 @@
 " vim: set foldmethod=marker  foldlevel=0: vim modeline( set )
 
-" let g:all_languages = []
 "{{{
 let g:all_languages = [
     \ 'c',
     \ 'cpp',
+    \ 'java',
     \ 'sh',
     \ 'zsh',
     \ 'python',
