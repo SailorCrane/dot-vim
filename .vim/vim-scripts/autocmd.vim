@@ -166,14 +166,20 @@ augroup CraneGroup
     au  FileType  terminal  nnoremap  <buffer> O          i<CR>
     au  FileType  terminal  nnoremap  <buffer> <C-d>      :q!<CR>
     au  FileType  terminal  :au WinEnter <buffer> normal  a
-
     " au  FileType  terminal  inoremap  <buffer> jk     <C-\><C-n>
     " au  FileType  terminal  inoremap  <buffer> <C-d>  <C-\><C-n>
     " au  FileType  terminal  inoremap  <buffer> <C-c>  <C-\><C-n>:q!<CR>
 
+    " 18 dosbatch
+    " used by 'gcc' comment plugin
+    au   FileType  dosbatch  let &commentstring=':: %s'
+
+
+    " 19 dockerfile
     au BufNewFile Dockerfile  silent 0 read  $TEMPLATE/dockerfile/dockerfile-template
 
-    " (TODO|NOTE|QUE|TEST|WARNING|REFACTOR|OPTIMIZE|FIXME|XXX) highlight
+
+    " END: highlight for coding (TODO|NOTE|QUE|TEST|WARNING|REFACTOR|OPTIMIZE|FIXME|XXX)
     au Syntax * syn match MyTodo /\v<(TODO|NOTE|QUE|WARNING|TEST|REFACTOR|OPTIMIZE|FIXME|XXX)/ containedin=.*Comment,vimCommentTitle
 
 augroup END "end of CraneGroup
