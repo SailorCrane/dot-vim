@@ -172,7 +172,8 @@ augroup CraneGroup
 
     " 18 dosbatch
     " used by 'gcc' comment plugin
-    au   FileType  dosbatch  let &commentstring=':: %s'
+    au  FileType  dosbatch  let &commentstring=':: %s'
+    au  FileType  dosbatch  set ff=dos
 
 
     " 19 dockerfile
