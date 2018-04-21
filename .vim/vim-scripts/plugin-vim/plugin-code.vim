@@ -306,3 +306,5 @@ Plug  'tpope/vim-endwise' ,  { 'for' : g:all_languages }
 ""Plug 'LucHermitte/lh-cpp'
 
 Plug 'SailorCrane/refactor'
+
+Plug 'othree/xml.vim'

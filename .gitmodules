@@ -560,6 +560,10 @@
     path = .vim/bundle/tabline.vim
     url = https://github.com/mkitt/tabline.vim.git
 
+[submodule ".vim/bundle/xml.vim"]
+    path = .vim/bundle/xml.vim
+    url = https://github.com/othree/xml.vim.git
+
 
 # [submodule ".vim/bundle/vim-refactor"]
 #     path = .vim/bundle/vim-refactor
