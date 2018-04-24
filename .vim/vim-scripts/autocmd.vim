@@ -180,6 +180,10 @@ augroup CraneGroup
     au BufNewFile Dockerfile  silent 0 read  $TEMPLATE/dockerfile/dockerfile-template
 
 
+    " 20 sql file
+    au  FileType  sql  let &commentstring='-- %s'
+
+
     " END: highlight for coding (TODO|NOTE|QUE|TEST|WARNING|REFACTOR|OPTIMIZE|FIXME|XXX)
     au Syntax * syn match MyTodo /\v<(TODO|NOTE|QUE|WARNING|TEST|REFACTOR|OPTIMIZE|FIXME|XXX)/ containedin=.*Comment,vimCommentTitle
 
