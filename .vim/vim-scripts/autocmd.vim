@@ -29,6 +29,9 @@ augroup CraneGroup
     " 打开QuickFix时, <CR> 恢复 <CR>功能.因为我将<CR>映射为了查找下一个
     au   FileType  qf  nnoremap <buffer>  <CR>  <CR>
     au   FileType  qf  setlocal nu rnu
+
+    " same with in ack quickfix('t' map)
+    au   FileType  qf  nnoremap  <silent> <buffer> tt <C-W><CR><C-W>T
     "au   FileType  qf   echo "MyFix"
 
 
