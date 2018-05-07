@@ -118,6 +118,9 @@ augroup CraneGroup
     au   FileType  nerdtree  nm        <silent> <buffer> <Space>   o
 
     au   FileType  nerdtree  nnoremap  <silent> <buffer> tt :call nerdtree#ui_glue#invokeKeyMap("t")<CR>
+
+    au   FileType  nerdtree  nnoremap  <silent> <buffer> <F5> :call nerdtree#ui_glue#invokeKeyMap("r")<CR>
+    au   FileType  nerdtree  nnoremap  <silent> <buffer> <F6> :call nerdtree#ui_glue#invokeKeyMap("R")<CR>
     "au   FileType  nerdtree  setlocal   nocursorline
 
 
