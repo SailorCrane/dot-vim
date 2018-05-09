@@ -24,3 +24,6 @@ inner_fun
 
 # socket
 socket.SOCK_NONBLOCK
+
+bs4
+BeautifulSoup
