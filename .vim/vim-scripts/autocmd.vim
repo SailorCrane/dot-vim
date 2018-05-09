@@ -189,6 +189,18 @@ augroup CraneGroup
     " 20 sql file
     au  FileType  sql  let &commentstring='-- %s'
 
+    " 21 html
+    " gnome-open
+    " exo-open
+    " xdg-open
+    " gvfs-open
+    " kde-open
+    au   FileType  html    nnoremap <buffer>  <F5>          :!xdg-open %<CR>
+    au   FileType  html    nnoremap <buffer>  <F6>          :!google-chrome-stable  %<CR>
+    au   FileType  html    nnoremap <buffer>  <F7>          :!firefox  %<CR>
+    "au   FileType  html    nnoremap <buffer>  <F5>          :!gnome-open %<CR>
+
+
 
     " END: highlight for coding (TODO|NOTE|QUE|TEST|WARNING|REFACTOR|OPTIMIZE|FIXME|XXX)
     au Syntax * syn match MyTodo /\v<(TODO|NOTE|QUE|WARNING|TEST|REFACTOR|OPTIMIZE|FIXME|XXX)/ containedin=.*Comment,vimCommentTitle
