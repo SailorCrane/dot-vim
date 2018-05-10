@@ -11,4 +11,7 @@ def mongo():
     record = table.find_one( {'name' : 'Bob'} )
     print(record)
 
-# mongo()
+    # close client
+    client.close()
+
+mongo()
