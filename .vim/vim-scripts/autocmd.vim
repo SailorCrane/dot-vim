@@ -140,8 +140,9 @@ augroup CraneGroup
     au   FileType  python  source  $Vim_Scripts/python.vim
 
     "14 c/cpp
-    au   FileType  c,cpp   source  $Vim_Scripts/c.vim
-    au   FileType  cpp     source  $Vim_Scripts/cpp.vim
+    au   FileType  c     setlocal commentstring=//\ %s
+    au   FileType  c,cpp source  $Vim_Scripts/c.vim
+    au   FileType  cpp   source  $Vim_Scripts/cpp.vim
 
     "15 sh
     " 执行当前文件
