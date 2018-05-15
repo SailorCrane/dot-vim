@@ -93,6 +93,8 @@ inoreabbrev <buffer> rsc   <ESC>:read $TEMPLATE_PYTHON/my_socket_client.py<CR>
 
 inoreabbrev <buffer> rve   <ESC>:read $TEMPLATE_PYTHON/version.py<CR>
 
+inoreabbrev <buffer> rfl   <ESC>:read $TEMPLATE_PYTHON/my_flask.py<CR>
+
 
 " 6: <Leader>ci <leader>cs
 vnoremap    <buffer> ,cs   do"""<CR>"""<ESC>kp
