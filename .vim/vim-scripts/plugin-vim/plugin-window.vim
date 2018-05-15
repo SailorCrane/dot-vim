@@ -9,8 +9,8 @@
 
 "let g:winManagerWidth = 30 "设置winmanager的宽度，默认为25
 "定义打开关闭winmanager快捷键为F8
-"nnoremap  <leader>ow  :WMToggle<cr>
-"imap  <leader>z <esc>:WMToggle<cr> "定义打开关闭winmanager快捷键为F8
+"nnoremap  <leader>ow  :WMToggle<CR>
+"imap  <leader>z <esc>:WMToggle<CR> "定义打开关闭winmanager快捷键为F8
 
 "let g:AutoOpenWinManager = 1 "在进入vim时自动打开winmanager
 
@@ -43,9 +43,10 @@ let NERDTreeWinPos="left"
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&
 " b:NERDTreeType == "primary") | q | endif
 
-"nnoremap <leader>on :NERDTreeToggle<cr>
-nnoremap <leader>on :NERDTreeFind<cr>
-nnoremap <leader>tn :NERDTreeToggle<cr>
+"nnoremap <leader>on :NERDTreeToggle<CR>
+nnoremap <leader>on :NERDTreeFind<CR>
+nnoremap <leader>oN :NERDTree<CR>
+nnoremap <leader>tn :NERDTreeToggle<CR>
 " }}}
 
 " 2-2 dirvish
@@ -61,10 +62,10 @@ Plug  'majutsushi/tagbar' , { 'on' : ['TagbarOpen', 'TagbarToggle'] }
 "5-2 Tagbar in vim-scripts's repo
 " <leader>tt 被vim-scripts/Align使用了
 " 所以这里使用ti: tag invert, tt :tag toggle
-"nnoremap  <leader>ot  :TagbarOpen<cr>
-nnoremap  <leader>tt  :TagbarToggle<cr>
+"nnoremap  <leader>ot  :TagbarOpen<CR>
+nnoremap  <leader>tt  :TagbarToggle<CR>
 " <Leader>ct comflict with create tags
-"nnoremap  <leader>ct  :TagbarOpen<cr>
+"nnoremap  <leader>ct  :TagbarOpen<CR>
 
 " 打开tagbar时,自动显示行号
 let g:tagbar_show_linenumbers=1
@@ -81,7 +82,7 @@ let g:tagbar_left = 0
 ""{{{
 "let g:bufExplorerSplitVertSize=30
 "nnoremap <leader>ob :BufExplorerVerticalSplit<CR>
-"nnoremap <leader>tb :ToggleBufExplorer<cr>
+"nnoremap <leader>tb :ToggleBufExplorer<CR>
 ""}}}
 
 "4-2 buffergator
@@ -100,7 +101,7 @@ nnoremap <leader>tb  :BuffergatorToggle<CR>
 "let g:miniBufExplForceSyntaxEnable = 1
 "let g:miniBufExplModSelTarget      = 1      "不在不可编辑窗口中打开选中的文件buffer
 "let g:miniBufExplorerMoreThanOne   = 0      "最多只有一个miniBuf窗口
-"nnoremap  <leader>mb   :MBEToggle!<cr>
+"nnoremap  <leader>mb   :MBEToggle!<CR>
 "}}}
 
 
@@ -118,8 +119,8 @@ nnoremap  <Leader>op   :MRU py<CR>
 " 类似插件 gundo, mundo, histwin
 Plug  'mbbill/undotree' ,   { 'on' : ['UndotreeShow', 'UndotreeToggle'] }
 " {{{
-nnoremap  <Leader>ou :UndotreeShow<cr>
-nnoremap  <Leader>tu :UndotreeToggle<cr>
+nnoremap  <Leader>ou :UndotreeShow<CR>
+nnoremap  <Leader>tu :UndotreeToggle<CR>
 " }}}
 
 "6-2 gundo stand for gnu undo
