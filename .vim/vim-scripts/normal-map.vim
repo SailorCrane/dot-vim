@@ -249,10 +249,16 @@ nnoremap \a     21gt<CR>
 "endif
 
 " 上下左右切换窗口, 并将切换到的窗口最大化: 最大化函数会显示文件名
-nnoremap  <C-w>h     <C-w>h:call MaxCurrentWindow()<Cr>
-nnoremap  <C-w>l     <C-w>l:call MaxCurrentWindow()<Cr>
-nnoremap  <C-w>j     <C-w>j:call MaxCurrentWindow()<Cr>
-nnoremap  <C-w>k     <C-w>k:call MaxCurrentWindow()<Cr>
+" nnoremap  <C-w>h     <C-w>h:call MaxCurrentWindow()<Cr>
+" nnoremap  <C-w>l     <C-w>l:call MaxCurrentWindow()<Cr>
+" nnoremap  <C-w>j     <C-w>j:call MaxCurrentWindow()<Cr>
+" nnoremap  <C-w>k     <C-w>k:call MaxCurrentWindow()<Cr>
+
+" 不最大化窗口
+nnoremap  <C-w>h     <C-w>h
+nnoremap  <C-w>l     <C-w>l
+nnoremap  <C-w>j     <C-w>j
+nnoremap  <C-w>k     <C-w>k
 " }}}
 
 " 7-5 最大化窗口等...
