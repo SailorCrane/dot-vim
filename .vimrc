@@ -142,6 +142,7 @@ source  $Vim_Scripts/function.vim
 source  $Vim_Scripts/normal-map.vim
 source  $Vim_Scripts/edit-map.vim
 source  $Vim_Scripts/insert-map.vim
+source  $Vim_Scripts/insert-abbr.vim
 source  $Vim_Scripts/opending-map.vim
 source  $Vim_Scripts/command-map.vim
 source  $Vim_Scripts/visual-map.vim

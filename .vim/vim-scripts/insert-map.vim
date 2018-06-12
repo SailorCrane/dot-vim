@@ -1,5 +1,4 @@
 
-"=================== imap =====================
 " 1  insert -----> normal
 "{{{
 " map jk to esc
@@ -182,14 +181,3 @@ inoremap  <C-x><C-]>   <C-x><C-]><C-p>
 inoremap <C-x>u  <Esc>guiwea
 inoremap <C-x>U  <Esc>gUiwea
 
-"=================== iabbrev =====================
-"1  My abbreviation at insert mode
-inoreabbrev q@  @qq.com
-inoreabbrev @@  215379@qq.com
-
-"2  my self  abbr
-inoreabbrev jft just for test
-
-"3 TODO, OPTIMIZE
-inoreabbrev OPT OPTIMIZE
-inoreabbrev TO  TODO
