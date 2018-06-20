@@ -42,12 +42,17 @@ test_now_stamp()
 # NOTE: utc时间和当地时间(timestamp都相同)
 # datetime.datetime.utcfromtimestamp
 # time.localtime(0)
+
 # 1: datetime: fromtimestamp vs utcfromtimestamp, now() vs utcnow()
 datetime.datetime.utcfromtimestamp(0)
 datetime.datetime.fromtimestamp(0)
 
 print(datetime.datetime.utcnow())
 print(datetime.datetime.now())
+
+# 1-1: datetime ------> timestamp
+n = datetime.datetime.now()
+print(n.timestamp())
 
 # 2: date: from datetime
 datetime.datetime.now().date()
