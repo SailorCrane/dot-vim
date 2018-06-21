@@ -637,12 +637,6 @@ nnoremap  <#  [#
 nnoremap  >#  ]#
 " }}}
 
-" 23-2 跳到main函数: C/C++
-"{{{
-" 通过正则匹配 int  main( .*)
-nnoremap  gm  /\v(int)?\s+main\s*\(.*<CR>
-"}}}
-
 " 24 get full path of file
 "{{{
 "nnoremap  <Leader>cf  :let @+=expand("%:p")<CR>

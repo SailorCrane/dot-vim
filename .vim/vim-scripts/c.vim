@@ -1,8 +1,8 @@
 
-" ========================= (.c/.cpp) =========================
-" Warning:
-" 是触发 Filetype时被 autocmd.vim 中source的
-" 只会触发一次: 所以此脚本中不可再 使用autocmd命令:否则不生效
+" ========================= NOTE: (for .c/.cpp) =========================
+" WARNING:
+" 在vim触发 Filetype时, 此文件被 autocmd.vim 中source
+" 只会触发一次: 所以此脚本文件中不可再使用'autocmd'命令:否则不生效
 
 " 1 main
 inoreabbrev <buffer> imn  int main(int argc, char **argv)<CR>{<CR>}<up><CR>
@@ -29,3 +29,7 @@ nnoremap     <buffer>  <C-t>  :A<CR>:call ShowBufName()<CR>
 nnoremap <buffer>  <leader>gg  :YcmCompleter  GoToDefinitionElseDeclaration<CR>
 nnoremap <buffer>  <leader>gd  :YcmCompleter  GoToDefinition<CR>
 nnoremap <buffer>  <leader>gl  :YcmCompleter  GoToDeclaration<CR>
+
+" 6 main
+" int  main( .*)
+nnoremap  <buffer> gm  /\v(int)?\s+main\s*\(.*<CR>
