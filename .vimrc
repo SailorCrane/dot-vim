@@ -164,4 +164,4 @@ let g:loaded_crane_vimrc = 1
 
 
 " end source(local config): 比如在服务器上独特的配置.家里独特配置等等
-source  $Vim_Scripts/global-local.vim
+source  $Vim_Scripts/global-custom.vim

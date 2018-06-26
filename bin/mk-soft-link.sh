@@ -16,7 +16,7 @@ fi
 
 # 3: cp python-tab.vim
 python_tab=${dotVimDir}/vim-scripts/python-tab-git.vim
-local_python_tab=${dotVimDir}/vim-scripts/python-tab-local.vim
+local_python_tab=${dotVimDir}/vim-scripts/python-tab-custom.vim
 
 if [ ! -e "${local_python_tab}" ]; then
     cp ${python_tab} ${local_python_tab}
@@ -26,7 +26,7 @@ fi
 
 # 4: global localities config
 global_git_config=${dotVimDir}/vim-scripts/global-git.vim
-global_local_config=${dotVimDir}/vim-scripts/global-local.vim
+global_local_config=${dotVimDir}/vim-scripts/global-custom.vim
 if [ ! -e "${global_local_config}" ]; then
     cp ${global_git_config} ${global_local_config}
 else
