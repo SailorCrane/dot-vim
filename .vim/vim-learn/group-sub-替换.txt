@@ -1,0 +1,16 @@
+group-sub-替换
+
+
+替换pre_mid_end ------> mid
+\v 用于激活括号功能
+\1 是group1
+\0 是所有匹配字符串
+
+
+:%s/\vpre_(mid)_end/\1/g
+
+fun! Define_s()
+    %s/define.serverMethod('client'/rpc_method(CLIENT_ONLY/ge
+    %s/define.serverMethod('server'/rpc_method(SERVER_ONLY/ge
+    %s/\vdefine\.(\w*)/\1()/ge
+endfun
