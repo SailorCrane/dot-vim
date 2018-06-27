@@ -111,4 +111,4 @@ setlocal  completeopt-=preview
 
 " 8: gd, search def while cursor in anywhere
 " so local gd to local definition is auto disabled
-nnoremap <buffer> gd  /def \+(<LEFT>
+nnoremap <buffer> gd  /def \+.*.*(<LEFT><LEFT><LEFT>
