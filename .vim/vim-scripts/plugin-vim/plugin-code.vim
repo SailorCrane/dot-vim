@@ -31,6 +31,8 @@ let g:all_languages = [
     \ 'cmake',
     \ 'ld_version',
     \ 'dockerfile',
+    \
+    \ 'yaml',
     \ ]
 "}}}
 
