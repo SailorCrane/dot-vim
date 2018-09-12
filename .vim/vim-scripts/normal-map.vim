@@ -750,7 +750,8 @@ nnoremap <Leader>vu  :!svn update %<CR>
 
 " 32 open defition in split window
 " then <C-w><C-t> open current window to new tab
-nnoremap <leader><C-[> :split  <CR>:exec("tag ".expand("<cword>"))<CR>
+" search, but reserve origin place in new window
+"nnoremap <leader><C-[> :split  <CR>:exec("tag ".expand("<cword>"))<CR>
 nnoremap <leader><C-]> :vsplit <CR>:exec("tag ".expand("<cword>"))<CR>
 
 
