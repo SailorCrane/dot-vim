@@ -170,7 +170,7 @@ Plug  'Chiel92/vim-autoformat'
 
 
 "32 color table view
-Plug  'http://git.oschina.net/CraneAgain/xterm-color-table.vim'
+Plug  'https://git.oschina.net/CraneAgain/xterm-color-table.vim'
 nnoremap  <Leader>ox  : XtermColorTable<CR>
 
 

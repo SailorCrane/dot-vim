@@ -125,7 +125,7 @@
     url = https://github.com/hrj/vim-DrawIt.git
 [submodule ".vim/bundle/xterm-color-table.vim"]
     path = .vim/bundle/xterm-color-table.vim
-    url = http://git.oschina.net/CraneAgain/xterm-color-table.vim.git
+    url = https://git.oschina.net/CraneAgain/xterm-color-table.vim.git
 
 [submodule ".vim/bundle/vim-easymotion"]
     path = .vim/bundle/vim-easymotion
