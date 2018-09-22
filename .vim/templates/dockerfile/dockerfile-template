@@ -6,7 +6,7 @@ MAINTAINER crane
 
 CMD echo 'docker run'
 
-USER crane
+USER root
 
 # WORKDIR
 
@@ -18,7 +18,7 @@ USER crane
 # RUN
 # RUN
 
-# ENTRYPOINT
+#ENTRYPOINT /bin/bash -c
 
 # ADD
 # COPY
