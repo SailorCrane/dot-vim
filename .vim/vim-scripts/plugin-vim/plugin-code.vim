@@ -8,6 +8,7 @@ let g:all_languages = [
     \ 'sh',
     \ 'zsh',
     \ 'python',
+    \ 'go',
     \
     \ 'vim',
     \ 'dosbatch',

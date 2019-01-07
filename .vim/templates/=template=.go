@@ -1,10 +1,18 @@
 //
-// %FFILE%
-// Copyright (C) %YEAR% %USER% <%MAIL%>
+// test.go
+// Copyright (C) 2019 crane <crane@his-pc>
 //
-// Distributed under terms of the %LICENSE% license.
+// Distributed under terms of the MIT license.
 //
 
 package main
 
-%HERE%
+
+import (
+    "fmt"
+)
+
+
+func main() {
+    fmt.Println("start main")
+}
