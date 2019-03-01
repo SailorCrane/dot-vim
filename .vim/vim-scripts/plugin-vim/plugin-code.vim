@@ -34,6 +34,7 @@ let g:all_languages = [
     \ 'dockerfile',
     \
     \ 'yaml',
+    \ 'proto',
     \ ]
 "}}}
 
