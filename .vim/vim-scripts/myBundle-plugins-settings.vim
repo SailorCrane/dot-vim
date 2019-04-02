@@ -36,7 +36,7 @@ source   $Plugin_Script/plugin-motion.vim
 source   $Plugin_Script/plugin-window.vim      " 和窗口相关的: undoTree, nerdtree, bufferexplorer, tagbar, winmanager
 source   $Plugin_Script/plugin-view.vim        " 和外观显示相关的: 主题等 airline, rainbow
 source   $Plugin_Script/plugin-scheme.vim
-source   $Plugin_Script/plugin-code.vim        " 和coding 相关的
+source   $Plugin_Script/plugin-source-code.vim " 和coding 相关的插件配置
 source   $Plugin_Script/plugin-python.vim
 source   $Plugin_Script/plugin-ft.vim          " 和文件类型相关关:markdown, vim-tmux
 

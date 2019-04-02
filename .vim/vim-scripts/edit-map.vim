@@ -21,7 +21,7 @@ nnoremap  <Leader>eo  :vsplit  $Vim_Scripts/opending-map.vim<CR>
 
 nnoremap  <Leader>eU  :vsplit  $Crane_Dot_Vim/vimtutal.txt<CR>
 
-nnoremap  <Leader>eb  :vsplit  $Vim_Scripts/myBundle.vim<CR>
+nnoremap  <Leader>eb  :vsplit  $Vim_Scripts/myBundle-plugins-settings.vim<CR>
 nnoremap  <Leader>ep  :vsplit  $Vim_Scripts/python.vim<CR>
 nnoremap  <Leader>eC  :vsplit  $Vim_Scripts/autocmd.vim<CR>
 

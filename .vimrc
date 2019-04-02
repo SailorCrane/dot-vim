@@ -134,9 +134,9 @@ set completeopt+=longest
 " source scripts
 "{{{
 " 将source移动到最后
-" source ~/.vim/vim-scripts/myBundle.vim
+" source ~/.vim/vim-scripts/myBundle-plugins-settings.vim
 " 注意这里如果要编辑, 只能使用<Leader>e 前缀编辑, 无法通过gf跳转.
-source  $Vim_Scripts/myBundle.vim
+source  $Vim_Scripts/myBundle-plugins-settings.vim
 source  $Vim_Scripts/function.vim
 
 source  $Vim_Scripts/normal-map.vim
