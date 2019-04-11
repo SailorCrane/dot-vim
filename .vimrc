@@ -148,7 +148,7 @@ source  $Vim_Scripts/command-map.vim
 source  $Vim_Scripts/visual-map.vim
 source  $Vim_Scripts/terminal-map.vim           " for vim8 or neovim
 
-source  $Vim_Scripts/autocmd.vim
+source  $Vim_Scripts/filetype-autocmd.vim
 source  $Vim_Scripts/tmp-test.vim
 
 "}}}

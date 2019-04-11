@@ -183,6 +183,10 @@ augroup CraneGroup
     au  FileType  dosbatch  let &commentstring=':: %s'
     au  FileType  dosbatch  set ff=dos
 
+    " 18 dos .asm
+    " used by 'gcc' comment plugin
+    au  FileType  asm  setlocal commentstring=;\ %s
+
 
     " 19 dockerfile
     au BufNewFile Dockerfile  silent 0 read  $TEMPLATE/dockerfile/dockerfile-template

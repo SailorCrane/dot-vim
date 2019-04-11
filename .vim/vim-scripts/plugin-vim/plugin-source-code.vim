@@ -2,6 +2,7 @@
 
 "{{{
 let g:all_languages = [
+    \ 'asm',
     \ 'c',
     \ 'cpp',
     \ 'java',
