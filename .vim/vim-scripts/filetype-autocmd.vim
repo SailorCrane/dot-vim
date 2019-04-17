@@ -51,8 +51,9 @@ augroup CraneGroup
     "3: Makefile
     " 设置所有的"make-"打头的文件名的文件类型都为make,注意vim使用"make"表示makefile文件类型,而不是"makefile"
     au   BufNewFile,BufRead   make-*  setlocal filetype=make
-    au   FileType  make    nnoremap <buffer>  <F5>          :!make -f %<CR>
-    au   FileType  make    nnoremap <buffer>  <Leader><F5>  :!make -B -f %<CR>
+    au   FileType  make    nnoremap <buffer>  <F5>          :!clear && make -f %<CR>
+    " au   FileType  make    nnoremap <buffer>  <Leader><F5>  :!clear && make -B -f %<CR>
+    au   FileType  make    nnoremap <buffer>  <F6>  :!clear && make -B -f %<CR>
 
 
     "4-1: tagbar
@@ -147,7 +148,7 @@ augroup CraneGroup
 
     "15 sh
     " 执行当前文件
-    au   FileType  sh      nnoremap <buffer>  <F5>  :!./%<CR>
+    au   FileType  sh      nnoremap <buffer>  <F5>  :!clear && ./%<CR>
 
 
     "15 command-line(history) Event: 完美
@@ -186,6 +187,7 @@ augroup CraneGroup
     " 18 dos .asm
     " used by 'gcc' comment plugin
     au  FileType  asm  setlocal commentstring=;\ %s
+    au  FileType  asm  nnoremap <buffer>  <F5>  :!clear; nasm %<CR>
 
 
     " 19 dockerfile

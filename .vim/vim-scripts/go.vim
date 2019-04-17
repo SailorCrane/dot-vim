@@ -1,5 +1,6 @@
 
-nnoremap <buffer>  <F5>          :!clear && go run  %<CR>
+nnoremap <buffer>  <F5>          :!clear ; go run  %<CR>
+nnoremap <buffer>  <F6>          :!clear ; go fmt  %<CR>
 
 " locate to "type.* or func.* or var", var前面没有空格: 目的是为定位全局变量
 "nnoremap <buffer>  [[  ?^\v\s*\zs(func\|type)\ze\s*<CR>
