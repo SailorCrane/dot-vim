@@ -210,10 +210,10 @@ augroup CraneGroup
 
 
 
-    " END: highlight for coding (TODO|NOTE|QUE|TEST|WARNING|REFACTOR|OPTIMIZE|FIXME|XXX)
-    au Syntax * syn match MyTodo /\v<(TODO|NOTE|QUE|WARNING|TEST|REFACTOR|OPTIMIZE|FIXME|XXX)/ containedin=.*Comment,vimCommentTitle
+    " END: highlight for coding (TODO|ATTENTION|NOTE|QUE|TEST|WARNING|REFACTOR|OPTIMIZE|FIXME|XXX)
+    au Syntax * syn match MyTodo /\v<(TODO|ATTENTION|NOTE|QUE|WARNING|TEST|REFACTOR|OPTIMIZE|FIXME|XXX)/ containedin=.*Comment,vimCommentTitle
 
 augroup END "end of CraneGroup
 
-" highlight (TODO|NOTE|QUE|TEST|WARNING|REFACTOR|OPTIMIZE|FIXME|XXX)
+" highlight (TODO|ATTENTION|NOTE|QUE|TEST|WARNING|REFACTOR|OPTIMIZE|FIXME|XXX)
 hi def link MyTodo Todo
