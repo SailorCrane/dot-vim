@@ -64,6 +64,13 @@ inoremap  <C-z>  <Esc>zza
 " I进入到第一个非空白字符前面, A到行尾(没有验证是否是非空白字符)
 inoremap  <C-a>   <Esc>I
 inoremap  <C-e>   <Esc>A
+inoremap  <C-e>   <Esc>A
+
+" ctrl-shift-h 跳到左边单词
+" ctrl-shift-l 跳到右边单词
+" 很不幸: vim无法区分ctrl-h 和 ctrl-shift-h
+" inoremap  <C-S-H> <Esc><Esc>Bi
+" inoremap  <C-S-L> <Esc><Esc>Ea
 "inoremap  <C-^>   <Esc><s-^>i
 "inoremap  <C-^>   <Esc>I, I是插入到第一个飞空白字符,将从<s-^>中解放出来了
 "inoremap  je   <Esc>$a
