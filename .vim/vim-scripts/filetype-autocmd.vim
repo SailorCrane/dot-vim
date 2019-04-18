@@ -188,6 +188,12 @@ augroup CraneGroup
     " used by 'gcc' comment plugin
     au  FileType  asm  setlocal commentstring=;\ %s
     au  FileType  asm  nnoremap <buffer>  <F5>  :!clear; nasm %<CR>
+    " expand("%:p:h")是路径名
+    " expand("%:p:r")不带后缀的文件路径
+    " <F6>用来反汇编当前文件产生的可执行文件
+    au  FileType  asm  nnoremap <buffer>  <F6>  :execute "!clear ; ndisasm  ".expand("%:p:r")<CR>
+
+" command! -nargs=1 ChgExt execute "saveas ".expand("%:p:r").<q-args>
 
 
     " 19 dockerfile
@@ -210,10 +216,10 @@ augroup CraneGroup
 
 
 
-    " END: highlight for coding (TODO|ATTENTION|NOTE|QUE|TEST|WARNING|REFACTOR|OPTIMIZE|FIXME|XXX)
-    au Syntax * syn match MyTodo /\v<(TODO|ATTENTION|NOTE|QUE|WARNING|TEST|REFACTOR|OPTIMIZE|FIXME|XXX)/ containedin=.*Comment,vimCommentTitle
+    " END: highlight for coding (TODO|HINT|NOTE|ATTENTION|QUE|TEST|WARNING|REFACTOR|OPTIMIZE|FIXME|XXX)
+    au Syntax * syn match MyTodo /\v<(TODO|HINT|NOTE|ATTENTION|QUE|WARNING|TEST|REFACTOR|OPTIMIZE|FIXME|XXX)/ containedin=.*Comment,vimCommentTitle
 
 augroup END "end of CraneGroup
 
-" highlight (TODO|ATTENTION|NOTE|QUE|TEST|WARNING|REFACTOR|OPTIMIZE|FIXME|XXX)
+" highlight (TODO|HINT|NOTE|ATTENTION|QUE|TEST|WARNING|REFACTOR|OPTIMIZE|FIXME|XXX)
 hi def link MyTodo Todo
