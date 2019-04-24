@@ -541,6 +541,9 @@ inoremap  <Leader>ra  <------
 nnoremap  <Leader>a=       40a=<ESC>20hi<Space><Space><Left>
 imap      <Leader>a=  <ESC><Leader>a=
 
+nnoremap  <Leader>a-       40a-<ESC>20hi<Space><Space><Left>
+imap      <Leader>a-  <ESC><Leader>a-
+
 " head 1, 2, 3
 nnoremap  <Leader>h1       yyPVr=
 nnoremap  <Leader>h2       yyPVr-
