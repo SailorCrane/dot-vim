@@ -191,7 +191,7 @@ augroup CraneGroup
     " expand("%:p:h")是路径名
     " expand("%:p:r")不带后缀的文件路径
     " <F6>用来反汇编当前文件产生的可执行文件
-    au  FileType  asm  nnoremap <buffer>  <F6>  :execute "!clear ; ndisasm  ".expand("%:p:r")<CR>
+    au  FileType  asm  nnoremap <buffer>  <F6>  :execute "!clear ; nasm % && ndisasm  ".expand("%:p:r")<CR>
 
 " command! -nargs=1 ChgExt execute "saveas ".expand("%:p:r").<q-args>
 
