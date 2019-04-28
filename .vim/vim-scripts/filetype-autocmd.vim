@@ -129,7 +129,9 @@ augroup CraneGroup
     au   FileType  c,cpp,sh,python,vim  match  ErrorMsg  /"　"/
 
     "12 vim
-    au   FileType  vim     nnoremap <buffer>  <F5>  :so %<CR>
+    " au   FileType  vim     nnoremap <buffer>  <F5>  :so %<CR>
+    " <F5> 加载vim脚本配置
+    au   FileType  vim     nnoremap <buffer>  <F5>  :source $MYVIMRC<CR>:let &filetype=&filetype<CR>
     au   FileType  vim     setlocal  foldmethod=marker foldlevel=0
     "au   FileType  vim     syn match vimSegment '=\{3,}.*=\{3,}'
     "au   FileType  vim     syn match vimSegment '====' contained
@@ -143,6 +145,10 @@ augroup CraneGroup
 
     "14 c/cpp
     au   FileType  c     setlocal commentstring=//\ %s
+    " <F5> 编译, <F6>执行
+    " TODO: 编译 + 执行
+    au   FileType  c     nnoremap <buffer>  <F5>  :execute "!clear ; gcc % -o ".expand("%:p:r")<CR>
+au FileType c nnoremap <buffer>  <F6>  :execute "!clear ; gcc % -o ".expand("%:p:r")."&& ".expand("%:p:r")<CR>
     au   FileType  c,cpp source  $Vim_Scripts/c.vim
     au   FileType  cpp   source  $Vim_Scripts/cpp.vim
 
