@@ -320,6 +320,7 @@ Plug 'othree/xml.vim'
 " the commands for generating tags is :
 " go get -u github.com/jstemmer/gotags
 " gotags -R *.go >> tags
+" 使得tagbar支持golang
 
 let g:tagbar_type_go = {
 \ 'ctagstype' : 'go',
@@ -348,3 +349,7 @@ let g:tagbar_type_go = {
 \ 'ctagsbin' : 'gotags',
 \ 'ctagsargs' : '-sort -silent'
 \ }
+
+
+" 需要这个{ 'do': ':GoUpdateBinaries' }吗
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' , 'for' : 'go'}
