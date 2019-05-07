@@ -222,10 +222,10 @@ au FileType c nnoremap <buffer>  <F6>  :execute "!clear ; gcc % -o ".expand("%:p
 
 
 
-    " END: highlight for coding (TODO|HINT|NOTE|ATTENTION|QUE|TEST|WARNING|REFACTOR|OPTIMIZE|FIXME|XXX)
-    au Syntax * syn match MyTodo /\v<(TODO|HINT|NOTE|ATTENTION|QUE|WARNING|TEST|REFACTOR|OPTIMIZE|FIXME|XXX)/ containedin=.*Comment,vimCommentTitle
+    " END: highlight for coding (TODO|OBSOLETE|HINT|NOTE|ATTENTION|QUE|TEST|WARNING|REFACTOR|OPTIMIZE|FIXME|XXX)
+    au Syntax * syn match MyTodo /\v<(TODO|OBSOLETE|HINT|NOTE|ATTENTION|QUE|WARNING|TEST|REFACTOR|OPTIMIZE|FIXME|XXX)/ containedin=.*Comment,vimCommentTitle
 
 augroup END "end of CraneGroup
 
-" highlight (TODO|HINT|NOTE|ATTENTION|QUE|TEST|WARNING|REFACTOR|OPTIMIZE|FIXME|XXX)
+" highlight (TODO|OBSOLETE|HINT|NOTE|ATTENTION|QUE|TEST|WARNING|REFACTOR|OPTIMIZE|FIXME|XXX)
 hi def link MyTodo Todo
