@@ -145,12 +145,16 @@ augroup CraneGroup
 
     "14 c/cpp
     au   FileType  c     setlocal commentstring=//\ %s
-    " <F5> 编译, <F6>执行
-    " TODO: 编译 + 执行
+    " NOTE: <F5> 编译, <F6>执行
     au   FileType  c     nnoremap <buffer>  <F5>  :execute "!clear ; gcc % -o ".expand("%:p:r")<CR>
-au FileType c nnoremap <buffer>  <F6>  :execute "!clear ; gcc % -o ".expand("%:p:r")."&& ".expand("%:p:r")<CR>
+    au FileType c nnoremap <buffer>  <F6>  :execute "!clear ; gcc % -o ".expand("%:p:r")."&& ".expand("%:p:r")<CR>
     au   FileType  c,cpp source  $Vim_Scripts/c.vim
     au   FileType  cpp   source  $Vim_Scripts/cpp.vim
+
+    "14-2 java
+    " <F5> 编译 + 执行
+    " NOTE: expand("%:t:r") 只包含文件名(没有目录名和后缀), 因为java需要这样运行class
+    au   FileType  java     nnoremap <buffer>  <F5>  :execute "!clear; javac % && java ".expand("%:t:r")<CR>
 
     "15 sh
     " 执行当前文件
