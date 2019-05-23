@@ -141,7 +141,7 @@ augroup CraneGroup
 
     "13 python and go
     au   FileType  python  source  $Vim_Scripts/python.vim
-    au   FileType  go      source  $Vim_Scripts/go.vim
+    au   FileType  go      source  $Vim_Scripts/go-golang.vim
 
     "14 c/cpp
     au   FileType  c     setlocal commentstring=//\ %s
