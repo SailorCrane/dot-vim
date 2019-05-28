@@ -52,7 +52,8 @@ nnoremap  <Leader>ez  :vsplit ~/.zshrc<CR>
 
 nnoremap  <Leader>ea  :vsplit   $Crane_Sh_Dir/alias-dir/python-alias.sh<CR>
 nnoremap  <Leader>eA  :vsplit   $Crane_Sh_Dir/myAlias.sh<CR>
-nnoremap  <Leader>eF  :vsplit   $Crane_Sh_Dir/myFunctions.sh<CR>
+"nnoremap  <Leader>eF  :vsplit   $Crane_Sh_Dir/myFunctions.sh<CR>
+nnoremap  <Leader>eF  :vsplit   $Crane_Sh_Dir/a-my-base-functions.sh<CR>
 nnoremap  <Leader>eN  :vsplit   $Crane_Sh_Dir/net-operation.sh<CR>
 "}}}
 
