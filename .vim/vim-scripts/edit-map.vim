@@ -50,7 +50,7 @@ nnoremap  <Leader>ez  :vsplit ~/.zshrc<CR>
 " 太容易编辑了, "让出快捷键给plugin-python.vim
 "nnoremap  <Leader>eP  :vsplit ~/.profile<CR>
 
-nnoremap  <Leader>ea  :vsplit   $Crane_Sh_Dir/alias-dir/python-alias.sh<CR>
+nnoremap  <Leader>ea  :vsplit   $Crane_Sh_Dir/alias-dir/python-pip-alias.sh<CR>
 nnoremap  <Leader>eA  :vsplit   $Crane_Sh_Dir/myAlias.sh<CR>
 "nnoremap  <Leader>eF  :vsplit   $Crane_Sh_Dir/myFunctions.sh<CR>
 nnoremap  <Leader>eF  :vsplit   $Crane_Sh_Dir/a-my-base-functions.sh<CR>
