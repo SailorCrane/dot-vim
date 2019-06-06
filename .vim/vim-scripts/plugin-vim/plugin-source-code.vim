@@ -24,6 +24,7 @@ let g:all_languages = [
     \
     \ 'gitconfig',
     \ 'json',
+    \ 'xml',
     \ 'conf',
     \ 'nginx',
     \ 'tmux',
