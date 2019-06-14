@@ -7,8 +7,11 @@
 
 public class %FILE%
 {
-	public %FILE%() {
+    public static void main(String[] args) throws Exception {
 		%HERE%
+    }
+
+	public %FILE%() {
 	}
 }
 
