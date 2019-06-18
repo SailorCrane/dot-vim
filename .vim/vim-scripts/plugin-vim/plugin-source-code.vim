@@ -22,10 +22,11 @@ let g:all_languages = [
     \
     \ 'ruby',
     \
+    \ 'conf',
     \ 'gitconfig',
+    \ 'jproperties',
     \ 'json',
     \ 'xml',
-    \ 'conf',
     \ 'nginx',
     \ 'tmux',
     \
