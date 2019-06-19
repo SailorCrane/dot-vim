@@ -25,8 +25,8 @@ else
 fi
 
 # 4: global localities config
-global_git_config=${dotVimDir}/vim-scripts/global-git.vim
-global_local_config=${dotVimDir}/vim-scripts/global-custom.vim
+global_git_config=${dotVimDir}/vim-scripts/local-custom-in-git-template.vim
+global_local_config=${dotVimDir}/vim-scripts/local-custom-no-git.vim
 if [ ! -e "${global_local_config}" ]; then
     cp ${global_git_config} ${global_local_config}
 else

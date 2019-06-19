@@ -1,2 +1,4 @@
 python-tab-custom.vim
-global-custom.vim
+
+local-custom*.vim
+!local-custom-in-git-template.vim
