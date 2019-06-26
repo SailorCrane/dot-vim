@@ -23,6 +23,7 @@ let g:all_languages = [
     \ 'ruby',
     \
     \ 'conf',
+    \ 'sudoers',
     \ 'gitconfig',
     \ 'jproperties',
     \ 'json',
