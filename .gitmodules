@@ -508,6 +508,14 @@
     path = .vim/bundle/denite.nvim
     url = https://github.com/Shougo/denite.nvim.git
 
+[submodule ".vim/bundle/nvim-yarp"]
+    path = .vim/bundle/nvim-yarp
+    url = https://github.com/roxma/nvim-yarp.git
+
+[submodule ".vim/bundle/vim-hug-neovim-rpc"]
+    path = .vim/bundle/vim-hug-neovim-rpc
+    url = https://github.com/roxma/vim-hug-neovim-rpc.git
+
 [submodule ".vim/bundle/vim-janah"]
     path = .vim/bundle/vim-janah
     url = https://github.com/mhinz/vim-janah.git

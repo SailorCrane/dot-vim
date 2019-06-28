@@ -171,6 +171,8 @@ Plug  'vim-scripts/FuzzyFinder' , { 'on' : ['FufFile'] }
 
 "10-3 unite(for vim8, nicer)
 Plug  'Shougo/denite.nvim'
+Plug  'roxma/vim-hug-neovim-rpc'
+Plug  'roxma/nvim-yarp'
 "{{{
 " map like ctrlp
 " h denite-key-mappings
