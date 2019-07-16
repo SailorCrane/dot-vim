@@ -1,3 +1,6 @@
+# 其它风格正则:java, perl, perl等都使用 zero-width 搜索.
+# look ahead, look behind
+# negative match, positive match
 
 这两个都是零宽断言.
 /zs  start
