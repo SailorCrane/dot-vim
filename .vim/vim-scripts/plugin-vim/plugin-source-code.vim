@@ -29,6 +29,8 @@ let g:all_languages = [
     \ 'json',
     \ 'xml',
     \ 'nginx',
+    \ 'tex',
+    \ 'markdown',
     \ 'tmux',
     \
     \ 'gdb',

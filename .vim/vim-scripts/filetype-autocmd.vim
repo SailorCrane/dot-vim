@@ -224,6 +224,8 @@ augroup CraneGroup
     au   FileType  html    nnoremap <buffer>  <F7>          :!firefox  %<CR>
     "au   FileType  html    nnoremap <buffer>  <F5>          :!gnome-open %<CR>
 
+    " 22 tex/latex
+    au   FileType  tex    nnoremap <buffer>  <F5>          :LLPStartPreview<CR>
 
 
     " END: highlight for coding (TODO|OBSOLETE|HINT|NOTE|ATTENTION|QUE|TEST|WARNING|REFACTOR|OPTIMIZE|FIXME|XXX)
