@@ -39,7 +39,7 @@ source   $Plugin_Script/plugin-scheme.vim
 source   $Plugin_Script/plugin-source-code.vim " 和coding 相关的插件配置
 source   $Plugin_Script/plugin-python.vim
 source   $Plugin_Script/plugin-ft.vim          " 和文件类型相关关:markdown, vim-tmux
-source   $Plugin_Script/plugin-misc.vim        " latex等, 不知如何归类
+source   $Plugin_Script/plugin-misc-tex.vim        " latex等, 不知如何归类
 
 call plug#end()
 
