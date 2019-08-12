@@ -130,7 +130,7 @@ augroup CraneGroup
 
     "12 vim
     " au   FileType  vim     nnoremap <buffer>  <F5>  :so %<CR>
-    " <F5> 加载vim脚本配置
+    " <F5> 重新加载vim脚本配置
     au   FileType  vim     nnoremap <buffer>  <F5>  :source $MYVIMRC<CR>:let &filetype=&filetype<CR>
     au   FileType  vim     setlocal  foldmethod=marker foldlevel=0
     "au   FileType  vim     syn match vimSegment '=\{3,}.*=\{3,}'
