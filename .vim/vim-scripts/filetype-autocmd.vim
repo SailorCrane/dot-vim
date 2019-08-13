@@ -171,13 +171,12 @@ augroup CraneGroup
     "16 scratch: 没有起作用...
     au  FileType  scratch  setlocal rnu nu
 
-    "17-1: config, ini
-    au  FileType  dosini  setlocal cms=#\ %s
 
-    "17-2 fixed commentstring
+    "17-1: fixed commentstring: config, ini
     au  FileType  gitconfig  setlocal cms=#\ %s
     au  FileType  cmake      setlocal commentstring=#\ %s
     au  FileType  text       setlocal cms=#\ %s
+    au  FileType  dosini  setlocal cms=#\ %s
 
 
     au  FileType  terminal  nnoremap  <buffer> <Leader>q   :q!<CR>
@@ -227,8 +226,12 @@ augroup CraneGroup
     au   FileType  html    nnoremap <buffer>  <F7>          :!firefox  %<CR>
     "au   FileType  html    nnoremap <buffer>  <F5>          :!gnome-open %<CR>
 
-    " 22 tex/latex
+    " 22-1 tex/latex
     au   FileType  tex    nnoremap <buffer>  <F5>          :LLPStartPreview<CR>
+
+    " 22-2 markdown(不再需要各种preview插件)
+    au   FileType  markdown    nnoremap <buffer>  <F5>     :!google-chrome-stable %:p<CR>'
+
 
 
     " END: highlight for coding (TODO|OBSOLETE|HINT|NOTE|ATTENTION|QUE|TEST|WARNING|REFACTOR|OPTIMIZE|FIXME|XXX)

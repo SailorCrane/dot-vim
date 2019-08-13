@@ -10,16 +10,24 @@ Plug  'benmills/vimux'
 
 
 " markdown preview plugin( need nodejs + npm )
-Plug  'suan/vim-instant-markdown' , {'for' : 'markdown'}
-"{{{
-"sudo npm -g install instant-markdown-d
-"sudo apt-get install xdg-utils
-"sudo apt-get install curl
-"sudo apt-get install nodejs-legacy        # (for Debian-based systems)
-let g:instant_markdown_autostart = 0        " 只有在markdown文档中, 并且设置了这里的非自动preview
-                                            " 才会有InstantMarkdownPreview
-                                            " 命令可以使用
-"}}}
+"Plug  'suan/vim-instant-markdown' , {'for' : 'markdown'}
+""{{{
+""sudo npm -g install instant-markdown-d
+""sudo apt-get install xdg-utils
+""sudo apt-get install curl
+""sudo apt-get install nodejs-legacy        # (for Debian-based systems)
+"let g:instant_markdown_autostart = 0        " 只有在markdown文档中, 并且设置了这里的非自动preview
+"                                            " 才会有InstantMarkdownPreview
+"                                            " 命令可以使用
+""}}}
+
+" Plug 'JamshedVesuna/vim-markdown-preview', {'for' : 'markdown'}
+" let vim_markdown_preview_browser='Google Chrome'
+" let vim_markdown_preview_temp_file=1
+"let vim_markdown_preview_hotkey='<F5>'
+
+
+
 
 " markdown syntax color
 Plug  'tpope/vim-markdown' , {'for' : 'markdown'}
