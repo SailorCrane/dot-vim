@@ -283,6 +283,10 @@
 [submodule ".vim/bundle/vim-instant-markdown"]
     path = .vim/bundle/vim-instant-markdown
     url = https://github.com/suan/vim-instant-markdown.git
+
+[submodule ".vim/bundle/vim-latex-live-preview"]
+    path = .vim/bundle/vim-latex-live-preview
+    url = https://github.com/xuhdev/vim-latex-live-preview.git
 [submodule ".vim/bundle/vim-quickrun"]
     path = .vim/bundle/vim-quickrun
     url = https://github.com/thinca/vim-quickrun.git
