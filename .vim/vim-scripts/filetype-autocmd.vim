@@ -158,7 +158,7 @@ augroup CraneGroup
 
     "15 sh
     " 执行当前文件
-    au   FileType  sh      nnoremap <buffer>  <F5>  :!clear && ./%<CR>
+    au   FileType  sh      nnoremap <buffer>  <F5>  :!clear && $(readlink -f %)<CR>
 
 
     "15 command-line(history) Event: 完美
