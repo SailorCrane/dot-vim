@@ -757,6 +757,8 @@ nnoremap <Leader>vu  :!svn update %<CR>
 "nnoremap <leader><C-[> :split  <CR>:exec("tag ".expand("<cword>"))<CR>
 nnoremap <leader><C-]> :vsplit <CR>:exec("tag ".expand("<cword>"))<CR>
 
+" 33 快速切换到终端
+nnoremap <C-q>  :sh<CR>
 
 " 99 关于normal 模式中惯用的n 和 p的总结:
 "{{{
