@@ -147,7 +147,7 @@ augroup CraneGroup
     au   FileType  c     setlocal commentstring=//\ %s
     " NOTE: <F5> 编译, <F6>执行
     au   FileType  c     nnoremap <buffer>  <F5>  :execute "!clear ; gcc % -o ".expand("%:p:r")<CR>
-    au FileType c nnoremap <buffer>  <F6>  :execute "!clear ; gcc % -o ".expand("%:p:r")."&& ".expand("%:p:r")<CR>
+    au   FileType  c     nnoremap <buffer>  <F6>  :execute "!clear ; gcc % -o ".expand("%:p:r")."&& ".expand("%:p:r")<CR>
     au   FileType  c,cpp source  $Vim_Scripts/c.vim
     au   FileType  cpp   source  $Vim_Scripts/cpp.vim
 
