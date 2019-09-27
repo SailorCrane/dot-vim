@@ -10,9 +10,17 @@
 %HERE%
 """
 
+class Solution:
+    def __init__(self):
+        pass
+
+
+def test():
+    pass
 
 def main():
     print("start main")
+    test()
 
 if __name__ == "__main__":
     main()
