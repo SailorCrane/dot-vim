@@ -16,7 +16,7 @@ class Solution:
 
 
 def test():
-    pass
+    s = Solution()
 
 def main():
     print("start main")
