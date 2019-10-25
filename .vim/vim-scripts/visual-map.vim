@@ -5,6 +5,9 @@
 " 并且ctrl在一般键盘caplock位置时,ctrl-j简直无敌组合"fast"
 xnoremap  <C-j>  "+y
 
+" 有些终端情况下<C-j>会失效, 比如ssh连接remote之后, 或者打开python pipenv后
+xnoremap  gj  "+y
+
 xnoremap  <Leader><Leader>p  "+p
 xnoremap  <Leader><Leader>P  "+P
 

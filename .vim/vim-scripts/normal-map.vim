@@ -118,7 +118,8 @@ xnoremap  <Leader>xD  : !xxd -r <CR>
 nnoremap  n           :set hlsearch<CR>n
 nnoremap  N           :set hlsearch<CR>N
 nnoremap  <Leader>/   :set hlsearch!  hlsearch?<CR>
-nnoremap  <Leader>i   :set ignorecase!  ignorecase?<CR>
+" nnoremap  <Leader>i   :set ignorecase!  ignorecase?<CR>
+nnoremap  <Leader>ii   :set ignorecase!  ignorecase?<CR>
 " }}}
 
 " 4 add line number: not enabled
