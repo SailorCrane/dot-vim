@@ -13,6 +13,7 @@ let g:all_languages = [
     \
     \ 'vim',
     \ 'dosbatch',
+    \ 'sql',
     \
     \ 'scheme',
     \
