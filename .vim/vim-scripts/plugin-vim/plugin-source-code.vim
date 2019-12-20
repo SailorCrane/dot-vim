@@ -6,6 +6,7 @@ let g:all_languages = [
     \ 'c',
     \ 'cpp',
     \ 'java',
+    \ 'scala',
     \ 'sh',
     \ 'zsh',
     \ 'python',

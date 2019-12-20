@@ -155,6 +155,7 @@ augroup CraneGroup
     " <F5> 编译 + 执行
     " NOTE: expand("%:t:r") 只包含文件名(没有目录名和后缀), 因为java需要这样运行class
     au   FileType  java     nnoremap <buffer>  <F5>  :execute "!clear; javac % && java ".expand("%:t:r")<CR>
+    au   FileType  scala     nnoremap <buffer>  <F5>  :execute "!clear; scala %" <CR>
 
     "15 sh
     " 执行当前文件
