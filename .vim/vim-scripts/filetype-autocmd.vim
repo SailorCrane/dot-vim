@@ -210,8 +210,8 @@ augroup CraneGroup
 
 
     " 19 dockerfile
-    au BufNewFile Dockerfile  silent 0 read  $TEMPLATE/dockerfile/dockerfile-template
-    au  FileType  Dockerfile  setlocal commentstring=#\ %s
+    au BufNewFile dockerfile  silent 0 read  $TEMPLATE/dockerfile/dockerfile-template
+    au  FileType  dockerfile  setlocal commentstring=#\ %s
 
 
     " 20 sql file
