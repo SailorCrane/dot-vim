@@ -25,6 +25,7 @@ let g:all_languages = [
     \ 'ruby',
     \
     \ 'conf',
+    \ 'sshconfig',
     \ 'sudoers',
     \ 'gitconfig',
     \ 'jproperties',
