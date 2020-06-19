@@ -148,6 +148,8 @@ augroup CraneGroup
     " NOTE: <F5> 编译, <F6>执行
     au   FileType  c     nnoremap <buffer>  <F5>  :execute "!clear ; gcc % -o ".expand("%:p:r")<CR>
     au   FileType  c     nnoremap <buffer>  <F6>  :execute "!clear ; gcc % -o ".expand("%:p:r")."&& ".expand("%:p:r")<CR>
+    au   FileType  cpp   nnoremap <buffer>  <F5>  :execute "!clear ; g++ % -o ".expand("%:p:r")<CR>
+    au   FileType  cpp   nnoremap <buffer>  <F6>  :execute "!clear ; g++ % -o ".expand("%:p:r")."&& ".expand("%:p:r")<CR>
     au   FileType  c,cpp source  $Vim_Scripts/c.vim
     au   FileType  cpp   source  $Vim_Scripts/cpp.vim
 
