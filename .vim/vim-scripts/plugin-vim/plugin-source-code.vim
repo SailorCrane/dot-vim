@@ -8,9 +8,11 @@ let g:all_languages = [
     \ 'java',
     \ 'scala',
     \ 'sh',
+    \ 'sed',
     \ 'zsh',
     \ 'python',
     \ 'go',
+    \ 'gomod',
     \
     \ 'vim',
     \ 'dosbatch',

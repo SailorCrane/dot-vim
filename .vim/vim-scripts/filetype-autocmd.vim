@@ -177,9 +177,10 @@ augroup CraneGroup
 
     "17-1: fixed commentstring: config, ini
     au  FileType  gitconfig  setlocal cms=#\ %s
+    au  FileType  sed        setlocal commentstring=#\ %s
     au  FileType  cmake      setlocal commentstring=#\ %s
     au  FileType  text       setlocal cms=#\ %s
-    au  FileType  dosini  setlocal cms=#\ %s
+    au  FileType  dosini     setlocal cms=#\ %s
 
 
     au  FileType  terminal  nnoremap  <buffer> <Leader>q   :q!<CR>
