@@ -1,4 +1,5 @@
-dotVimDir=$(readlink -f ..)
+# dotVimDir=$(readlink -f ..)
+dotVimDir=$(realpath ..)
 
 # 1
 ln  -s  ${dotVimDir}/.vimrc   ~/.vimrc
