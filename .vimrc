@@ -130,6 +130,8 @@ set thesaurus+=$Crane_Vim_The/mthesaur.txt " set 可以保证不重复添加(不
 set completeopt+=longest
 "set completeopt+=noselect
 "}}}
+let g:pymode_python = 'python3'
+let g:pymode_rope = 0
 
 " source scripts
 "{{{
