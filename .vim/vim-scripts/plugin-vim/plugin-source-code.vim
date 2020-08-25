@@ -244,7 +244,7 @@ Plug  'thinca/vim-quickrun'
 
 
 " 69 ultisnips +  vim-snippets
-Plug  'SirVer/ultisnips'         , { 'for' : g:all_languages }
+" Plug  'SirVer/ultisnips'         , { 'for' : g:all_languages }
 Plug  'SailorCrane/vim-snippets' , { 'for' : g:all_languages }
 "{{{
 "    ultisnips 是一个snippet引擎(类似于snipMate), vim-snippets是代码片段定义.

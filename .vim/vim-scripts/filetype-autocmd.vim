@@ -11,7 +11,7 @@ augroup CraneGroup
     "au WinLeave * setlocal nocursorline
 
     "0-1 let b:surround_ of surround plugin
-    au   BufNewFile,BufRead   *  call Set_Fold_Surround()
+    " au   BufNewFile,BufRead   *  call Set_Fold_Surround()
 
     "0-2 根据文件类型设置dict
     au   BufNewFile,BufRead   *  call Set_Dict_List()
