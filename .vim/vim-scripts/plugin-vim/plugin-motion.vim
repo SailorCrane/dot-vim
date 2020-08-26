@@ -20,7 +20,9 @@ imap  <Leader><Leader>f  <ESC><Plug>(easymotion-overwin-f)
 
 " move to any char
 xmap <Leader>f <Plug>(easymotion-bd-f)
-nmap <leader>f <plug>(easymotion-overwin-f)
+" <plug>(easymotion-overwin-f)在macvim下不能正常工作, <Plug>(easymotion-bd-f)可以
+" nmap <leader>f <Plug>(easymotion-overwin-f)
+nmap <Leader>f <Plug>(easymotion-bd-f)
 
 " Move to line
 xmap <Leader><Leader>l <Plug>(easymotion-bd-jk)
