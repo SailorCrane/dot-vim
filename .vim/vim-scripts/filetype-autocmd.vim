@@ -237,6 +237,9 @@ augroup CraneGroup
     " 22-2 markdown(不再需要各种preview插件)
     au   FileType  markdown    nnoremap <buffer>  <F5>     :!google-chrome-stable %:p<CR>'
 
+    " 23 php
+    au   FileType  php    nnoremap <buffer>  <F5>     :!clear ; php %<CR>
+
 
 
     " END: highlight for coding (TODO|OBSOLETE|HINT|NOTE|ATTENTION|QUE|TEST|WARNING|REFACTOR|OPTIMIZE|FIXME|XXX)
