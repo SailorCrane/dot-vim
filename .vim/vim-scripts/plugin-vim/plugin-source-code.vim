@@ -68,7 +68,8 @@ Plug  'scrooloose/nerdcommenter', { 'for' : g:all_languages, 'on' : ['<Plug>NERD
 " }}}
 
 "3-2
-Plug  'tpope/vim-commentary',     { 'for' : g:all_languages, 'on' : ['<Plug>CommentaryLine', '<Plug>Commentary',]}
+" Plug  'tpope/vim-commentary',     { 'for' : g:all_languages, 'on' : ['<Plug>CommentaryLine', '<Plug>Commentary',]}
+Plug  'tpope/vim-commentary'
 
 
 "4-1: syntastic/ale

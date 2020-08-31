@@ -17,7 +17,9 @@ import (
 func wait_ctrl_c() {
 	signalCh := make(chan os.Signal, 1)
 	signal.Notify(signalCh, os.Interrupt, syscall.SIGTERM)
-	<-signalCh
+
+	// <-signalCh
+	fmt.Println("received signal: [", <-signalCh, "]")
 }
 
 func main() {
