@@ -375,6 +375,10 @@ nnoremap  <Leader>l:    A:<ESC>:write<CR>
 nnoremap  <Leader>l,    A,<ESC>:write<CR>
 nnoremap  <Leader>l.    A.<ESC>:write<CR>
 nnoremap  <Leader>l!    A!<ESC>:write<CR>
+" True
+nnoremap  <Leader>lt    A  ✅<ESC>:write<CR>
+" False
+nnoremap  <Leader>lf    A  ❌<ESC>:write<CR>
 
 " add '<Space>' + '\': Makefile
 nnoremap  <Leader>l\    A<Space>\<ESC>

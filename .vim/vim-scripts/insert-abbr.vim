@@ -13,3 +13,8 @@ inoreabbrev TO  TODO
 
 "4
 inoreabbrev slef self
+
+"
+" inoreabbrev dh  √
+inoreabbrev dh  ✅
+inoreabbrev ch  ❌
