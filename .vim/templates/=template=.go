@@ -14,7 +14,7 @@ import (
 	"syscall"
 )
 
-func wait_ctrl_c() {
+func waitCtrlCSignal() {
 	signalCh := make(chan os.Signal, 1)
 	signal.Notify(signalCh, os.Interrupt, syscall.SIGTERM)
 
@@ -25,5 +25,5 @@ func wait_ctrl_c() {
 func main() {
 	fmt.Println("start main")
 
-	wait_ctrl_c()
+	waitCtrlCSignal()
 }
